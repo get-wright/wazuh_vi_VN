@@ -16,7 +16,7 @@ export default {
   name: 'OpenSCAP',
   wodle_name: 'open-scap',
   description: 'Configuration options of the OpenSCAP wodle.',
-  category: 'Auditing and policy monitoring',
+  category: 'Kiểm thử và giám sát chính sách',
   documentation_link: webDocumentationLink('user-manual/reference/ossec-conf/wodle-openscap.html'),
   icon: 'securityApp',
   avaliable_for_manager: true,

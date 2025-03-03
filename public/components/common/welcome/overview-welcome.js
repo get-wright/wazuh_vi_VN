@@ -109,7 +109,7 @@ export const OverviewWelcome = withErrorBoundary(class OverviewWelcome extends C
                   </EuiCard>
                 </EuiFlexItem>
                 <EuiFlexItem>
-                  <EuiCard title description betaBadgeLabel="Auditing and Policy Monitoring">
+                  <EuiCard title description betaBadgeLabel="Kiểm thử và giám sát chính sách">
                     <EuiSpacer size="s" />
                     <EuiFlexGrid columns={2}>
                       {this.buildTabCard('pm', 'advancedSettingsApp')}

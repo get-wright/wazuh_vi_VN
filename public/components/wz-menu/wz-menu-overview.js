@@ -34,7 +34,7 @@ class WzMenuOverview extends Component {
         id: 'securityInformation',
         text: 'Quản lý thông tin an ninh',
       },
-      auditing: { id: 'auditing', text: 'Auditing and Policy Monitoring' },
+      auditing: { id: 'auditing', text: 'Kiểm thử và giám sát chính sách' },
       threatDetection: {
         id: 'threatDetection',
         text: 'Threat detection and response',
@@ -215,7 +215,7 @@ class WzMenuOverview extends Component {
   createItems = items => {
     const keyExists = key => Object.keys(this.state.extensions).includes(key);
     const keyIsTrue = key => (this.state.extensions || [])[key];
-    return items.filter(item => 
+    return items.filter(item =>
       (Object.keys(this.props.currentAgentData).length ? hasAgentSupportModule(this.props.currentAgentData, item.id) : true) && Object.keys(this.state.extensions).length && (!keyExists(item.id) || keyIsTrue(item.id))
     ).map(item => this.createItem(item));
   };

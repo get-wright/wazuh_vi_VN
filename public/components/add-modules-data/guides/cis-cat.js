@@ -16,7 +16,7 @@ export default {
   name: 'CIS-CAT',
   wodle_name: 'cis-cat',
   description: 'Configuration options of the CIS-CAT wodle.',
-  category: 'Auditing and policy monitoring',
+  category: 'Kiểm thử và giám sát chính sách',
   documentation_link: webDocumentationLink('user-manual/reference/ossec-conf/wodle-ciscat.html'),
   icon: 'securityApp',
   callout_warning: `CIS-CAT is not installed by default. It is a proprietary software that you have to obtain for using this module.`,

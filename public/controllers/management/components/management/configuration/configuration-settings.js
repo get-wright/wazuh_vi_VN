@@ -89,7 +89,7 @@ export default [
     ]
   },
   {
-    title: 'Auditing and policy monitoring',
+    title: 'Kiểm thử và giám sát chính sách',
     description: '',
     settings: [
       {

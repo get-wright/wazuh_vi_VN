@@ -70,7 +70,7 @@ export const AgentConfiguration = {
       ]
     },
     {
-      title: 'Auditing and policy monitoring',
+      title: 'Kiểm thử và giám sát chính sách',
       sections: [
         {
           subtitle: 'Policy monitoring',

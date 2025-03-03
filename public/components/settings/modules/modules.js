@@ -45,7 +45,7 @@ export class EnableModulesWrapper extends Component {
             ]
           },
           {
-            title: 'Auditing and Policy Monitoring',
+            title: 'Kiểm thử và giám sát chính sách',
             modules: [
               { name: 'pm', default: true, agent: false },
               { name: 'sca', default: true, agent: false },

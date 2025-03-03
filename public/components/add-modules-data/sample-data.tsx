@@ -50,7 +50,7 @@ export default class WzSampleData extends Component {
         categorySampleAlertsIndex: 'security',
       },
       {
-        title: 'Sample auditing and policy monitoring',
+        title: 'Mẫu kiểm thử và giám sát chính sách',
         description:
           'Sample data, visualizations and dashboards for events of auditing and policy monitoring (policy monitoring, system auditing, OpenSCAP, CIS-CAT).',
         image: '',

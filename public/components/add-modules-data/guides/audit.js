@@ -17,7 +17,7 @@ export default {
   name: 'System auditing',
   xml_tag: 'localfile',
   description: 'Configuration options of the System auditing extension.',
-  category: 'Auditing and policy monitoring',
+  category: 'Kiểm thử và giám sát chính sách',
   documentation_link: webDocumentationLink('user-manual/reference/ossec-conf/localfile.html'),
   icon: 'securityApp',
   avaliable_for_manager: true,
