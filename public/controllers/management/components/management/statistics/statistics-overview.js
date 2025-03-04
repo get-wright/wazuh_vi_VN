@@ -82,7 +82,7 @@ export class WzStatisticsOverview extends Component {
       const nodes = data.data.data.affected_items.map((item) => {
         return { value: item.name, text: `${item.name} (${item.type})` };
       });
-      nodes.unshift({ value: 'all', text: 'All' })
+      nodes.unshift({ value: 'all', text: 'Tất cả' })
       this.setState({
         clusterNodes: nodes,
         clusterNodeSelected: nodes[0].value,
@@ -187,7 +187,7 @@ export class WzStatisticsOverview extends Component {
                     options={this.state.clusterNodes}
                     value={this.state.clusterNodeSelected}
                     onChange={this.onSelectNode}
-                    aria-label="Select node"
+                    aria-label="Chọn nút"
                   />
                 </EuiFlexItem>
               )}
@@ -251,8 +251,8 @@ export class WzStatisticsOverview extends Component {
 export default compose(
   withGlobalBreadcrumb([
     { text: '' },
-    { text: 'Management', href: '#/manager' },
-    { text: 'Statistics' }
+    { text: 'Trình quản lý', href: '#/manager' },
+    { text: 'Thống kê' }
   ]),
   withGuard(props => {
     return !((wzConfig.getConfig() || {})['cron.statistics.status']); // if 'cron.statistics.status' is false, then it renders PromptStatisticsDisabled component

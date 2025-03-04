@@ -180,7 +180,7 @@ hosts:
                             color="primary"
                             style={{ marginTop: '-12px' }}
                             iconType="questionInCircle"
-                            aria-label="Info about the error"
+                            aria-label="Thông tin về lỗi"
                             onClick={() =>
                               this.props.copyToClipBoard(item.downReason)
                             }
@@ -195,7 +195,7 @@ hosts:
                             color="primary"
                             style={{ marginTop: '-12px' }}
                             iconType="questionInCircle"
-                            aria-label="Info about the error"
+                            aria-label="Thông tin về lỗi"
                             onClick={() =>
                               this.props.copyToClipBoard(item.downReason)
                             }
@@ -227,7 +227,7 @@ hosts:
 
     const steps = [
       {
-        title: 'Check the Wazuh API service status',
+        title: 'Kiểm tra trạng thái dịch vụ API Wazuh',
         children: (
           <div>
             <EuiText>For Systemd</EuiText>
@@ -241,7 +241,7 @@ hosts:
         )
       },
       {
-        title: 'Check the configuration',
+        title: 'Kiểm tra cấu hình',
         children: (
           <div>
             <EuiText>
@@ -257,7 +257,7 @@ hosts:
         )
       },
       {
-        title: 'Test the configuration',
+        title: 'Kiểm tra cấu hình',
         children: checkConnectionChildren,
         status: this.state.status
       }

@@ -69,9 +69,9 @@ export const DrilldownConfigActor = {
                     { field: 'icon' },
                     { field: 'timestamp' },
                     { field: 'rule.description' },
-                    { field: 'data.github.org', label: 'Organization' },
-                    { field: 'data.github.repo', label: 'Repository' },
-                    { field: 'data.github.action', label: 'Action' },
+                    { field: 'data.github.org', label: 'Tổ chức' },
+                    { field: 'data.github.repo', label: 'Kho lưu trữ' },
+                    { field: 'data.github.action', label: 'Hành động' },
                     { field: 'rule.level' },
                     { field: 'rule.id' },
                   ]}

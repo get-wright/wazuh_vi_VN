@@ -59,7 +59,7 @@ const tabs = [
 export const WzSecurity = compose(
   withErrorBoundary,
   withReduxProvider,
-  withGlobalBreadcrumb([{ text: '' }, { text: 'Security' }]),
+  withGlobalBreadcrumb([{ text: '' }, { text: 'Bảo mật' }]),
   withUserAuthorizationPrompt(null, [WAZUH_ROLE_ADMINISTRATOR_NAME])
 )(() => {
   const dispatch = useDispatch();

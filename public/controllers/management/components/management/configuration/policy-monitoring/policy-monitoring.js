@@ -42,10 +42,10 @@ class WzPolicyMonitoring extends Component {
       <Fragment>
         {(this.props.onlyShowTab === 'Policy Monitoring' && (
           <WzTabSelector>
-            <WzTabSelectorTab label="General">
+            <WzTabSelectorTab label="Tổng quan">
               <WzConfigurationPolicyMonitoringGeneral {...this.props} />
             </WzTabSelectorTab>
-            <WzTabSelectorTab label="Ignored">
+            <WzTabSelectorTab label="Đã bỏ qua">
               <WzConfigurationPolicyMonitoringIgnored {...this.props} />
             </WzTabSelectorTab>
           </WzTabSelector>
@@ -57,13 +57,13 @@ class WzPolicyMonitoring extends Component {
             <WzConfigurationPolicyMonitoringSCA {...this.props} />
           )) || (
             <WzTabSelector>
-              <WzTabSelectorTab label="General">
+              <WzTabSelectorTab label="Tổng quan">
                 <WzConfigurationPolicyMonitoringGeneral {...this.props} />
               </WzTabSelectorTab>
-              <WzTabSelectorTab label="System audit">
+              <WzTabSelectorTab label="Kiểm định hệ thống">
                 <WzConfigurationPolicyMonitoringSystemAudit {...this.props} />
               </WzTabSelectorTab>
-              <WzTabSelectorTab label="Ignored">
+              <WzTabSelectorTab label="Đã bỏ qua">
                 <WzConfigurationPolicyMonitoringIgnored {...this.props} />
               </WzTabSelectorTab>
               <WzTabSelectorTab label="SCA">

@@ -14,11 +14,11 @@ import { webDocumentationLink } from "../../../../../../../common/services/web_d
 
 export default [
   {
-    text: 'Integrity monitoring documentation',
+    text: 'Tài liệu giám sát toàn vẹn',
     href: webDocumentationLink('user-manual/capabilities/file-integrity/index.html')
   },
   {
-    text: 'Syscheck reference',
+    text: 'Tham khảo syscheck',
     href: webDocumentationLink('user-manual/reference/ossec-conf/syscheck.html')
   }
 ];

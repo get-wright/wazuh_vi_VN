@@ -83,7 +83,7 @@ const panelTree = (props) => {
         icon: 'pencil',
         panel: {
           id: 1,
-          title: 'Edit filter',
+          title: 'Chỉnh sửa bộ lọc',
           width: 400,
           content: <EditFilter {...props} />
         }
@@ -167,7 +167,7 @@ function EditFilterValue(value, setValue, suggest): React.ReactNode {
   useEffect(() => {
     updateSuggestsValues(suggest, value, setSuggetsValues);
   }, [value])
-  return <EuiFormRow label="Value">
+  return <EuiFormRow label="Giá trị">
     <EuiInputPopover
       input={<EuiFieldText
         value={value}
@@ -200,7 +200,7 @@ function EditFilterOperator(operator, setOperator) {
     { value: '~', inputDisplay: 'like' },
   ];
 
-  return <EuiFormRow label="Operator">
+  return <EuiFormRow label="Người vận hành">
     <EuiSuperSelect options={operatorSelectOptions} valueOfSelected={operator} onChange={setOperator} />
   </EuiFormRow>;
 }
@@ -211,7 +211,7 @@ function EditFilterConjuntion(conjuntion: string, setConjuntion): React.ReactNod
     { id: `conjuntion-OR`, label: "OR" },
   ];
 
-  return <EuiFormRow label="Conjuntion">
+  return <EuiFormRow label="Kết hợp">
     <EuiButtonGroup legend="Conjunction" options={conjuntionOptions} idSelected={`conjuntion-${conjuntion.trim()}`} onChange={() => setConjuntion(/and/gi.test(conjuntion) ? ' OR ' : ' AND ')} />
   </EuiFormRow>;
 }

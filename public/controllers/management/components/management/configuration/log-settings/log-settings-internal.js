@@ -19,14 +19,14 @@ import { isString } from '../utils/utils';
 import helpLinks from './help-links';
 
 const mainSettings = [
-  { field: 'plain_format', label: 'Plain format' },
+  { field: 'plain_format', label: 'Định dạng đơn giản' },
   { field: 'JSON format', label: 'json_format' },
   { field: 'Compress rotatio', label: 'compress_rotation' },
   { field: 'Saved rotations', label: 'saved_rotations' },
-  { field: 'schedule', label: 'Schedule' },
-  { field: 'maxsize', label: 'Maximum log size' },
-  { field: 'minsize', label: 'Minimum log size' },
-  { field: 'maxage', label: 'Maximum log age' }
+  { field: 'schedule', label: 'Lịch trình' },
+  { field: 'maxsize', label: 'Kích thước log tối đa' },
+  { field: 'minsize', label: 'Kích thước log tối thiểu' },
+  { field: 'maxage', label: 'Tuổi tối đa của log' }
 ];
 
 class WzConfigurationLogSettingsInternal extends Component {
@@ -51,8 +51,8 @@ class WzConfigurationLogSettingsInternal extends Component {
           (currentConfig['monitor-logging'] &&
             currentConfig['monitor-logging'].logging && (
               <WzConfigurationSettingsTabSelector
-                title="Internal settings"
-                description="Basic internal log settings"
+                title="Cài đặt nội bộ"
+                description="Cài đặt log nội bộ cơ bản"
                 currentConfig={currentConfig['monitor-logging'].logging}
                 helpLinks={helpLinks}
               >
@@ -65,8 +65,8 @@ class WzConfigurationLogSettingsInternal extends Component {
         {currentConfig['agent-logging'] &&
           currentConfig['agent-logging'].logging && (
             <WzConfigurationSettingsTabSelector
-              title="Internal settings"
-              description="Basic internal log settings"
+              title="Cài đặt nội bộ"
+              description="Cài đặt log nội bộ cơ bản"
               currentConfig={currentConfig['agent-logging'].logging}
               helpLinks={helpLinks}
             >

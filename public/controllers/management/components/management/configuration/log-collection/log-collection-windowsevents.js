@@ -62,17 +62,17 @@ const panelsLabel = (item) =>
     : `${item.channel} (${item.logformat})`;
 
 const mainSettings = [
-  { field: 'logformat', label: 'Log format' },
-  { field: 'channel', label: 'Channel', render: renderValueOrNoValue, renderLabel: channelLabel },
-  { field: 'query', label: 'Query', render: queryValue },
+  { field: 'logformat', label: 'Định dạng log' },
+  { field: 'channel', label: 'Kênh', render: renderValueOrNoValue, renderLabel: channelLabel },
+  { field: 'query', label: 'Truy vấn', render: queryValue },
   {
     field: 'only-future-events',
-    label: 'Only future events',
+    label: 'Chỉ các sự kiện tương lai',
     render: renderValueOrNoValue,
   },
   {
     field: 'reconnect_time',
-    label: 'Reconnect Time',
+    label: 'Thời gian kết nối lại',
     render: renderValueOrNoValue,
   },
 ];
@@ -99,8 +99,8 @@ class WzConfigurationLogCollectionWindowsEvents extends Component {
         ) : null}
         {currentConfig?.[LOGCOLLECTOR_LOCALFILE_PROP]?.[LOCALFILE_WINDOWSEVENT_PROP]?.length ? (
           <WzConfigurationSettingsTabSelector
-            title="Windows events logs"
-            description="List of Windows logs that will be processed"
+            title="Windows logs sự kiện"
+            description="Danh sách Windows logs sẽ được xử lý"
             currentConfig={currentConfig}
             minusHeight={this.props.agent.id === '000' ? 320 : 415}
             helpLinks={helpLinks}

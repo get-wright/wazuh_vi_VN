@@ -21,12 +21,12 @@ import { isString, renderValueNoThenEnabled } from '../utils/utils';
 const mainSettings = [
   {
     field: 'disabled',
-    label: 'OpenSCAP integration status',
+    label: 'Trạng thái tích hợp OpenSCAP',
     render: renderValueNoThenEnabled
   },
-  { field: 'timeout', label: 'Timeout (in seconds) for scan executions' },
-  { field: 'interval', label: 'Interval between scan executions' },
-  { field: 'scan-on-start', label: 'Scan on start' }
+  { field: 'timeout', label: 'Thời gian chờ (tính bằng giây) cho lần quét' },
+  { field: 'interval', label: 'Khoảng thời gian giữa các lần quét' },
+  { field: 'scan-on-start', label: 'Quét khi khởi động' }
 ];
 
 class WzConfigurationOpenSCAPGeneral extends Component {
@@ -51,8 +51,8 @@ class WzConfigurationOpenSCAPGeneral extends Component {
           )}
         {wodleConfig['open-scap'] && (
           <WzConfigurationSettingsTabSelector
-            title="Main settings"
-            description="These settings apply to all OpenSCAP evaluations"
+            title="Cài đặt chính"
+            description="Các cài đặt này áp dụng cho tất cả các đánh giá OpenSCAP"
             currentConfig={wodleConfig}
             minusHeight={this.props.agent.id === '000' ? 320 : 415}
             helpLinks={helpLinks}

@@ -213,7 +213,7 @@ export const ApiTable = compose(withErrorBoundary, withReduxProvider)(class ApiT
                     color="primary"
                     style={{ marginTop: '-12px' }}
                     iconType="questionInCircle"
-                    aria-label="Info about the error"
+                    aria-label="Thông tin về lỗi"
                     onClick={() => this.props.copyToClipBoard(item.downReason)}
                   />
                 </EuiToolTip>
@@ -226,7 +226,7 @@ export const ApiTable = compose(withErrorBoundary, withReduxProvider)(class ApiT
                     color="primary"
                     style={{ marginTop: '-12px' }}
                     iconType="questionInCircle"
-                    aria-label="Info about the error"
+                    aria-label="Thông tin về lỗi"
                     onClick={() => this.props.copyToClipBoard(item.downReason)}
                   />
                 </EuiToolTip>
@@ -286,7 +286,7 @@ export const ApiTable = compose(withErrorBoundary, withReduxProvider)(class ApiT
                     ? 'starFilled'
                     : 'starEmpty'
                 }
-                aria-label="Set as default"
+                aria-label="Đặt làm mặc định"
                 onClick={async () => {
                   const currentDefault = await this.props.setDefault(item);
                   this.setState({
@@ -298,7 +298,7 @@ export const ApiTable = compose(withErrorBoundary, withReduxProvider)(class ApiT
             <EuiFlexItem grow={false}>
               <EuiToolTip position="top" content={<p>Check connection</p>}>
                 <EuiButtonIcon
-                  aria-label="Check connection"
+                  aria-label="Kiểm tra kết nối"
                   iconType="refresh"
                   onClick={async () => await this.checkApi(item)}
                   color="success"

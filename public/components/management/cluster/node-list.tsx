@@ -81,7 +81,7 @@ export const NodeList = withErrorBoundary(
                 <EuiFlexItem grow={false} style={{ marginRight: 0 }}>
                   <EuiToolTip position='right' content={`Back to groups`}>
                     <EuiButtonIcon
-                      aria-label='Back'
+                      aria-label='Quay lại'
                       style={{ paddingTop: 8 }}
                       color='primary'
                       iconSize='l'
@@ -105,7 +105,7 @@ export const NodeList = withErrorBoundary(
                 onSearch={e => this.search(e)}
                 isClearable={true}
                 fullWidth={true}
-                aria-label='Filter'
+                aria-label='Bộ lọc'
               />
             </EuiFlexItem>
           </EuiFlexGroup>

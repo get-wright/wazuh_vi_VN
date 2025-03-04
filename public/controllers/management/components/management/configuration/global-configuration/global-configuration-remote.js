@@ -39,13 +39,13 @@ const renderAllowedDeniedIPs = (items, label) => {
 
 const helpLinks = [
   {
-    text: 'Remote daemon reference',
+    text: 'Tham khảo daemon từ xa',
     href: webDocumentationLink(
       'user-manual/reference/daemons/wazuh-remoted.html',
     ),
   },
   {
-    text: 'Remote configuration reference',
+    text: 'Tham khảo cấu hình từ xa',
     href: webDocumentationLink('user-manual/reference/ossec-conf/remote.html'),
   },
 ];
@@ -103,8 +103,8 @@ class WzConfigurationGlobalConfigurationRemote extends Component {
         {currentConfig['request-remote'] &&
           currentConfig['request-remote'].remote && (
             <WzConfigurationSettingsTabSelector
-              title='Remote settings'
-              description='Configuration to listen for events from the agents or a syslog client'
+              title='Cài đặt từ xa'
+              description='Cấu hình để nghe sự kiện từ các trạm hoặc một syslog client.'
               minusHeight={320}
               currentConfig={currentConfig}
               helpLinks={helpLinks}

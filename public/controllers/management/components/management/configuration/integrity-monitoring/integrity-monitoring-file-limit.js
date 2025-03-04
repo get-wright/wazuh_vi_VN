@@ -22,12 +22,12 @@ import { renderValueYesThenEnabled } from '../utils/utils';
 const mainSettings = [
   {
     field: 'enabled',
-    label: 'File limit status',
+    label: 'Trạng thái giới hạn tệp',
     render: renderValueYesThenEnabled
   },
   {
     field: 'entries',
-    label: 'Maximum number of files to monitor'
+    label: 'Số tệp tối đa được theo dõi'
   }
 ];
 
@@ -44,8 +44,8 @@ class WzConfigurationIntegrityMonitoringFileLimit extends Component {
         currentConfig['syscheck-syscheck'].syscheck &&
         currentConfig['syscheck-syscheck'].syscheck.file_limit ? (
           <WzConfigurationSettingsTabSelector
-            title="File limit"
-            description="Limit the maximum of files to be monitored"
+            title="Giới hạn tệp"
+            description="Giới hạn tối đa số tệp được theo dõi"
             currentConfig={currentConfig['syscheck-syscheck']}
             minusHeight={this.props.agent.id === '000' ? 320 : 415}
             helpLinks={helpLinks}

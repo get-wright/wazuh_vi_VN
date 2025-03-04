@@ -29,12 +29,12 @@ class WzMenuManagement extends Component {
       management: {
         id: WAZUH_MENU_MANAGEMENT_SECTIONS_ID.MANAGEMENT,
         cyTestId: WAZUH_MENU_MANAGEMENT_SECTIONS_CY_TEST_ID.MANAGEMENT,
-        text: 'Management',
+        text: 'Trình quản lý',
       },
       administration: {
         id: WAZUH_MENU_MANAGEMENT_SECTIONS_ID.ADMINISTRATION,
         cyTestId: WAZUH_MENU_MANAGEMENT_SECTIONS_CY_TEST_ID.ADMINISTRATION,
-        text: 'Administration',
+        text: 'Quản trị',
       },
       ruleset: {
         id: WAZUH_MENU_MANAGEMENT_SECTIONS_ID.RULESET,
@@ -54,47 +54,47 @@ class WzMenuManagement extends Component {
       lists: {
         id: WAZUH_MENU_MANAGEMENT_SECTIONS_ID.CDB_LISTS,
         cyTestId: WAZUH_MENU_MANAGEMENT_SECTIONS_CY_TEST_ID.CDB_LISTS,
-        text: 'CDB lists',
+        text: 'Danh sách CDB',
       },
       groups: {
         id: WAZUH_MENU_MANAGEMENT_SECTIONS_ID.GROUPS,
         cyTestId: WAZUH_MENU_MANAGEMENT_SECTIONS_CY_TEST_ID.GROUPS,
-        text: 'Groups',
+        text: 'Các nhóm',
       },
       configuration: {
         id: WAZUH_MENU_MANAGEMENT_SECTIONS_ID.CONFIGURATION,
         cyTestId: WAZUH_MENU_MANAGEMENT_SECTIONS_CY_TEST_ID.CONFIGURATION,
-        text: 'Configuration',
+        text: 'Cấu hình',
       },
       statusReports: {
         id: WAZUH_MENU_MANAGEMENT_SECTIONS_ID.STATUS_AND_REPORTS,
         cyTestId: WAZUH_MENU_MANAGEMENT_SECTIONS_CY_TEST_ID.STATUS_AND_REPORTS,
-        text: 'Status and reports',
+        text: 'Trạng thái và báo cáo',
       },
       status: {
         id: WAZUH_MENU_MANAGEMENT_SECTIONS_ID.STATUS,
         cyTestId: WAZUH_MENU_MANAGEMENT_SECTIONS_CY_TEST_ID.STATUS,
-        text: 'Status',
+        text: 'Trạng thái',
       },
       cluster: {
         id: WAZUH_MENU_MANAGEMENT_SECTIONS_ID.CLUSTER,
         cyTestId: WAZUH_MENU_MANAGEMENT_SECTIONS_CY_TEST_ID.CLUSTER,
-        text: 'Cluster',
+        text: 'Cụm',
       },
       logs: {
         id: WAZUH_MENU_MANAGEMENT_SECTIONS_ID.LOGS,
         cyTestId: WAZUH_MENU_MANAGEMENT_SECTIONS_CY_TEST_ID.LOGS,
-        text: 'Logs',
+        text: 'logs',
       },
       reporting: {
         id: WAZUH_MENU_MANAGEMENT_SECTIONS_ID.REPORTING,
         cyTestId: WAZUH_MENU_MANAGEMENT_SECTIONS_CY_TEST_ID.REPORTING,
-        text: 'Reporting',
+        text: 'Báo cáo',
       },
       statistics: {
         id: WAZUH_MENU_MANAGEMENT_SECTIONS_ID.STATISTICS,
         cyTestId: WAZUH_MENU_MANAGEMENT_SECTIONS_CY_TEST_ID.STATISTICS,
-        text: 'Statistics',
+        text: 'Thống kê',
       },
     };
 

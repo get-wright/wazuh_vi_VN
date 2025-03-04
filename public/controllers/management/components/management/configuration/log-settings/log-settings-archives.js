@@ -19,14 +19,14 @@ import { isString } from '../utils/utils';
 import helpLinks from './help-links';
 
 const mainSettings = [
-  { field: 'plain_format', label: 'Plain format' },
+  { field: 'plain_format', label: 'Định dạng đơn giản' },
   { field: 'JSON format', label: 'json_format' },
   { field: 'Compress rotatio', label: 'compress_rotation' },
   { field: 'Saved rotations', label: 'saved_rotations' },
-  { field: 'schedule', label: 'Schedule' },
-  { field: 'maxsize', label: 'Maximum log size' },
-  { field: 'minsize', label: 'Minimum log size' },
-  { field: 'maxage', label: 'Maximum log age' }
+  { field: 'schedule', label: 'Lịch trình' },
+  { field: 'maxsize', label: 'Kích thước log tối đa' },
+  { field: 'minsize', label: 'Kích thước log tối thiểu' },
+  { field: 'maxage', label: 'Tuổi tối đa của log' }
 ];
 
 class WzConfigurationLogSettingsArchives extends Component {
@@ -51,8 +51,8 @@ class WzConfigurationLogSettingsArchives extends Component {
           (currentConfig['com-logging'] &&
             currentConfig['com-logging'].logging && (
               <WzConfigurationSettingsTabSelector
-                title="Archives settings"
-                description="Basic archives log settings"
+                title="Cài đặt kho lưu trữ"
+                description="Cài đặt log lưu trữ cơ bản"
                 currentConfig={
                   currentConfig['analysis-logging'].logging.archives
                 }

@@ -201,7 +201,7 @@ export const EditUser = ({ currentUser, closeFlyout, rolesObject }) => {
     modal = (
       <EuiOverlayMask>
         <EuiConfirmModal
-          title="Unsubmitted changes"
+          title="Thay đổi chưa được lưu"
           onConfirm={() => {
             setIsModalVisible(false);
             closeFlyout(false);
@@ -256,7 +256,7 @@ export const EditUser = ({ currentUser, closeFlyout, rolesObject }) => {
               <EuiFormRow label="" helpText="Set if the user is able to use run as">
                 <WzButtonPermissions
                   buttonType="switch"
-                  label="Allow run as"
+                  label="Cho phép chạy như"
                   showLabel={true}
                   checked={allowRunAs}
                   permissions={[{ action: 'security:edit_run_as', resource: '*:*:*' }]}

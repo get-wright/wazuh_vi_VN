@@ -67,7 +67,7 @@ export class TestConfiguration extends Component {
             {this.state.result && (
               <div>
                 <EuiCallOut
-                  title="The configuration is valid!"
+                  title="Cấu hình hợp lệ!"
                   color="success"
                   iconType="check"
                 ></EuiCallOut>

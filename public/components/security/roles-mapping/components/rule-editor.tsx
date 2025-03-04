@@ -156,7 +156,7 @@ export const RuleEditor = ({ save, initialRule, isLoading, isReserved, internalU
         <Fragment key={`rule_${idx}`}>
           <EuiFlexGroup>
             <EuiFlexItem>
-              <EuiFormRow label="User field">
+              <EuiFormRow label="Trường người dùng">
                 <EuiFieldText
                   disabled={isLoading || isReserved}
                   placeholder=""
@@ -167,19 +167,19 @@ export const RuleEditor = ({ save, initialRule, isLoading, isReserved, internalU
               </EuiFormRow>
             </EuiFlexItem>
             <EuiFlexItem grow={false}>
-              <EuiFormRow label="Search operation">
+              <EuiFormRow label="Hoạt động tìm kiếm">
                 <EuiSelect
                   disabled={isLoading || isReserved}
                   id="selectDocExample"
                   options={searchOperationOptions}
                   value={item.searchOperation}
                   onChange={e => onSelectorChange(e, idx)}
-                  aria-label="Use aria labels when no actual label is in use"
+                  aria-label="Sử dụng nhãn aria khi không có nhãn thực tế"
                 />
               </EuiFormRow>
             </EuiFlexItem>
             <EuiFlexItem>
-              <EuiFormRow label="Value">
+              <EuiFormRow label="Giá trị">
                 <EuiFieldText
                   disabled={isLoading || isReserved}
                   placeholder=""
@@ -195,7 +195,7 @@ export const RuleEditor = ({ save, initialRule, isLoading, isReserved, internalU
                 onClick={() => removeRule(idx)}
                 iconType="trash"
                 color="danger"
-                aria-label="Remove rule"
+                aria-label="Loại bỏ rule"
               />
             </EuiFlexItem>
           </EuiFlexGroup>
@@ -321,7 +321,7 @@ export const RuleEditor = ({ save, initialRule, isLoading, isReserved, internalU
                   mode="json"
                   onChange={onChangeRuleJson}
                   wrapEnabled
-                  aria-label="Code Editor"
+                  aria-label="Trình chỉnh sửa mã"
                 />
               )) || (
                   <Fragment>
@@ -329,7 +329,7 @@ export const RuleEditor = ({ save, initialRule, isLoading, isReserved, internalU
                       <h2>Map internal users</h2>
                     </EuiTitle>
                     <EuiFormRow
-                      label="Internal users"
+                      label="Người dùng nội bộ"
                       helpText="Assign internal users to the selected role mapping"
                     >
                       <EuiComboBox

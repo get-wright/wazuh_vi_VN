@@ -18,16 +18,16 @@ import { renderValueNoThenEnabled } from '../../../../controllers/management/com
 import { LogoGitHub } from '../../../common/logos';
 
 const settings = [
-  { field: 'enabled', label: 'Service status', render: renderValueNoThenEnabled },
-  { field: 'only_future_events', label: 'Collect events generated since Wazuh agent was started'},
-  { field: 'time_delay', label: 'Time in seconds that each scan will monitor until that delay backwards'},
-  { field: 'curl_max_size', label: 'Maximum size allowed for the GitHub API response'},
-  { field: 'interval', label: 'Interval between GitHub wodle executions in seconds'},
-  { field: 'event_type', label: 'Event type'},
-  { field: 'api_auth', label: 'Credentials', render: (value) => value.map(v => 
+  { field: 'enabled', label: 'Trạng thái dịch vụ', render: renderValueNoThenEnabled },
+  { field: 'only_future_events', label: 'Thu thập các sự kiện tạo ra từ khi trạm Wazuh được khởi động'},
+  { field: 'time_delay', label: 'Thời gian (tính bằng giây) mà mỗi lần quét sẽ theo dõi cho đến khi khoảng trễ được đảo ngược'},
+  { field: 'curl_max_size', label: 'Kích thước tối đa cho phép cho phản hồi API GitHub'},
+  { field: 'interval', label: 'Khoảng thời gian giữa các lần thực hiện Github wodle (tính bằng giây)'},
+  { field: 'event_type', label: 'Loại sự kiện'},
+  { field: 'api_auth', label: 'Thông tin xác thực', render: (value) => value.map(v => 
     <EuiPanel paddingSize='s' key={`module_configuration_api_auth_${v.org_name}_${v.client_id}`}>
       <EuiDescriptionList listItems={[
-        {title: 'Organization', description: v.org_name},
+        {title: 'Tổ chức', description: v.org_name},
         {title: 'Token', description: v.api_token}
       ].filter(item => typeof item.description !== 'undefined')}/>
     </EuiPanel>

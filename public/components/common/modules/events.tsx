@@ -313,7 +313,7 @@ export const Events = compose(
       if (satisfyPluginPlatformVersion('<7.11')) {
         getToasts().add({
           color: 'success',
-          title: 'The index pattern was refreshed successfully.',
+          title: 'Mẫu chỉ mục đã được làm mới thành công.',
           text: toMountPoint(
             <EuiFlexGroup justifyContent="flexEnd" gutterSize="s">
               <EuiFlexItem grow={false}>
@@ -332,7 +332,7 @@ export const Events = compose(
       } else if (satisfyPluginPlatformVersion('>=7.11')) {
         getToasts().add({
           color: 'warning',
-          title: 'Found unknown fields in the index pattern.',
+          title: 'Tìm thấy các trường không xác định trong mẫu chỉ mục.',
           text: toMountPoint(
             <EuiFlexGroup justifyContent="flexEnd" gutterSize="s">
               <EuiFlexItem grow={false}>
@@ -354,7 +354,7 @@ export const Events = compose(
     errorToast = (error) => {
       getToasts().add({
         color: 'danger',
-        title: 'The index pattern could not be refreshed.',
+        title: 'Mẫu chỉ mục không thể được làm mới.',
         text:
           'There are some unknown fields for the current index pattern. The index pattern fields need to be refreshed.',
       });

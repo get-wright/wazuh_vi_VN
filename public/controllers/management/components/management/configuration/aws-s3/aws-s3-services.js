@@ -22,12 +22,12 @@ import helpLinks from './help-links';
 import { connect } from 'react-redux';
 
 const mainSettings = [
-  { field: 'type', label: 'Service type' },
-  { field: 'aws_profile', label: 'Profile name with read permissions' },
-  { field: 'account_alias', label: 'AWS account alias' },
-  { field: 'iam_role_arn', label: 'IAM ARN role to read bucket logs' },
-  { field: 'only_logs_after', label: 'Parse only logs from this date onwards' },
-  { field: 'regions', label: 'Limit log parsing to these regions' }
+  { field: 'type', label: 'Loại dịch vụ' },
+  { field: 'aws_profile', label: 'Tên hồ sơ có quyền đọc' },
+  { field: 'account_alias', label: 'Bí danh tài khoản AWS' },
+  { field: 'iam_role_arn', label: 'Vai trò IAM ARN để đọc logs từ bucket' },
+  { field: 'only_logs_after', label: 'Phân tích logs chỉ từ ngày này trở đi' },
+  { field: 'regions', label: 'Giới hạn phân tích log chỉ trong các vùng này' }
 ];
 
 class WzConfigurationAmazonS3Services extends Component {
@@ -53,8 +53,8 @@ class WzConfigurationAmazonS3Services extends Component {
           wodleConfig['aws-s3'] &&
           wodleConfig['aws-s3'].services && (
             <WzConfigurationSettingsTabSelector
-              title="Services"
-              description="Amazon services from where logs are read"
+              title="Dịch vụ"
+              description="Amazon services lưu trữ logs"
               currentConfig={wodleConfig}
               minusHeight={320}
               helpLinks={helpLinks}

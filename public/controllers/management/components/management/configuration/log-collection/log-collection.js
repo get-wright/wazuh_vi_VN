@@ -50,7 +50,7 @@ class WzConfigurationLogCollection extends Component {
       <Fragment>
         <WzTabSelector>
           { currentConfig[LOGCOLLECTOR_LOCALFILE_PROP][LOCALFILE_LOGS_PROP].length > 0 && 
-            <WzTabSelectorTab label="Logs">
+            <WzTabSelectorTab label="logs">
               <WzConfigurationLogCollectionLogs
                 currentConfig={currentConfig}
                 agent={agent}
@@ -66,7 +66,7 @@ class WzConfigurationLogCollection extends Component {
             </WzTabSelectorTab>
           }
           { currentConfig[LOGCOLLECTOR_LOCALFILE_PROP][LOCALFILE_COMMANDS_PROP].length > 0 && 
-            <WzTabSelectorTab label="Commands">
+            <WzTabSelectorTab label="Các lệnh">
               <WzConfigurationLogCollectionCommands
                 currentConfig={currentConfig}
                 agent={agent}

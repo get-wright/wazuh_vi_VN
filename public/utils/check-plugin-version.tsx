@@ -46,7 +46,7 @@ export const checkPluginVersion = async () => {
 const checkClientAppVersion = (appInfo: TAppInfo) => {
   if (appInfo['app-version'] !== appVersion || appInfo.revision !== appRevision) {
     const toastOptions: ErrorToastOptions = {
-      title: 'Conflict with the Wazuh app version',
+      title: 'Xung đột với phiên bản ứng dụng Wazuh',
       toastLifeTimeMs: 50000,
       toastMessage: `The version of the Wazuh app in your browser does not correspond with the app version installed in ${PLUGIN_PLATFORM_NAME}. Please, clear your browser cache. For more info check the full error.`,
     };

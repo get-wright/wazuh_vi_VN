@@ -84,10 +84,10 @@ export class Inventory extends Component {
       customBadges: [],
       filters: [],
       stats: [
-        { title: 0, description: 'Critical', titleColor: this.titleColors.Critical },
-        { title: 0, description: 'High', titleColor: this.titleColors.High },
-        { title: 0, description: 'Medium', titleColor: this.titleColors.Medium },
-        { title: 0, description: 'Low', titleColor: this.titleColors.Low },
+        { title: 0, description: 'Nghiêm trọng', titleColor: this.titleColors.Critical },
+        { title: 0, description: 'Cao', titleColor: this.titleColors.High },
+        { title: 0, description: 'Trung bình', titleColor: this.titleColors.Medium },
+        { title: 0, description: 'Thấp', titleColor: this.titleColors.Low },
       ],
       severityPieStats: [],
       vulnerabilityLastScan: {
@@ -262,7 +262,7 @@ export class Inventory extends Component {
                       <EuiFlexItem>
                         <WzStat
                           title={last_full_scan}
-                          description="Last full scan"
+                          description="Lần quét đầy đủ cuối cùng"
                           textAlign="center"
                           titleSize="xs"
                         />
@@ -270,7 +270,7 @@ export class Inventory extends Component {
                       <EuiFlexItem>
                         <WzStat
                           title={last_partial_scan}
-                          description="Last partial scan"
+                          description="Lần quét nhanh cuối"
                           textAlign="center"
                           titleSize="xs"
                         />
@@ -287,11 +287,11 @@ export class Inventory extends Component {
                   size={{ width: '100%', height: '150px' }}
                   showLegend
                   selectorOptions={[
-                    { value: 'name', text: 'Name' },
+                    { value: 'name', text: 'Tên' },
                     { value: 'cve', text: 'CVE' },
-                    { value: 'version', text: 'Version' },
-                    { value: 'cvss2_score', text: 'CVSS2 Score' },
-                    { value: 'cvss3_score', text: 'CVSS3 Score' },
+                    { value: 'version', text: 'Phiên bản' },
+                    { value: 'cvss2_score', text: 'Điểm CVSS2' },
+                    { value: 'cvss3_score', text: 'Điểm CVSS3' },
                   ]}
                   onFetch={this.fetchVisualizationVulnerabilitiesSummaryData}
                   onFetchExtraDependencies={[this.props.agent.id]}

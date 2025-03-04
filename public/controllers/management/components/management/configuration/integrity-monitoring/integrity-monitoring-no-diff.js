@@ -39,7 +39,7 @@ class WzConfigurationIntegrityMonitoringNoDiff extends Component {
           currentConfig['syscheck-syscheck'].syscheck &&
           currentConfig['syscheck-syscheck'].syscheck.nodiff && (
             <WzConfigurationSettingsTabSelector
-              title="No diff directories"
+              title="Không có thư mục nào để tính diff"
               description="These files won't have their diff calculated"
               currentConfig={currentConfig['syscheck-syscheck']}
               minusHeight={this.props.agent.id === '000' ? 320 : 415}

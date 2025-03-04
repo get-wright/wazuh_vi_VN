@@ -51,7 +51,7 @@ export function FimEventsTable({ agent, router }) {
                   iconType="popout"
                   color="primary"
                   onClick={() => navigateToFim(agent, router)}
-                  aria-label="Open FIM"
+                  aria-label="Mở FIM"
                 />
               </EuiToolTip>
             </EuiFlexItem>

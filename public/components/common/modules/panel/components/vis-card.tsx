@@ -49,7 +49,7 @@ export const VisCard = ({ changeView = () => {}, id, width, tab, ...props }) => 
                     style={{ padding: '0px 6px', height: 30 }}
                     onClick={() => toggleExpand()}
                     iconType="expand"
-                    aria-label="Expand"
+                    aria-label="Mở rộng"
                   />
                 </EuiFlexItem>
               </EuiFlexGroup>

@@ -27,14 +27,14 @@ import helpLinks from './help-links';
 const mainSettings = [
   {
     field: 'disabled',
-    label: 'Amazon S3 integration status',
+    label: 'Trạng thái tích hợp Amazon S3',
     render: renderValueNoThenEnabled
   },
-  { field: 'interval', label: 'Frequency for reading from S3 buckets' },
-  { field: 'run_on_start', label: 'Run on start' },
+  { field: 'interval', label: 'Tần suất đọc từ S3 buckets' },
+  { field: 'run_on_start', label: 'Chạy khi khởi động' },
   {
     field: 'remove_from_bucket',
-    label: 'Remove bucket logs after being read'
+    label: 'Xóa logs của bucket sau khi được đọc'
   },
   { field: 'skip_on_error', label: "Skip logs that can't be processed" }
 ];
@@ -62,8 +62,8 @@ class WzConfigurationAmazonS3General extends Component {
           )}
         {currentConfig && wodleConfig['aws-s3'] && (
           <WzConfigurationSettingsTabSelector
-            title="Main settings"
-            description="Common settings applied to all Amazon S3 buckets"
+            title="Cài đặt chính"
+            description="Cài đặt chung áp dụng cho tất cả Amazon S3 buckets"
             currentConfig={wodleConfig}
             minusHeight={320}
             helpLinks={helpLinks}

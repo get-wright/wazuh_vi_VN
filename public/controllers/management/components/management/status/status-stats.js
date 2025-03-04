@@ -29,7 +29,7 @@ export class WzStatusStats extends Component {
     }));
     this.agentStatus.push({
       color: undefined,
-      description: 'Agents coverage',
+      description: 'Độ bao phủ của các trạm',
       status: 'coverage'
     })
   }

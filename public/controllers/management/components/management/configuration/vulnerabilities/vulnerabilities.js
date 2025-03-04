@@ -43,13 +43,13 @@ class WzConfigurationVulnerabilities extends Component {
     return (
       <Fragment>
         <WzTabSelector>
-          <WzTabSelectorTab label="General">
+          <WzTabSelectorTab label="Tổng quan">
             <WzConfigurationVulnerabilitiesGeneral
               currentConfig={currentConfig}
               wodleConfig={this.wodleConfig}
             />
           </WzTabSelectorTab>
-          <WzTabSelectorTab label="Providers">
+          <WzTabSelectorTab label="Nhà cung cấp">
             <WzConfigurationVulnerabilitiesProviders
               currentConfig={currentConfig}
               wodleConfig={this.wodleConfig}

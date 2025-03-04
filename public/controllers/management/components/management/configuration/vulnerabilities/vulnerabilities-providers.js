@@ -110,8 +110,8 @@ class WzConfigurationVulnerabilitiesProviders extends Component {
         wodleConfig['vulnerability-detector'].providers ? (
           <Fragment>
             <WzConfigurationSettingsTabSelector
-              title="Providers"
-              description="List of OVAL databases providers to check for vulnerability scans"
+              title="Nhà cung cấp"
+              description="Danh sách các nhà cung cấp cơ sở dữ liệu OVAL để quét lỗ hổng"
               currentConfig={wodleConfig}
               minusHeight={320}
               helpLinks={helpLinks}

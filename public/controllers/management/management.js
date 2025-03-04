@@ -231,7 +231,7 @@ export class ManagementController {
         error: {
           error: error,
           message: error?.message || '',
-          title: 'Error restarting cluster',
+          title: 'Lỗi khởi động lại cụm',
         },
       };
 
@@ -267,7 +267,7 @@ export class ManagementController {
         error: {
           error: error,
           message: error?.message || '',
-          title: 'Error restarting manager',
+          title: 'Lỗi khởi động lại trình quản lý',
         },
       };
 
@@ -293,7 +293,7 @@ export class ManagementController {
         error: {
           error: error,
           message: error?.message || '',
-          title: 'Error restarting cluster',
+          title: 'Lỗi khởi động lại cụm',
         },
       };
 
@@ -445,7 +445,7 @@ export class ManagementController {
         error: {
           error: error,
           message: error?.message || '',
-          title: 'Error loading node list',
+          title: 'Lỗi tải danh sách nút',
         },
       };
 
@@ -524,7 +524,7 @@ export class ManagementController {
         error: {
           error: error,
           message: error?.message || '',
-          title: 'Files cannot be loaded',
+          title: 'Không thể tải các tệp',
         },
       };
 

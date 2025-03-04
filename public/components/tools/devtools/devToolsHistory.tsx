@@ -108,7 +108,7 @@ export function DevToolsHistory({ localStorage, closeHistory, addRequest }) {
                 isReadOnly={true}
                 wrapEnabled
                 setOptions={codeEditorOptions}
-                aria-label="Code Editor"
+                aria-label="Trình chỉnh sửa mã"
             />
         )
     }

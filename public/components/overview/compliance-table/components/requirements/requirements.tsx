@@ -128,7 +128,7 @@ export class ComplianceRequirements extends Component {
     const panels = [
       {
         id: 0,
-        title: 'Options',
+        title: 'Tùy chọn',
         items: [
           {
             name: 'Select all',

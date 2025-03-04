@@ -227,7 +227,7 @@ class WzStatusActionButtons extends Component {
         value={selectedNode}
         onChange={this.changeNode}
         disabled={isLoading || this.state.isRestarting}
-        aria-label="Select node"
+        aria-label="Chọn nút"
       />
     );
 

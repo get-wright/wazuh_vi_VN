@@ -27,13 +27,13 @@ import { webDocumentationLink } from '../../../../../../../common/services/web_d
 
 const helpLinks = [
   {
-    text: 'Monitoring containers activity',
+    text: 'Giám sát hoạt động container',
     href: webDocumentationLink(
       'user-manual/capabilities/container-security/use-cases.html',
     ),
   },
   {
-    text: 'Docker listener module reference',
+    text: 'Tham chiếu module Docker trình nghe',
     href: webDocumentationLink(
       'user-manual/reference/ossec-conf/wodle-docker.html',
     ),
@@ -43,22 +43,22 @@ const helpLinks = [
 const mainSettings = [
   {
     field: 'disabled',
-    label: 'Docker listener status',
+    label: 'Trạng thái Docker trình nghe',
     render: renderValueNoThenEnabled,
   },
   {
     field: 'attempts',
-    label: 'Number of attempts to execute the listener',
+    label: 'Số lần thử thực thi trình nghe',
     render: renderValueOrDefault('5'),
   },
   {
     field: 'interval',
-    label: 'Waiting time to rerun the listener in case it fails',
+    label: 'Thời gian chờ để chạy lại trình nghe nếu thất bại',
     render: renderValueOrDefault('10m'),
   },
   {
     field: 'run_on_start',
-    label: 'Run the listener immediately when service is started',
+    label: 'Chạy trình nghe ngay khi dịch vụ khởi động',
     render: renderValueOrYes,
   },
 ];
@@ -99,8 +99,8 @@ class WzConfigurationDockerListener extends Component {
           )}
         {currentConfig && this.wodleConfig['docker-listener'] && (
           <WzConfigurationSettingsTabSelector
-            title='Main settings'
-            description='General Docker listener settings'
+            title='Cài đặt chính'
+            description='Cài đặt Docker trình nghe chung'
             currentConfig={this.wodleConfig}
             minusHeight={this.props.agent.id === '000' ? 240 : 355}
             helpLinks={helpLinks}

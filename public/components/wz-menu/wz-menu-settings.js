@@ -40,12 +40,12 @@ class WzMenuSettings extends Component {
       settings: {
         id: WAZUH_MENU_SETTINGS_SECTIONS_ID.SETTINGS,
         cyTestId: WAZUH_MENU_SETTINGS_SECTIONS_CY_TEST_ID.SETTINGS,
-        text: 'Settings',
+        text: 'Cài đặt',
       },
       api: {
         id: WAZUH_MENU_SETTINGS_SECTIONS_ID.API_CONFIGURATION,
         cyTestId: WAZUH_MENU_SETTINGS_SECTIONS_CY_TEST_ID.API_CONFIGURATION,
-        text: 'API configuration',
+        text: 'Cấu hình API',
       },
       modules: {
         id: WAZUH_MENU_SETTINGS_SECTIONS_ID.MODULES,
@@ -55,12 +55,12 @@ class WzMenuSettings extends Component {
       sample_data: {
         id: WAZUH_MENU_SETTINGS_SECTIONS_ID.SAMPLE_DATA,
         cyTestId: WAZUH_MENU_SETTINGS_SECTIONS_CY_TEST_ID.SAMPLE_DATA,
-        text: 'Sample data',
+        text: 'Dữ liệu mẫu',
       },
       configuration: {
         id: WAZUH_MENU_SETTINGS_SECTIONS_ID.CONFIGURATION,
         cyTestId: WAZUH_MENU_SETTINGS_SECTIONS_CY_TEST_ID.CONFIGURATION,
-        text: 'Configuration',
+        text: 'Cấu hình',
       },
       logs: {
         id: WAZUH_MENU_SETTINGS_SECTIONS_ID.LOGS,
@@ -69,12 +69,12 @@ class WzMenuSettings extends Component {
       miscellaneous: {
         id: WAZUH_MENU_SETTINGS_SECTIONS_ID.MISCELLANEOUS,
         cyTestId: WAZUH_MENU_SETTINGS_SECTIONS_CY_TEST_ID.MISCELLANEOUS,
-        text: 'Miscellaneous',
+        text: 'Khác',
       },
       about: {
         id: WAZUH_MENU_SETTINGS_SECTIONS_ID.ABOUT,
         cyTestId: WAZUH_MENU_SETTINGS_SECTIONS_CY_TEST_ID.ABOUT,
-        text: 'About',
+        text: 'Về',
       },
     };
     return (auxSettings);

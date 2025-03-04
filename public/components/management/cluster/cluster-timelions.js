@@ -35,7 +35,7 @@ export const ClusterTimelions = compose (withErrorBoundary,withReduxProvider) (c
                   style={{ padding: '0px 6px', height: 30 }}
                   onClick={() => this.expand('Wazuh-App-Cluster-monitoring-Overview-Manager')}
                   iconType="expand"
-                  aria-label="Expand"
+                  aria-label="Mở rộng"
                 />
               </EuiFlexGroup>
               <div style={{ height: '100%' }}>
@@ -66,7 +66,7 @@ export const ClusterTimelions = compose (withErrorBoundary,withReduxProvider) (c
                   style={{ padding: '0px 6px', height: 30 }}
                   onClick={() => this.expand('Wazuh-App-Cluster-monitoring-Overview')}
                   iconType="expand"
-                  aria-label="Expand"
+                  aria-label="Mở rộng"
                 />
               </EuiFlexGroup>
               <div style={{ height: '100%' }}>

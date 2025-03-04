@@ -30,13 +30,13 @@ class WzConfigurationLogSettings extends Component {
       <Fragment>
         {agent && agent.id === '000' ? (
           <WzTabSelector>
-            <WzTabSelectorTab label="Alerts">
+            <WzTabSelectorTab label="Cảnh báo">
               <WzConfigurationLogSettingsAlerts {...this.props} />
             </WzTabSelectorTab>
-            <WzTabSelectorTab label="Archives">
+            <WzTabSelectorTab label="Kho lưu trữ">
               <WzConfigurationLogSettingsArchives {...this.props} />
             </WzTabSelectorTab>
-            <WzTabSelectorTab label="Internal">
+            <WzTabSelectorTab label="Nội bộ">
               <WzConfigurationLogSettingsInternal {...this.props} />
             </WzTabSelectorTab>
           </WzTabSelector>

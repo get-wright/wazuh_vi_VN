@@ -107,7 +107,7 @@ export class FilesInGroupTable extends Component {
           return (
             <EuiToolTip position="right" content="See file content">
               <EuiButtonIcon
-                aria-label="See file content"
+                aria-label="Xem nội dung tệp"
                 onClick={() => 
                   this.props.openFileContent(
                     this.state.groupName,

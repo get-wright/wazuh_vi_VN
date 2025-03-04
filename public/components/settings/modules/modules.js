@@ -55,7 +55,7 @@ export class EnableModulesWrapper extends Component {
             ]
           },
           {
-            title: 'Threat Detection and Response',
+            title: 'Phát hiện và ứng phó đe dọa',
             modules: [
               { name: 'vuls', default: true, agent: false },
               { name: 'mitre', default: true, agent: false },
@@ -65,7 +65,7 @@ export class EnableModulesWrapper extends Component {
             ]
           },
           {
-            title: 'Regulatory Compliance',
+            title: 'Tuân thủ quy định',
             modules: [
               { name: 'pci', default: true, agent: false },
               { name: 'nist', default: true, agent: false },

@@ -192,7 +192,7 @@ export class RowDetails extends Component {
                       isDisabled={!hasFieldMapping}
                       onClick={() => this.props.addFilter(filter)}
                       iconType="magnifyWithPlus"
-                      aria-label="Filter"
+                      aria-label="Bộ lọc"
                       iconSize="s"
                     />
                   </EuiToolTip>
@@ -203,7 +203,7 @@ export class RowDetails extends Component {
                       isDisabled={!hasFieldMapping}
                       onClick={() => this.props.addFilterOut(filter)}
                       iconType="magnifyWithMinus"
-                      aria-label="Filter"
+                      aria-label="Bộ lọc"
                       iconSize="s"
                     />
                   </EuiToolTip>
@@ -213,7 +213,7 @@ export class RowDetails extends Component {
                     <EuiButtonIcon
                       onClick={() => this.props.toggleColumn(key)}
                       iconType="tableOfContents"
-                      aria-label="Filter"
+                      aria-label="Bộ lọc"
                       iconSize="s"
                     />
                   </EuiToolTip>

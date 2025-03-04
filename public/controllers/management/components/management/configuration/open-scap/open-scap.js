@@ -39,14 +39,14 @@ class WzConfigurationOpenSCAP extends Component {
     let { currentConfig } = this.props;
     return (
       <WzTabSelector>
-        <WzTabSelectorTab label="General">
+        <WzTabSelectorTab label="Tổng quan">
           <WzConfigurationOpenSCAPGeneral
             {...this.props}
             currentConfig={currentConfig}
             wodleConfig={this.wodleConfig}
           />
         </WzTabSelectorTab>
-        <WzTabSelectorTab label="Evaluations">
+        <WzTabSelectorTab label="Đánh giá">
           <WzConfigurationOpenSCAPEvaluations
             {...this.props}
             currentConfig={currentConfig}

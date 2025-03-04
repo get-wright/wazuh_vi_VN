@@ -284,7 +284,7 @@ class WzListEditor extends Component {
             <h2>
               <EuiToolTip position="right" content={'Back to lists'}>
                 <EuiButtonIcon
-                  aria-label="Back"
+                  aria-label="Quay lại"
                   color="primary"
                   iconSize="l"
                   iconType="arrowLeft"
@@ -302,7 +302,7 @@ class WzListEditor extends Component {
             placeholder="New CDB list name"
             value={this.state.newListName}
             onChange={this.onNewListNameChange}
-            aria-label="Use aria labels when no actual label is in use"
+            aria-label="Sử dụng nhãn aria khi không có nhãn thực tế"
           />
         </EuiFlexItem>
       </Fragment>
@@ -362,7 +362,7 @@ class WzListEditor extends Component {
                   placeholder="Key"
                   value={addingKey}
                   onChange={this.onChangeKey}
-                  aria-label="Use aria labels when no actual label is in use"
+                  aria-label="Sử dụng nhãn aria khi không có nhãn thực tế"
                 />
               </EuiFlexItem>
 
@@ -372,7 +372,7 @@ class WzListEditor extends Component {
                   placeholder="Value"
                   value={addingValue}
                   onChange={this.onChangeValue}
-                  aria-label="Use aria labels when no actual label is in use"
+                  aria-label="Sử dụng nhãn aria khi không có nhãn thực tế"
                 />
               </EuiFlexItem>
               <EuiFlexItem grow={false}>
@@ -412,7 +412,7 @@ class WzListEditor extends Component {
             <span style={{ fontSize: '22px' }}>
               <EuiToolTip position="right" content={'Back to lists'}>
                 <EuiButtonIcon
-                  aria-label="Back"
+                  aria-label="Quay lại"
                   color="primary"
                   iconSize="l"
                   iconType="arrowLeft"
@@ -452,7 +452,7 @@ class WzListEditor extends Component {
                 placeholder="New value"
                 value={this.state.editingValue}
                 onChange={this.onChangeEditingValue}
-                aria-label="Use aria labels when no actual label is in use"
+                aria-label="Sử dụng nhãn aria khi không có nhãn thực tế"
               />
             );
           } else {
@@ -469,7 +469,7 @@ class WzListEditor extends Component {
               <Fragment>
                 <EuiToolTip position="top" content={'Save'}>
                   <EuiButtonIcon
-                    aria-label="Confirm value"
+                    aria-label="Xác nhận giá trị"
                     iconType="check"
                     onClick={() => {
                       this.setEditedValue();
@@ -479,7 +479,7 @@ class WzListEditor extends Component {
                 </EuiToolTip>
                 <EuiToolTip position="top" content={'Discard'}>
                   <EuiButtonIcon
-                    aria-label="Cancel edition"
+                    aria-label="Hủy chỉnh sửa"
                     iconType="cross"
                     onClick={() => this.setState({ editing: false })}
                     color="danger"
@@ -492,7 +492,7 @@ class WzListEditor extends Component {
               <Fragment>
                 <WzButtonPermissions
                   buttonType="icon"
-                  aria-label="Edit content"
+                  aria-label="Chỉnh sửa nội dung"
                   iconType="pencil"
                   permissions={this.getUpdatePermissions(fileName)}
                   tooltip={{ position: 'top', content: `Edit ${item.key}` }}
@@ -506,7 +506,7 @@ class WzListEditor extends Component {
                 />
                 <WzButtonPermissions
                   buttonType="icon"
-                  aria-label="Remove content"
+                  aria-label="Xóa nội dung"
                   iconType="trash"
                   permissions={this.getDeletePermissions(fileName)}
                   tooltip={{ position: 'top', content: `Remove ${item.key}` }}

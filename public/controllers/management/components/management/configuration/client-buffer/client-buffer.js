@@ -27,11 +27,11 @@ import { webDocumentationLink } from '../../../../../../../common/services/web_d
 
 const helpLinks = [
   {
-    text: 'Anti-flooding mechanism',
+    text: 'Cơ chế chống tràn',
     href: webDocumentationLink('user-manual/capabilities/antiflooding.html')
   },
   {
-    text: 'Client buffer reference',
+    text: 'Tham chiếu buffer máy khách',
     href: webDocumentationLink('user-manual/reference/ossec-conf/client-buffer.html')
   }
 ];
@@ -39,17 +39,17 @@ const helpLinks = [
 const mainSettings = [
   {
     field: 'disabled',
-    label: 'Buffer status',
+    label: 'Trạng thái buffer',
     render: renderValueNoThenEnabled
   },
   {
     field: 'queue_size',
-    label: 'Queue size',
+    label: 'Kích thước hàng đợi',
     render: renderValueOrDefault('5000')
   },
   {
     field: 'events_per_second',
-    label: 'Events per second',
+    label: 'Số sự kiện mỗi giây',
     render: renderValueOrDefault('500')
   }
 ];
@@ -78,8 +78,8 @@ class WzConfigurationClientBuffer extends Component {
           !isString(currentConfig['agent-buffer']) &&
           currentConfig['agent-buffer'].buffer && (
             <WzConfigurationSettingsTabSelector
-              title="Main settings"
-              description="These settings determine the event processing rate for the agent"
+              title="Cài đặt chính"
+              description="Các cài đặt này xác định tốc độ xử lý sự kiện cho trạm"
               currentConfig={currentConfig}
               minusHeight={355}
               helpLinks={helpLinks}

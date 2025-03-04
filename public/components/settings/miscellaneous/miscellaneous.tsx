@@ -49,11 +49,11 @@ export const SettingsMiscellaneous = () => {
         </EuiFlexGroup>
         <EuiSpacer />
         <SettingsMiscellaneousCategory 
-          title='Health check'
+          title='Kiểm tra sức khỏe'
           actions={[
             {
-              title: 'Execute in debug mode',
-              description: 'Run health check and no redirect when all checks are ready',
+              title: 'Thực thi ở chế độ debug',
+              description: 'Chạy kiểm tra sức khỏe và không chuyển hướng khi tất cả kiểm tra đã sẵn',
               render: (
                 <EuiFormRow>
                   <EuiButton

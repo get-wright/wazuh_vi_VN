@@ -23,9 +23,9 @@ export type ApiAuthProps = {
 
 const columns = [
   { field: 'tenant_id', label: 'Tenant Id' },
-  { field: 'client_id', label: 'Client Id' },
-  { field: 'client_secret', label: 'Client Secret' },
-  { field: 'client_secret_path', label: 'Client Secret Path' },
+  { field: 'client_id', label: 'ID máy khách' },
+  { field: 'client_secret', label: 'Secret của máy khách' },
+  { field: 'client_secret_path', label: 'Đường dẫn đến Secret của máy khách' },
 ];
 
 export const ApiAuthTab = ({ agent, wodleConfiguration }: ApiAuthProps) => {
@@ -37,7 +37,7 @@ export const ApiAuthTab = ({ agent, wodleConfiguration }: ApiAuthProps) => {
 
   return (
     <WzConfigurationSettingsTabSelector
-      title="Credentials for the authentication with the API"
+      title="Thông tin xác thực dùng với API"
       currentConfig={wodleConfiguration}
       minusHeight={agent.id === '000' ? 370 : 320}
       helpLinks={HELP_LINKS}

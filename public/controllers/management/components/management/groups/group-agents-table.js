@@ -45,14 +45,14 @@ class WzGroupAgentsTable extends Component {
       {
         type: 'q',
         label: 'status',
-        description: 'Filter by agent connection status',
+        description: 'Lọc theo trạng thái kết nối của trạm',
         operators: ['=', '!='],
         values: UI_ORDER_AGENT_STATUS,
       },
       {
         type: 'q',
         label: 'os.platform',
-        description: 'Filter by operating system platform',
+        description: 'Lọc theo nền tảng hệ điều hành',
         operators: ['=', '!='],
         values: async value =>
           getAgentFilterValues('os.platform', value, {
@@ -62,7 +62,7 @@ class WzGroupAgentsTable extends Component {
       {
         type: 'q',
         label: 'ip',
-        description: 'Filter by agent IP address',
+        description: 'Lọc theo địa chỉ IP của trạm',
         operators: ['=', '!='],
         values: async value =>
           getAgentFilterValues('ip', value, {
@@ -72,7 +72,7 @@ class WzGroupAgentsTable extends Component {
       {
         type: 'q',
         label: 'name',
-        description: 'Filter by agent name',
+        description: 'Lọc theo tên của trạm',
         operators: ['=', '!='],
         values: async value =>
           getAgentFilterValues('name', value, {
@@ -82,7 +82,7 @@ class WzGroupAgentsTable extends Component {
       {
         type: 'q',
         label: 'id',
-        description: 'Filter by agent id',
+        description: 'Lọc theo ID của trạm',
         operators: ['=', '!='],
         values: async value =>
           getAgentFilterValues('id', value, {
@@ -92,7 +92,7 @@ class WzGroupAgentsTable extends Component {
       {
         type: 'q',
         label: 'node_name',
-        description: 'Filter by node name',
+        description: 'Lọc theo tên nút',
         operators: ['=', '!='],
         values: async value =>
           getAgentFilterValues('node_name', value, {
@@ -102,7 +102,7 @@ class WzGroupAgentsTable extends Component {
       {
         type: 'q',
         label: 'manager',
-        description: 'Filter by manager',
+        description: 'Lọc theo trình quản lý',
         operators: ['=', '!='],
         values: async value =>
           getAgentFilterValues('manager', value, {
@@ -112,7 +112,7 @@ class WzGroupAgentsTable extends Component {
       {
         type: 'q',
         label: 'version',
-        description: 'Filter by agent version',
+        description: 'Lọc theo phiên bản của trạm',
         operators: ['=', '!='],
         values: async value =>
           getAgentFilterValues('version', value, {
@@ -122,7 +122,7 @@ class WzGroupAgentsTable extends Component {
       {
         type: 'q',
         label: 'configSum',
-        description: 'Filter by agent config sum',
+        description: 'Lọc theo sum cấu hình của trạm',
         operators: ['=', '!='],
         values: async value =>
           getAgentFilterValues('configSum', value, {
@@ -132,15 +132,15 @@ class WzGroupAgentsTable extends Component {
       {
         type: 'q',
         label: 'mergedSum',
-        description: 'Filter by agent merged sum',
+        description: 'Lọc theo merged sum của trạm',
         operators: ['=', '!='],
         values: async value =>
           getAgentFilterValues('mergedSum', value, {
             q: `group=${this.props.state.itemDetail.name}`,
           }),
       },
-      //{ type: 'q', label: 'dateAdd', description: 'Filter by add date', operators: ['=', '!=',], values: async (value) => getAgentFilterValues('dateAdd', value,  {q: `group=${this.props.state.itemDetail.name}`})},
-      //{ type: 'q', label: 'lastKeepAlive', description: 'Filter by last keep alive', operators: ['=', '!=',], values: async (value) => getAgentFilterValues('lastKeepAlive', value,  {q: `group=${this.props.state.itemDetail.name}`})},
+      //{ type: 'q', label: 'dateAdd', description: 'Lọc theo ngày thêm', operators: ['=', '!=',], values: async (value) => getAgentFilterValues('dateAdd', value,  {q: `group=${this.props.state.itemDetail.name}`})},
+      //{ type: 'q', label: 'lastKeepAlive', description: 'Lọc theo lần giữ kết nối cuối', operators: ['=', '!=',], values: async (value) => getAgentFilterValues('lastKeepAlive', value,  {q: `group=${this.props.state.itemDetail.name}`})},
     ];
     this.groupsHandler = GroupsHandler;
 
@@ -205,7 +205,7 @@ class WzGroupAgentsTable extends Component {
                   ],
                 ]}
                 tooltip={{ position: 'top', content: 'Go to the agent' }}
-                aria-label='Go to the agent'
+                aria-label='Đi đến trạm'
                 iconType='eye'
                 onClick={async () => {
                   this.props.groupsProps.showAgent(item);
@@ -231,7 +231,7 @@ class WzGroupAgentsTable extends Component {
                     position: 'top',
                     content: 'Remove agent from this group',
                   }}
-                  aria-label='Remove agent from this group'
+                  aria-label='Xóa trạm khỏi nhóm này'
                   iconType='trash'
                   onConfirm={async () => {
                     this.removeItems([item]);

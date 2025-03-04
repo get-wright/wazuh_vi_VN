@@ -109,7 +109,7 @@ export const checkApiService =
         );
         getToasts().add({
           color: 'warning',
-          title: 'Selected Wazuh API has been updated',
+          title: 'API Wazuh đã được cập nhật',
           text: '',
           toastLifeTimeMs: 3000,
         });

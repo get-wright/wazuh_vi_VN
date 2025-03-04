@@ -29,46 +29,46 @@ import helpLinks from './help-links';
 const mainSettings = [
   {
     field: 'disabled',
-    label: 'Integrity monitoring status',
+    label: 'Trạng thái giám sát toàn vẹn',
     render: renderValueNoThenEnabled
   },
   {
     field: 'frequency',
-    label: 'Interval (in seconds) to run the integrity scan'
+    label: 'Khoảng thời gian (tính bằng giây) để chạy quét toàn vẹn'
   },
   {
     field: 'scan_time',
-    label: 'Time of day to run integrity scans',
+    label: 'Thời gian trong ngày để chạy quét toàn vẹn',
     render: renderValueOrNoValue
   },
   {
     field: 'scan_day',
-    label: 'Day of the week to run integrity scans',
+    label: 'Ngày trong tuần để chạy quét toàn vẹn',
     render: renderValueOrNoValue
   },
   {
     field: 'auto_ignore',
-    label: 'Ignore files that change too many times',
+    label: 'Bỏ qua các tệp thay đổi quá nhiều lần',
     render: renderValueOrNo,
     when: 'manager'
   },
   {
     field: 'alert_new_files',
-    label: 'Alert when new files are created',
+    label: 'Cảnh báo khi tệp mới được tạo',
     render: renderValueOrNo,
     when: 'manager'
   },
-  { field: 'scan_on_start', label: 'Scan on start' },
-  { field: 'skip_nfs', label: 'Skip scan on CIFS/NFS mounts' },
-  { field: 'skip_dev', label: 'Skip scan of /dev directory' },
-  { field: 'skip_sys', label: 'Skip scan of /sys directory' },
-  { field: 'skip_proc', label: 'Skip scan of /proc directory' },
+  { field: 'scan_on_start', label: 'Quét khi khởi động' },
+  { field: 'skip_nfs', label: 'Bỏ qua quét ổ CIFS/NFS' },
+  { field: 'skip_dev', label: 'Bỏ qua quét thư mục /dev' },
+  { field: 'skip_sys', label: 'Bỏ qua quét thư mục /sys' },
+  { field: 'skip_proc', label: 'Bỏ qua quét thư mục /proc' },
   {
     field: 'remove_old_diff',
-    label: 'Remove old local snapshots',
+    label: 'Xóa các snapshot cũ cục bộ',
     render: renderValueOrYes
   },
-  { field: 'restart_audit', label: 'Restart the Audit daemon' },
+  { field: 'restart_audit', label: 'Khởi động lại daemon Audit' },
   {
     field: 'windows_audit_interval',
     label: "Interval (in seconds) to check directories' SACLs",
@@ -76,12 +76,12 @@ const mainSettings = [
   },
   {
     field: 'prefilter_cmd',
-    label: 'Command to prevent prelinking',
+    label: 'Lệnh để ngăn chặn liên kết trước',
     render: renderValueOrNoValue
   },
-  { field: 'max_eps', label: 'Maximum event reporting throughput' },
-  { field: 'process_priority', label: 'Process priority' },
-  { field: 'database', label: 'Database type' }
+  { field: 'max_eps', label: 'Thông lượng báo cáo sự kiện tối đa' },
+  { field: 'process_priority', label: 'Ưu tiên quá trình' },
+  { field: 'database', label: 'Loại cơ sở dữ liệu' }
 ];
 
 const mainSettingsOfAgentOrManager = agent =>
@@ -98,8 +98,8 @@ class WzConfigurationIntegrityMonitoringGeneral extends Component {
     return (
       <Fragment>
         <WzConfigurationSettingsTabSelector
-          title="General"
-          description="The settings shown below are applied globally"
+          title="Tổng quan"
+          description="Các cài đặt dưới đây được áp dụng toàn cục"
           currentConfig={currentConfig['syscheck-syscheck']}
           minusHeight={this.props.agent.id === '000' ? 320 : 415}
           helpLinks={helpLinks}

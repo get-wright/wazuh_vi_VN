@@ -22,21 +22,21 @@ import { webDocumentationLink } from '../../../../../../../common/services/web_d
 const mainSettings = [
   {
     field: 'log_alert_level',
-    label: 'Minimum severity level to store the alert'
+    label: 'Mức độ nghiêm trọng tối thiểu để lưu trữ cảnh báo'
   },
   {
     field: 'email_alert_level',
-    label: 'Minimum severity level to send the alert by email'
+    label: 'Mức độ nghiêm trọng tối thiểu để gửi cảnh báo qua email'
   },
-  { field: 'use_geoip', label: 'Enable GeoIP lookups', render: renderValueOrNo }
+  { field: 'use_geoip', label: 'Kích hoạt tra cứu địa lý', render: renderValueOrNo }
 ];
 const helpLinks = [
   {
-    text: 'Use cases about alerts generation',
+    text: 'Các trường hợp sử dụng liên quan đến tạo cảnh báo',
     href: webDocumentationLink('getting-started/use-cases/index.html')
   },
   {
-    text: 'Alerts reference',
+    text: 'Tham khảo cảnh báo',
     href: webDocumentationLink('user-manual/reference/ossec-conf/alerts.html')
   }
 ];
@@ -69,8 +69,8 @@ class WzConfigurationAlertsGeneral extends Component {
           !isString(currentConfig['analysis-alerts']) &&
           currentConfig['analysis-alerts'].alerts && (
             <WzConfigurationSettingsTabSelector
-              title="Main settings"
-              description="General alert settings"
+              title="Cài đặt chính"
+              description="Cài đặt cảnh báo chung"
               currentConfig={currentConfig}
               minusHeight={320}
               helpLinks={helpLinks}

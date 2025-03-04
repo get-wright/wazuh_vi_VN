@@ -26,18 +26,18 @@ export default compose(
     if (props.agent.id === '000') {
       breadcrumb = [
         { text: '' },
-        { text: 'Management', href: '#/manager' },
-        { text: 'Configuration' },
+        { text: 'Trình quản lý', href: '#/manager' },
+        { text: 'Cấu hình' },
       ];
     } else {
       breadcrumb = [
         { text: '' },
         {
-          text: 'Agents',
+          text: 'Các trạm',
           href: '#/agents-preview',
         },
         { agent: props.agent },
-        { text: 'Configuration' },
+        { text: 'Cấu hình' },
       ];
     }
     $('#breadcrumbNoTitle').attr('title', '');

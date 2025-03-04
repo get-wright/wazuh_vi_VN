@@ -15,25 +15,25 @@ export default {
   id: 'vuls',
   xml_tag: 'vulnerabilities-detector',
   name: 'Vulnerabilities',
-  description: 'Configuration options for vulnerabilities.',
+  description: 'Tùy chọn cấu hình cho các lỗ hổng',
   category: 'Threat detection and response',
   documentation_link: webDocumentationLink('user-manual/reference/ossec-conf/vuln-detector.html'),
   icon: 'securityApp',
   avaliable_for_manager: true,
   steps: [
     {
-      title: 'Settings',
+      title: 'Cài đặt',
       description: '',
       elements: [
         {
           name: 'enabled',
-          description: 'Enables the module.',
+          description: 'Bật module',
           type: 'switch',
           required: true
         },
         {
           name: 'interval',
-          description: 'Time between vulnerabilities scans.',
+          description: 'Khoảng cách giữa các lần quét lỗ hổng.',
           type: 'input',
           required: true,
           default_value: '5m',
@@ -43,14 +43,14 @@ export default {
         },
         {
           name: 'run_on_start',
-          description: 'Runs updates and vulnerabilities scans immediately when service is started.',
+          description: 'Chạy cập nhật và quét lỗ hổng ngay khi dịch vụ khởi động.',
           type: 'switch',
           required: true,
           default_value: true
         },
         {
           name: 'ignore_time',
-          description: ' Time during which vulnerabilities that have already been alerted will be ignored.',
+          description: 'Thời gian mà các lỗ hổng đã được cảnh báo sẽ bị bỏ qua',
           type: 'input',
           default_value: '6h',
           placeholder: 'Time in format <number><time unit suffix>',
@@ -60,12 +60,12 @@ export default {
       ]
     },
     {
-      title: 'Providers',
-      description: 'Define providers of vulnerability updates.',
+      title: 'Nhà cung cấp',
+      description: 'Xác định nguồn cung cấp cập nhật lỗ hổng.',
       elements: [
         {
           name: 'provider',
-          description: 'Configuration block to specify vulnerability updates.',
+          description: 'Khối cấu hình để chỉ định cập nhật lỗ hổng',
           repeatable: true,
           required: true,
           removable: true,
@@ -76,7 +76,7 @@ export default {
           attributes: [
             {
               name: 'name',
-              description: 'Defines a vulnerability information provider.',
+              description: 'Xác định nguồn cung cấp thông tin lỗ hổng',
               type: 'select',
               required: true,
               values: [
@@ -93,13 +93,13 @@ export default {
           options: [
             {
               name: 'enabled',
-              description: 'Enables the vulnerability provider update.',
+              description: 'Cho phép cập nhật từ nhà cung cấp lỗ hổng',
               type: 'switch',
               required: true
             },
             {
               name: 'os',
-              description: 'Feed to update.',
+              description: 'Nguồn cấp dữ liệu để cập nhật.',
               type: 'select',
               info: `For canonical: ()`,
 
@@ -120,26 +120,26 @@ export default {
               attributes: [
                 {
                   name: 'update_interval',
-                  description: 'How often the vulnerability database is updated. It has priority over the update_interval option of the provider block.',
+                  description: 'Tần suất cập nhật cơ sở dữ liệu lỗ hổng. Ưu tiên hơn tùy chọn update_interval của khối nhà cung cấp.',
                   type: 'input',
                   validate_error_message: 'A positive number that should contain a suffix character indicating a time unit: s (seconds), m (minutes), h (hours) or d (days).',
                   validate_regex: /^[1-9]\d*[s|m|h|d]$/
                 },
                 {
                   name: 'url',
-                  description: 'Defines the link to an alternative OVAL files.',
+                  description: 'Xác định liên kết đến tệp OVAL thay thế.',
                   type: 'input',
                   placeholder: 'Link to download the OVAL file obtained from Canonical or Debian.'
                 },
                 {
                   name: 'path',
-                  description: 'Defines the path to an alternative OVAL file.',
+                  description: 'Xác định đường dẫn đến tệp OVAL thay thế.',
                   type: 'input',
                   placeholder: ''
                 },
                 {
                   name: 'port',
-                  description: 'Defines the connection port when using the url attribute.',
+                  description: 'Xác định cổng kết nối khi sử dụng thuộc tính url.',
                   type: 'input-number',
                   values: { min: 0 },
                   default_value: '',
@@ -147,7 +147,7 @@ export default {
                 },
                 {
                   name: 'allow',
-                  description: 'Defines compatibility with unsupported systems.',
+                  description: 'Xác định khả năng tương thích với các hệ thống không được hỗ trợ',
                   info: `You can find a guide on how to set it up ${webDocumentationLink('user-manual/capabilities/vulnerability-detection/allow_os.html')}`,
                   type: 'input',
                   validate_error_message: 'A valid operating system not supported by default.'
@@ -156,7 +156,7 @@ export default {
             },
             {
               name: 'update_interval',
-              description: 'How often the vulnerabilities of the provider are updated. It can be overwritten by the attribute with the same name of <os>.',
+              description: 'Tần suất cập nhật lỗ hổng từ nhà cung cấp. Có thể bị ghi đè bởi thuộc tính cùng tên của <os>.',
               type: 'input',
               default_value: '1h',
               placeholder: 'A positive number that should contain a suffix character indicating a time unit: s (seconds), m (minutes), h (hours) or d (days).',
@@ -165,7 +165,7 @@ export default {
             },
             {
               name: 'update_from_year',
-              description: 'Year from which the provider will be updated.',
+              description: 'Năm mà nhà cung cấp sẽ được cập nhật.',
               default_value: '2010',
               type: 'input',
               placeholder: 'Year from which the provider will be updated.',
@@ -174,11 +174,11 @@ export default {
             },
             {
               name: 'allow',
-              description: 'Defines compatibility with unsupported systems.',
+              description: 'Xác định khả năng tương thích với các hệ thống không được hỗ trợ',
               attributes: [
                 {
                   name: 'replaced_os',
-                  description: 'Defines the version of Red Hat that will replace the unsupported system.',
+                  description: 'Xác định phiên bản Red Hat sẽ thay thế hệ thống không được hỗ trợ.',
                   type: 'input',
                   placeholder: 'A numeric value that in substitution with the tag forms a valid link.',
                   validate_error_message: 'A numeric value that in substitution with the tag forms a valid link.'
@@ -187,13 +187,13 @@ export default {
             },
             {
               name: 'url',
-              description: 'Defines the link to an alternative feed files.',
+              description: 'Xác định liên kết đến tệp nguồn cấp thay thế.',
               type: 'input',
               placeholder:'Defines the link to an alternative feed files.',
               attributes: [
                 {
                   name: 'start',
-                  description: 'Defines the first value which the tag will be substituted.',
+                  description: 'Xác định giá trị đầu tiên mà tag sẽ được thay thế.',
                   type: 'input-number',
                   values: { min: 0 },
                   default_value: '',
@@ -202,7 +202,7 @@ export default {
                 },
                 {
                   name: 'end',
-                  description: 'Defines the last value which the tag will be substituted.',
+                  description: 'Xác định giá trị cuối cùng mà tag sẽ được thay thế.',
                   type: 'input-number',
                   values: { min: 0 },
                   default_value: '',
@@ -211,7 +211,7 @@ export default {
                 },
                 {
                   name: 'port',
-                  description: 'Defines the connection port.',
+                  description: 'Xác định cổng kết nối.',
                   type: 'input-number',
                   values: { min: 0 },
                   placeholder: 'A valid port.',
@@ -221,7 +221,7 @@ export default {
             },
             {
               name: 'path',
-              description: 'Defines the path to an alternative feed files.',
+              description: 'Xác định đường dẫn đến tệp nguồn cấp thay thế.',
               type: 'input',
               placeholder: 'A valid path'
             }

@@ -15,7 +15,7 @@ export default {
   id: 'office',
   name: 'Office 365',
   wodle_name: 'office',
-  description: 'Configuration options of the Office 365 wodle.',
+  description: 'Tùy chọn cấu hình của Office 365 wodle',
   category: 'Quản lý thông tin an ninh',
   documentation_link: webDocumentationLink('user-manual/reference/ossec-conf/wodle-s3.html'),
   icon: 'logoOfficeMono',
@@ -23,7 +23,7 @@ export default {
   avaliable_for_agent: true,
   steps: [
     // {
-    //   title: 'Required settings',
+    //   title: 'Cài đặt bắt buộc',
     //   description: '',
     //   elements: [
     //     {
@@ -34,7 +34,7 @@ export default {
     //     },
     //     {
     //       name: 'interval',
-    //       description: 'Frequency for reading from the S3 bucket.',
+    //       description: 'Tần số đọc từ S3 bucket',
     //       type: 'input',
     //       required: true,
     //       placeholder: 'Positive number with suffix character indicating a time unit',
@@ -44,7 +44,7 @@ export default {
     //     },
     //     {
     //       name: 'run_on_start',
-    //       description: 'Run evaluation immediately when service is started.',
+    //       description: 'Chạy đánh giá ngay khi dịch vụ khởi động.',
     //       type: 'switch',
     //       required: true,
     //       default_value: true
@@ -53,18 +53,18 @@ export default {
     //   ]
     // },
     // {
-    //   title: 'Optional settings',
+    //   title: 'Cài đặt tùy chọn',
     //   description: '',
     //   elements: [
     //     {
     //       name: 'remove_from_bucket',
-    //       description: 'Define if you want to remove logs from your S3 bucket after they are read by the wodle.',
+    //       description: 'Xác định nếu bạn muốn xóa logs khỏi S3 bucket sau khi chúng được đọc bởi wodle.',
     //       type: 'switch',
     //       default_value: true
     //     },
     //     {
     //       name: 'skip_on_error',
-    //       description: 'When unable to process and parse a CloudTrail log, skip the log and continue processing',
+    //       description: 'Khi không thể xử lý và phân tích một bản ghi CloudTrail, bỏ qua log đó và tiếp tục xử lý.',
     //       type: 'switch',
     //       default_value: true
     //     }
@@ -72,11 +72,11 @@ export default {
     // },
     // {
     //   title: 'Buckets',
-    //   description: 'Defines one or more buckets to process.',
+    //   description: 'Xác định một hoặc nhiều bucket để xử lý',
     //   elements: [
     //     {
     //       name: 'bucket',
-    //       description: 'Defines a bucket to process.',
+    //       description: 'Xác định bucket để xử lý',
     //       removable: true,
     //       required: true,
     //       repeatable: true,
@@ -89,7 +89,7 @@ export default {
     //       attributes: [
     //         {
     //           name: 'type',
-    //           description: 'Specifies type of bucket.',
+    //           description: 'Chỉ định loại bucket',
     //           info: 'Different configurations as macie has custom type.',
     //           type: 'select',
     //           required: true,
@@ -107,26 +107,26 @@ export default {
     //       options: [
     //         {
     //           name: 'name',
-    //           description: 'Name of the S3 bucket from where logs are read.',
+    //           description: 'Tên của S3 bucket nơi đọc logs.',
     //           type: 'input',
     //           required: true,
     //           placeholder: 'Name of the S3 bucket'
     //         },
     //         {
     //           name: 'aws_account_id',
-    //           description: 'The AWS Account ID for the bucket logs. Only works with CloudTrail buckets.',
+    //           description: 'ID tài khoản AWS cho logs của bucket. Chỉ áp dụng với CloudTrail buckets.',
     //           type: 'input',
     //           placeholder: 'Comma list of 12 digit AWS Account ID'
     //         },
     //         {
     //           name: 'aws_account_alias',
-    //           description: 'A user-friendly name for the AWS account.',
+    //           description: 'Tên thân thiện dành cho tài khoản AWS',
     //           type: 'input',
     //           placeholder: 'AWS account user-friendly name'
     //         },
     //         {
     //           name: 'access_key',
-    //           description: 'The access key ID for the IAM user with the permission to read logs from the bucket.',
+    //           description: 'ID khóa truy cập cho người dùng IAM có quyền đọc logs từ bucket.',
     //           type: 'input',
     //           placeholder: 'Any alphanumerical key.'
     //         },
@@ -138,25 +138,25 @@ export default {
     //         },
     //         {
     //           name: 'aws_profile',
-    //           description: 'A valid profile name from a Shared Credential File or AWS Config File with the permission to read logs from the bucket.',
+    //           description: 'Tên profile hợp lệ từ Shared Credential File hoặc AWS Config File với quyền đọc logs từ bucket.',
     //           type: 'input',
     //           placeholder: 'Valid profile name'
     //         },
     //         {
     //           name: 'iam_role_arn',
-    //           description: 'A valid role arn with permission to read logs from the bucket.Valid role arn',
+    //           description: 'Role arn hợp lệ với quyền đọc logs từ bucket. Valid role arn',
     //           type: 'input',
     //           placeholder: 'Valid role arn'
     //         },
     //         {
     //           name: 'path',
-    //           description: 'If defined, the path or prefix for the bucket.',
+    //           description: 'Nếu được định nghĩa, đường dẫn hoặc tiền tố cho bucket.',
     //           type: 'input',
     //           placeholder: 'Path or prefix for the bucket.'
     //         },
     //         {
     //           name: 'only_logs_after',
-    //           description: 'A valid date, in YYYY-MMM-DD format, that only logs from after that date will be parsed. All logs from before that date will be skipped.',
+    //           description: 'Ngày hợp lệ theo định dạng YYYY-MMM-DD, chỉ các logs sau ngày này mới được phân tích; tất cả logs trước đó sẽ bị bỏ qua.',
     //           type: 'input',
     //           placeholder: 'Date, e.g.: 2020-APR-02',
     //           validate_regex: /^[1-9]\d{3}-((JAN)|(FEB)|(MAR)|(APR)|(MAY)|(JUN)|(JUL)|(AUG)|(SEP)|(OCT)|(NOV)|(DEC))-\d{2}$/,
@@ -164,14 +164,14 @@ export default {
     //         },
     //         {
     //           name: 'regions',
-    //           description: 'A comma-delimited list of regions to limit parsing of logs. Only works with CloudTrail buckets.',
+    //           description: 'Một danh sách các vùng, phân cách bằng dấu phẩy, để hạn chế việc phân tích logs. Chỉ áp dụng với CloudTrail buckets.',
     //           type: 'input',
     //           default_value: 'All regions',
     //           placeholder: 'Comma-delimited list of valid regions'
     //         },
     //         {
     //           name: 'aws_organization_id',
-    //           description: 'Name of AWS organization. Only works with CloudTrail buckets.',
+    //           description: 'Tên tổ chức AWS. Chỉ áp dụng với CloudTrail buckets.',
     //           type: 'input',
     //           placeholder: 'Valid AWS organization name'
     //         }

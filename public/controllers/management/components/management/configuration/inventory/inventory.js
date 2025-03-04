@@ -23,32 +23,32 @@ import { webDocumentationLink } from '../../../../../../../common/services/web_d
 const mainSettings = [
   {
     field: 'disabled',
-    label: 'Syscollector integration status',
+    label: 'Trạng thái tích hợp syscollector',
     render: renderValueNoThenEnabled,
   },
-  { field: 'interval', label: 'Interval between system scans' },
-  { field: 'scan-on-start', label: 'Scan on start' },
+  { field: 'interval', label: 'Khoảng thời gian giữa các lần quét hệ thống' },
+  { field: 'scan-on-start', label: 'Quét khi khởi động' },
 ];
 
 const scanSettings = [
-  { field: 'hardware', label: 'Scan hardware info' },
-  { field: 'processes', label: 'Scan current processes' },
-  { field: 'os', label: 'Scan operating system info' },
-  { field: 'packages', label: 'Scan installed packages' },
-  { field: 'network', label: 'Scan network interfaces' },
-  { field: 'ports', label: 'Scan listening network ports' },
-  { field: 'ports_all', label: 'Scan all network ports' },
+  { field: 'hardware', label: 'Quét thông tin phần cứng' },
+  { field: 'processes', label: 'Quét các tiến trình hiện tại' },
+  { field: 'os', label: 'Quét thông tin hệ điều hành' },
+  { field: 'packages', label: 'Quét các gói đã cài' },
+  { field: 'network', label: 'Quét giao diện mạng' },
+  { field: 'ports', label: 'Quét các cổng mạng mở' },
+  { field: 'ports_all', label: 'Quét tất cả các cổng mạng' },
 ];
 
 const helpLinks = [
   {
-    text: 'System inventory',
+    text: 'Inventory hệ thống',
     href: webDocumentationLink(
       'user-manual/capabilities/system-inventory/index.html',
     ),
   },
   {
-    text: 'Syscollector module reference',
+    text: 'Tham khảo module syscollector',
     href: webDocumentationLink(
       'user-manual/reference/ossec-conf/wodle-syscollector.html',
     ),
@@ -88,8 +88,8 @@ class WzConfigurationInventory extends Component {
           )}
         {currentConfig && this.wodleConfig && this.wodleConfig.syscollector && (
           <WzConfigurationSettingsTabSelector
-            title='Main settings'
-            description='General settings applied to all the scans'
+            title='Cài đặt chính'
+            description='Cài đặt chung áp dụng cho tất cả các lần quét'
             currentConfig={this.wodleConfig}
             minusHeight={this.props.agent.id === '000' ? 260 : 355}
             helpLinks={helpLinks}
@@ -99,8 +99,8 @@ class WzConfigurationInventory extends Component {
               items={mainSettings}
             />
             <WzConfigurationSettingsGroup
-              title='Scan settings'
-              description='Specific inventory scans to collect'
+              title='Cài đặt quét'
+              description='Các lần quét inventory cụ thể để thu thập'
               config={this.wodleConfig.syscollector}
               items={scanSettings}
             />

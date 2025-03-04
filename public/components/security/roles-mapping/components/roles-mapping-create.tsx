@@ -84,7 +84,7 @@ export const RolesMappingCreate = ({
     modal = (
       <EuiOverlayMask>
         <EuiConfirmModal
-          title="Unsubmitted changes"
+          title="Thay đổi chưa được lưu"
           onConfirm={() => {
             setIsModalVisible(false);
             closeFlyout(false);
@@ -129,7 +129,7 @@ export const RolesMappingCreate = ({
         <EuiFlyoutBody>
           <EuiForm component="form" style={{ padding: 24 }}>
             <EuiFormRow
-              label="Role mapping name"
+              label="Tên ánh xạ vai trò"
               isInvalid={false}
               error={'Please provide a role mapping name'}
               helpText="Introduce a name for this role mapping."
@@ -141,7 +141,7 @@ export const RolesMappingCreate = ({
               />
             </EuiFormRow>
             <EuiFormRow
-              label="Roles"
+              label="Vai trò"
               isInvalid={false}
               error={'At least one role must be selected.'}
               helpText="Assign roles to your users."

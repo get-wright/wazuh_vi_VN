@@ -89,7 +89,7 @@ export function SyscollectorInventory({ agent }) {
       {agent && agent.status === API_NAME_AGENT_STATUS.DISCONNECTED && (
         <EuiCallOut
           style={{ margin: '8px 16px 8px 16px' }}
-          title='This agent is currently disconnected, the data may be outdated.'
+          title='Trạm này hiện bị ngắt kết nối, dữ liệu có thể lỗi thời.'
           iconType='iInCircle'
         />
       )}
@@ -104,7 +104,7 @@ export function SyscollectorInventory({ agent }) {
           <SyscollectorTable
             tableParams={{
               path: `/syscollector/${agent.id}/netiface`,
-              title: 'Network interfaces',
+              title: 'Giao diện mạng',
               columns: netifaceColumns,
               icon: 'indexMapping',
               searchBar: false,
@@ -116,7 +116,7 @@ export function SyscollectorInventory({ agent }) {
           <SyscollectorTable
             tableParams={{
               path: `/syscollector/${agent.id}/ports`,
-              title: 'Network ports',
+              title: 'Cổng mạng',
               columns: portsColumns[soPlatform],
               icon: 'inputOutput',
               searchBar: true,
@@ -131,7 +131,7 @@ export function SyscollectorInventory({ agent }) {
           <SyscollectorTable
             tableParams={{
               path: `/syscollector/${agent.id}/netaddr`,
-              title: 'Network settings',
+              title: 'Cài đặt mạng',
               columns: netaddrColumns,
               icon: 'controlsHorizontal',
               searchBar: false,
@@ -144,7 +144,7 @@ export function SyscollectorInventory({ agent }) {
             <SyscollectorTable
               tableParams={{
                 path: `/syscollector/${agent.id}/hotfixes`,
-                title: 'Windows updates',
+                title: 'Bản cập nhật Windows',
                 columns: [{ id: 'hotfix' }],
                 icon: 'logoWindows',
                 searchBar: false,
@@ -161,7 +161,7 @@ export function SyscollectorInventory({ agent }) {
             tableParams={{
               path: `/syscollector/${agent.id}/packages`,
               hasTotal: true,
-              title: 'Packages',
+              title: 'Gói',
               columns: packagesColumns[soPlatform],
               icon: 'apps',
               searchBar: true,
@@ -177,7 +177,7 @@ export function SyscollectorInventory({ agent }) {
             tableParams={{
               path: `/syscollector/${agent.id}/processes`,
               hasTotal: true,
-              title: 'Processes',
+              title: 'Quá trình',
               columns: processColumns[soPlatform],
               icon: 'console',
               searchBar: true,

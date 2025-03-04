@@ -38,7 +38,7 @@ class WzConfigurationClusterSelect extends Component {
         options={options}
         value={this.props.clusterNodeSelected}
         onChange={this.onChange}
-        aria-label="Select Configuration Cluster Node"
+        aria-label="Chọn nút cụm cấu hình"
         fullWidth={true}
       />
     );

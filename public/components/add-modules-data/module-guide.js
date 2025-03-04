@@ -60,7 +60,7 @@ const capitalize = (str) => str[0].toUpperCase() + str.slice(1);
 const agentTypeButtons = [
   {
     id: 'manager',
-    label: 'Manager'
+    label: 'Trình quản lý'
   },
   {
     id: 'agent',
@@ -150,7 +150,7 @@ class WzModuleGuide extends Component {
   resetGuideWithNotification = () => {
     this.resetGuide(true);
     this.addToast({
-      title: 'The guide was restarted',
+      title: 'Hướng dẫn đã được đặt lại',
       color: 'success'
     });
   }
@@ -341,7 +341,7 @@ class WzModuleGuide extends Component {
                   content='Show / hide attributes'
                 >
                   <EuiButtonToggle
-                    label='Attributes'
+                    label='Thuộc tính'
                     color={this.checkInvalidElements(guideOption.attributes) ? 'danger' : 'primary'}
                     fill={guideOption.show_attributes}
                     iconType={!guideOption.show_attributes ? 'eye' : 'eyeClosed'}
@@ -371,7 +371,7 @@ class WzModuleGuide extends Component {
                   content='Show / hide options'
                 >
                   <EuiButtonToggle
-                    label='Options'
+                    label='Tùy chọn'
                     color={this.checkInvalidElements(guideOption.options) ? 'danger' : 'primary'}
                     fill={guideOption.show_options}
                     iconType={!guideOption.show_options ? 'eye' : 'eyeClosed'}
@@ -696,7 +696,7 @@ class WzModuleGuide extends Component {
                       position='top'
                       content='Back to add modules data'
                     >
-                      <EuiButtonIcon onClick={() => this.props.close()} iconType='arrowLeft' iconSize='l' aria-label='Back to add modules data'/>
+                      <EuiButtonIcon onClick={() => this.props.close()} iconType='arrowLeft' iconSize='l' aria-label='Quay lại để thêm dữ liệu modules'/>
                     </EuiToolTip>
                     {guide.icon && (
                       <EuiIcon size='xl' type={guide.icon} />
@@ -716,7 +716,7 @@ class WzModuleGuide extends Component {
                 {guide.callout_warning && (
                   <EuiFlexGroup>
                     <EuiFlexItem>
-                      <EuiCallOut title='Warning' color="warning" iconType="alert">
+                      <EuiCallOut title='Cảnh báo' color="warning" iconType="alert">
                         <p>{guide.callout_warning}</p>
                       </EuiCallOut>
                     </EuiFlexItem>
@@ -812,7 +812,7 @@ class WzModuleGuide extends Component {
         {modalRestartIsVisble && (
           <EuiOverlayMask>
             <EuiConfirmModal
-              title="Do you want reset the guide?"
+              title="Bạn có muốn đặt lại hướng dẫn không?"
               onCancel={this.toggleResetGuideModal}
               onConfirm={this.resetGuideWithNotification}
               cancelButtonText="No, don't do it"

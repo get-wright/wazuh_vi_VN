@@ -37,7 +37,7 @@ export class ToastNotifications {
       color: 'danger',
     });
   }
-  static error(path, error, title = 'Error unexpected') {
+  static error(path, error, title = 'Lỗi bất ngờ') {
     getToasts().danger({
       title,
       iconType: 'alert',

@@ -27,11 +27,11 @@ import { webDocumentationLink } from '../../../../../../../common/services/web_d
 
 const helpLinks = [
   {
-    text: 'Active response documentation',
+    text: 'Tài liệu ứng phó chủ động',
     href: webDocumentationLink('user-manual/capabilities/active-response/index.html')
   },
   {
-    text: 'Active response reference',
+    text: 'Tham khảo ứng phó chủ động',
     href: webDocumentationLink('user-manual/reference/ossec-conf/active-response.html')
   }
 ];
@@ -39,18 +39,18 @@ const helpLinks = [
 const mainSettings = [
   {
     field: 'disabled',
-    label: 'Active response status',
+    label: 'Trạng thái ứng phó chủ động',
     render: renderValueNoThenEnabled
   },
   {
     field: 'repeated_offenders',
-    label: 'List of timeouts (in minutes) for repeated offenders'
+    label: 'Danh sách thời gian chờ (tính theo phút) cho những người vi phạm lặp lại'
   },
   {
     field: 'ca_store',
-    label: 'Use the following list of root CA certificates'
+    label: 'Sử dụng danh sách chứng chỉ root CA sau'
   },
-  { field: 'ca_verification', label: 'Validate WPKs using root CA certificate' }
+  { field: 'ca_verification', label: 'Xác thực WPK bằng chứng chỉ root CA' }
 ];
 
 class WzConfigurationActiveResponseAgent extends Component {
@@ -81,8 +81,8 @@ class WzConfigurationActiveResponseAgent extends Component {
           !isString(currentConfig['com-active-response']) &&
           currentConfig['com-active-response']['active-response'] && (
             <WzConfigurationSettingsTabSelector
-              title="Active response settings"
-              description="Find here all the Active response settings for this agent"
+              title="Cài đặt ứng phó chủ động"
+              description="Tìm ở đây tất cả các cài đặt ứng phó chủ động cho trạm này"
               currentConfig={currentConfig}
               minusHeight={this.props.agent.id === '000' ? 280 : 355}
               helpLinks={helpLinks}

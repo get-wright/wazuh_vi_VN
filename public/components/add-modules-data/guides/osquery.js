@@ -15,7 +15,7 @@ export default {
   id: 'osquery',
   name: 'Osquery',
   wodle_name: 'osquery',
-  description: 'Configuration options of the osquery wodle.',
+  description: 'Tùy chọn cấu hình của osquery wodle',
   category: 'Threat detection and response',
   documentation_link: webDocumentationLink('user-manual/reference/ossec-conf/wodle-osquery.html'),
   icon: 'securityApp',
@@ -24,25 +24,25 @@ export default {
   avaliable_for_agent: true,
   steps: [
     {
-      title: 'Settings',
+      title: 'Cài đặt',
       description: '',
       elements: [
         {
           name: 'disabled',
-          description: 'Disable the osquery wodle.',
+          description: 'Vô hiệu hóa osquery wodle',
           type: 'switch',
           required: true
         },
         {
           name: 'run_daemon',
-          description: 'Makes the module run osqueryd as a subprocess or lets the module monitor the results log without running Osquery.',
+          description: 'Cho phép module chạy osqueryd dưới dạng tiến trình con hoặc giám sát tập kết quả log mà không cần chạy Osquery.',
           type: 'switch',
           required: true,
           default_value: true
         },
         {
           name: 'bin_path',
-          description: 'Full path to the folder that contains the osqueryd executable.',
+          description: 'Đường dẫn đầy đủ đến thư mục chứa tệp osqueryd có thể thực thi',
           type: 'input',
           required: true,
           placeholder: 'Any valid path.',
@@ -51,7 +51,7 @@ export default {
         },
         {
           name: 'log_path',
-          description: 'Full path to the results log written by Osquery.',
+          description: 'Đường dẫn đầy đủ đến tập tin log kết quả do Osquery ghi',
           type: 'input',
           required: true,
           placeholder: 'Any valid path.',
@@ -61,7 +61,7 @@ export default {
         },
         {
           name: 'config_path',
-          description: 'Path to the Osquery configuration file. This path can be relative to the folder where the Wazuh agent is running.',
+          description: 'Đường dẫn đến tập tin cấu hình Osquery. Đường dẫn này có thể là tương đối với thư mục nơi trạm Wazuh đang chạy.',
           type: 'input',
           required: true,
           placeholder: 'Path to the Osquery configuration file',
@@ -70,7 +70,7 @@ export default {
         },
         {
           name: 'add_labels',
-          description: 'Add the agent labels defined as decorators.',
+          description: 'Thêm các nhãn trạm được định nghĩa làm decorator.',
           type: 'switch',
           required: true,
           default_value: true
@@ -78,12 +78,12 @@ export default {
       ]
     },
     {
-      title: 'Packs',
-      description: 'Add a query pack to the configuration. This option can be defined multiple times.',
+      title: 'Các gói',
+      description: 'Thêm gói truy vấn vào cấu hình. Tùy chọn này có thể được định nghĩa nhiều lần.',
       elements: [
         {
           name: 'pack',
-          description: 'Add a query pack to the configuration.',
+          description: 'Thêm một gói truy vấn vào cấu hình.',
           type: 'input',
           placeholder: 'Path to pack configuration file',
           default_value: '',
@@ -95,7 +95,7 @@ export default {
           attributes: [
             {
               name: 'name',
-              description: 'Name for this pack',
+              description: 'Tên cho gói này',
               type: 'input',
               required: true,
               placeholder: 'Name for this pack',

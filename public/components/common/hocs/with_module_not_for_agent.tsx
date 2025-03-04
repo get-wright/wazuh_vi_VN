@@ -27,7 +27,7 @@ export const withModuleNotForAgent = (WrappedComponent) =>
       ({ agent }) => agent?.id,
       (props) => (
         <PromptModuleNotForAgent
-          title="Module not available for agents"
+          title="Module không khả dụng cho trạm"
           body="Remove the pinned agent."
           {...props}
         />

@@ -27,7 +27,7 @@ export const ModuleMitreAttackIntelligenceLeftPanel = ({onSelectResource, select
           onChange={onSearchTermAllResourcesChange}
           onSearch={onSearchTermAllResourcesSearch}
           isClearable
-          aria-label='Search in all resources'
+          aria-label='Tìm kiếm trong tất cả tài nguyên'
         />
       </div>
       {MitreAttackResources.map(resource => (

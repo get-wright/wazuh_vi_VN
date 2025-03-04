@@ -77,21 +77,21 @@ export const AgentsTable = withErrorBoundary(
         {
           type: 'q',
           label: 'status',
-          description: 'Filter by agent connection status',
+          description: 'Lọc theo trạng thái kết nối của trạm',
           operators: ['=', '!='],
           values: UI_ORDER_AGENT_STATUS,
         },
         {
           type: 'q',
           label: 'group_config_status',
-          description: 'Filter by agent synced configuration status',
+          description: 'Lọc theo trạng thái đồng bộ cấu hình của trạm',
           operators: ['=', '!='],
           values: [AGENT_SYNCED_STATUS.SYNCED, AGENT_SYNCED_STATUS.NOT_SYNCED],
         },
         {
           type: 'q',
           label: 'os.platform',
-          description: 'Filter by operating system platform',
+          description: 'Lọc theo nền tảng hệ điều hành',
           operators: ['=', '!='],
           values: async value =>
             getAgentFilterValues('os.platform', value, { q: 'id!=000' }),
@@ -99,7 +99,7 @@ export const AgentsTable = withErrorBoundary(
         {
           type: 'q',
           label: 'ip',
-          description: 'Filter by agent IP address',
+          description: 'Lọc theo địa chỉ IP của trạm',
           operators: ['=', '!='],
           values: async value =>
             getAgentFilterValues('ip', value, { q: 'id!=000' }),
@@ -107,7 +107,7 @@ export const AgentsTable = withErrorBoundary(
         {
           type: 'q',
           label: 'name',
-          description: 'Filter by agent name',
+          description: 'Lọc theo tên của trạm',
           operators: ['=', '!='],
           values: async value =>
             getAgentFilterValues('name', value, { q: 'id!=000' }),
@@ -115,7 +115,7 @@ export const AgentsTable = withErrorBoundary(
         {
           type: 'q',
           label: 'id',
-          description: 'Filter by agent id',
+          description: 'Lọc theo ID của trạm',
           operators: ['=', '!='],
           values: async value =>
             getAgentFilterValues('id', value, { q: 'id!=000' }),
@@ -123,7 +123,7 @@ export const AgentsTable = withErrorBoundary(
         {
           type: 'q',
           label: 'group',
-          description: 'Filter by agent group',
+          description: 'Lọc theo nhóm trạm',
           operators: ['=', '!='],
           values: async value =>
             getAgentFilterValues('group', value, { q: 'id!=000' }),
@@ -131,7 +131,7 @@ export const AgentsTable = withErrorBoundary(
         {
           type: 'q',
           label: 'node_name',
-          description: 'Filter by node name',
+          description: 'Lọc theo tên nút',
           operators: ['=', '!='],
           values: async value =>
             getAgentFilterValues('node_name', value, { q: 'id!=000' }),
@@ -139,7 +139,7 @@ export const AgentsTable = withErrorBoundary(
         {
           type: 'q',
           label: 'manager',
-          description: 'Filter by manager',
+          description: 'Lọc theo trình quản lý',
           operators: ['=', '!='],
           values: async value =>
             getAgentFilterValues('manager', value, { q: 'id!=000' }),
@@ -147,7 +147,7 @@ export const AgentsTable = withErrorBoundary(
         {
           type: 'q',
           label: 'version',
-          description: 'Filter by agent version',
+          description: 'Lọc theo phiên bản của trạm',
           operators: ['=', '!='],
           values: async value =>
             getAgentFilterValues('version', value, { q: 'id!=000' }),
@@ -155,7 +155,7 @@ export const AgentsTable = withErrorBoundary(
         {
           type: 'q',
           label: 'configSum',
-          description: 'Filter by agent config sum',
+          description: 'Lọc theo sum cấu hình của trạm',
           operators: ['=', '!='],
           values: async value =>
             getAgentFilterValues('configSum', value, { q: 'id!=000' }),
@@ -163,7 +163,7 @@ export const AgentsTable = withErrorBoundary(
         {
           type: 'q',
           label: 'mergedSum',
-          description: 'Filter by agent merged sum',
+          description: 'Lọc theo merged sum của trạm',
           operators: ['=', '!='],
           values: async value =>
             getAgentFilterValues('mergedSum', value, { q: 'id!=000' }),
@@ -171,7 +171,7 @@ export const AgentsTable = withErrorBoundary(
         {
           type: 'q',
           label: 'dateAdd',
-          description: 'Filter by add date',
+          description: 'Lọc theo ngày thêm',
           operators: ['=', '!='],
           values: async value =>
             getAgentFilterValues('dateAdd', value, { q: 'id!=000' }),
@@ -179,7 +179,7 @@ export const AgentsTable = withErrorBoundary(
         {
           type: 'q',
           label: 'lastKeepAlive',
-          description: 'Filter by last keep alive',
+          description: 'Lọc theo lần giữ kết nối cuối',
           operators: ['=', '!='],
           values: async value =>
             getAgentFilterValues('lastKeepAlive', value, { q: 'id!=000' }),
@@ -355,7 +355,7 @@ export const AgentsTable = withErrorBoundary(
               }}
               iconType='eye'
               color={'primary'}
-              aria-label='Open summary panel for this agent'
+              aria-label='Mở bảng tóm tắt cho trạm này'
             />
           </EuiToolTip>
           &nbsp;
@@ -374,7 +374,7 @@ export const AgentsTable = withErrorBoundary(
                 }}
                 color={'primary'}
                 iconType='wrench'
-                aria-label='Open configuration for this agent'
+                aria-label='Mở cấu hình cho trạm này'
               />
             </EuiToolTip>
           )}

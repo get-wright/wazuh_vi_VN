@@ -108,8 +108,8 @@ function CDBListsTable(props) {
         setTableFootprint(Date.now());
         getToasts().add({
           color: 'success',
-          title: 'Success',
-          text: 'Deleted successfully',
+          title: 'Thành công',
+          text: 'Xóa thành công',
           toastLifeTimeMs: 3000,
         });
       });

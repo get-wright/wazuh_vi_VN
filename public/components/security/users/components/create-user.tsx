@@ -210,7 +210,7 @@ export const CreateUser = ({ closeFlyout }) => {
     modal = (
       <EuiOverlayMask>
         <EuiConfirmModal
-          title="Unsubmitted changes"
+          title="Thay đổi chưa được lưu"
           onConfirm={() => {
             setIsModalVisible(false);
             closeFlyout(false);
@@ -262,7 +262,7 @@ export const CreateUser = ({ closeFlyout }) => {
               </EuiTitle>
               <EuiSpacer />
               <EuiFormRow
-                label="User name"
+                label="Tên người dùng"
                 isInvalid={!!formErrors.userName}
                 error={formErrors.userName}
                 helpText="Introduce the user name for the user."
@@ -276,7 +276,7 @@ export const CreateUser = ({ closeFlyout }) => {
                 />
               </EuiFormRow>
               <EuiFormRow
-                label="Password"
+                label="Mật khẩu"
                 isInvalid={!!formErrors.password}
                 error={formErrors.password}
                 helpText="Introduce a new password for the user."
@@ -290,7 +290,7 @@ export const CreateUser = ({ closeFlyout }) => {
                 />
               </EuiFormRow>
               <EuiFormRow
-                label="Confirm Password"
+                label="Xác nhận mật khẩu"
                 isInvalid={!!formErrors.confirmPassword}
                 error={formErrors.confirmPassword}
                 helpText="Confirm the new password."
@@ -303,10 +303,10 @@ export const CreateUser = ({ closeFlyout }) => {
                   isInvalid={!!formErrors.confirmPassword}
                 />
               </EuiFormRow>
-              <EuiFormRow label="Allow run as" helpText="Set if the user is able to use run as">
+              <EuiFormRow label="Cho phép chạy như" helpText="Set if the user is able to use run as">
                 <WzButtonPermissions
                   buttonType="switch"
-                  label="Allow run as"
+                  label="Cho phép chạy như"
                   showLabel={false}
                   checked={allowRunAs}
                   permissions={[{ action: 'security:edit_run_as', resource: '*:*:*' }]}

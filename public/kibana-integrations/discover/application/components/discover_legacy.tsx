@@ -202,7 +202,7 @@ export function DiscoverLegacy({
                 data-test-subj="collapseSideBarButton"
                 aria-controls="discover-sidebar"
                 aria-expanded={isSidebarClosed ? 'false' : 'true'}
-                aria-label="Toggle sidebar"
+                aria-label="Chuyển đổi thanh bên"
                 className="dscCollapsibleSidebar__collapseButton"
               />
             </div>

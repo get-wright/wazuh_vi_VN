@@ -37,7 +37,7 @@ class WzConfigurationGlobalConfiguration extends Component {
             <WzTabSelectorTab label="Global">
               <WzConfigurationGlobalConfigurationGlobal {...this.props} />
             </WzTabSelectorTab>
-            <WzTabSelectorTab label="Remote">
+            <WzTabSelectorTab label="Từ xa">
               <WzConfigurationGlobalConfigurationRemote {...this.props} />
             </WzTabSelectorTab>
           </WzTabSelector>

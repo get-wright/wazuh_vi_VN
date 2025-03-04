@@ -64,16 +64,16 @@ class WzConfigurationIntegrityMonitoring extends Component {
           !isString(currentConfig['syscheck-syscheck']) &&
           currentConfig['syscheck-syscheck'].syscheck && (
             <WzTabSelector>
-              <WzTabSelectorTab label="General">
+              <WzTabSelectorTab label="Tổng quan">
                 <WzConfigurationIntegrityMonitoringGeneral {...this.props} />
               </WzTabSelectorTab>
-              <WzTabSelectorTab label="Monitored">
+              <WzTabSelectorTab label="Đang theo dõi">
                 <WzConfigurationIntegrityMonitoringMonitored {...this.props} />
               </WzTabSelectorTab>
-              <WzTabSelectorTab label="Ignored">
+              <WzTabSelectorTab label="Đã bỏ qua">
                 <WzConfigurationIntegrityMonitoringIgnored {...this.props} />
               </WzTabSelectorTab>
-              <WzTabSelectorTab label="No diff">
+              <WzTabSelectorTab label="Không có diff">
                 <WzConfigurationIntegrityMonitoringNoDiff {...this.props} />
               </WzTabSelectorTab>
               {agentPlatform !== 'windows' && (
@@ -81,12 +81,12 @@ class WzConfigurationIntegrityMonitoring extends Component {
                   <WzConfigurationIntegrityMonitoringWhoData {...this.props} />
                 </WzTabSelectorTab>
               )}
-              <WzTabSelectorTab label="Synchronization">
+              <WzTabSelectorTab label="Đồng bộ hóa">
                 <WzConfigurationIntegrityMonitoringSynchronization
                   {...this.props}
                 />
               </WzTabSelectorTab>
-              <WzTabSelectorTab label="File limit">
+              <WzTabSelectorTab label="Giới hạn tệp">
                 <WzConfigurationIntegrityMonitoringFileLimit {...this.props} />
               </WzTabSelectorTab>
             </WzTabSelector>

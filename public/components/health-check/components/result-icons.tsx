@@ -45,7 +45,7 @@ const ResultIcons = ({ result, children, initCheck }) => {
             iconSize="m"
             onClick={initCheck}
             size="m"
-            aria-label="Next"
+            aria-label="Tiếp theo"
           />
         </EuiToolTip>}
       </>

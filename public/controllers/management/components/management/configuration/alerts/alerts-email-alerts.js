@@ -23,42 +23,42 @@ import { connect } from 'react-redux';
 import { webDocumentationLink } from '../../../../../../../common/services/web_documentation';
 
 const mainSettings = [
-  { field: 'email_to', label: 'Send alerts to this email address' },
+  { field: 'email_to', label: 'Gửi cảnh báo đến địa chỉ email này' },
   {
     field: 'level',
-    label: 'Minimum severity level to send the alert by email'
+    label: 'Mức độ nghiêm trọng tối thiểu để gửi cảnh báo qua email'
   },
   {
     field: 'group',
-    label: 'Send only alerts that belong to one of these groups'
+    label: 'Chỉ gửi cảnh báo thuộc một trong các nhóm này'
   },
   {
     field: 'event_location',
-    label: 'Send alerts when they match this event location'
+    label: 'Gửi cảnh báo khi chúng khớp với vị trí sự kiện này'
   },
-  { field: 'format', label: 'Format for email alerts' },
+  { field: 'format', label: 'Định dạng cảnh báo email' },
   {
     field: 'rule_id',
-    label: 'Send only alerts that belong to one of these rule IDs'
+    label: 'Chỉ gửi cảnh báo thuộc một trong các rule IDs này'
   },
-  { field: 'do_not_delay', label: 'Disable delayed email delivery' },
+  { field: 'do_not_delay', label: 'Tắt gửi email trễ' },
   {
     field: 'do_not_group',
-    label: 'Disable alerts grouping into the same email'
+    label: 'Tắt nhóm cảnh báo trong cùng một email'
   }
 ];
 
 const helpLinks = [
   {
-    text: 'Configuring email alerts',
+    text: 'Cấu hình cảnh báo email',
     href: webDocumentationLink('user-manual/manager/manual-email-report/index.html')
   },
   {
-    text: 'SMTP server with authentication',
+    text: 'Máy chủ SMTP có xác thực',
     href: webDocumentationLink('user-manual/manager/manual-email-report/smtp-authentication.html')
   },
   {
-    text: 'Email alerts reference',
+    text: 'Tham khảo thông báo email',
     href: webDocumentationLink('user-manual/reference/ossec-conf/email-alerts.html')
   }
 ];
@@ -98,8 +98,8 @@ class WzConfigurationAlertsEmailAlerts extends Component {
         isArray(currentConfig['mail-alerts'].email_alerts) &&
         currentConfig['mail-alerts'].email_alerts.length ? (
           <WzConfigurationSettingsTabSelector
-            title="Main settings"
-            description="Granular email alert options"
+            title="Cài đặt chính"
+            description="Tùy chọn cảnh báo email chi tiết"
             currentConfig={currentConfig}
             minusHeight={320}
             helpLinks={helpLinks}

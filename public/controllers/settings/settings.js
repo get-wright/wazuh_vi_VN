@@ -68,7 +68,7 @@ export class SettingsController {
    */
   async $onInit() {
     try {
-      const breadcrumb = [{ text: '' }, { text: 'Settings' }];
+      const breadcrumb = [{ text: '' }, { text: 'Cài đặt' }];
       store.dispatch(updateGlobalBreadcrumb(breadcrumb));
 
       const location = this.$location.search();

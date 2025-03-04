@@ -70,7 +70,7 @@ export class MainModuleAgent extends Component {
     if (this.props.section === 'welcome') {
       breadcrumb = [
         { text: '' },
-        { text: 'Agents', href: '#/agents-preview' },
+        { text: 'Các trạm', href: '#/agents-preview' },
         { text: this.props.agent.id }
       ];
     } else {
@@ -79,7 +79,7 @@ export class MainModuleAgent extends Component {
           text: '',
         },
         {
-          text: 'Agents',
+          text: 'Các trạm',
           href: "#/agents-preview"
         },
         { agent: this.props.agent },
@@ -279,7 +279,7 @@ export class MainModuleAgent extends Component {
         {(!agent || !agent.os) &&
           <EuiCallOut
             style={{ margin: '66px 16px 0 16px' }}
-            title="This agent has never connected"
+            title="Trạm này chưa bao giờ kết nối"
             color="warning"
             iconType="alert">
           </EuiCallOut>

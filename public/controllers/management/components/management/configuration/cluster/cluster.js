@@ -25,26 +25,26 @@ import { compose } from 'redux';
 import { webDocumentationLink } from '../../../../../../../common/services/web_documentation';
 
 const mainSettings = [
-  { field: 'disabled', label: 'Cluster status' },
-  { field: 'name', label: 'Cluster name' },
-  { field: 'node_name', label: 'Node name' },
-  { field: 'node_type', label: 'Node type' },
-  { field: 'nodes', label: 'Master node IP address' },
-  { field: 'port', label: 'Port to listen to cluster communications' },
+  { field: 'disabled', label: 'Trạng thái cụm' },
+  { field: 'name', label: 'Tên cụm' },
+  { field: 'node_name', label: 'Tên nút' },
+  { field: 'node_type', label: 'Loại nút' },
+  { field: 'nodes', label: 'Địa chỉ IP của nút chủ' },
+  { field: 'port', label: 'Cổng để nghe liên lạc cụm' },
   {
     field: 'bind_addr',
-    label: 'IP address to listen to cluster communications'
+    label: 'Địa chỉ IP để lắng nghe liên lạc cụm'
   },
-  { field: 'hidden', label: 'Hide cluster information in alerts' }
+  { field: 'hidden', label: 'Ẩn thông tin cụm trong cảnh báo' }
 ];
 
 const helpLinks = [
   {
-    text: 'Configuring a Wazuh cluster',
+    text: 'Cấu hình cụm Wazuh',
     href: webDocumentationLink('user-manual/configuring-cluster/index.html')
   },
   {
-    text: 'Wazuh cluster reference',
+    text: 'Tham khảo cụm Wazuh',
     href: webDocumentationLink('user-manual/reference/ossec-conf/cluster.html')
   }
 ];
@@ -73,7 +73,7 @@ class WzCluster extends Component {
         {currentConfig['com-cluster'] &&
           !isString(currentConfig['com-cluster']) && (
             <WzConfigurationSettingsTabSelector
-              title="Main settings"
+              title="Cài đặt chính"
               currentConfig={currentConfig}
               minusHeight={260}
               helpLinks={helpLinks}

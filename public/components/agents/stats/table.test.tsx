@@ -57,7 +57,7 @@ describe('AgentStatTable component', () => {
         loading={false}
         start={''}
         end={''}
-        title="Test"
+        title="Thử"
         items={[]}
         exportCSVFilename={`agent-stats-10101-logcollector-global`}
       />
@@ -72,7 +72,7 @@ describe('AgentStatTable component', () => {
         loading={true}
         start={''}
         end={''}
-        title="Test"
+        title="Thử"
         items={[]}
         exportCSVFilename={`agent-stats-10101-logcollector-global`}
       />
@@ -89,7 +89,7 @@ describe('AgentStatTable component', () => {
         loading={true}
         start={''}
         end={''}
-        title="Test"
+        title="Thử"
         items={[]}
         exportCSVFilename={`agent-stats-10101-logcollector-global`}
       />

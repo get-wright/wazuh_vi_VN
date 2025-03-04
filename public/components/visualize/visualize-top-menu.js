@@ -103,7 +103,7 @@ export class VisualizeTopMenu extends Component {
             {this.state.isAgent && (
               <div className="TopMenuAgent">
                 <EuiKeyPadMenuItem
-                  label="Change Agent"
+                  label="Thay đổi trạm"
                   onClick={() => this.showAgentModal()}
                   betaBadgeLabel="Change"
                   betaBadgeTooltipContent={`Change Agent ${this.state.isAgent}`}
@@ -112,7 +112,7 @@ export class VisualizeTopMenu extends Component {
                   <EuiIcon type="watchesApp" color="primary" size="m" />
                 </EuiKeyPadMenuItem>
                 <EuiKeyPadMenuItem
-                  label="Remove Agent"
+                  label="Loại bỏ trạm"
                   onClick={() => {
                     this.setState({ isAgent: false });
                     this.props.setAgent(false);
@@ -126,7 +126,7 @@ export class VisualizeTopMenu extends Component {
               </div>
             )}
             {this.state.subtab === 'panels' && (
-              <EuiKeyPadMenuItem isDisabled label="Report">
+              <EuiKeyPadMenuItem isDisabled label="Báo cáo">
                 <EuiIcon type="reportingApp" color="primary" size="m" />
               </EuiKeyPadMenuItem>
             )}

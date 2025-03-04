@@ -954,7 +954,7 @@ export const RegisterAgent = withErrorBoundary(
               <EuiCallOut
                 style={{ marginTop: '1.5rem' }}
                 color='warning'
-                title='This section could not be configured because you do not have permission to read groups.'
+                title='Không thể cấu hình phần này vì bạn không có quyền đọc nhóm.'
                 iconType='iInCircle'
               />
             </>
@@ -1078,7 +1078,7 @@ apk add wazuh-agent=${this.state.wazuhVersion}-r1`,
 
       const windowsAdvice = this.state.selectedOS === 'win' && (
         <>
-          <EuiCallOut title='Requirements' iconType='iInCircle'>
+          <EuiCallOut title='Yêu cầu' iconType='iInCircle'>
             <ul className='wz-callout-list'>
               <li>
                 <span>
@@ -1108,7 +1108,7 @@ apk add wazuh-agent=${this.state.wazuhVersion}-r1`,
         .gotErrorRegistrationServiceInfo ? (
         <EuiCallOut
           color='danger'
-          title='This section could not be displayed because you do not have permission to get access to the registration service.'
+          title='Không thể hiển thị phần này vì bạn không có quyền truy cập dịch vụ đăng ký.'
           iconType='iInCircle'
         />
       ) : null;
@@ -1118,7 +1118,7 @@ apk add wazuh-agent=${this.state.wazuhVersion}-r1`,
           {this.state.gotErrorRegistrationServiceInfo ? (
             <EuiCallOut
               color='danger'
-              title='This section could not be displayed because you do not have permission to get access to the registration service.'
+              title='Không thể hiển thị phần này vì bạn không có quyền truy cập dịch vụ đăng ký.'
               iconType='iInCircle'
             />
           ) : (
@@ -1384,7 +1384,7 @@ apk add wazuh-agent=${this.state.wazuhVersion}-r1`,
                 {this.state.needsPassword &&
                 !['sol', 'hp', 'alpine'].includes(this.state.selectedOS) ? (
                   <EuiSwitch
-                    label='Show password'
+                    label='Hiển thị mật khẩu'
                     checked={this.state.showPassword}
                     onChange={active => this.setShowPassword(active)}
                   />
@@ -1588,7 +1588,7 @@ apk add wazuh-agent=${this.state.wazuhVersion}-r1`,
 
       const steps = [
         {
-          title: 'Choose the operating system',
+          title: 'Chọn hệ điều hành',
           children: (
             <PrincipalButtonGroup
               legend='Choose the Operating system'
@@ -1601,7 +1601,7 @@ apk add wazuh-agent=${this.state.wazuhVersion}-r1`,
         ...(this.state.selectedOS == 'rpm'
           ? [
               {
-                title: 'Choose the version',
+                title: 'Chọn phiên bản',
                 children: (
                   <RegisterAgentButtonGroup
                     legend='Choose the version'
@@ -1616,7 +1616,7 @@ apk add wazuh-agent=${this.state.wazuhVersion}-r1`,
         ...(this.state.selectedOS == 'oraclelinux'
           ? [
               {
-                title: 'Choose the version',
+                title: 'Chọn phiên bản',
                 children: (
                   <RegisterAgentButtonGroup
                     legend='Choose the version'
@@ -1631,7 +1631,7 @@ apk add wazuh-agent=${this.state.wazuhVersion}-r1`,
         ...(this.state.selectedOS == 'raspbian'
           ? [
               {
-                title: 'Choose the version',
+                title: 'Chọn phiên bản',
                 children: (
                   <RegisterAgentButtonGroup
                     legend='Choose the version'
@@ -1646,7 +1646,7 @@ apk add wazuh-agent=${this.state.wazuhVersion}-r1`,
         ...(this.state.selectedOS == 'amazonlinux'
           ? [
               {
-                title: 'Choose the version',
+                title: 'Chọn phiên bản',
                 children: (
                   <RegisterAgentButtonGroup
                     legend='Choose the version'
@@ -1661,7 +1661,7 @@ apk add wazuh-agent=${this.state.wazuhVersion}-r1`,
         ...(this.state.selectedOS == 'cent'
           ? [
               {
-                title: 'Choose the version',
+                title: 'Chọn phiên bản',
                 children: (
                   <RegisterAgentButtonGroup
                     legend='Choose the version'
@@ -1676,7 +1676,7 @@ apk add wazuh-agent=${this.state.wazuhVersion}-r1`,
         ...(this.state.selectedOS == 'fedora'
           ? [
               {
-                title: 'Choose the version',
+                title: 'Chọn phiên bản',
                 children: (
                   <RegisterAgentButtonGroup
                     legend='Choose the version'
@@ -1691,7 +1691,7 @@ apk add wazuh-agent=${this.state.wazuhVersion}-r1`,
         ...(this.state.selectedOS == 'deb'
           ? [
               {
-                title: 'Choose the version',
+                title: 'Chọn phiên bản',
                 children: (
                   <RegisterAgentButtonGroup
                     legend='Choose the version'
@@ -1706,7 +1706,7 @@ apk add wazuh-agent=${this.state.wazuhVersion}-r1`,
         ...(this.state.selectedOS == 'ubu'
           ? [
               {
-                title: 'Choose the version',
+                title: 'Chọn phiên bản',
                 children: (
                   <RegisterAgentButtonGroup
                     legend='Choose the version'
@@ -1721,7 +1721,7 @@ apk add wazuh-agent=${this.state.wazuhVersion}-r1`,
         ...(this.state.selectedOS == 'win'
           ? [
               {
-                title: 'Choose the version',
+                title: 'Chọn phiên bản',
                 children: (
                   <RegisterAgentButtonGroup
                     legend='Choose the version'
@@ -1736,7 +1736,7 @@ apk add wazuh-agent=${this.state.wazuhVersion}-r1`,
         ...(this.state.selectedOS == 'macos'
           ? [
               {
-                title: 'Choose the version',
+                title: 'Chọn phiên bản',
                 children: (
                   <RegisterAgentButtonGroup
                     legend='Choose the version'
@@ -1751,7 +1751,7 @@ apk add wazuh-agent=${this.state.wazuhVersion}-r1`,
         ...(this.state.selectedOS == 'suse'
           ? [
               {
-                title: 'Choose the version',
+                title: 'Chọn phiên bản',
                 children: (
                   <RegisterAgentButtonGroup
                     legend='Choose the version'
@@ -1766,7 +1766,7 @@ apk add wazuh-agent=${this.state.wazuhVersion}-r1`,
         ...(this.state.selectedOS == 'open'
           ? [
               {
-                title: 'Choose the version',
+                title: 'Chọn phiên bản',
                 children: (
                   <RegisterAgentButtonGroup
                     legend='Choose the version'
@@ -1781,7 +1781,7 @@ apk add wazuh-agent=${this.state.wazuhVersion}-r1`,
         ...(this.state.selectedOS == 'sol'
           ? [
               {
-                title: 'Choose the version',
+                title: 'Chọn phiên bản',
                 children: (
                   <RegisterAgentButtonGroup
                     legend='Choose the version'
@@ -1796,7 +1796,7 @@ apk add wazuh-agent=${this.state.wazuhVersion}-r1`,
         ...(this.state.selectedOS == 'aix'
           ? [
               {
-                title: 'Choose the version',
+                title: 'Chọn phiên bản',
                 children: (
                   <RegisterAgentButtonGroup
                     legend='Choose the version'
@@ -1811,7 +1811,7 @@ apk add wazuh-agent=${this.state.wazuhVersion}-r1`,
         ...(this.state.selectedOS == 'hp'
           ? [
               {
-                title: 'Choose the version',
+                title: 'Chọn phiên bản',
                 children: (
                   <RegisterAgentButtonGroup
                     legend='Choose the version'
@@ -1826,7 +1826,7 @@ apk add wazuh-agent=${this.state.wazuhVersion}-r1`,
         ...(this.state.selectedOS == 'alpine'
           ? [
               {
-                title: 'Choose the version',
+                title: 'Chọn phiên bản',
                 children: (
                   <RegisterAgentButtonGroup
                     legend='Choose the version'
@@ -1844,7 +1844,7 @@ apk add wazuh-agent=${this.state.wazuhVersion}-r1`,
         this.state.selectedVersion == 'suse11'
           ? [
               {
-                title: 'Choose the architecture',
+                title: 'Chọn kiến trúc',
                 children: (
                   <RegisterAgentButtonGroup
                     legend='Choose the architecture'
@@ -1861,7 +1861,7 @@ apk add wazuh-agent=${this.state.wazuhVersion}-r1`,
         ...(this.state.selectedVersion == 'leap15'
           ? [
               {
-                title: 'Choose the architecture',
+                title: 'Chọn kiến trúc',
                 children: (
                   <RegisterAgentButtonGroup
                     legend='Choose the architecture'
@@ -1878,7 +1878,7 @@ apk add wazuh-agent=${this.state.wazuhVersion}-r1`,
         ...(this.state.selectedVersion == '3.12.12'
           ? [
               {
-                title: 'Choose the architecture',
+                title: 'Chọn kiến trúc',
                 children: (
                   <RegisterAgentButtonGroup
                     legend='Choose the architecture'
@@ -1904,7 +1904,7 @@ apk add wazuh-agent=${this.state.wazuhVersion}-r1`,
         this.state.selectedVersion == 'ubuntu15'
           ? [
               {
-                title: 'Choose the architecture',
+                title: 'Chọn kiến trúc',
                 children: (
                   <RegisterAgentButtonGroup
                     legend='Choose the architecture'
@@ -1926,7 +1926,7 @@ apk add wazuh-agent=${this.state.wazuhVersion}-r1`,
         this.state.selectedVersion == 'busterorgreater'
           ? [
               {
-                title: 'Choose the architecture',
+                title: 'Chọn kiến trúc',
                 children: (
                   <RegisterAgentButtonGroup
                     legend='Choose the architecture'
@@ -1945,7 +1945,7 @@ apk add wazuh-agent=${this.state.wazuhVersion}-r1`,
         this.state.selectedVersion == 'windows7'
           ? [
               {
-                title: 'Choose the architecture',
+                title: 'Chọn kiến trúc',
                 children: (
                   <RegisterAgentButtonGroup
                     legend='Choose the architecture'
@@ -1962,7 +1962,7 @@ apk add wazuh-agent=${this.state.wazuhVersion}-r1`,
         ...(this.state.selectedVersion == 'sierra'
           ? [
               {
-                title: 'Choose the architecture',
+                title: 'Chọn kiến trúc',
                 children: (
                   <RegisterAgentButtonGroup
                     legend='Choose the architecture'
@@ -1980,7 +1980,7 @@ apk add wazuh-agent=${this.state.wazuhVersion}-r1`,
         this.state.selectedVersion == 'solaris11'
           ? [
               {
-                title: 'Choose the architecture',
+                title: 'Chọn Kiến Trúc',
                 children: (
                   <RegisterAgentButtonGroup
                     legend='Choose the architecture'
@@ -1997,7 +1997,7 @@ apk add wazuh-agent=${this.state.wazuhVersion}-r1`,
         ...(this.state.selectedVersion == '6.1 TL9'
           ? [
               {
-                title: 'Choose the architecture',
+                title: 'Chọn kiến trúc',
                 children: (
                   <RegisterAgentButtonGroup
                     legend='Choose the architecture'
@@ -2014,7 +2014,7 @@ apk add wazuh-agent=${this.state.wazuhVersion}-r1`,
         ...(this.state.selectedVersion == '11.31'
           ? [
               {
-                title: 'Choose the architecture',
+                title: 'Chọn kiến trúc',
                 children: (
                   <RegisterAgentButtonGroup
                     legend='Choose the architecture'
@@ -2035,7 +2035,7 @@ apk add wazuh-agent=${this.state.wazuhVersion}-r1`,
         )
           ? [
               {
-                title: 'Wazuh server address',
+                title: 'Địa chỉ Wazuh server',
                 children: (
                   <Fragment>
                     <WzManagerAddressInput
@@ -2056,7 +2056,7 @@ apk add wazuh-agent=${this.state.wazuhVersion}-r1`,
         )
           ? [
               {
-                title: 'Wazuh password',
+                title: 'Mật khẩu Wazuh',
                 children: <Fragment>{passwordInput}</Fragment>,
               },
             ]
@@ -2068,7 +2068,7 @@ apk add wazuh-agent=${this.state.wazuhVersion}-r1`,
         )
           ? [
               {
-                title: 'Optional settings',
+                title: 'Cài đặt tùy chọn',
                 children: (
                   <Fragment>
                     {agentName}
@@ -2080,7 +2080,7 @@ apk add wazuh-agent=${this.state.wazuhVersion}-r1`,
             ]
           : []),
         {
-          title: 'Install and enroll the agent',
+          title: 'Cài đặt và đăng ký trạm',
           children: this.state.gotErrorRegistrationServiceInfo ? (
             calloutErrorRegistrationServiceInfo
           ) : this.state.agentNameError &&
@@ -2119,7 +2119,7 @@ apk add wazuh-agent=${this.state.wazuhVersion}-r1`,
         this.state.selectedOS == ''
           ? [
               {
-                title: 'Start the agent',
+                title: 'Khởi động trạm',
                 children: this.state.gotErrorRegistrationServiceInfo ? (
                   calloutErrorRegistrationServiceInfo
                 ) : this.state.agentNameError &&
@@ -2203,7 +2203,7 @@ apk add wazuh-agent=${this.state.wazuhVersion}-r1`,
         restartAgentCommand
           ? [
               {
-                title: 'Start the agent',
+                title: 'Khởi động trạm',
                 children: this.state.gotErrorRegistrationServiceInfo ? (
                   calloutErrorRegistrationServiceInfo
                 ) : (

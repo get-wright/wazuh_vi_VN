@@ -17,28 +17,28 @@ export const visualizations = {
         height: 400,
         vis: [
           {
-            title: 'Alert groups evolution',
+            title: 'Chuyển hóa trong các nhóm cảnh báo',
             id: 'Wazuh-App-Agents-General-Alert-groups-evolution',
             width: 50
           },
-          { title: 'Alerts', id: 'Wazuh-App-Agents-General-Alerts', width: 50 }
+          { title: 'Cảnh báo', id: 'Wazuh-App-Agents-General-Alerts', width: 50 }
         ]
       },
       {
         height: 300,
         vis: [
           {
-            title: 'Top 5 agents',
+            title: 'Top 5 trạm hàng đầu',
             id: 'Wazuh-App-Agents-General-Top-5-alerts',
             width: 33
           },
           {
-            title: 'Top 5 rule groups',
+            title: 'Top 5 nhóm rule',
             id: 'Wazuh-App-Agents-General-Top-10-groups',
             width: 33
           },
           {
-            title: 'Top 5 PCI DSS Requirements',
+            title: 'Top 5 yêu cầu PCI DSS',
             id: 'Wazuh-App-Agents-General-Top-5-PCI-DSS-Requirements',
             width: 33
           }
@@ -52,17 +52,17 @@ export const visualizations = {
         height: 300,
         vis: [
           {
-            title: 'Most active users',
+            title: 'Các người dùng hoạt động tích cực nhất',
             id: 'Wazuh-App-Agents-FIM-Users',
             width: 30
           },
           {
-            title: 'Actions',
+            title: 'Hành động',
             id: 'Wazuh-App-Agents-FIM-Actions',
             width: 30
           },
           {
-            title: 'Events',
+            title: 'Sự kiện',
             id: 'Wazuh-App-Agents-FIM-Events',
             width: 40
           }
@@ -72,17 +72,17 @@ export const visualizations = {
         height: 230,
         vis: [
           {
-            title: 'Files added',
+            title: 'Các tệp đã thêm',
             id: 'Wazuh-App-Agents-FIM-Files-added',
             width: 33
           },
           {
-            title: 'Files modified',
+            title: 'Các tệp đã được sửa đổi',
             id: 'Wazuh-App-Agents-FIM-Files-modified',
             width: 33
           },
           {
-            title: 'Files deleted',
+            title: 'Các tệp đã bị xóa',
             id: 'Wazuh-App-Agents-FIM-Files-deleted',
             width: 33
           }
@@ -96,17 +96,17 @@ export const visualizations = {
         height: 300,
         vis: [
           {
-            title: 'Top 5 rule groups',
+            title: 'Top 5 nhóm rule',
             id: 'Wazuh-App-Agents-PCI-Groups',
             width: 33
           },
           {
-            title: 'Top 5 rules',
+            title: 'Top 5 rule',
             id: 'Wazuh-App-Agents-PCI-Rule',
             width: 33
           },
           {
-            title: 'Top 5 PCI DSS requirements',
+            title: 'Top 5 yêu cầu PCI DSS',
             id: 'Wazuh-App-Agents-PCI-Requirement',
             width: 33
           }
@@ -116,12 +116,12 @@ export const visualizations = {
         height: 300,
         vis: [
           {
-            title: 'PCI Requirements',
+            title: 'Yêu cầu PCI',
             id: 'Wazuh-App-Agents-PCI-Requirements',
             width: 70
           },
           {
-            title: 'Rule level distribution',
+            title: 'Phân phối mức rule',
             id: 'Wazuh-App-Agents-PCI-Rule-level-distribution',
             width: 30
           }
@@ -135,17 +135,17 @@ export const visualizations = {
         height: 300,
         vis: [
           {
-            title: 'Top 5 rule groups',
+            title: 'Top 5 nhóm rule',
             id: 'Wazuh-App-Agents-GDPR-Groups',
             width: 33
           },
           {
-            title: 'Top 5 rules',
+            title: 'Top 5 rule',
             id: 'Wazuh-App-Agents-GDPR-Rule',
             width: 33
           },
           {
-            title: 'Top 5 GDPR requirements',
+            title: 'Top 5 yêu cầu GDPR hàng đầu',
             id: 'Wazuh-App-Agents-GDPR-Requirement',
             width: 33
           }
@@ -155,12 +155,12 @@ export const visualizations = {
         height: 300,
         vis: [
           {
-            title: 'GDPR Requirements',
+            title: 'Yêu cầu GDPR',
             id: 'Wazuh-App-Agents-GDPR-Requirements',
             width: 70
           },
           {
-            title: 'Rule level distribution',
+            title: 'Phân phối mức rule',
             id: 'Wazuh-App-Agents-GDPR-Rule-level-distribution',
             width: 30
           }
@@ -174,17 +174,17 @@ export const visualizations = {
         height: 300,
         vis: [
           {
-            title: 'Stats',
+            title: 'Số liệu thống kê',
             id: 'Wazuh-App-Agents-NIST-Stats',
             width: 25
           },
           {
-            title: 'Top 10 requirements',
+            title: 'Top 10 yêu cầu',
             id: 'Wazuh-App-Agents-NIST-top-10-requirements',
             width: 25
           },
           {
-            title: 'Requirements distributed by level',
+            title: 'Yêu cầu phân phối theo cấp độ',
             id: 'Wazuh-App-Agents-NIST-Requirement-by-level',
             width: 50
           }
@@ -194,7 +194,7 @@ export const visualizations = {
         height: 300,
         vis: [
           {
-            title: 'Requirements over time',
+            title: 'Yêu cầu theo thời gian',
             id: 'Wazuh-App-Agents-NIST-Requirements-stacked-overtime'
           }
         ]
@@ -207,12 +207,12 @@ export const visualizations = {
         height: 400,
         vis: [
           {
-            title: 'TSC requirements',
+            title: 'Yêu cầu TSC',
             id: 'Wazuh-App-Overview-TSC-requirements',
             width: 50
           },
           {
-            title: 'Top 10 agents by alerts number',
+            title: 'Top 10 trạm theo số lượng cảnh báo',
             id: 'Wazuh-App-Overview-TSC-Agents',
             width: 50
           }
@@ -222,7 +222,7 @@ export const visualizations = {
         height: 300,
         vis: [
           {
-            title: 'Top requirements over time',
+            title: 'Top yêu cầu theo thời gian',
             id: 'Wazuh-App-Overview-TSC-Requirements-over-time'
           }
         ]
@@ -231,7 +231,7 @@ export const visualizations = {
         height: 530,
         vis: [
           {
-            title: 'Last alerts',
+            title: 'Cảnh báo cuối',
             id: 'Wazuh-App-Overview-TSC-Requirements-Agents-heatmap'
           }
         ]
@@ -240,7 +240,7 @@ export const visualizations = {
         height: 255,
         vis: [
           {
-            title: 'Requirements by agent',
+            title: 'Yêu cầu của trạm',
             id: 'Wazuh-App-Overview-TSC-Requirements-by-agent'
           }
         ]
@@ -253,12 +253,12 @@ export const visualizations = {
         height: 300,
         vis: [
           {
-            title: 'Requirements over time',
+            title: 'Yêu cầu theo thời gian',
             id: 'Wazuh-App-Agents-HIPAA-Requirements-Stacked-Overtime',
             width: 50
           },
           {
-            title: 'Top 10 requirements',
+            title: 'Top 10 yêu cầu',
             id: 'Wazuh-App-Agents-HIPAA-top-10',
             width: 50
           }
@@ -268,17 +268,17 @@ export const visualizations = {
         height: 300,
         vis: [
           {
-            title: 'HIPAA requirements',
+            title: 'Yêu cầu HIPAA',
             id: 'Wazuh-App-Agents-HIPAA-Burbles',
             width: 45
           },
           {
-            title: 'Requirements distribution by level',
+            title: 'Yêu cầu phân phối theo cấp độ',
             id: 'Wazuh-App-Agents-HIPAA-Distributed-By-Level',
             width: 30
           },
           {
-            title: 'Most common alerts',
+            title: 'Các cảnh báo phổ biến nhất',
             id: 'Wazuh-App-Agents-HIPAA-Most-Common',
             width: 25
           }
@@ -292,12 +292,12 @@ export const visualizations = {
         height: 250,
         vis: [
           {
-            title: 'Last scanned files',
+            title: 'Các tệp quét cuối',
             id: 'Wazuh-App-Agents-Virustotal-Last-Files-Pie',
             width: 33
           },
           {
-            title: 'Malicious files alerts Evolution',
+            title: 'Chuyển hóa cảnh báo các tệp độc hại',
             id: 'Wazuh-App-Agents-Virustotal-Malicious-Evolution',
             width: 67
           }
@@ -307,7 +307,7 @@ export const visualizations = {
         height: 570,
         vis: [
           {
-            title: 'Last files',
+            title: 'Tệp cuối',
             id: 'Wazuh-App-Agents-Virustotal-Files-Table'
           }
         ]
@@ -320,12 +320,12 @@ export const visualizations = {
         height: 300,
         vis: [
           {
-            title: 'Most common Osquery actions',
+            title: 'Các hành động Osquery phổ biến nhất',
             id: 'Wazuh-App-Agents-Osquery-most-common-osquery-actions',
             width: 30
           },
           {
-            title: 'Evolution of Osquery events per pack over time',
+            title: 'Sự chuyển hóa của các sự kiện Osquery theo từng gói theo thời gian',
             id: 'Wazuh-App-Agents-Osquery-Evolution',
             width: 70
           }
@@ -335,12 +335,12 @@ export const visualizations = {
         height: 300,
         vis: [
           {
-            title: 'Most common Osquery packs being used',
+            title: 'Các gói Osquery phổ biến nhất đang được sử dụng',
             id: 'Wazuh-App-Agents-Osquery-top-5-packs-being-used',
             width: 30
           },
           {
-            title: 'Most common rules',
+            title: 'Các rule phổ biến nhất',
             id: 'Wazuh-App-Agents-Osquery-monst-common-rules-being-fired',
             width: 70
           }
@@ -359,12 +359,12 @@ export const visualizations = {
             width: 25
           },
           {
-            title: 'Top 5 events',
+            title: 'Top 5 sự kiện hàng đầu',
             id: 'Wazuh-App-Agents-Docker-top-5-actions',
             width: 25
           },
           {
-            title: 'Resources usage over time',
+            title: 'Sử dụng tài nguyên theo thời gian',
             id: 'Wazuh-App-Agents-Docker-Types-over-time',
             width: 50
           }
@@ -374,7 +374,7 @@ export const visualizations = {
         height: 300,
         vis: [
           {
-            title: 'Events occurred evolution',
+            title: 'Chuyển hóa giữa các sự kiện',
             id: 'Wazuh-App-Agents-Docker-Actions-over-time'
           }
         ]
@@ -387,22 +387,22 @@ export const visualizations = {
         height: 230,
         vis: [
           {
-            title: 'Top 5 Scans',
+            title: 'Top 5 lần quét',
             id: 'Wazuh-App-Agents-OSCAP-Scans',
             width: 25
           },
           {
-            title: 'Top 5 Profiles',
+            title: 'Top 5 hồ sơ',
             id: 'Wazuh-App-Agents-OSCAP-Profiles',
             width: 25
           },
           {
-            title: 'Top 5 Content',
+            title: 'Top 5 nội dung',
             id: 'Wazuh-App-Agents-OSCAP-Content',
             width: 25
           },
           {
-            title: 'Top 5 Severity',
+            title: 'Top 5 mức độ nghiêm trọng',
             id: 'Wazuh-App-Agents-OSCAP-Severity',
             width: 25
           }
@@ -412,7 +412,7 @@ export const visualizations = {
         height: 230,
         vis: [
           {
-            title: 'Daily scans evolution',
+            title: 'Chuyển hóa các lần quét hàng ngày',
             id: 'Wazuh-App-Agents-OSCAP-Daily-scans-evolution'
           }
         ]
@@ -421,12 +421,12 @@ export const visualizations = {
         height: 250,
         vis: [
           {
-            title: 'Top 5 - Alerts',
+            title: 'Top 5 - Cảnh báo',
             id: 'Wazuh-App-Agents-OSCAP-Top-5-Alerts',
             width: 50
           },
           {
-            title: 'Top 5 - High risk alerts',
+            title: 'Top 5 - Cảnh báo rủi ro cao',
             id: 'Wazuh-App-Agents-OSCAP-Top-5-High-risk-alerts',
             width: 50
           }
@@ -440,12 +440,12 @@ export const visualizations = {
         height: 320,
         vis: [
           {
-            title: 'Top 5 CIS-CAT groups',
+            title: 'Top 5 nhóm CIS-CAT',
             id: 'Wazuh-app-Agents-CISCAT-top-5-groups',
             width: 60
           },
           {
-            title: 'Scan result evolution',
+            title: 'Chuyển hóa kết quả quét',
             id: 'Wazuh-app-Agents-CISCAT-scan-result-evolution',
             width: 40
           }
@@ -459,12 +459,12 @@ export const visualizations = {
         height: 290,
         vis: [
           {
-            title: 'Alerts over time',
+            title: 'Cảnh báo theo thời gian',
             id: 'Wazuh-App-Agents-PM-Events-over-time',
             width: 50
           },
           {
-            title: 'Rule distribution',
+            title: 'Phân phối rule',
             id: 'Wazuh-App-Agents-PM-Top-5-rules',
             width: 50
           }
@@ -474,7 +474,7 @@ export const visualizations = {
         height: 240,
         vis: [
           {
-            title: 'Events per control type evolution',
+            title: 'Chuyển hóa sự kiện theo loại kiểm soát',
             id: 'Wazuh-App-Agents-PM-Events-per-agent-evolution'
           }
         ]
@@ -487,17 +487,17 @@ export const visualizations = {
         height: 250,
         vis: [
           {
-            title: 'Groups',
+            title: 'Các nhóm',
             id: 'Wazuh-App-Agents-Audit-Groups',
             width: 33
           },
           {
-            title: 'Commands',
+            title: 'Các lệnh',
             id: 'Wazuh-App-Agents-Audit-Commands',
             width: 33
           },
           {
-            title: 'Files',
+            title: 'Các tệp',
             id: 'Wazuh-App-Agents-Audit-Files',
             width: 33
           }
@@ -507,7 +507,7 @@ export const visualizations = {
         height: 310,
         vis: [
           {
-            title: 'Alerts over time',
+            title: 'Cảnh báo theo thời gian',
             id: 'Wazuh-App-Agents-Audit-Alerts-over-time'
           }
         ]

@@ -57,7 +57,7 @@ export function getSavedSearch($location, $window, $route) {
         })
         .catch(() => {
           getToasts().addWarning({
-            title: 'Saved object is missing',
+            title: 'Đối tượng đã lưu bị thiếu',
             text: (element) => {
               ReactDOM.render(<ErrorRenderer>{error.message}</ErrorRenderer>, element);
               return () => ReactDOM.unmountComponentAtNode(element);

@@ -34,8 +34,8 @@ import { getErrorOrchestrator } from '../../../../../react-services/common-servi
 class WzGroupFilesTable extends Component {
   _isMounted = false;
   suggestions = [
-    //{ type: 'q', label: 'filename', description: 'Filter by file name', operators: ['=', '!=',], values: async (value) => getGroupsFilesValues('filename', value, {},this.props.state.itemDetail.name )},
-    //{ type: 'params', label: 'hash', description: 'Filter by hash', operators: ['=', '!=',], values: async (value) => getGroupsFilesValues('hash', value, {},this.props.state.itemDetail.name )},
+    //{ type: 'q', label: 'filename', description: 'Lọc theo tên tệp', operators: ['=', '!=',], values: async (value) => getGroupsFilesValues('filename', value, {},this.props.state.itemDetail.name )},
+    //{ type: 'params', label: 'hash', description: 'Lọc theo băm (hash)', operators: ['=', '!=',], values: async (value) => getGroupsFilesValues('hash', value, {},this.props.state.itemDetail.name )},
   ];
 
   constructor(props) {

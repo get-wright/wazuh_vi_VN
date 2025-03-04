@@ -13,11 +13,11 @@ import { webDocumentationLink } from '../../../../../../../common/services/web_d
 
 const helpLinks = [
   {
-    text: 'Using Wazuh to monitor GCP services',
+    text: 'Sử dụng Wazuh để giám sát dịch vụ GCP',
     href: webDocumentationLink('cloud-security/gcp/index.html'),
   },
   {
-    text: 'Google Cloud Pub/Sub module reference',
+    text: 'Tham khảo module Google Cloud Pub/Sub',
     href: webDocumentationLink(
       'user-manual/reference/ossec-conf/gcp-pubsub.html',
     ),
@@ -27,22 +27,22 @@ const helpLinks = [
 const mainSettings = [
   {
     field: 'enabled',
-    label: 'Google Cloud Pub/Sub integration status',
+    label: 'Trạng thái tích hợp Google Cloud Pub/Sub',
     render: renderValueYesThenEnabled,
   },
-  { field: 'project_id', label: 'Project ID' },
-  { field: 'subscription_name', label: 'Subscription to read from' },
+  { field: 'project_id', label: 'ID dự án' },
+  { field: 'subscription_name', label: 'Đăng ký để đọc từ' },
   {
     field: 'credentials_file',
-    label: 'Path of the credentials file',
+    label: 'Đường dẫn tệp thông tin xác thực',
   },
-  { field: 'logging', label: 'Logging level' },
-  { field: 'max_messages', label: 'Maximum messages pulled in each iteration' },
-  { field: 'interval', label: 'Interval between module executions in seconds' },
-  { field: 'pull_on_start', label: 'Pull on start' },
-  { field: 'day', label: 'Day of the month to fetch logs' },
-  { field: 'wday', label: 'Day of the week to fetch logs' },
-  { field: 'time', label: 'Time of the day to fetch logs' },
+  { field: 'logging', label: 'Mức ghi log' },
+  { field: 'max_messages', label: 'Số tin nhắn tối đa được lấy mỗi lần lặp' },
+  { field: 'interval', label: 'Khoảng thời gian giữa các lần thực thi module (tính bằng giây)' },
+  { field: 'pull_on_start', label: 'Kéo khi bắt đầu' },
+  { field: 'day', label: 'Ngày trong tháng để nạp logs' },
+  { field: 'wday', label: 'Ngày trong tuần để nạp logs' },
+  { field: 'time', label: 'Thời gian trong ngày để nạp logs' },
 ];
 
 class WzConfigurationGoogleCloudPubSub extends Component {
@@ -78,8 +78,8 @@ class WzConfigurationGoogleCloudPubSub extends Component {
           )}
         {currentConfig && this.wodleConfig['gcp-pubsub'] && (
           <WzConfigurationSettingsTabSelector
-            title='Main settings'
-            description='Configuration for the Google Cloud Pub/Sub module'
+            title='Cài đặt chính'
+            description='Cấu hình cho module Google Cloud Pub/Sub'
             currentConfig={this.wodleConfig}
             minusHeight={320}
             helpLinks={helpLinks}

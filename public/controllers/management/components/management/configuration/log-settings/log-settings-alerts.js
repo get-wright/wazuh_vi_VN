@@ -20,14 +20,14 @@ import WzConfigurationSettingsTabSelector from '../util-components/configuration
 import WzConfigurationSettingsGroup from '../util-components/configuration-settings-group';
 
 const mainSettings = [
-  { field: 'plain_format', label: 'Plain format' },
-  { field: 'json_format', label: 'JSON format' },
-  { field: 'compress_rotation', label: 'Compress rotation' },
-  { field: 'saved_rotations', label: 'Saved rotations' },
-  { field: 'schedule', label: 'Schedule' },
-  { field: 'maxsize', label: 'Maximum log size' },
-  { field: 'minsize', label: 'Minimum log size' },
-  { field: 'maxage', label: 'Maximum log age' }
+  { field: 'plain_format', label: 'Định dạng đơn giản' },
+  { field: 'json_format', label: 'Định dạng JSON' },
+  { field: 'compress_rotation', label: 'Nén xoay' },
+  { field: 'saved_rotations', label: 'Các vòng quay đã lưu' },
+  { field: 'schedule', label: 'Lịch trình' },
+  { field: 'maxsize', label: 'Kích thước log tối đa' },
+  { field: 'minsize', label: 'Kích thước log tối thiểu' },
+  { field: 'maxage', label: 'Tuổi tối đa của log' }
 ];
 
 class WzConfigurationLogSettingsAlerts extends Component {
@@ -50,8 +50,8 @@ class WzConfigurationLogSettingsAlerts extends Component {
           (currentConfig['com-logging'] &&
             currentConfig['com-logging'].logging)) && (
           <WzConfigurationSettingsTabSelector
-            title="Alerts settings"
-            description="Basic alerts log settings"
+            title="Cài đặt cảnh báo"
+            description="Cài đặt log cảnh báo cơ bản"
             currentConfig={currentConfig['analysis-logging'].logging.alerts}
             helpLinks={helpLinks}
           >

@@ -21,29 +21,29 @@ import WzNoConfig from '../util-components/no-config';
 const allSettings = [
   {
     field: 'disabled',
-    label: 'Policy monitoring service status',
+    label: 'Trạng thái dịch vụ giám sát chính sách',
     render: renderValueNoThenEnabled
   },
-  { field: 'base_directory', label: 'Base directory' },
-  { field: 'scanall', label: 'Scan the entire system' },
-  { field: 'frequency', label: 'Frequency (in seconds) to run the scan' },
-  { field: 'check_dev', label: 'Check /dev path' },
-  { field: 'check_files', label: 'Check files' },
-  { field: 'check_if', label: 'Check network interfaces' },
-  { field: 'check_pids', label: 'Check processes IDs' },
-  { field: 'check_ports', label: 'Check network ports' },
-  { field: 'check_sys', label: 'Check anomalous system objects' },
-  { field: 'check_trojans', label: 'Check trojans' },
-  { field: 'check_unixaudit', label: 'Check UNIX audit' },
-  { field: 'check_winapps', label: 'Check Windows apps' },
-  { field: 'check_winaudit', label: 'Check Windows audit' },
-  { field: 'check_winmalware', label: 'Check Windows malware' },
-  { field: 'skip_nfs', label: 'Skip scan on CIFS/NFS mounts' },
-  { field: 'rootkit_files', label: 'Rootkit files database path' },
-  { field: 'rootkit_trojans', label: 'Rootkit trojans database path' },
-  { field: 'windows_audit', label: 'Windows audit definition file path' },
-  { field: 'windows_apps', label: 'Windows application definition file path' },
-  { field: 'windows_malware', label: 'Windows malware definitions file path' }
+  { field: 'base_directory', label: 'Thư mục gốc' },
+  { field: 'scanall', label: 'Quét toàn bộ hệ thống' },
+  { field: 'frequency', label: 'Tần số (tính bằng giây) để chạy quét' },
+  { field: 'check_dev', label: 'Kiểm tra đường dẫn /dev' },
+  { field: 'check_files', label: 'Kiểm tra các tập tin' },
+  { field: 'check_if', label: 'Kiểm tra giao diện mạng' },
+  { field: 'check_pids', label: 'Kiểm tra IDs của các tiến trình' },
+  { field: 'check_ports', label: 'Kiểm tra các cổng mạng' },
+  { field: 'check_sys', label: 'Kiểm tra các đối tượng hệ thống dị thường' },
+  { field: 'check_trojans', label: 'Kiểm tra Trojans' },
+  { field: 'check_unixaudit', label: 'Kiểm tra kiểm định UNIX' },
+  { field: 'check_winapps', label: 'Kiểm tra ứng dụng Windows' },
+  { field: 'check_winaudit', label: 'Kiểm tra kiểm định Windows' },
+  { field: 'check_winmalware', label: 'Kiểm tra phần mềm độc hại trên Windows' },
+  { field: 'skip_nfs', label: 'Bỏ qua quét ổ CIFS/NFS' },
+  { field: 'rootkit_files', label: 'Đường dẫn cơ sở dữ liệu tệp rootkit' },
+  { field: 'rootkit_trojans', label: 'Đường dẫn cơ sở dữ liệu trojans rootkit' },
+  { field: 'windows_audit', label: 'Đường dẫn tệp định nghĩa kiểm định Windows' },
+  { field: 'windows_apps', label: 'Đường dẫn tệp định nghĩa ứng dụng Windows' },
+  { field: 'windows_malware', label: 'Đường dẫn tệp định nghĩa phần mềm độc hại Windows' }
 ];
 
 class WzConfigurationPolicyMonitoringGeneral extends Component {
@@ -71,8 +71,8 @@ class WzConfigurationPolicyMonitoringGeneral extends Component {
           currentConfig['syscheck-rootcheck'].rootcheck) ||
           currentConfig['sca']) && (
           <WzConfigurationSettingsTabSelector
-            title="All settings"
-            description="General settings for the rootcheck daemon"
+            title="Tất cả các cài đặt"
+            description="Cài đặt chung cho daemon rootcheck"
             currentConfig={currentConfig}
             minusHeight={this.props.agent.id === '000' ? 320 : 415}
             helpLinks={helpLinks}

@@ -22,28 +22,28 @@ import { webDocumentationLink } from '../../../../../../../common/services/web_d
 
 const helpLinks = [
   {
-    text: 'Using multiple outputs',
+    text: 'Sử dụng nhiều đầu ra',
     href: webDocumentationLink(
       'user-manual/capabilities/log-data-collection/log-data-configuration.html#using-multiple-outputs'
     ),
   },
   {
-    text: 'Socket reference',
+    text: 'Tham khảo socket',
     href: webDocumentationLink('user-manual/reference/ossec-conf/socket.html'),
   },
 ];
 
 const mainSettings = [
-  { field: 'name', label: 'Socket name', render: renderValueOrNoValue },
-  { field: 'location', label: 'Socket location', render: renderValueOrNoValue },
+  { field: 'name', label: 'Tên socket', render: renderValueOrNoValue },
+  { field: 'location', label: 'Vị trí socket', render: renderValueOrNoValue },
   {
     field: 'mode',
-    label: 'UNIX socket protocol',
+    label: 'Giao thức UNIX socket',
     render: renderValueOrDefault('udp'),
   },
   {
     field: 'prefix',
-    label: 'Prefix to place before the message',
+    label: 'Tiền tố đặt trước tin nhắn',
     render: renderValueOrNoValue,
   },
 ];
@@ -69,8 +69,8 @@ class WzConfigurationLogCollectionSockets extends Component {
         {!isString(currentConfig?.[LOGCOLLECTOR_SOCKET_PROP]) &&
         currentConfig?.[LOGCOLLECTOR_SOCKET_PROP]?.target?.length ? (
           <WzConfigurationSettingsTabSelector
-            title="Output sockets"
-            description="Define custom outputs to send log data"
+            title="Sockets đầu ra"
+            description="Định nghĩa đầu ra tùy chỉnh để gửi dữ liệu log"
             currentConfig={currentConfig}
             minusHeight={this.props.agent.id === '000' ? 320 : 415}
             helpLinks={helpLinks}

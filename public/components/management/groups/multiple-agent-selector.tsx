@@ -119,7 +119,7 @@ export const MultipleAgentSelector = withErrorBoundary(
           error: {
             error: error,
             message: error.message || error,
-            title: 'Error loading agents',
+            title: 'Lỗi tải trạm',
           },
         };
         getErrorOrchestrator().handleError(options);
@@ -418,7 +418,7 @@ export const MultipleAgentSelector = withErrorBoundary(
               error: {
                 error: error,
                 message: error.message || error,
-                title: 'Error fetching all available agents',
+                title: 'Lỗi lấy tất cả các trạm hiện hành',
               },
             };
             getErrorOrchestrator().handleError(options);
@@ -471,7 +471,7 @@ export const MultipleAgentSelector = withErrorBoundary(
               error: {
                 error: error,
                 message: error.message || error,
-                title: 'Error fetching group agents',
+                title: 'Lỗi lấy các trạm trong nhóm',
               },
             };
             getErrorOrchestrator().handleError(options);
@@ -513,7 +513,7 @@ export const MultipleAgentSelector = withErrorBoundary(
                               style={{ marginRight: 0 }}
                             >
                               <EuiButtonIcon
-                                aria-label='Back'
+                                aria-label='Quay lại'
                                 style={{ paddingTop: 8 }}
                                 color='primary'
                                 iconSize='l'
@@ -569,7 +569,7 @@ export const MultipleAgentSelector = withErrorBoundary(
                                   </EuiFlexItem>
                                   <EuiFlexItem grow={false}>
                                     <EuiButtonIcon
-                                      aria-label='Back'
+                                      aria-label='Quay lại'
                                       color='primary'
                                       iconType='refresh'
                                       onClick={() =>
@@ -601,7 +601,7 @@ export const MultipleAgentSelector = withErrorBoundary(
                                   }}
                                   isClearable={true}
                                   fullWidth={true}
-                                  aria-label='Filter'
+                                  aria-label='Bộ lọc'
                                 />
                                 <EuiSpacer size={'m'}></EuiSpacer>
                                 <select
@@ -691,7 +691,7 @@ export const MultipleAgentSelector = withErrorBoundary(
                             </div>
                             <EuiKeyPadMenu className='wzMultipleSelectorButtons'>
                               <EuiKeyPadMenuItem
-                                label='Add all items'
+                                label='Thêm tất cả các mục'
                                 onClick={() => {
                                   this.moveAll(
                                     this.state.availableAgents.data,
@@ -726,7 +726,7 @@ export const MultipleAgentSelector = withErrorBoundary(
                                 />
                               </EuiKeyPadMenuItem>
                               <EuiKeyPadMenuItem
-                                label='Add selected items'
+                                label='Thêm các mục được chọn'
                                 onClick={() => {
                                   this.moveItem(
                                     this.state.availableItem,
@@ -752,7 +752,7 @@ export const MultipleAgentSelector = withErrorBoundary(
                                 />
                               </EuiKeyPadMenuItem>
                               <EuiKeyPadMenuItem
-                                label='Remove selected items'
+                                label='Xóa các mục được chọn'
                                 onClick={() => {
                                   this.moveItem(
                                     this.state.selectedElement,
@@ -778,7 +778,7 @@ export const MultipleAgentSelector = withErrorBoundary(
                                 />
                               </EuiKeyPadMenuItem>
                               <EuiKeyPadMenuItem
-                                label='Remove all items'
+                                label='Xóa tất cả các mục'
                                 onClick={() => {
                                   this.moveAll(
                                     this.state.selectedAgents.data,
@@ -847,7 +847,7 @@ export const MultipleAgentSelector = withErrorBoundary(
                                   }}
                                   isClearable={true}
                                   fullWidth={true}
-                                  aria-label='Filter'
+                                  aria-label='Bộ lọc'
                                 />
                                 <EuiSpacer size={'m'}></EuiSpacer>
                                 <select

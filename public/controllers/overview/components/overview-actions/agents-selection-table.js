@@ -68,7 +68,7 @@ export class AgentSelectionTable extends Component {
       },
       {
         id: 'name',
-        label: 'Name',
+        label: 'Tên',
         alignment: LEFT_ALIGNMENT,
         mobileOptions: {
           show: true,
@@ -77,7 +77,7 @@ export class AgentSelectionTable extends Component {
       },
       {
         id: 'group',
-        label: 'Group',
+        label: 'Nhóm',
         alignment: LEFT_ALIGNMENT,
         mobileOptions: {
           show: false,
@@ -87,7 +87,7 @@ export class AgentSelectionTable extends Component {
       },
       {
         id: 'version',
-        label: 'Version',
+        label: 'Phiên bản',
         width: '80px',
         alignment: LEFT_ALIGNMENT,
         mobileOptions: {
@@ -97,7 +97,7 @@ export class AgentSelectionTable extends Component {
       },
       {
         id: 'os',
-        label: 'Operating system',
+        label: 'Hệ điều hành',
         alignment: LEFT_ALIGNMENT,
         mobileOptions: {
           show: false,
@@ -107,7 +107,7 @@ export class AgentSelectionTable extends Component {
       },
       {
         id: 'status',
-        label: 'Status',
+        label: 'Trạng thái',
         alignment: LEFT_ALIGNMENT,
         mobileOptions: {
           show: true,
@@ -118,19 +118,19 @@ export class AgentSelectionTable extends Component {
       },
     ];
     this.suggestions = [
-      { type: 'q', label: 'status', description: 'Filter by agent connection status', operators: ['=', '!=',], values: UI_ORDER_AGENT_STATUS },
-      { type: 'q', label: 'os.platform', description: 'Filter by operating system platform', operators: ['=', '!=',], values: async (value) => getAgentFilterValues('os.platform', value, { q: 'id!=000'})},
-      { type: 'q', label: 'ip', description: 'Filter by agent IP address', operators: ['=', '!=',], values: async (value) => getAgentFilterValues('ip', value, { q: 'id!=000'})},
-      { type: 'q', label: 'name', description: 'Filter by agent name', operators: ['=', '!=',], values: async (value) => getAgentFilterValues('name', value, { q: 'id!=000'})},
-      { type: 'q', label: 'id', description: 'Filter by agent id', operators: ['=', '!=',], values: async (value) => getAgentFilterValues('id', value, { q: 'id!=000'})},
-      { type: 'q', label: 'group', description: 'Filter by agent group', operators: ['=', '!=',], values: async (value) => getAgentFilterValues('group', value, { q: 'id!=000'})},
-      { type: 'q', label: 'node_name', description: 'Filter by node name', operators: ['=', '!=',], values: async (value) => getAgentFilterValues('node_name', value, { q: 'id!=000'})},
-      { type: 'q', label: 'manager', description: 'Filter by manager', operators: ['=', '!=',], values: async (value) => getAgentFilterValues('manager', value, { q: 'id!=000'})},
-      { type: 'q', label: 'version', description: 'Filter by agent version', operators: ['=', '!=',], values: async (value) => getAgentFilterValues('version', value, { q: 'id!=000'})},
-      { type: 'q', label: 'configSum', description: 'Filter by agent config sum', operators: ['=', '!=',], values: async (value) => getAgentFilterValues('configSum', value, { q: 'id!=000'})},
-      { type: 'q', label: 'mergedSum', description: 'Filter by agent merged sum', operators: ['=', '!=',], values: async (value) => getAgentFilterValues('mergedSum', value, { q: 'id!=000'})},
-      { type: 'q', label: 'dateAdd', description: 'Filter by add date', operators: ['=', '!=',], values: async (value) => getAgentFilterValues('dateAdd', value, { q: 'id!=000'})},
-      { type: 'q', label: 'lastKeepAlive', description: 'Filter by last keep alive', operators: ['=', '!=',], values: async (value) => getAgentFilterValues('lastKeepAlive', value, { q: 'id!=000'})},
+      { type: 'q', label: 'status', description: 'Lọc theo trạng thái kết nối của trạm', operators: ['=', '!=',], values: UI_ORDER_AGENT_STATUS },
+      { type: 'q', label: 'os.platform', description: 'Lọc theo nền tảng hệ điều hành', operators: ['=', '!=',], values: async (value) => getAgentFilterValues('os.platform', value, { q: 'id!=000'})},
+      { type: 'q', label: 'ip', description: 'Lọc theo địa chỉ IP của trạm', operators: ['=', '!=',], values: async (value) => getAgentFilterValues('ip', value, { q: 'id!=000'})},
+      { type: 'q', label: 'name', description: 'Lọc theo tên của trạm', operators: ['=', '!=',], values: async (value) => getAgentFilterValues('name', value, { q: 'id!=000'})},
+      { type: 'q', label: 'id', description: 'Lọc theo ID của trạm', operators: ['=', '!=',], values: async (value) => getAgentFilterValues('id', value, { q: 'id!=000'})},
+      { type: 'q', label: 'group', description: 'Lọc theo nhóm trạm', operators: ['=', '!=',], values: async (value) => getAgentFilterValues('group', value, { q: 'id!=000'})},
+      { type: 'q', label: 'node_name', description: 'Lọc theo tên nút', operators: ['=', '!=',], values: async (value) => getAgentFilterValues('node_name', value, { q: 'id!=000'})},
+      { type: 'q', label: 'manager', description: 'Lọc theo trình quản lý', operators: ['=', '!=',], values: async (value) => getAgentFilterValues('manager', value, { q: 'id!=000'})},
+      { type: 'q', label: 'version', description: 'Lọc theo phiên bản của trạm', operators: ['=', '!=',], values: async (value) => getAgentFilterValues('version', value, { q: 'id!=000'})},
+      { type: 'q', label: 'configSum', description: 'Lọc theo sum cấu hình của trạm', operators: ['=', '!=',], values: async (value) => getAgentFilterValues('configSum', value, { q: 'id!=000'})},
+      { type: 'q', label: 'mergedSum', description: 'Lọc theo merged sum của trạm', operators: ['=', '!=',], values: async (value) => getAgentFilterValues('mergedSum', value, { q: 'id!=000'})},
+      { type: 'q', label: 'dateAdd', description: 'Lọc theo ngày thêm', operators: ['=', '!=',], values: async (value) => getAgentFilterValues('dateAdd', value, { q: 'id!=000'})},
+      { type: 'q', label: 'lastKeepAlive', description: 'Lọc theo lần giữ kết nối cuối', operators: ['=', '!=',], values: async (value) => getAgentFilterValues('lastKeepAlive', value, { q: 'id!=000'})},
     ];
   }
 

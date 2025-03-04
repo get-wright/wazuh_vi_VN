@@ -15,7 +15,7 @@ export default {
   id: 'ciscat',
   name: 'CIS-CAT',
   wodle_name: 'cis-cat',
-  description: 'Configuration options of the CIS-CAT wodle.',
+  description: 'Tùy chọn cấu hình của CIS-CAT wodle',
   category: 'Kiểm thử và giám sát chính sách',
   documentation_link: webDocumentationLink('user-manual/reference/ossec-conf/wodle-ciscat.html'),
   icon: 'securityApp',
@@ -24,18 +24,18 @@ export default {
   avaliable_for_agent: true,
   steps: [
     {
-      title: 'Settings',
+      title: 'Cài đặt',
       description: '',
       elements: [
         {
           name: 'disabled',
-          description: 'Disables the CIS-CAT wodle.',
+          description: 'Vô hiệu hóa CIS-CAT wodle',
           type: 'switch',
           required: true
         },
         {
           name: 'timeout',
-          description: 'Timeout for each evaluation. In case the execution takes longer that the specified timeout, it stops.',
+          description: 'Thời gian chờ cho mỗi đánh giá. Nếu thực thi vượt quá thời gian chờ đã định, sẽ dừng lại.',
           type: 'input-number',
           required: true,
           placeholder: 'Time in seconds',
@@ -45,14 +45,14 @@ export default {
         },
         {
           name: 'java_path',
-          description: 'Define where Java is located. If this parameter is not set, the wodle will search for the Java location in the default environment variable $PATH.',
+          description: 'Xác định vị trí của Java. Nếu không được thiết lập, wodle sẽ tìm vị trí Java qua biến môi trường $PATH.',
           warning: 'For this field, it can be set a full path or a relative path. Whether you specify a relative path, it concatenates to the Wazuh installation path. ciscat_path has the same behavior.',
           type: 'input',
           placeholder: 'Java location'
         },
         {
           name: 'ciscat_path',
-          description: 'Define where CIS-CAT is located.',
+          description: 'Xác định vị trí của CIS-CAT.',
           type: 'input',
           required: true,
           placeholder: 'CIS-CAT location',
@@ -60,7 +60,7 @@ export default {
         },
         {
           name: 'scan-on-start',
-          description: 'Run evaluation immediately when service is started.',
+          description: 'Chạy đánh giá ngay khi dịch vụ khởi động.',
           type: 'switch'
         },
         {
@@ -75,7 +75,7 @@ export default {
         },
         {
           name: 'day',
-          description: 'Day of the month to run the CIS-CAT scan.',
+          description: 'Ngày trong tháng để chạy quét CIS-CAT.',
           info: 'When the day option is set, the interval value must be a multiple of months. By default, the interval is set to a month.',
           type: 'select',
           values: [
@@ -115,7 +115,7 @@ export default {
         },
         {
           name: 'wday',
-          description: 'Day of the week to run the CIS-CAT scan. This option is not compatible with the day option.',
+          description: 'Ngày trong tuần để chạy quét CIS-CAT. Tùy chọn này không tương thích với lựa chọn ngày.',
           info: 'When the wday option is set, the interval value must be a multiple of weeks. By default, the interval is set to a week.',
           type: 'select',
           values: [
@@ -133,7 +133,7 @@ export default {
         },
         {
           name: 'time',
-          description: 'Time of the day to run the scan. It has to be represented in the format hh:mm.',
+          description: 'Thời gian trong ngày để chạy quét. Phải được biểu diễn theo định dạng hh:mm.',
           type: 'input',
           placeholder: 'Time of day',
           validate_error_message: 'Time of day in hh:mm format',
@@ -142,8 +142,8 @@ export default {
       ]
     },
     {
-      title: 'Content',
-      description: 'Define an evaluation.',
+      title: 'Nội dung',
+      description: 'Xác định một tiêu chí đánh giá.',
       elements: [
         {
           name: 'content',
@@ -156,7 +156,7 @@ export default {
           attributes: [
             {
               name: 'type',
-              description: 'Select content type.',
+              description: 'Chọn loại nội dung.',
               type: 'input',
               required: true,
               default_value: 'xccdf',
@@ -164,7 +164,7 @@ export default {
             },
             {
               name: 'path',
-              description: 'Use the specified policy file.',
+              description: 'Sử dụng tập tin policy đã chỉ định.',
               info: 'The path attribute can be filled in with the whole path where the benchmark files are located, or with a relative path to the CIS-CAT tool location.',
               type: 'input',
               required: true,
@@ -184,7 +184,7 @@ export default {
           options: [
             {
               name: 'profile',
-              description: 'Select profile.',
+              description: 'Chọn hồ sơ.',
               type: 'input',
               required: true,
               placeholder: 'Profile',

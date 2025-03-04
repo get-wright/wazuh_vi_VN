@@ -34,7 +34,7 @@ const WzManagerAddressInput = (props: Props) => {
         Đây là địa chỉ mà agent sử dụng để giao tiếp với máy chủ Wazuh, có thể là địa chỉ IP hoặc tên miền đủ điều kiện (FQDN).
       </p>
       <EuiFieldText
-        placeholder='Server Address'
+        placeholder='Nhập địa chỉ máy chủ Wazuh'
         onChange={handleOnChange}
         value={value}
       />

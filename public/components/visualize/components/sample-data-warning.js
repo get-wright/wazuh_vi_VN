@@ -50,7 +50,7 @@ export const SampleDataWarning = ({ ...props }) => {
   if (isSampleData) {
     return (
       <EuiCallOut
-        title="This dashboard contains sample data"
+        title="Bảng điều khiển này chứa dữ liệu mẫu"
         color="warning"
         iconType="alert"
         style={{ margin: '0 8px 16px 8px' }}
@@ -59,7 +59,7 @@ export const SampleDataWarning = ({ ...props }) => {
       >
         <p>
           {'The data displayed may contain sample alerts. Go '}
-          <EuiLink href="#/settings?tab=sample_data" aria-label="go to configure sample data">
+          <EuiLink href="#/settings?tab=sample_data" aria-label="Đi đến cấu hình dữ liệu mẫu">
             {'here '}
           </EuiLink>
           {'to configure the sample data.'}

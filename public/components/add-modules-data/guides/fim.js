@@ -15,7 +15,7 @@ export default {
   id: 'fim',
   xml_tag: 'syscheck',
   name: 'Integrity monitoring',
-  description: 'Configuration options for file integrity monitoring.',
+  description: 'Tùy chọn cấu hình cho giám sát toàn vẹn tệp',
   category: 'Quản lý thông tin an ninh',
   documentation_link: webDocumentationLink('user-manual/reference/ossec-conf/syscheck.html'),
   icon: 'filebeatApp',
@@ -23,8 +23,8 @@ export default {
   avaliable_for_agent: true,
   steps: [
     {
-      title: 'Directories/files to monitoring',
-      description: 'Add or remove directories to be monitored. You can add multiple directories with different monitoring configurations.',
+      title: 'Thư mục/tập tin cần giám sát',
+      description: 'Thêm hoặc loại bỏ các thư mục cần theo dõi. Bạn có thể thêm nhiều thư mục với cấu hình giám sát khác nhau.',
       elements: [
         {
           name: 'directories',
@@ -52,19 +52,19 @@ export default {
             },
             {
               name: 'who-data',
-              description: 'This will enable who-data monitoring on Linux and Windows systems.',
+              description: 'Điều này sẽ kích hoạt giám sát who-data trên hệ thống Linux và Windows.',
               type: 'switch',
               default_value: false
             },
             {
               name: 'report_changes',
-              description: 'Report file changes. This is limited to text files at this time.',
+              description: 'Báo cáo thay đổi tập tin. Hiện chỉ áp dụng cho các tập tin văn bản.',
               type: 'switch',
               default_value: false
             },
             {
               name: 'check_all',
-              description: 'All attributes with the prefix check_ will be activated.',
+              description: 'Tất cả thuộc tính có tiền tố check_ sẽ được kích hoạt',
               type: 'switch',
               default_value: true
             },
@@ -77,25 +77,25 @@ export default {
             },
             {
               name: 'check_sha1sum',
-              description: 'Check only the SHA-1 hash of the files.',
+              description: 'Chỉ kiểm tra hàm băm SHA-1 của các tập tin.',
               type: 'switch',
               default_value: false
             },
             {
               name: 'check_md5sum',
-              description: 'Check only the MD5 hash of the files.',
+              description: 'Chỉ kiểm tra hàm băm MD5 của các tập tin.',
               type: 'switch',
               default_value: false
             },
             {
               name: 'check_sha256sum',
-              description: 'Check only the SHA-256 hash of the files.',
+              description: 'Chỉ kiểm tra hàm băm SHA-256 của các tập tin.',
               type: 'switch',
               default_value: false
             },
             {
               name: 'check_size',
-              description: 'Check the size of the files.',
+              description: 'Kiểm tra kích thước của các tập tin.',
               type: 'switch',
               default_value: false
             },
@@ -132,7 +132,7 @@ export default {
             },
             {
               name: 'check_mtime',
-              description: 'Check the modification time of a file.',
+              description: 'Kiểm tra thời gian chỉnh sửa của tập tin.',
               type: 'switch',
               default_value: false
             },
@@ -156,13 +156,13 @@ export default {
             },
             {
               name: 'tags',
-              description: 'Add tags to alerts for monitored directories.',
+              description: 'Thêm các tag cho cảnh báo của các thư mục được giám sát.',
               type: 'input',
               placeholder: 'Tags list separated by commas'
             },
             {
               name: 'recursion_level',
-              description: 'Limits the maximum level of recursion allowed.',
+              description: 'Giới hạn mức đệ quy tối đa cho phép.',
               type: 'input-number',
               default_value: '',
               values: { min: 0, max: 320 },
@@ -182,12 +182,12 @@ export default {
       ]
     },
     {
-      title: 'Ignore directories and/or files',
-      description: 'List of files or directories to be ignored. You can add multiple times this option. These files and directories are still checked, but the results are ignored.',
+      title: 'Bỏ qua các thư mục và/hoặc tập tin',
+      description: 'Danh sách các tập tin hoặc thư mục sẽ bị bỏ qua. Bạn có thể thêm tùy chọn này nhiều lần. Các tập tin và thư mục này vẫn được kiểm tra, nhưng kết quả sẽ bị bỏ qua.',
       elements: [
         {
           name: 'ignore',
-          description: 'File or directory to be ignored.',
+          description: 'Tập tin hoặc thư mục sẽ bị bỏ qua.',
           type: 'input',
           removable: true,
           required: true,
@@ -196,7 +196,7 @@ export default {
           attributes: [
             {
               name: 'type',
-              description: 'This is a simple regex pattern to filter out files so alerts are not generated.',
+              description: 'Đây là mẫu regex đơn giản để loại trừ các tập tin nhằm không tạo cảnh báo.',
               type: 'input',
               placeholder: 'sregex',
               default_value: 'sregex',
@@ -207,12 +207,12 @@ export default {
       ]
     },
     {
-      title: 'Not compute',
-      description: 'List of files to not compute the diff. You can add multiple times this option. It could be used for sensitive files like a private key, credentials stored in a file or database configuration, avoiding data leaking by sending the file content changes through alerts.',
+      title: 'Không tính diff',
+      description: 'Danh sách các tập tin không tính diff. Bạn có thể thêm tùy chọn này nhiều lần. Nó có thể dùng cho các tập tin nhạy cảm như khóa riêng, thông tin đăng nhập trong tập tin hoặc cấu hình cơ sở dữ liệu, nhằm tránh rò rỉ dữ liệu qua cảnh báo khi nội dung tập tin thay đổi.',
       elements: [
         {
           name: 'nodiff',
-          description: 'File to not compute the diff.',
+          description: 'Tập tin để không tính diff',
           type: 'input',
           placeholder: 'File path',
           required: true,
@@ -222,7 +222,7 @@ export default {
           attributes: [
             {
               name: 'type',
-              description: 'This is a simple regex pattern to filter out files so alerts are not generated.',
+              description: 'Đây là mẫu regex đơn giản để loại trừ các tập tin nhằm không tạo cảnh báo.',
               type: 'input',
               placeholder: 'sregex',
               default_value: 'sregex',
@@ -233,12 +233,12 @@ export default {
       ]
     },
     {
-      title: 'Scan day',
-      description: 'Day of the week to run the scans. You can add multiple times this option.',
+      title: 'Ngày quét',
+      description: 'Ngày trong tuần để chạy quét. Bạn có thể thêm tùy chọn này nhiều lần.',
       elements: [
         {
           name: 'scan_day',
-          description: 'Day of the week to run the scans.',
+          description: 'Ngày trong tuần để chạy quét.',
           type: 'select',
           removable: true,
           required: true,
@@ -259,11 +259,11 @@ export default {
     },
     {
       title: 'Windows registry',
-      description: 'Use this option to monitor specified Windows registry entries. You can add multiple times this option.',
+      description: 'Sử dụng tùy chọn này để giám sát các mục nhập Windows registry được chỉ định. Bạn có thể thêm tùy chọn này nhiều lần.',
       elements: [
         {
           name: 'windows_registry',
-          description: 'Use this option to monitor specified Windows registry entries',
+          description: 'Sử dụng tùy chọn này để giám sát các mục nhập Windows registry được chỉ định',
           info: 'New entries will not trigger alerts, only changes to existing entries.',
           type: 'input',
           placeholder: 'Windows registry entry',
@@ -275,14 +275,14 @@ export default {
           attributes: [
             {
               name: 'arch',
-              description: 'Select the Registry view depending on the architecture.',
+              description: 'Chọn chế độ xem Registry tùy thuộc vào kiến trúc.',
               type: 'select',
               values: [{value: '32bit', text: '32bit'}, {value: '64bit', text: '64bit'}, {value: 'both', text: 'both'}],
               default_value: '32bit'
             },
             {
               name: 'tags',
-              description: 'Add tags to alerts for monitored registry entries.',
+              description: 'Thêm các tag cho cảnh báo của các registry được giám sát',
               type: 'input',
               placeholder: 'Tags list separated by commas'
             }
@@ -291,12 +291,12 @@ export default {
       ]
     },
     {
-      title: 'Registry ignore',
-      description: 'List of registry entries to be ignored.',
+      title: 'Bỏ qua registry',
+      description: 'Danh sách các registry sẽ bị bỏ qua.',
       elements: [
         {
           name: 'registry_ignore',
-          description: 'List of registry entries to be ignored. (one entry per line). Multiple lines may be entered to include multiple registry entries.',
+          description: 'Danh sách các mục registry cần bỏ qua. (mỗi dòng một mục). Có thể nhập nhiều dòng để bao gồm nhiều mục registry.',
           type: 'input',
           placeholder: 'Any registry entry.',
           validate_error_message: 'Any registry entry.',
@@ -304,14 +304,14 @@ export default {
           attributes: [
             {
               name: 'arch',
-              description: 'Select the Registry to ignore depending on the architecture.',
+              description: 'Chọn Registry để bỏ qua tùy thuộc vào kiến trúc.',
               type: 'select',
               values: [{value: '32bit', text: '32bit'}, {value: '64bit', text: '64bit'}, {value: 'both', text: 'both'}],
               default_value: '32bit'
             },
             {
               name: 'tags',
-              description: 'This is a simple regex pattern to filter out files so alerts are not generated.',
+              description: 'Đây là mẫu regex đơn giản để loại trừ các tập tin nhằm không tạo cảnh báo.',
               type: 'input',
               placeholder: 'sregex'
             }
@@ -320,12 +320,12 @@ export default {
       ]
     },
     {
-      title: 'Other settings',
+      title: 'Các cài đặt khác',
       description: '',
       elements: [
         {
           name: 'frequency',
-          description: 'Frequency that the syscheck will be run (in seconds).',
+          description: 'Tần số chạy syscheck (giây).',
           type: 'input-number',
           required: true,
           default_value: 43200,
@@ -335,7 +335,7 @@ export default {
         },
         {
           name: 'scan_time',
-          description: 'Time to run the scans. Times may be represented as 9pm or 8:30.',
+          description: 'Thời gian để chạy quét. Có thể biểu diễn dạng 9pm hoặc 8:30.',
           info: 'This may delay the initialization of real-time scans.',
           type: 'input',
           placeholder: 'Time of day',
@@ -345,7 +345,7 @@ export default {
         },
         {
           name: 'auto_ignore',
-          description: 'Specifies whether or not syscheck will ignore files that change too many times (manager only).',
+          description: 'Chỉ định nếu syscheck sẽ bỏ qua các tập tin thay đổi quá nhiều lần (chỉ áp dụng cho trình quản lý).',
           info: 'It is valid on: server and local.',
           type: 'switch',
           agent_type: 'manager',
@@ -362,7 +362,7 @@ export default {
             },
             {
               name: 'timeframe',
-              description: 'Time interval in which the number of alerts generated by a file accumulates.',
+              description: 'Khoảng thời gian để tích lũy số cảnh báo được tạo ra bởi một tập tin.',
               type: 'input-number',
               required: true,
               placeholder: 'Time in seconds',
@@ -374,27 +374,27 @@ export default {
         },
         {
           name: 'alert_new_files',
-          description: 'Specifies if syscheck should alert when new files are created.',
+          description: 'Chỉ định nếu syscheck nên cảnh báo khi tạo tập tin mới.',
           info: 'It is valid on: server and local.',
           type: 'switch',
           default_value: true
         },
         {
           name: 'scan_on_start',
-          description: 'Specifies if syscheck scans immediately when started.',
+          description: 'Chỉ định xem syscheck có quét ngay khi khởi động hay không.',
           type: 'switch',
           default_value: true
         },
         {
           name: 'allow_remote_prefilter_cmd',
-          description: 'Allows prefilter_cmd option apply in remote configuration (agent.conf).',
+          description: 'Cho phép áp dụng tùy chọn prefilter_cmd trong cấu hình từ xa (agent.conf).',
           info: 'This option only can be activate from the agent side, in its own ossec.conf.',
           type: 'switch',
           default_value: false
         },
         {
           name: 'prefilter_cmd',
-          description: 'Run to prevent prelinking from creating false positives.',
+          description: 'Chạy để ngăn prelinking tạo ra dương tính giả.',
           info: `This option may negatively impact performance as the configured command will be run for each file checked.
           This option is ignored when defined at agent.conf if allow_remote_prefilter_cmd is set to no at ossec.conf.`,
           type: 'input',
@@ -402,13 +402,13 @@ export default {
         },
         {
           name: 'skip_nfs',
-          description: 'Specifies if syscheck should scan network mounted filesystems (Works on Linux and FreeBSD). Currently, skip_nfs will exclude checking files on CIFS or NFS mounts.',
+          description: 'Chỉ định nếu syscheck nên quét hệ thống tập tin gắn mạng (áp dụng cho Linux và FreeBSD). Hiện tại, skip_nfs sẽ loại trừ các tập tin trên ổ CIFS hoặc NFS.',
           type: 'switch',
           default_value: true
         },
         {
           name: 'skip_dev',
-          description: 'Specifies if syscheck should scan the /dev directory. (Works on Linux and FreeBSD).',
+          description: 'Chỉ định nếu syscheck nên quét thư mục /dev (áp dụng cho Linux và FreeBSD).',
           type: 'switch',
           default_value: true
         },
@@ -426,7 +426,7 @@ export default {
         },
         {
           name: 'windows_audit_interval',
-          description: 'This option sets the frequency in seconds with which the Windows agent will check that the SACLs of the directories monitored in whodata mode are correct.',
+          description: 'Tùy chọn này thiết lập tần số (giây) để trạm Windows kiểm tra SACL của các thư mục được giám sát ở chế độ whodata có đúng không.',
           type: 'input-number',
           values: { min: 1, max: 9999 },
           default_value: 300,
@@ -436,7 +436,7 @@ export default {
         },
         {
           name: 'process_priority',
-          description: 'Set the nice value for Syscheck process.',
+          description: 'Thiết lập giá trị ưu tiên cho tiến trình Syscheck.',
           info: 'The "niceness" scale in Linux goes from -20 to 19, whereas -20 is the highest priority and 19 the lowest priority.',
           type: 'input-number',
           placholder: 'Process priority',
@@ -446,7 +446,7 @@ export default {
         },
         {
           name: 'max_eps',
-          description: 'Set the maximum event reporting throughput. Events are messages that will produce an alert.',
+          description: 'Thiết lập thông lượng báo cáo sự kiện tối đa. Sự kiện là thông báo tạo ra cảnh báo.',
           info: '0 means disabled.',
           type: 'input-number',
           placholder: 'Process priority',
@@ -456,7 +456,7 @@ export default {
         },
         {
           name: 'database',
-          description: 'Specify where is the database going to be stored.',
+          description: 'Chỉ định nơi lưu trữ cơ sở dữ liệu.',
           type: 'select',
           default_value: 'disk',
           values: [
@@ -466,19 +466,19 @@ export default {
         },
         {
           name: 'synchronization',
-          description: 'The database synchronization settings will be configured inside this tag.',
+          description: 'Cài đặt đồng bộ hóa cơ sở dữ liệu sẽ được cấu hình bên trong thẻ này.',
           show_options: true,
           options: [
             {
               name: 'enabled',
-              description: 'Specifies whether there will be periodic inventory synchronizations or not.',
+              description: 'Chỉ định liệu có đồng bộ inventory định kỳ hay không.',
               type: 'switch',
               default_value: true,
               required: true
             },
             {
               name: 'interval',
-              description: 'Specifies the initial number of seconds between every inventory synchronization. If synchronization fails the value will be duplicated until it reaches the value of max_interval.',
+              description: 'Chỉ định số giây ban đầu giữa các lần đồng bộ inventory. Nếu đồng bộ không thành công, giá trị sẽ được nhân đôi cho đến khi đạt max_interval.',
               type: 'input',
               default_value: '300s',
               required: true,
@@ -487,7 +487,7 @@ export default {
             },
             {
               name: 'max_interval',
-              description: 'Specifies the maximum number of seconds between every inventory synchronization.',
+              description: 'Chỉ định số giây tối đa giữa các lần đồng bộ inventory.',
               type: 'input',
               default_value: '1h',
               required: true,
@@ -496,7 +496,7 @@ export default {
             },
             {
               name: 'response_timeout',
-              description: 'Specifies the time elapsed in seconds since the agent sends the message to the manager and receives the response. If the response is not received in this interval, the message is marked as unanswered (timed-out) and the agent may start a new synchronization session at the defined interval.',
+              description: 'Chỉ định khoảng thời gian (giây) kể từ khi trạm gửi tin nhắn đến trình quản lý và nhận được phản hồi. Nếu không nhận được phản hồi trong khoảng này, tin nhắn được đánh dấu là chưa trả lời (hết thời gian) và trạm có thể bắt đầu phiên đồng bộ mới theo khoảng đã định.',
               type: 'input-number',
               default_value: 30,
               required: true,
@@ -505,7 +505,7 @@ export default {
             },
             {
               name: 'queue_size',
-              description: 'Specifies the queue size of the manager synchronization responses.',
+              description: 'Chỉ định kích thước hàng đợi của phản hồi đồng bộ từ trình quản lý.',
               type: 'input-number',
               default_value: 16384,
               required: true,
@@ -514,7 +514,7 @@ export default {
             },
             {
               name: 'max_eps',
-              description: 'Set the maximum synchronization message throughput.',
+              description: 'Thiết lập thông lượng tin nhắn đồng bộ hóa tối đa.',
               info: '0 means disabled.',
               type: 'input-number',
               default_value: 10,
@@ -526,17 +526,17 @@ export default {
         },
         {
             name: 'whodata',
-            description: 'The Whodata options will be configured inside this tag.',
+            description: 'Các tùy chọn whodata sẽ được cấu hình bên trong thẻ này.',
             options: [
               {
                 name: 'restart_audit',
-                description: 'Allow the system to restart Auditd after installing the plugin. Note that setting this field to no the new whodata rules won’t be applied automatically.',
+                description: 'Cho phép hệ thống khởi động lại Auditd sau khi cài đặt plugin. Lưu ý rằng nếu thiết lập giá trị này là no thì các quy tắc whodata mới sẽ không được tự động áp dụng.',
                 type: 'switch',
                 default_value: true
               },
               {
                 name: 'audit_key',
-                description: 'Set up the FIM engine to collect the Audit events using keys with audit_key. Wazuh will include in its FIM baseline those events being monitored by Audit using audit_key. For those systems where Audit is already set to monitor folders for other purposes, Wazuh can collect events generated as a key from audit_key. This option is only available for Linux systems with Audit.',
+                description: 'Thiết lập công cụ FIM để thu thập các sự kiện Audit sử dụng khóa có audit_key. Wazuh sẽ đưa các sự kiện được Audit giám sát bằng audit_key vào baseline FIM. Đối với các hệ thống đã cài đặt Audit để giám sát thư mục cho mục đích khác, Wazuh có thể thu thập các sự kiện được tạo ra dưới dạng khóa từ audit_key. Tùy chọn này chỉ áp dụng cho hệ thống Linux có Audit.',
                 info: 'Audit allow inserting spaces inside the keys, so the spaces inserted inside the field <audit_key> will be part of the key.',
                 type: 'input',
                 placeholder: 'Any string separated by commas',
@@ -545,7 +545,7 @@ export default {
               },
               {
                 name: 'startup_healthcheck',
-                description: 'This option allows to disable the Audit health check during the Whodata engine starting. This option is only available for Linux systems with Audit.',
+                description: 'Tùy chọn này cho phép vô hiệu hóa kiểm tra sức khỏe Audit khi khởi động Whodata. Chỉ áp dụng cho hệ thống Linux có Audit.',
                 warning: 'The health check ensures that the rules required by Whodata can be set in Audit correctly and also that the generated events can be obtained. Disabling the health check may cause functioning problems in Whodata and loss of FIM events.',
                 type: 'switch',
                 default_value: true,

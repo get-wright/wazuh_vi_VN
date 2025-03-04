@@ -39,7 +39,7 @@ export default class CDBListsColumns {
           render: (item) => (
             <EuiToolTip position="top" content={`Export ${item.filename}`}>
               <EuiButtonIcon
-                aria-label="Export list"
+                aria-label="Xuất danh sách"
                 iconType="exportAction"
                 onClick={async ev => {
                   try {
@@ -107,7 +107,7 @@ export default class CDBListsColumns {
             <WzButtonPermissions
               buttonType='icon'
               permissions={getEditButtonPermissions(item)}
-              aria-label="Edit content"
+              aria-label="Chỉnh sửa nội dung"
               iconType="pencil"
               tooltip={{ position: 'top', content: `Edit ${item.filename} content` }}
               onClick={async (ev) => {
@@ -131,7 +131,7 @@ export default class CDBListsColumns {
               buttonType="icon"
               permissions={getDeleteButtonPermissions(item)}
               tooltip={{ position: 'top', content: (defaultItems.indexOf(`${item.relative_dirname}`) === -1) ? `Delete ${item.filename}` : `The ${item.filename} list cannot be deleted` }}
-              aria-label="Delete file"
+              aria-label="Xóa tệp"
               iconType="trash"
               isDisabled={defaultItems.indexOf(`${item.relative_dirname}`) !== -1}
               onConfirm={async () => {
@@ -157,7 +157,7 @@ export default class CDBListsColumns {
             <WzButtonPermissions
               buttonType='icon'
               permissions={getReadButtonPermissions(item)}
-              aria-label="Export list"
+              aria-label="Xuất danh sách"
               iconType="exportAction"
               tooltip={{ position: 'top', content: `Export ${item.filename} content` }}
               onClick={async (ev) => {

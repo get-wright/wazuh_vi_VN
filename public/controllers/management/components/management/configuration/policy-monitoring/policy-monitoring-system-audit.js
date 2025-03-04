@@ -47,8 +47,8 @@ class WzPolicyMonitoringSystemAudit extends Component {
           currentConfig['syscheck-rootcheck'].rootcheck &&
           currentConfig['syscheck-rootcheck'].rootcheck.system_audit && (
             <WzConfigurationSettingsTabSelector
-              title="UNIX audit files"
-              description="Specified paths to audit definition files for Unix-like systems"
+              title="Các tệp kiểm định UNIX"
+              description="Các đường dẫn được chỉ định đến tệp định nghĩa kiểm tra cho hệ thống Unix-like"
               currentConfig={currentConfig}
               minusHeight={this.props.agent.id === '000' ? 320 : 415}
               helpLinks={helpLinks}

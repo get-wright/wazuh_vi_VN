@@ -155,17 +155,17 @@ export class AgentInfo extends Component {
         { title: agent.id, description: 'ID', style: { maxWidth: 100 } },
         {
           title: agent.status,
-          description: 'Status',
+          description: 'Trạng thái',
           style: { maxWidth: 150 },
         },
         {
           title: agent.version,
-          description: 'Version',
+          description: 'Phiên bản',
           style: { maxWidth: 150 },
         },
         {
           title: agent.name,
-          description: 'Operating system',
+          description: 'Hệ điều hành',
           style: { minWidth: 200, maxWidth: 200 },
         },
       ];
@@ -174,23 +174,23 @@ export class AgentInfo extends Component {
         { title: agent.id, description: 'ID', style: { minWidth: 30 } },
         {
           title: agent.status,
-          description: 'Status',
+          description: 'Trạng thái',
           style: { minWidth: 100 },
         },
         {
           title: agent.ip,
-          description: 'IP address',
+          description: 'Địa chỉ IP',
           style: { minwidth: 150 },
         },
         {
           title: agent.version,
-          description: 'Version',
+          description: 'Phiên bản',
           style: { minWidth: 100 },
         },
-        { title: agent.group, description: 'Groups', style: { minWidth: 150 } },
+        { title: agent.group, description: 'Các nhóm', style: { minWidth: 150 } },
         {
           title: agent.name,
-          description: 'Operating system',
+          description: 'Hệ điều hành',
           style: { minWidth: 150 },
         },
         {
@@ -198,17 +198,17 @@ export class AgentInfo extends Component {
             agent.node_name && agent.node_name !== 'unknown'
               ? agent.node_name
               : '-',
-          description: 'Cluster node',
+          description: 'Node của cụm',
           style: { minWidth: 120 },
         },
         {
           title: formatUIDate(agent.dateAdd),
-          description: 'Registration date',
+          description: 'Ngày đăng ký',
           style: { minWidth: 180 },
         },
         {
           title: formatUIDate(agent.lastKeepAlive),
-          description: 'Last keep alive',
+          description: 'Lần keep alive cuối',
           style: { minWidth: 180 },
         },
       ];

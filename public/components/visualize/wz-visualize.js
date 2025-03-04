@@ -151,13 +151,13 @@ export const WzVisualize = compose(
       if(satisfyPluginPlatformVersion('<7.11')){
         getToasts().add({
           color: 'success',
-          title: 'The index pattern was refreshed successfully.',
+          title: 'Mẫu chỉ mục đã được làm mới thành công.',
           text: toMountPoint(<EuiFlexGroup justifyContent="flexEnd" gutterSize="s">
             <EuiFlexItem grow={false}>
               There were some unknown fields for the current index pattern.
               You need to refresh the page to apply the changes.
               <a
-                title="More information in Wazuh documentation"
+                title="Thông tin thêm trong tài liệu Wazuh"
                 href={webDocumentationLink('user-manual/elasticsearch/troubleshooting.html#index-pattern-was-refreshed-toast-keeps-popping-up')}
                 target="documentation"
               >
@@ -173,13 +173,13 @@ export const WzVisualize = compose(
       }else if(satisfyPluginPlatformVersion('>=7.11')){
         getToasts().add({
           color: 'warning',
-          title: 'Found unknown fields in the index pattern.',
+          title: 'Tìm thấy các trường không xác định trong mẫu chỉ mục.',
           text: toMountPoint(<EuiFlexGroup justifyContent="flexEnd" gutterSize="s">
             <EuiFlexItem grow={false}>
               There are some unknown fields for the current index pattern.
               You need to refresh the page to update the fields.
               <a
-                title="More information in Wazuh documentation"
+                title="Thông tin thêm trong tài liệu Wazuh"
                 href={urlTroubleShootingDocs}
                 target="documentation">
                 Troubleshooting
@@ -215,7 +215,7 @@ export const WzVisualize = compose(
                     style={{ padding: '0px 6px', height: 30 }}
                     onClick={() => this.expand(vis.id)}
                     iconType="expand"
-                    aria-label="Expand"
+                    aria-label="Mở rộng"
                   />
                 </EuiFlexGroup>
                 <div style={{ height: '100%' }}>   
@@ -322,7 +322,7 @@ export const WzVisualize = compose(
                         style={{ padding: '0px 6px', height: 30 }}
                         onClick={() => this.expand('security-alerts')}
                         iconType="expand"
-                        aria-label="Expand"
+                        aria-label="Mở rộng"
                       />
                     </EuiFlexGroup>
                     <SecurityAlerts />

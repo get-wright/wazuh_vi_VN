@@ -57,8 +57,8 @@ class WzConfigurationMonitoringIgnored extends Component {
         currentConfig['syscheck-syscheck'].syscheck.ignore_sregex ) ? (
           <Fragment>
             <WzConfigurationSettingsTabSelector
-              title="Ignored files and directories"
-              description="These files and directories are ignored from the integrity scan"
+              title="Các tệp và thư mục đã bị bỏ qua"
+              description="Các tệp và thư mục này bị bỏ qua trong quét toàn vẹn"
               currentConfig={currentConfig['syscheck-syscheck']}
               minusHeight={this.props.agent.id === '000' ? 320 : 415}
               helpLinks={helpLinks}
@@ -104,8 +104,8 @@ class WzConfigurationMonitoringIgnored extends Component {
             currentConfig['syscheck-syscheck'].syscheck.registry_ignore ||
             currentConfig['syscheck-syscheck'].syscheck.registry_ignore_sregex) && (
             <WzConfigurationSettingsTabSelector
-              title="Ignored"
-              description="A list of registry entries that will be ignored"
+              title="Đã bỏ qua"
+              description="Danh sách các registry sẽ bị bỏ qua"
               currentConfig={currentConfig}
               minusHeight={this.props.agent.id === '000' ? 320 : 415}
               helpLinks={helpLinks}

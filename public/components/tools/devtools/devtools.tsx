@@ -241,7 +241,7 @@
 //               onClick={(ev) => { ev.stopPropagation(); closeTab(idx) }}
 //               color="text"
 //               iconType="cross"
-//               aria-label="close tab"
+//               aria-label="Đóng tab"
 //             />}
 //           </EuiButtonEmpty>
 //         </EuiFlexItem>)
@@ -424,7 +424,7 @@
 //           isReadOnly={true}
 //           wrapEnabled
 //           setOptions={codeEditorOptions}
-//           aria-label="Code Editor"
+//           aria-label="Trình chỉnh sửa mã"
 //         />
 //       </div>)
 //   }
@@ -534,7 +534,7 @@
 //           options={auxTabs}
 //           value={auxTabs.text}
 //           onChange={ (e) => onchange(e.target.value)}
-//           aria-label="Selected tabs"
+//           aria-label="Các tab đã chọn"
 //         />
 //       </EuiFlexItem>
 //     )
@@ -571,7 +571,7 @@
 //                 id={'addButtonTab'}
 //                 color="text"
 //                 iconType="plusInCircle"
-//                 aria-label="open new tab"
+//                 aria-label="Mở tab mới"
 //               />
 //             </EuiFlexItem>
 //             }
@@ -588,7 +588,7 @@
 //               color={'subdued'}
 //               onClick={() => exportOutput()}
 //               iconType="importAction"
-//               aria-label="Export"
+//               aria-label="Xuất"
 //             />
 //           </EuiToolTip>
 //         </EuiFlexItem>
@@ -600,7 +600,7 @@
 //               color={'subdued'}
 //               onClick={() => window.open(webDocumentationLink('user-manual/api/reference.html'))}
 //               iconType="questionInCircle"
-//               aria-label="Reference"
+//               aria-label="Tham khảo"
 //             />
 //           </EuiToolTip>
 //         </EuiFlexItem>

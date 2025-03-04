@@ -43,7 +43,7 @@ import { UI_ERROR_SEVERITIES } from '../../../../../react-services/error-orchest
 import { getErrorOrchestrator } from '../../../../../react-services/common-services';
 
 export default compose(
-  withGlobalBreadcrumb([{ text: '' }, { text: 'Management', href: '#/manager' }, { text: 'Logs' }]),
+  withGlobalBreadcrumb([{ text: '' }, { text: 'Trình quản lý', href: '#/manager' }, { text: 'logs' }]),
   withUserAuthorizationPrompt([
     { action: 'cluster:status', resource: '*:*:*' },
     { action: 'cluster:read', resource: 'node:id:*' },
@@ -252,16 +252,16 @@ export default compose(
         ? this.state.daemonsList.map((item) => {
             return { value: item, text: item === 'all' ? 'All daemons' : item };
           })
-        : [{ value: 'all', text: 'All daemons' }];
+        : [{ value: 'all', text: 'Tất cả daemon' }];
     }
 
     getLogLevelOptions() {
       return [
-        { value: 'all', text: 'All log levels' },
-        { value: 'info', text: 'Info' },
-        { value: 'error', text: 'Error' },
-        { value: 'warning', text: 'Warning' },
-        { value: 'critical', text: 'Critical' },
+        { value: 'all', text: 'Tất cả các mức log' },
+        { value: 'info', text: 'Thông tin' },
+        { value: 'error', text: 'Lỗi' },
+        { value: 'warning', text: 'Cảnh báo' },
+        { value: 'critical', text: 'Nghiêm trọng' },
         { value: 'debug', text: 'Debug' },
         { value: 'debug2', text: 'Debug2' },
       ];
@@ -437,7 +437,7 @@ export default compose(
                     options={daemonsOptions}
                     value={this.state.selectedDaemon}
                     onChange={this.onDaemonChange}
-                    aria-label="Filter by daemon"
+                    aria-label="Lọc theo daemon"
                   />
                 </EuiFlexItem>
                 <EuiFlexItem grow={false}>
@@ -446,7 +446,7 @@ export default compose(
                     options={logLevelOptions}
                     value={this.state.logLevelSelect}
                     onChange={this.onLogLevelChange}
-                    aria-label="Filter by log level"
+                    aria-label="Lọc theo mức log"
                   />
                 </EuiFlexItem>
                 {this.state.selectedNode && (
@@ -456,20 +456,20 @@ export default compose(
                       options={nodeList}
                       value={this.state.selectedNode}
                       onChange={this.onSelectNode}
-                      aria-label="Select node"
+                      aria-label="Chọn nút"
                     />
                   </EuiFlexItem>
                 )}
                 <EuiFlexItem grow={false} style={{ paddingTop: '10px' }}>
                   <EuiSwitch
-                    label="Descending sort"
+                    label="Sắp xếp giảm dần"
                     checked={this.state.descendingSort}
                     onChange={this.onSortSwitchChange}
                   />
                 </EuiFlexItem>
                 <EuiFlexItem grow={false} style={{ paddingTop: '10px' }}>
                   <EuiSwitch
-                    label="Realtime"
+                    label="Thời gian thực"
                     checked={this.state.realTime}
                     onChange={() => this.switchRealTime()}
                   />
@@ -485,7 +485,7 @@ export default compose(
                 onChange={this.onSearchBarChange}
                 onSearch={this.onSearchBarSearch}
                 placeholder="Filter logs"
-                aria-label="Filter logs"
+                aria-label="Lọc logs"
                 fullWidth
               />
             </EuiFlexItem>
@@ -539,7 +539,7 @@ export default compose(
           )) || (
             <EuiCallOut
               color="warning"
-              title="No results match your search criteria."
+              title="Không có kết quả nào phù hợp với tiêu chí tìm kiếm của bạn."
               iconType="alert"
             />
           )}

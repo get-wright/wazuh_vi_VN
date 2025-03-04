@@ -486,12 +486,12 @@ export class AgentsController {
           text: '',
         },
         {
-          text: 'Agents',
+          text: 'Các trạm',
           href: '#/agents-preview',
         },
         { agent: this.$scope.agent },
         {
-          text: 'Inventory Data',
+          text: 'Dữ liệu Inventory',
           className: 'wz-global-breadcrumb-popover',
         },
       ];

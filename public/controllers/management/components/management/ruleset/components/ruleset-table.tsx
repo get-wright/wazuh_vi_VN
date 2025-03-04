@@ -130,7 +130,7 @@ function RulesetTable({ setShowingFiles, showingFiles, ...props }) {
   }, [])
 
   // Table custom filter options
-  const buttonOptions = [{ label: "Custom rules", field: "relative_dirname", value: "etc/rules" },];
+  const buttonOptions = [{ label: "Quy tắc tùy chỉnh", field: "relative_dirname", value: "etc/rules" },];
 
   const updateFilters = (filters) => {
     setFilters(filters);
@@ -163,8 +163,8 @@ function RulesetTable({ setShowingFiles, showingFiles, ...props }) {
         setTableFootprint(Date.now());
         getToasts().add({
           color: 'success',
-          title: 'Success',
-          text: 'Deleted successfully',
+          title: 'Thành công',
+          text: 'Xóa thành công',
           toastLifeTimeMs: 3000,
         });
       });

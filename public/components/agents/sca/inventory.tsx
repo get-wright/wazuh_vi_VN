@@ -322,19 +322,19 @@ export class Inventory extends Component<InventoryProps, InventoryState> {
           : '';
       const listItems = [
         {
-          title: 'Check not applicable due to:',
+          title: 'Kiểm tra không áp dụng được do:',
           description: item.reason,
         },
         {
-          title: 'Rationale',
+          title: 'Lý do',
           description: item.rationale || '-',
         },
         {
-          title: 'Remediation',
+          title: 'Khắc phục',
           description: item.remediation || '-',
         },
         {
-          title: 'Description',
+          title: 'Mô tả',
           description: item.description || '-',
         },
         {
@@ -346,7 +346,7 @@ export class Inventory extends Component<InventoryProps, InventoryState> {
           description: <RuleText rules={item.rules.length ? item.rules : []} />,
         },
         {
-          title: 'Compliance',
+          title: 'Tuân thủ',
           description: <ComplianceText complianceText={complianceText} />,
         },
       ];
@@ -393,7 +393,7 @@ export class Inventory extends Component<InventoryProps, InventoryState> {
     const buttonPopover = (
       <EuiButtonEmpty
         iconType='iInCircle'
-        aria-label='Help'
+        aria-label='Trợ giúp'
         onClick={() =>
           this.setState({ showMoreInfo: !this.state.showMoreInfo })
         }
@@ -417,7 +417,7 @@ export class Inventory extends Component<InventoryProps, InventoryState> {
             (agent || {}).status !== API_NAME_AGENT_STATUS.NEVER_CONNECTED &&
             !this.state.policies.length &&
             !this.state.loading && (
-              <EuiCallOut title='No scans available' iconType='iInCircle'>
+              <EuiCallOut title='Không có quét nào' iconType='iInCircle'>
                 <EuiButton color='primary' onClick={() => this.initialize()}>
                   Refresh
                 </EuiButton>
@@ -428,7 +428,7 @@ export class Inventory extends Component<InventoryProps, InventoryState> {
             (agent || {}).status === API_NAME_AGENT_STATUS.NEVER_CONNECTED &&
             !this.state.loading && (
               <EuiCallOut
-                title='Agent has never connected'
+                title='Trạm chưa bao giờ kết nối'
                 style={{ width: '100%' }}
                 iconType='iInCircle'
               >
@@ -518,7 +518,7 @@ export class Inventory extends Component<InventoryProps, InventoryState> {
                             : () => this.loadScaPolicy(false)
                         }
                         iconType='arrowLeft'
-                        aria-label='Back to policies'
+                        aria-label='Quay lại policies'
                         {...{ iconSize: 'l' }}
                       />
                     </EuiFlexItem>
@@ -599,7 +599,7 @@ export class Inventory extends Component<InventoryProps, InventoryState> {
                     <EuiFlexItem>
                       <EuiStat
                         title={`${this.state.lookingPolicy.score}%`}
-                        description='Score'
+                        description='Điểm'
                         titleColor='accent'
                         titleSize='m'
                         textAlign='center'
@@ -608,7 +608,7 @@ export class Inventory extends Component<InventoryProps, InventoryState> {
                     <EuiFlexItem>
                       <EuiStat
                         title={formatUIDate(this.state.lookingPolicy.end_scan)}
-                        description='End scan'
+                        description='Kết thúc quét'
                         titleColor='primary'
                         titleSize='s'
                         textAlign='center'

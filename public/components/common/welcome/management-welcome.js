@@ -35,7 +35,7 @@ class ManagementWelcome extends Component {
   }
 
   setGlobalBreadcrumb() {
-    const breadcrumb = [{ text: '' }, { text: 'Management' }];
+    const breadcrumb = [{ text: '' }, { text: 'Trình quản lý' }];
     store.dispatch(updateGlobalBreadcrumb(breadcrumb));
   }
 
@@ -70,7 +70,7 @@ class ManagementWelcome extends Component {
                       }
                       title="Rules"
                       onClick={() => this.switchSection('rules')}
-                      description="Manage your Wazuh cluster rules."
+                      description="Quản lý rule của cụm Wazuh của bạn."
                     />
                   </EuiFlexItem>
                   <EuiFlexItem>
@@ -86,7 +86,7 @@ class ManagementWelcome extends Component {
                       }
                       title="Decoders"
                       onClick={() => this.switchSection('decoders')}
-                      description="Manage your Wazuh cluster decoders."
+                      description="Quản lý bộ giải mã của cụm Wazuh."
                     />
                   </EuiFlexItem>
                 </EuiFlexGroup>
@@ -102,9 +102,9 @@ class ManagementWelcome extends Component {
                           color="primary"
                         />
                       }
-                      title="CDB lists"
+                      title="Danh sách CDB"
                       onClick={() => this.switchSection('lists')}
-                      description="Manage your Wazuh cluster CDB lists."
+                      description="Quản lý danh sách CDB của cụm Wazuh."
                     />
                   </EuiFlexItem>
                   <EuiFlexItem>
@@ -118,9 +118,9 @@ class ManagementWelcome extends Component {
                           color="primary"
                         />
                       }
-                      title="Groups"
+                      title="Các nhóm"
                       onClick={() => this.switchSection('groups')}
-                      description="Manage your agent groups."
+                      description="Quản lý nhóm trạm của bạn."
                     />
                   </EuiFlexItem>
                 </EuiFlexGroup>
@@ -132,9 +132,9 @@ class ManagementWelcome extends Component {
                       icon={
                         <EuiIcon size="xl" type="devToolsApp" color="primary" />
                       }
-                      title="Configuration"
+                      title="Cấu hình"
                       onClick={() => this.switchSection('configuration')}
-                      description="Manage your Wazuh cluster configuration."
+                      description="Quản lý cấu hình cụm Wazuh của bạn."
                     />
                   </EuiFlexItem>
                   <EuiFlexItem />
@@ -152,9 +152,9 @@ class ManagementWelcome extends Component {
                       icon={
                         <EuiIcon size="xl" type="uptimeApp" color="primary" />
                       }
-                      title="Status"
+                      title="Trạng thái"
                       onClick={() => this.switchSection('status')}
-                      description="Manage your Wazuh cluster status."
+                      description="Quản lý trạng thái cụm Wazuh của bạn."
                     />
                   </EuiFlexItem>
                   <EuiFlexItem>
@@ -168,9 +168,9 @@ class ManagementWelcome extends Component {
                           color="primary"
                         />
                       }
-                      title="Cluster"
+                      title="Cụm"
                       onClick={() => this.switchSection('monitoring')}
-                      description="Visualize your Wazuh cluster."
+                      description="Trực quan hóa cụm Wazuh của bạn."
                     />
                   </EuiFlexItem>
                 </EuiFlexGroup>
@@ -182,9 +182,9 @@ class ManagementWelcome extends Component {
                       icon={
                         <EuiIcon size="xl" type="filebeatApp" color="primary"/>
                       }
-                      title="Logs"
+                      title="logs"
                       onClick={() => this.switchSection('logs')}
-                      description="Logs from your Wazuh cluster."
+                      description="logs từ cụm Wazuh của bạn"
                     />
                   </EuiFlexItem>
                   <EuiFlexItem>
@@ -198,9 +198,9 @@ class ManagementWelcome extends Component {
                           color="primary"
                         />
                       }
-                      title="Reporting"
+                      title="Báo cáo"
                       onClick={() => this.switchSection('reporting')}
-                      description="Check your stored Wazuh reports."
+                      description="Kiểm tra các báo cáo Wazuh đã lưu của bạn."
                     />
                   </EuiFlexItem>
                 </EuiFlexGroup>
@@ -212,9 +212,9 @@ class ManagementWelcome extends Component {
                       icon={
                         <EuiIcon size="xl" type="visualizeApp" color="primary" />
                       }
-                      title="Statistics"
+                      title="Thống kê"
                       onClick={() => this.switchSection('statistics')}
-                      description="Information about the Wazuh environment"
+                      description="Thông tin về môi trường Wazuh"
                     />
                   </EuiFlexItem>
                   <EuiFlexItem>

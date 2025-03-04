@@ -34,8 +34,8 @@ class WzGroups extends Component {
   setGlobalBreadcrumb() {
     const breadcrumb = [
       { text: '' },
-      { text: 'Management', href: '#/manager' },
-      { text: 'Groups' },
+      { text: 'Trình quản lý', href: '#/manager' },
+      { text: 'Các nhóm' },
     ];
     store.dispatch(updateGlobalBreadcrumb(breadcrumb));
   }

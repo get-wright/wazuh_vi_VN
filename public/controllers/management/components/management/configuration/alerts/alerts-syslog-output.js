@@ -29,11 +29,11 @@ import { webDocumentationLink } from '../../../../../../../common/services/web_d
 
 const helpLinks = [
   {
-    text: 'Configuring syslog output',
+    text: 'Cấu hình đầu ra syslog',
     href: webDocumentationLink('user-manual/manager/manual-syslog-output.html')
   },
   {
-    text: 'Syslog output reference',
+    text: 'Tham khảo đầu ra syslog',
     href: webDocumentationLink('user-manual/reference/ossec-conf/syslog-output.html')
   }
 ];
@@ -78,8 +78,8 @@ class WzConfigurationAlertsReports extends Component {
           currentConfig['csyslog-csyslog'].syslog_output &&
           currentConfig['csyslog-csyslog'].syslog_output.length && (
             <WzConfigurationSettingsTabSelector
-              title="Main settings"
-              description="Output alerts to a syslog server"
+              title="Cài đặt chính"
+              description="Gửi cảnh báo đến máy chủ syslog"
               currentConfig={currentConfig}
               minusHeight={320}
               helpLinks={helpLinks}

@@ -34,56 +34,56 @@ export class InventoryTable extends Component {
     {
       type: 'q',
       label: 'name',
-      description: 'Filter by package ID',
+      description: 'Lọc theo ID gói',
       operators: ['=', '!=', '~'],
       values: async (value) => getFilterValues('name', value, this.props.agent.id),
     },
     {
       type: 'q',
       label: 'cve',
-      description: 'Filter by CVE ID',
+      description: 'Lọc theo CVE ID',
       operators: ['=', '!=', '~'],
       values: async (value) => getFilterValues('cve', value, this.props.agent.id),
     },
     {
       type: 'q',
       label: 'version',
-      description: 'Filter by CVE version',
+      description: 'Lọc theo phiên bản CVE',
       operators: ['=', '!=', '~'],
       values: async (value) => getFilterValues('version', value, this.props.agent.id),
     },
     {
       type: 'q',
       label: 'architecture',
-      description: 'Filter by architecture',
+      description: 'Lọc theo kiến trúc',
       operators: ['=', '!=', '~'],
       values: async (value) => getFilterValues('architecture', value, this.props.agent.id),
     },
     {
       type: 'q',
       label: 'severity',
-      description: 'Filter by Severity',
+      description: 'Lọc theo mức độ nghiêm trọng',
       operators: ['=', '!=', '~'],
       values: async (value) => getFilterValues('severity', value, this.props.agent.id),
     },
     {
       type: 'q',
       label: 'cvss2_score',
-      description: 'Filter by CVSS2',
+      description: 'Lọc theo CVSS2',
       operators: ['=', '!=', '~'],
       values: async (value) => getFilterValues('cvss2_score', value, this.props.agent.id),
     },
     {
       type: 'q',
       label: 'cvss3_score',
-      description: 'Filter by CVSS3',
+      description: 'Lọc theo CVSS3',
       operators: ['=', '!=', '~'],
       values: async (value) => getFilterValues('cvss3_score', value, this.props.agent.id),
     },
     {
       type: 'q',
       label: 'detection_time',
-      description: 'Filter by Detection Time',
+      description: 'Lọc theo thời gian phát hiện',
       operators: ['=', '!=', '~'],
       values: async (value) => getFilterValues('detection_time', value, this.props.agent.id),
     },
@@ -237,7 +237,7 @@ export class InventoryTable extends Component {
 
     return (
       <TableWzAPI
-        title="Vulnerabilities"
+        title="Lỗ hổng"
         tableColumns={columns}
         tableInitialSortingField="name"
         searchTable={true}

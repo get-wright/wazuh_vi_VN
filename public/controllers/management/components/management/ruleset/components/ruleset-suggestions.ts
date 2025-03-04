@@ -4,13 +4,13 @@ const rulesItems = [
   {
     type: 'params',
     label: 'status',
-    description: 'Filters the rules by status.',
+    description: 'Lọc rule theo trạng thái',
     values: ['enabled', 'disabled']
   },
   {
     type: 'params',
     label: 'group',
-    description: 'Filters the rules by group',
+    description: 'Lọc rule theo nhóm',
     values: async value => {
       const filter = { limit: 30 };
       if (value) {
@@ -23,13 +23,13 @@ const rulesItems = [
   {
     type: 'params',
     label: 'level',
-    description: 'Filters the rules by level',
+    description: 'Lọc rule theo mức độ',
     values: [...Array(16).keys()]
   },
   {
     type: 'params',
     label: 'filename',
-    description: 'Filters the rules by file name.',
+    description: 'Lọc rule theo tên tệp',
     values: async value => {
       const filter = { limit: 30 };
       if (value) {
@@ -42,7 +42,7 @@ const rulesItems = [
   {
     type: 'params',
     label: 'relative_dirname',
-    description: 'Path of the rules files',
+    description: 'Đường dẫn các tệp rule',
     values: async () => {
       const result = await WzRequest.apiReq('GET', '/manager/configuration', {
         params: {
@@ -56,7 +56,7 @@ const rulesItems = [
   {
     type: 'params',
     label: 'hipaa',
-    description: 'Filters the rules by HIPAA requirement',
+    description: 'Lọc rule theo yêu cầu HIPAA',
     values: async () => {
       const result = await WzRequest.apiReq('GET', '/rules/requirement/hipaa', {});
       return result?.data?.data?.affected_items;
@@ -65,7 +65,7 @@ const rulesItems = [
   {
     type: 'params',
     label: 'gdpr',
-    description: 'Filters the rules by GDPR requirement',
+    description: 'Lọc rule theo yêu cầu GDPR',
     values: async () => {
       const result = await WzRequest.apiReq('GET', '/rules/requirement/gdpr', {});
       return result?.data?.data?.affected_items;
@@ -74,7 +74,7 @@ const rulesItems = [
   {
     type: 'params',
     label: 'nist-800-53',
-    description: 'Filters the rules by NIST requirement',
+    description: 'Lọc rule theo yêu cầu NIST',
     values: async () => {
       const result = await WzRequest.apiReq('GET', '/rules/requirement/nist-800-53', {});
       return result?.data?.data?.affected_items;
@@ -83,7 +83,7 @@ const rulesItems = [
   {
     type: 'params',
     label: 'gpg13',
-    description: 'Filters the rules by GPG requirement',
+    description: 'Lọc rule theo yêu cầu GPG',
     values: async () => {
       const result = await WzRequest.apiReq('GET', '/rules/requirement/gpg13', {});
       return result?.data?.data?.affected_items;
@@ -92,7 +92,7 @@ const rulesItems = [
   {
     type: 'params',
     label: 'pci_dss',
-    description: 'Filters the rules by PCI DSS requirement',
+    description: 'Lọc rule theo yêu cầu PCI DSS',
     values: async () => {
       const result = await WzRequest.apiReq('GET', '/rules/requirement/pci_dss', {});
       return result?.data?.data?.affected_items;
@@ -101,7 +101,7 @@ const rulesItems = [
   {
     type: 'params',
     label: 'tsc',
-    description: 'Filters the rules by TSC requirement',
+    description: 'Lọc rule theo yêu cầu TSC',
     values: async () => {
       const result = await WzRequest.apiReq('GET', '/rules/requirement/tsc', {});
       return result?.data?.data?.affected_items;
@@ -110,7 +110,7 @@ const rulesItems = [
   {
     type: 'params',
     label: 'mitre',
-    description: 'Filters the rules by MITRE requirement',
+    description: 'Lọc rule theo yêu cầu MITRE',
     values: async () => {
       const result = await WzRequest.apiReq('GET', '/rules/requirement/mitre', {});
       return result?.data?.data?.affected_items;
@@ -121,7 +121,7 @@ const rulesFiles = [
   {
     type: 'params',
     label: 'filename',
-    description: 'Filters the rules by file name.',
+    description: 'Lọc rule theo tên tệp',
     values: async value => {
       const filter = { limit: 30 };
       if (value) {

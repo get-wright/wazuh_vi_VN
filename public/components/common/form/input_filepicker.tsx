@@ -13,7 +13,7 @@ export const InputFormFilePicker = ({onChange, options, setInputRef, key, ...res
       || rest.initialValue)}
     display='default'
     fullWidth
-    aria-label='Upload a file'
+    aria-label='Tải lên tệp'
     accept={options.file.extensions.join(',')}
     ref={setInputRef}
   />

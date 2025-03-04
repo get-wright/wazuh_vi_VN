@@ -284,7 +284,7 @@ class WzGroupsActionButtons extends Component {
           >
             <EuiFlexGroup direction={'column'}>
               <EuiFlexItem>
-                <EuiFormRow label="Introduce the group name" id="">
+                <EuiFormRow label="Nhập tên nhóm" id="">
                   <EuiFieldText
                     className="groupNameInput"
                     value={this.state.newGroupName}

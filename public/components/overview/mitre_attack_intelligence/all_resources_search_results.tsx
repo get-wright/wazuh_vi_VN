@@ -57,7 +57,7 @@ export const ModuleMitreAttackIntelligenceAllResourcesSearchResults = withGuard(
     </EuiAccordion>
   ), []).reduce((accum, cur) => [accum, <EuiSpacer size='m'/>, cur])
   :  <EuiCallOut
-        title='No results found'
+        title='Không tìm thấy kết quả'
         color='warning'
       />
 });

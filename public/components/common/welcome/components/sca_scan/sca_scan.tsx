@@ -260,7 +260,7 @@ export const ScaScan = compose(
                         this.router.reload();
                       }
                     }
-                    aria-label="Open SCA Scans" />
+                    aria-label="Mở quét SCA" />
                 </EuiToolTip>
               </EuiFlexItem>
             </EuiFlexGroup>

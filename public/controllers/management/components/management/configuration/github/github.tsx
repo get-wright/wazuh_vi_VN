@@ -31,12 +31,12 @@ const sections = [{ component: 'wmodules', configuration: 'wmodules' }];
 const mainSettings = [
   {
     field: 'enabled',
-    label: 'Service status',
+    label: 'Trạng thái dịch vụ',
     render: renderValueYesThenEnabled,
   },
   {
     field: 'only_future_events',
-    label: 'Collect events generated since Wazuh agent was started',
+    label: 'Thu thập các sự kiện tạo ra từ khi trạm Wazuh được khởi động',
   },
   {
     field: 'time_delay',
@@ -45,27 +45,27 @@ const mainSettings = [
   },
   {
     field: 'curl_max_size',
-    label: 'Maximum size allowed for the GitHub API response',
+    label: 'Kích thước tối đa cho phép cho phản hồi API GitHub',
   },
   {
     field: 'interval',
-    label: 'Interval between GitHub wodle executions in seconds',
+    label: 'Khoảng thời gian giữa các lần thực hiện Github wodle (tính bằng giây)',
   },
-  { field: 'event_type', label: 'Event type' },
+  { field: 'event_type', label: 'Loại sự kiện' },
 ];
 
 const columns = [
-  { field: 'org_name', label: 'Organization' },
+  { field: 'org_name', label: 'Tổ chức' },
   { field: 'api_token', label: 'Token' },
 ];
 
 const helpLinks = [
   {
-    text: 'Using Wazuh to monitor GitHub',
+    text: 'Sử dụng Wazuh để giám sát GitHub',
     href: webDocumentationLink('cloud-security/github/index.html'),
   },
   {
-    text: 'GitHub module reference',
+    text: 'Tham khảo module Github',
     href: webDocumentationLink(
       'user-manual/reference/ossec-conf/github-module.html',
     ),
@@ -90,14 +90,14 @@ export const WzConfigurationGitHub = withWzConfig(sections)(
 
     return (
       <WzTabSelector>
-        <WzTabSelectorTab label='General'>
+        <WzTabSelectorTab label='Tổng quan'>
           <GeneralTab
             wodleConfiguration={wodleConfiguration}
             currentConfig={currentConfig}
             {...rest}
           />
         </WzTabSelectorTab>
-        <WzTabSelectorTab label='Credentials'>
+        <WzTabSelectorTab label='Thông tin xác thực'>
           <CredentialsTab
             wodleConfiguration={wodleConfiguration}
             currentConfig={currentConfig}
@@ -126,8 +126,8 @@ const tabWrapper = compose(
 
 const GeneralTab = tabWrapper(({ agent, wodleConfiguration }) => (
   <WzConfigurationSettingsTabSelector
-    title='Main settings'
-    description='Configuration for the GitHub module'
+    title='Cài đặt chính'
+    description='Cấu hình cho module Github'
     currentConfig={wodleConfiguration}
     minusHeight={agent.id === '000' ? 370 : 420} //TODO: Review the minusHeight for the agent case
     helpLinks={helpLinks}
@@ -147,7 +147,7 @@ const CredentialsTab = tabWrapper(({ agent, wodleConfiguration }) => {
   );
   return (
     <WzConfigurationSettingsTabSelector
-      title='List of organizations to auditing'
+      title='Danh sách các tổ chức để kiểm định'
       currentConfig={wodleConfiguration}
       minusHeight={agent.id === '000' ? 370 : 420} //TODO: Review the minusHeight for the agent case
       helpLinks={helpLinks}

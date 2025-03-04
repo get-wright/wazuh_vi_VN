@@ -187,7 +187,7 @@ class OverviewActions extends Component {
             this.removeAgentsFilter();
           }}
           tooltip={{ position: 'bottom', content: 'Unpin agent' }}
-          aria-label="Unpin agent"
+          aria-label="Gỡ ghim trạm"
         />
       );
     }

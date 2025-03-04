@@ -22,16 +22,16 @@ import helpLinks from './help-links';
 import { connect } from 'react-redux';
 
 const mainSettings = [
-  { field: 'name', label: 'Bucket name' },
-  { field: 'type', label: 'Bucket type' },
-  { field: 'aws_account_id', label: 'AWS account ID' },
-  { field: 'aws_account_alias', label: 'AWS account alias' },
-  { field: 'aws_profile', label: 'Profile name with read permissions' },
-  { field: 'iam_role_arn', label: 'IAM ARN role to read bucket logs' },
-  { field: 'path', label: 'Bucket path' },
-  { field: 'only_logs_after', label: 'Parse only logs from this date onwards' },
-  { field: 'remove_from_bucket', label: 'Remove bucket logs after being read' },
-  { field: 'regions', label: 'Limit log parsing to these regions' }
+  { field: 'name', label: 'Tên bucket' },
+  { field: 'type', label: 'Loại bucket' },
+  { field: 'aws_account_id', label: 'ID tài khoản AWS' },
+  { field: 'aws_account_alias', label: 'Bí danh tài khoản AWS' },
+  { field: 'aws_profile', label: 'Tên hồ sơ có quyền đọc' },
+  { field: 'iam_role_arn', label: 'Vai trò IAM ARN để đọc logs từ bucket' },
+  { field: 'path', label: 'Đường dẫn bucket' },
+  { field: 'only_logs_after', label: 'Phân tích logs chỉ từ ngày này trở đi' },
+  { field: 'remove_from_bucket', label: 'Xóa logs của bucket sau khi được đọc' },
+  { field: 'regions', label: 'Giới hạn phân tích log chỉ trong các vùng này' }
 ];
 
 class WzConfigurationAmazonS3Buckets extends Component {
@@ -57,8 +57,8 @@ class WzConfigurationAmazonS3Buckets extends Component {
           wodleConfig['aws-s3'] &&
           wodleConfig['aws-s3'].buckets && (
             <WzConfigurationSettingsTabSelector
-              title="Main settings"
-              description="Amazon buckets from where logs are read"
+              title="Cài đặt chính"
+              description="Amazon buckets lưu trữ logs"
               currentConfig={wodleConfig}
               minusHeight={320}
               helpLinks={helpLinks}

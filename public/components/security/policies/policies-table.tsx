@@ -114,7 +114,7 @@ export const PoliciesTable = ({ policies, loading, editPolicy, updatePolicies })
             modalProps={{ buttonColor: 'danger' }}
             iconType="trash"
             color="danger"
-            aria-label="Delete policy"
+            aria-label="Xóa policy"
           />
         </div>
       ),

@@ -273,7 +273,7 @@ export class Details extends Component {
                             this.addFilter(item.field, value);
                           }}
                           iconType="magnifyWithPlus"
-                          aria-label="Next"
+                          aria-label="Tiếp theo"
                           iconSize="s"
                           className="buttonAddFilter"
                         />
@@ -440,18 +440,18 @@ export class Details extends Component {
                   { field: 'icon' },
                   { field: 'timestamp' },
                   { field: 'agent.id', label: 'Agent' },
-                  { field: 'agent.name', label: 'Agent name' },
-                  { field: 'rule.description', label: 'Description' },
-                  { field: 'rule.level', label: 'Level' },
-                  { field: 'rule.id', label: 'Rule ID' },
+                  { field: 'agent.name', label: 'Tên trạm' },
+                  { field: 'rule.description', label: 'Mô tả' },
+                  { field: 'rule.level', label: 'Mức' },
+                  { field: 'rule.id', label: 'ID rule' },
                 ]}
                 initialAgentColumns={[
                   { field: 'icon' },
                   { field: 'timestamp' },
-                  { field: 'rule.description', label: 'Description' },
-                  { field: 'rule.level', label: 'Level' },
-                  { field: 'rule.id', label: 'Rule ID' },
-                  { field: 'data.vulnerability.status', label: 'Status', width: '20%' },
+                  { field: 'rule.description', label: 'Mô tả' },
+                  { field: 'rule.level', label: 'Mức' },
+                  { field: 'rule.id', label: 'ID rule' },
+                  { field: 'data.vulnerability.status', label: 'Trạng thái', width: '20%' },
                 ]}
                 includeFilters="vulnerability"
                 implicitFilters={implicitFilters}

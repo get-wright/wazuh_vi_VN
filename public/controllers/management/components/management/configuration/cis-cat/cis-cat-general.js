@@ -21,20 +21,20 @@ import { isString, renderValueNoThenEnabled } from '../utils/utils';
 const mainSettings = [
   {
     field: 'disabled',
-    label: 'CIS-CAT integration status',
+    label: 'Trạng thái tích hợp CIS-CAT',
     render: renderValueNoThenEnabled
   },
-  { field: 'timeout', label: 'Timeout (in seconds) for scan executions' },
-  { field: 'java_path', label: 'Path to Java executable directory' },
-  { field: 'ciscat_path', label: 'Path to CIS-CAT executable directory' }
+  { field: 'timeout', label: 'Thời gian chờ (tính bằng giây) cho lần quét' },
+  { field: 'java_path', label: 'Đường dẫn đến thư mục thực thi Java' },
+  { field: 'ciscat_path', label: 'Đường dẫn đến thư mục thực thi CIS-CAT' }
 ];
 
 const schedulingSettings = [
-  { field: 'interval', label: 'Interval between scan executions' },
-  { field: 'scan-on-start', label: 'Scan on start' },
-  { field: 'day', label: 'Day of the month to run scans' },
-  { field: 'wday', label: 'Day of the week to run scans' },
-  { field: 'time', label: 'Time of the day to run scans' }
+  { field: 'interval', label: 'Khoảng thời gian giữa các lần quét' },
+  { field: 'scan-on-start', label: 'Quét khi khởi động' },
+  { field: 'day', label: 'Ngày trong tháng để chạy quét' },
+  { field: 'wday', label: 'Ngày trong tuần để chạy quét' },
+  { field: 'time', label: 'Thời gian trong ngày để chạy quét' }
 ];
 
 class WzConfigurationCisCatGeneral extends Component {
@@ -59,8 +59,8 @@ class WzConfigurationCisCatGeneral extends Component {
           )}
         {wodleConfig['cis-cat'] && (
           <WzConfigurationSettingsTabSelector
-            title="Main settings"
-            description="General settings applied to all benchmarks"
+            title="Cài đặt chính"
+            description="Cài đặt chung áp dụng cho tất cả các điểm chuẩn"
             currentConfig={wodleConfig}
             minusHeight={this.props.agent.id === '000' ? 320 : 415}
             helpLinks={helpLinks}
@@ -70,8 +70,8 @@ class WzConfigurationCisCatGeneral extends Component {
               items={mainSettings}
             />
             <WzConfigurationSettingsGroup
-              title="Scheduling settings"
-              description="Customize CIS-CAT scans scheduling"
+              title="Cài đặt lịch"
+              description="Thiết lập lịch quét CIS-CAT"
               config={wodleConfig['cis-cat']}
               items={schedulingSettings}
             />

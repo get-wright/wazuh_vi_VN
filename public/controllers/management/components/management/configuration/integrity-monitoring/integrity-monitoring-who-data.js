@@ -20,8 +20,8 @@ import WzNoConfig from '../util-components/no-config';
 import helpLinks from './help-links';
 
 const mainSettings = [
-  { field: 'restart_audit', label: 'Restart audit' },
-  { field: 'startup_healthcheck', label: 'Startup healthcheck' }
+  { field: 'restart_audit', label: 'Khởi động lại kiểm định' },
+  { field: 'startup_healthcheck', label: 'Kiểm tra khởi động' }
 ];
 
 const columns = [{ field: 'audit_key', name: 'Keys' }];
@@ -45,8 +45,8 @@ class WzConfigurationIntegrityMonitoringWhoData extends Component {
           currentConfig['syscheck-syscheck'].syscheck &&
           currentConfig['syscheck-syscheck'].syscheck.whodata && (
             <WzConfigurationSettingsTabSelector
-              title="Who-data audit keys"
-              description="Wazuh will include in its FIM baseline those events being monitored by Audit using audit_key."
+              title="Keys kiểm định who-data"
+              description="Wazuh sẽ bao gồm trong baseline FIM các sự kiện được giám sát bởi Audit sử dụng audit_key."
               currentConfig={currentConfig['syscheck-syscheck']}
               minusHeight={this.props.agent.id === '000' ? 320 : 415}
               helpLinks={helpLinks}

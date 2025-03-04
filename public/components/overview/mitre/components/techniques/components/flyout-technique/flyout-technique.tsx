@@ -218,7 +218,7 @@ export class FlyoutTechnique extends Component {
         ),
       },
       {
-        title: 'Tactics',
+        title: 'Chiến thuật',
         description: techniqueData.tactics
           ? techniqueData.tactics.map((tactic) => {
               return (
@@ -243,7 +243,7 @@ export class FlyoutTechnique extends Component {
           : '',
       },
       {
-        title: 'Version',
+        title: 'Phiên bản',
         description: techniqueData.mitre_version,
       },
     ];
@@ -335,21 +335,21 @@ export class FlyoutTechnique extends Component {
                   { field: 'icon' },
                   { field: 'timestamp' },
                   { field: 'agent.id', label: 'Agent' },
-                  { field: 'agent.name', label: 'Agent Name' },
-                  { field: 'rule.mitre.id', label: 'Technique(s)' },
-                  { field: 'rule.mitre.tactic', label: 'Tactic(s)' },
-                  { field: 'rule.level', label: 'Level' },
-                  { field: 'rule.id', label: 'Rule ID' },
-                  { field: 'rule.description', label: 'Description' },
+                  { field: 'agent.name', label: 'Tên trạm' },
+                  { field: 'rule.mitre.id', label: 'Kỹ thuật' },
+                  { field: 'rule.mitre.tactic', label: 'Chiến thuật' },
+                  { field: 'rule.level', label: 'Mức' },
+                  { field: 'rule.id', label: 'ID rule' },
+                  { field: 'rule.description', label: 'Mô tả' },
                 ]}
                 initialAgentColumns={[
                   { field: 'icon' },
                   { field: 'timestamp' },
-                  { field: 'rule.mitre.id', label: 'Technique(s)' },
-                  { field: 'rule.mitre.tactic', label: 'Tactic(s)' },
-                  { field: 'rule.level', label: 'Level' },
-                  { field: 'rule.id', label: 'Rule ID' },
-                  { field: 'rule.description', label: 'Description' },
+                  { field: 'rule.mitre.id', label: 'Kỹ thuật' },
+                  { field: 'rule.mitre.tactic', label: 'Chiến thuật' },
+                  { field: 'rule.level', label: 'Mức' },
+                  { field: 'rule.id', label: 'ID rule' },
+                  { field: 'rule.description', label: 'Mô tả' },
                 ]}
                 implicitFilters={implicitFilters}
                 initialFilters={[]}

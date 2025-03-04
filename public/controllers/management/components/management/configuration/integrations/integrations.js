@@ -25,17 +25,17 @@ import { webDocumentationLink } from '../../../../../../../common/services/web_d
 
 const helpLinks = [
   {
-    text: 'Integration with external APIs',
+    text: 'Tích hợp với API bên ngoài',
     href: webDocumentationLink('user-manual/manager/manual-integration.html'),
   },
   {
-    text: 'VirusTotal integration',
+    text: 'Tích hợp VirusTotal',
     href: webDocumentationLink(
       'user-manual/capabilities/malware-detection/virus-total-integration.html',
     ),
   },
   {
-    text: 'Integration reference',
+    text: 'Tham khảo tích hợp',
     href: webDocumentationLink(
       'user-manual/reference/ossec-conf/integration.html',
     ),
@@ -43,27 +43,27 @@ const helpLinks = [
 ];
 
 const defaultIntegrations = [
-  { title: 'Slack', description: 'Get alerts directly on Slack' },
+  { title: 'Slack', description: 'Nhận cảnh báo trực tiếp qua Slack' },
   {
     title: 'VirusTotal',
-    description: 'Get notified when malicious software is found',
+    description: 'Nhận thông báo khi phát hiện phần mềm độc hại',
   },
   {
     title: 'PagerDuty',
-    description: 'Get alerts on this streamlined incident resolution software',
+    description: 'Nhận cảnh báo qua phần mềm xử lý sự cố này',
   },
 ];
 
 const integrationsSettings = [
   { field: 'hook_url', label: 'Hook URL' },
-  { field: 'level', label: 'Filter alerts by this level or above' },
-  { field: 'rule_id', label: 'Filter alerts by these rule IDs' },
-  { field: 'group', label: 'Filter alerts by these rule groupst' },
+  { field: 'level', label: 'Lọc cảnh báo ở mức này hoặc cao hơn' },
+  { field: 'rule_id', label: 'Lọc cảnh báo theo rule IDs' },
+  { field: 'group', label: 'Lọc cảnh báo theo nhóm rule' },
   {
     field: 'event_location',
-    label: 'Filter alerts by location (agent, IP address or file)',
+    label: 'Lọc cảnh báo theo vị trí (trạm, IP hoặc tệp)',
   },
-  { field: 'alert_format', label: 'Used format to write alerts' },
+  { field: 'alert_format', label: 'Định dạng được sử dụng để ghi cảnh báo' },
 ];
 
 class WzConfigurationIntegrations extends Component {
@@ -80,7 +80,7 @@ class WzConfigurationIntegrations extends Component {
     return (
       defaultIntegrations.find(
         i => i.title && i.title.toLocaleLowerCase() === integration,
-      ) || { title: capitalize(integration), description: 'Custom integration' }
+      ) || { title: capitalize(integration), description: 'Tích hợp tùy chỉnh' }
     );
   }
   render() {
@@ -103,8 +103,8 @@ class WzConfigurationIntegrations extends Component {
         {currentConfig['integrator-integration'] &&
           !isString(currentConfig['integrator-integration']) && (
             //   <WzConfigurationSettingsTabSelector
-            //     title='Main settings'
-            //     description='Basic alerts and logging settings'
+            //     title='Cài đặt chính'
+            //     description='Cài đặt cảnh báo và logging cơ bản'
             //     currentConfig={currentConfig}
             //     helpLinks={helpLinks}>
             // </WzConfigurationSettingsTabSelector>

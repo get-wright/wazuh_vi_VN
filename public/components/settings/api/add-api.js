@@ -178,11 +178,11 @@ export const AddApi = withErrorBoundary (class AddApi extends Component {
 
     const steps = [
       {
-        title: 'Edit the configuration',
+        title: 'Chỉnh sửa cấu hình',
         children: editConfigChildren
       },
       {
-        title: 'Test the configuration',
+        title: 'Kiểm tra cấu hình',
         children: checkConnectionChildren,
         status: this.state.status
       }

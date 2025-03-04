@@ -38,7 +38,7 @@ export default class GroupsColums {
                 buttonType='icon'
                 permissions={[{action: 'group:read', resource: `group:id:${item.name}`}]}
                 tooltip={{position: 'top', content: `View ${item.name} details`}}
-                aria-label="View group details"
+                aria-label="Xem chi tiết nhóm"
                 iconType="eye"
                 onClick={async () => {
                   this.tableProps.updateGroupDetail(item);
@@ -49,7 +49,7 @@ export default class GroupsColums {
                 buttonType='icon'
                 permissions={[{action: 'group:read', resource: `group:id:${item.name}`}]}
                 tooltip={{position: 'top', content: 'Edit group configuration'}}
-                aria-label="Edit group configuration"
+                aria-label="Chỉnh sửa cấu hình nhóm"
                 iconType="pencil"
                 onClick={async ev => {
                   ev.stopPropagation();
@@ -60,7 +60,7 @@ export default class GroupsColums {
                 buttonType='icon'
                 permissions={[{action: 'group:delete', resource: `group:id:${item.name}`}]}
                 tooltip={{posiiton: 'top', content: item.name === 'default' ? `The ${item.name} group cannot be deleted`: `Delete ${item.name}`}}
-                aria-label="Delete content"
+                aria-label="Xóa nội dung"
                 iconType="trash"
                 onClick={async ev => {
                   ev.stopPropagation();

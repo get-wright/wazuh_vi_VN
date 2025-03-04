@@ -97,7 +97,7 @@ function convertSeriesParams(visState) {
           truncate: 100,
         },
         title: {
-          text: 'Count',
+          text: 'Số lượng',
         },
       },
     ];
@@ -127,7 +127,7 @@ function convertSeriesParams(visState) {
       showCircles: visState.params.showCircles,
       radiusRatio: visState.params.radiusRatio,
       data: {
-        label: 'Count',
+        label: 'Số lượng',
         id: '1',
       },
       lineWidth: 2,

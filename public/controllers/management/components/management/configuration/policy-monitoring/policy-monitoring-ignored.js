@@ -53,8 +53,8 @@ class WzConfigurationPolicyMonitoringSystemAudit extends Component {
         currentConfig['syscheck-rootcheck'].rootcheck.ignore &&
         currentConfig['syscheck-rootcheck'].rootcheck.ignore.length ? (
           <WzConfigurationSettingsTabSelector
-            title="Ignored files and directories"
-            description="These files and directories are ignored from the rootcheck scan"
+            title="Các tệp và thư mục đã bị bỏ qua"
+            description="Các tệp và thư mục này bị bỏ qua trong quét rootcheck"
             currentConfig={currentConfig}
             minusHeight={this.props.agent.id === '000' ? 320 : 415}
             helpLinks={helpLinks}

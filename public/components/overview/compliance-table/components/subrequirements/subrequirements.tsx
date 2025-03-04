@@ -263,7 +263,7 @@ export class ComplianceSubrequirements extends Component {
       );
     } else {
       return (
-        <EuiCallOut title="There are no results." iconType="help" color="warning"></EuiCallOut>
+        <EuiCallOut title="Không có kết quả." iconType="help" color="warning"></EuiCallOut>
       );
     }
   }
@@ -316,7 +316,7 @@ export class ComplianceSubrequirements extends Component {
           value={this.state.searchValue}
           onChange={(e) => this.onSearchValueChange(e)}
           isClearable={true}
-          aria-label="Use aria labels when no actual label is in use"
+          aria-label="Sử dụng nhãn aria khi không có nhãn thực tế"
         />
         <EuiSpacer size="s" />
 

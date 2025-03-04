@@ -41,7 +41,7 @@ class WzConfigurationAmazonS3 extends Component {
   render() {
     return (
       <WzTabSelector>
-        <WzTabSelectorTab label="General">
+        <WzTabSelectorTab label="Tổng quan">
           <WzConfigurationAmazonS3General
             currentConfig={this.props.currentConfig}
             wodleConfig={this.wodleConfig}
@@ -53,7 +53,7 @@ class WzConfigurationAmazonS3 extends Component {
             wodleConfig={this.wodleConfig}
           />
         </WzTabSelectorTab>
-        <WzTabSelectorTab label="Services">
+        <WzTabSelectorTab label="Dịch vụ">
           <WzConfigurationAmazonS3Services
             currentConfig={this.props.currentConfig}
             wodleConfig={this.wodleConfig}

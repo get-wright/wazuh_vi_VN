@@ -91,7 +91,7 @@ export function RequirementVis(props) {
           type='donut'
           size={{width: '100%', height: '200px'}}
           showLegend
-          title='Compliance'
+          title='Tuân thủ'
           selectorOptions={selectionOptionsCompliance}
           onFetch={fetchData}
           onFetchExtraDependencies={[timeFilter,props.agent]}

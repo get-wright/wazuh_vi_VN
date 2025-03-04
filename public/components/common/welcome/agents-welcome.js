@@ -113,7 +113,7 @@ export const AgentsWelcome = compose(
       const breadcrumb = [
         { text: '' },
         {
-          text: 'Agents',
+          text: 'Các trạm',
           href: '#/agents-preview',
         },
         {
@@ -153,12 +153,12 @@ export const AgentsWelcome = compose(
       const defaultMenuAgents = {
         general: {
           id: 'general',
-          text: 'Security events',
+          text: 'Sự kiện bảo mật',
           isPin: true,
         },
         fim: {
           id: 'fim',
-          text: 'Integrity monitoring',
+          text: 'Giám sát toàn vẹn',
           isPin: true,
         },
         sca: {
@@ -168,12 +168,12 @@ export const AgentsWelcome = compose(
         },
         audit: {
           id: 'audit',
-          text: 'System Auditing',
+          text: 'Kiểm định hệ thống',
           isPin: true,
         },
         vuls: {
           id: 'vuls',
-          text: 'Vulnerabilities',
+          text: 'Lỗ hổng',
           isPin: true,
         },
         mitre: {
@@ -480,7 +480,7 @@ export const AgentsWelcome = compose(
                         window.location.href = `#/overview?tab=mitre`;
                         this.router.reload();
                       }}
-                      aria-label='Open MITRE'
+                      aria-label='Mở MITRE'
                     />
                   </EuiToolTip>
                 </EuiFlexItem>

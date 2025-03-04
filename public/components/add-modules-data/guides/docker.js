@@ -15,7 +15,7 @@ export default {
   id: 'docker',
   name: 'Docker Listener',
   wodle_name: 'docker-listener',
-  description: 'Configuration options of the Docker wodle.',
+  description: 'Tùy chọn cấu hình của Docker wodle',
   category: 'Threat detection and response',
   documentation_link: webDocumentationLink('user-manual/reference/ossec-conf/wodle-docker.html'),
   icon: 'logoDocker',
@@ -23,18 +23,18 @@ export default {
   avaliable_for_agent: true,
   steps: [
     {
-      title: 'Settings',
+      title: 'Cài đặt',
       description: '',
       elements: [
         {
           name: 'disabled',
-          description: 'Disables the Docker wodle.',
+          description: 'Vô hiệu hóa Docker wodle',
           type: 'switch',
           required: true
         },
         {
           name: 'interval',
-          description: 'A positive number that should contain a suffix character indicating a time unit, such as, s (seconds), m (minutes), h (hours), d (days)',
+          description: 'Một số dương kèm ký tự hậu tố biểu thị đơn vị thời gian, ví dụ: s (giây), m (phút), h (giờ), d (ngày)',
           type: 'input',
           required: true,
           placeholder: 'Time in format <number><time unit suffix>',
@@ -44,7 +44,7 @@ export default {
         },
         {
           name: 'attempts',
-          description: 'Number of attempts to execute the wodle.',
+          description: 'Số lần thử chạy wodle.',
           type: 'input-number',
           required: true,
           placeholder: 'Number of attempts',

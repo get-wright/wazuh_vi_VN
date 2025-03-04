@@ -82,7 +82,7 @@ export const PanelModuleConfiguration : FunctionalComponent<{h: string}> = conne
         error: {
           error: error,
           message: error.message || error,
-          title: 'Module Unavailable',
+          title: 'Module không khả dụng',
         },
       };
       getErrorOrchestrator().handleError(options);
@@ -122,7 +122,7 @@ const ConfigurationWrapper = compose(
   withGuard(({loading}) => loading, () => <EuiProgress size='xs' color='primary' />),
   withGuard(({error}) => error, ({error}) => (
     <EuiCallOut className='office-stats-callout-warning'
-      title="Error fetching the module configuration"
+      title="Lỗi lấy cấu hình module"
       color="danger"
       iconType="alert"
     >
@@ -131,7 +131,7 @@ const ConfigurationWrapper = compose(
   )),
   withGuard(({configurations}) => !configurations, () => (
     <EuiCallOut className='office-stats-callout-warning'
-      title='Module configuration unavailable'
+      title='Cấu hình module không khả dụng'
       color='warning'
       iconType='alert'
     />

@@ -15,7 +15,7 @@ export default {
   id: 'oscap',
   name: 'OpenSCAP',
   wodle_name: 'open-scap',
-  description: 'Configuration options of the OpenSCAP wodle.',
+  description: 'Tùy chọn cấu hình của OpenSCAP wodle',
   category: 'Kiểm thử và giám sát chính sách',
   documentation_link: webDocumentationLink('user-manual/reference/ossec-conf/wodle-openscap.html'),
   icon: 'securityApp',
@@ -23,7 +23,7 @@ export default {
   avaliable_for_agent: true,
   steps: [
     {
-      title: 'Settings',
+      title: 'Cài đặt',
       description: '',
       elements: [
         {
@@ -34,7 +34,7 @@ export default {
         },
         {
           name: 'timeout',
-          description: 'Timeout for each evaluation in seconds',
+          description: 'Thời gian chờ cho mỗi đánh giá (giây)',
           type: 'input-number',
           required: true,
           placeholder: 'Time in seconds',
@@ -44,7 +44,7 @@ export default {
         },
         {
           name: 'interval',
-          description: 'Interval between OpenSCAP executions.',
+          description: 'Khoảng cách giữa các lần chạy OpenSCAP',
           type: 'input',
           required: true,
           placeholder: 'Time in format <number><time unit suffix>, e.g.: 1d',
@@ -54,7 +54,7 @@ export default {
         },
         {
           name: 'scan-on-start',
-          description: 'Run evaluation immediately when service is started.',
+          description: 'Chạy đánh giá ngay khi dịch vụ khởi động.',
           type: 'switch',
           required: true,
           default_value: true
@@ -62,8 +62,8 @@ export default {
       ]
     },
     {
-      title: 'Content',
-      description: 'Define evaluations.',
+      title: 'Nội dung',
+      description: 'Định nghĩa các đánh giá.',
       elements: [
         {
           name: 'content',
@@ -80,7 +80,7 @@ export default {
           attributes: [
             {
               name: 'type',
-              description: 'Select content type: xccdf or oval.',
+              description: 'Chọn loại nội dung: xccdf hoặc oval.',
               type: 'select',
               required: true,
               values: [
@@ -141,7 +141,7 @@ export default {
           options: [
             {
               name: 'profile',
-              description: 'Select profile.',
+              description: 'Chọn hồ sơ.',
               type: 'input',
               placeholder: 'Profile',
               repeatable: true,

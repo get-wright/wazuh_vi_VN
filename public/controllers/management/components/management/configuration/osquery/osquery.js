@@ -26,23 +26,23 @@ import { webDocumentationLink } from '../../../../../../../common/services/web_d
 const mainSettings = [
   {
     field: 'disabled',
-    label: 'Osquery integration status',
+    label: 'Trạng thái tích hợp Osquery',
     render: renderValueNoThenEnabled
   },
-  { field: 'run_daemon', label: 'Auto-run the Osquery daemon' },
-  { field: 'bin_path', label: 'Path to the Osquery executable' },
-  { field: 'log_path', label: 'Path to the Osquery results log file' },
-  { field: 'config_path', label: 'Path to the Osquery configuration file' },
-  { field: 'add_labels', label: 'Use defined labels as decorators' }
+  { field: 'run_daemon', label: 'Tự động chạy Osquery daemon' },
+  { field: 'bin_path', label: 'Đường dẫn đến Osquery thực thi' },
+  { field: 'log_path', label: 'Đường dẫn đến tệp log kết quả của Osquery' },
+  { field: 'config_path', label: 'Đường dẫn tệp cấu hình Osquery' },
+  { field: 'add_labels', label: 'Sử dụng nhãn đã định nghĩa làm decorators' }
 ];
 
 const helpLinks = [
   {
-    text: 'Osquery module documentation',
+    text: 'Tài liệu module Osquery',
     href: webDocumentationLink('user-manual/capabilities/osquery.html')
   },
   {
-    text: 'Osquery module reference',
+    text: 'Tham khảo module Osquery',
     href: webDocumentationLink('user-manual/reference/ossec-conf/wodle-osquery.html')
   }
 ];
@@ -85,8 +85,8 @@ class WzConfigurationOsquery extends Component {
           )}
         {currentConfig && this.wodleConfig && this.wodleConfig.osquery && (
           <WzConfigurationSettingsTabSelector
-            title="Main settings"
-            description="General Osquery integration settings"
+            title="Cài đặt chính"
+            description="Cài đặt tích hợp Osquery chung"
             currentConfig={this.wodleConfig}
             minusHeight={this.props.agent.id === '000' ? 260 : 355}
             helpLinks={helpLinks}
@@ -101,8 +101,8 @@ class WzConfigurationOsquery extends Component {
               this.wodleConfig.osquery.packs.length && (
                 <Fragment>
                   <WzConfigurationSettingsHeader
-                    title="Osquery packs"
-                    description="A pack contains multiple queries to quickly retrieve system information"
+                    title="Các gói Osquery"
+                    description="Một gói chứa nhiều truy vấn để nhanh chóng truy xuất thông tin hệ thống"
                   />
                   <EuiBasicTable
                     items={this.wodleConfig.osquery.packs}

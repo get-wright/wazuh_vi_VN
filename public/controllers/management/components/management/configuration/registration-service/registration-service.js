@@ -21,11 +21,11 @@ import { webDocumentationLink } from '../../../../../../../common/services/web_d
 
 const helpLinks = [
   {
-    text: 'Wazuh agent enrollment',
+    text: 'Đăng ký trạm Wazuh',
     href: webDocumentationLink('user-manual/agent-enrollment/index.html')
   },
   {
-    text: 'Registration service reference',
+    text: 'Tham khảo dịch vụ đăng ký',
     href: webDocumentationLink('user-manual/reference/ossec-conf/auth.html')
   }
 ];
@@ -33,20 +33,20 @@ const helpLinks = [
 const mainSettings = [
   {
     field: 'disabled',
-    label: 'Service status',
+    label: 'Trạng thái dịch vụ',
     render: renderValueNoThenEnabled,
   },
-  { field: 'port', label: 'Listen to connections at port' },
+  { field: 'port', label: 'Lắng nghe kết nối tại cổng' },
   { field: 'use_source_ip', label: "Use client's source IP address" },
-  { field: 'use_password', label: 'Use a password to register agents' },
-  { field: 'purge', label: 'Purge agents list when removing agents' },
+  { field: 'use_password', label: 'Sử dụng mật khẩu để đăng ký trạm' },
+  { field: 'purge', label: 'Xóa danh sách trạm khi loại bỏ trạm' },
   {
     field: 'limit_maxagents',
-    label: 'Limit registration to maximum number of agents',
+    label: 'Giới hạn đăng ký tới số trạm tối đa',
   },
   {
     field: 'force.enabled',
-    label: 'Force registration when using an existing IP address',
+    label: 'Bắt buộc đăng ký khi sử dụng địa chỉ IP hiện có',
   },
   {
     field: 'force.after_registration_time',
@@ -55,7 +55,7 @@ const mainSettings = [
   },
   {
     field: 'force.key_mismatch',
-    label: 'Avoid re-registering agents that already have valid keys',
+    label: 'Tránh đăng ký lại các trạm đã có keys hợp lệ',
   },
   {
     field: 'force.disconnected_time.enabled',
@@ -64,48 +64,48 @@ const mainSettings = [
   },
   {
     field: 'force.disconnected_time.value',
-    label: 'Seconds since an agent is in a disconnected state',
+    label: 'Số giây kể từ khi trạm bị ngắt kết nối',
   },
 ];
 
 const keyRequestSettings = [
   {
     field: 'key_request.enabled',
-    label: 'Key request status',
+    label: 'Trạng thái yêu cầu key',
     render: renderValueYesThenEnabled,
   },
   {
     field: 'key_request.exec_path',
-    label: 'Full path to the executable',
+    label: 'Đường dẫn đầy đủ đến tệp thực thi',
   },
   {
     field: 'key_request.socket',
-    label: 'Full path to the Unix domain socket',
+    label: 'Đường dẫn đầy đủ đến Unix domain socket',
   },
   {
     field: 'key_request.timeout',
-    label: 'Maximum time for waiting a response from the executable',
+    label: 'Thời gian chờ tối đa phản hồi từ tệp thực thi',
   },
   {
     field: 'key_request.threads',
-    label: 'Number of threads for dispatching the external keys requests',
+    label: 'Số luồng để gửi yêu cầu key bên ngoài',
   },
   {
     field: 'key_request.queue_size',
-    label: 'Indicates the maximum size of the queue for fetching external keys',
+    label: 'Chỉ ra kích thước tối đa của hàng đợi để lấy các key bên ngoài',
   },
 ];
 
 const sslSettings = [
-  { field: 'ssl_verify_host', label: 'Verify agents using a CA certificate' },
+  { field: 'ssl_verify_host', label: 'Xác minh trạm bằng chứng chỉ CA' },
   {
     field: 'ssl_auto_negotiate',
-    label: 'Auto-select the SSL negotiation method',
+    label: 'Tự động chọn phương thức đàm phán SSL',
   },
-  { field: 'ssl_manager_ca', label: 'CA certificate location' },
-  { field: 'ssl_manager_cert', label: 'Server SSL certificate location' },
-  { field: 'ssl_manager_key', label: 'Server SSL key location' },
-  { field: 'ciphers', label: 'Use the following SSL ciphers' },
+  { field: 'ssl_manager_ca', label: 'Vị trí chứng chỉ CA' },
+  { field: 'ssl_manager_cert', label: 'Vị trí chứng chỉ SSL máy chủ' },
+  { field: 'ssl_manager_key', label: 'Vị trí khóa SSL máy chủ' },
+  { field: 'ciphers', label: 'Sử dụng các cipher SSL sau' },
 ];
 
 class WzRegistrationService extends Component {
@@ -133,8 +133,8 @@ class WzRegistrationService extends Component {
           currentConfig['auth-auth'].auth &&
           !isString(currentConfig['auth-auth'].auth) && (
             <WzConfigurationSettingsTabSelector
-              title="Main settings"
-              description="General settings applied to the registration service"
+              title="Cài đặt chính"
+              description="Cài đặt chung áp dụng cho dịch vụ đăng ký"
               currentConfig={currentConfig}
               minusHeight={260}
               helpLinks={helpLinks}
@@ -144,14 +144,14 @@ class WzRegistrationService extends Component {
                 items={mainSettings}
               />
               <WzConfigurationSettingsGroup
-                title="Key request settings"
-                description="The key request feature allows to fetch agent keys from an external source, for example, a database"
+                title="Cài đặt yêu cầu key"
+                description="Tính năng yêu cầu key cho phép lấy key của trạm từ nguồn bên ngoài, ví dụ như cơ sở dữ liệu"
                 config={currentConfig['auth-auth'].auth}
                 items={keyRequestSettings}
               />
               <WzConfigurationSettingsGroup
-                title="SSL settings"
-                description="Applied when the registration service uses SSL certificates"
+                title="Cài đặt SSL"
+                description="Áp dụng khi dịch vụ đăng ký sử dụng chứng chỉ SSL"
                 config={currentConfig['auth-auth'].auth}
                 items={sslSettings}
               />

@@ -54,7 +54,7 @@ import {
 export const AgentsPreview = compose(
   withErrorBoundary,
   withReduxProvider,
-  withGlobalBreadcrumb([{ text: '' }, { text: 'Agents' }]),
+  withGlobalBreadcrumb([{ text: '' }, { text: 'Các trạm' }]),
   withUserAuthorizationPrompt([
     [
       { action: 'agent:read', resource: 'agent:id:*' },
@@ -272,7 +272,7 @@ export const AgentsPreview = compose(
                             isLoading={this.state.loadingSummary}
                             title={`${this.state.agentsActiveCoverage}%`}
                             titleSize='s'
-                            description='Agents coverage'
+                            description='Độ bao phủ của các trạm'
                             className='white-space-nowrap'
                           />
                         </EuiFlexItem>
@@ -299,7 +299,7 @@ export const AgentsPreview = compose(
                               </EuiToolTip>
                             }
                             titleSize='s'
-                            description='Last registered agent'
+                            description='Trạm được đăng ký cuối'
                             titleColor='primary'
                           />
                         </EuiFlexItem>
@@ -327,7 +327,7 @@ export const AgentsPreview = compose(
                                 </EuiToolTip>
                               }
                               titleSize='s'
-                              description='Most active agent'
+                              description='Trạm hoạt động tích cực nhất'
                               titleColor='primary'
                             />
                           </EuiFlexItem>

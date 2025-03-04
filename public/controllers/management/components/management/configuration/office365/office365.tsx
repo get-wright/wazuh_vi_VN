@@ -49,21 +49,21 @@ export const WzConfigurationOffice365: React.FunctionComponent<IWzConfigOffice36
 
   return (
     <WzTabSelector>
-      <WzTabSelectorTab label="General">
+      <WzTabSelectorTab label="Tổng quan">
         <GeneralTabWrapped
           wodleConfiguration={wodleConfiguration}
           currentConfig={currentConfig}
           {...props}
         />
       </WzTabSelectorTab>
-      <WzTabSelectorTab label="Credentials">
+      <WzTabSelectorTab label="Thông tin xác thực">
         <ApiAuthTabWrapped
           wodleConfiguration={wodleConfiguration}
           currentConfig={currentConfig}
           {...props}
         />
       </WzTabSelectorTab>
-      <WzTabSelectorTab label="Subscriptions">
+      <WzTabSelectorTab label="Đăng ký">
         <SubscriptionTabWrapped
           wodleConfiguration={wodleConfiguration}
           currentConfig={currentConfig}

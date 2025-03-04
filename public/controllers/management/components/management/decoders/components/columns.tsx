@@ -92,7 +92,7 @@ export default class DecodersColumns {
                 <WzButtonPermissions
                   buttonType='icon'
                   permissions={getReadButtonPermissions(item)}
-                  aria-label="Show content"
+                  aria-label="Hiển thị nội dung"
                   iconType="eye"
                   tooltip={{ position: 'top', content: `View the content of ${item.filename}` }}
                   onClick={async ev => {
@@ -119,7 +119,7 @@ export default class DecodersColumns {
                   <WzButtonPermissions
                     buttonType='icon'
                     permissions={getEditButtonPermissions(item)}
-                    aria-label="Edit content"
+                    aria-label="Chỉnh sửa nội dung"
                     iconType="pencil"
                     tooltip={{ position: 'top', content: `Edit ${item.filename} content` }}
                     onClick={async ev => {
@@ -143,7 +143,7 @@ export default class DecodersColumns {
                     buttonType="icon"
                     permissions={getDeleteButtonPermissions(item)}
                     tooltip={{ position: 'top', content: `Remove ${item.filename} file` }}
-                    aria-label="Delete file"
+                    aria-label="Xóa tệp"
                     iconType="trash"
                     onConfirm={async () => {
                       try {

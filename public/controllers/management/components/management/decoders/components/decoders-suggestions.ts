@@ -4,7 +4,7 @@ const decodersItems = [
   {
     type: 'params',
     label: 'filename',
-    description: 'Filters the decoders by file name.',
+    description: 'Lọc bộ giải mã theo tên tệp.',
     values: async value => {
       const filter = { limit: 30 };
       if (value) {
@@ -17,7 +17,7 @@ const decodersItems = [
   {
     type: 'params',
     label: 'relative_dirname',
-    description: 'Path of the decoders files.',
+    description: 'Đường dẫn các tệp giải mã.',
     values: async () => {
       const result = await WzRequest.apiReq('GET', '/manager/configuration', {
         params: {
@@ -31,7 +31,7 @@ const decodersItems = [
   {
     type: 'params',
     label: 'status',
-    description: 'Filters the decoders by status.',
+    description: 'Lọc bộ giải mã theo trạng thái.',
     values: ['enabled', 'disabled']
   }
 ];

@@ -59,7 +59,7 @@ export default class GroupsFilesColumns {
             <div>
               <EuiToolTip position="top" content={`See file content`}>
                 <EuiButtonIcon
-                  aria-label="See file content"
+                  aria-label="Xem nội dung tệp"
                   iconType="eye"
                   onClick={() => this.actionFile(item, false)}
                   color="primary"
@@ -68,7 +68,7 @@ export default class GroupsFilesColumns {
               {item.filename === 'agent.conf' && (
                 <WzButtonPermissions
                   buttonType="icon"
-                  aria-label="Edit content"
+                  aria-label="Chỉnh sửa nội dung"
                   iconType="pencil"
                   permissions={[{ action: 'group:read', resource: `group:id:${itemDetail.name}` }]}
                   tooltip={{ position: 'top', content: `Edit ${item.filename}` }}

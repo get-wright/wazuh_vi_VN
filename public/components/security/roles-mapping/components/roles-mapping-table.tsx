@@ -124,7 +124,7 @@ export const RolesMappingTable = ({ rolesEquivalences, rules, loading, editRule,
             modalProps={{ buttonColor: 'danger' }}
             iconType="trash"
             color="danger"
-            aria-label="Delete role mapping"
+            aria-label="Xóa ánh xạ vai trò"
             modalCancelText="Cancel"
             modalConfirmText="Confirm"
           />

@@ -28,10 +28,10 @@ class WzConfigurationActiveResponse extends Component {
     return (
       <Fragment>
         <WzTabSelector>
-          <WzTabSelectorTab label="Active response">
+          <WzTabSelectorTab label="Ứng phó chủ động">
             <WzConfigurationActiveResponseActiveResponse {...this.props} />
           </WzTabSelectorTab>
-          <WzTabSelectorTab label="Commands">
+          <WzTabSelectorTab label="Các lệnh">
             <WzConfigurationActiveResponseCommands {...this.props} />
           </WzTabSelectorTab>
         </WzTabSelector>

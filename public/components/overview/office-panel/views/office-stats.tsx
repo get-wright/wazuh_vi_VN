@@ -18,21 +18,21 @@ import { LogoOffice365 } from '../../../common/logos';
 import { renderValueYesThenEnabled } from '../../../../controllers/management/components/management/configuration/utils/utils';
 
 const settings = [
-  { field: 'enabled', label: 'Service status', render: renderValueYesThenEnabled },
-  { field: 'only_future_events', label: 'Collect events generated since Wazuh manager was started'},
-  { field: 'curl_max_size', label: 'Maximum size allowed for the Office 365 API response'},
-  { field: 'interval', label: 'Interval between Office 365 wodle executions in seconds'},
-  { field: 'api_auth', label: 'Credentials', render: (value) => value.map(v => 
+  { field: 'enabled', label: 'Trạng thái dịch vụ', render: renderValueYesThenEnabled },
+  { field: 'only_future_events', label: 'Thu thập các sự kiện tạo ra từ khi trình quản lý Wazuh được khởi động'},
+  { field: 'curl_max_size', label: 'Kích thước tối đa cho phép cho phản hồi API Office 365'},
+  { field: 'interval', label: 'Khoảng thời gian giữa các lần thực hiện Office 365 wodle (tính bằng giây)'},
+  { field: 'api_auth', label: 'Thông tin xác thực', render: (value) => value.map(v => 
     <EuiPanel paddingSize='s' key={`module_configuration_api_auth_${v.tenant_id}_${v.client_id}`}>
       <EuiDescriptionList listItems={[
-        {title: 'Tenant ID', description: v.tenant_id},
-        {title: 'Client ID', description: v.client_id},
-        {title: 'Client secret', description: v.client_secret},
-        {title: 'Path file of client secret', description: v.client_secret_path},
+        {title: 'ID người thuê', description: v.tenant_id},
+        {title: 'ID máy khách', description: v.client_id},
+        {title: 'Secret máy khách', description: v.client_secret},
+        {title: 'Đường dẫn tệp client secret', description: v.client_secret_path},
       ].filter(item => typeof item.description !== 'undefined')}/>
     </EuiPanel>
   ).reduce((prev, cur) => [prev, <div key={`padding-len-${prev.length}`} style={{marginTop: '8px'}} /> , cur], [])},
-  { field: 'subscriptions', label: 'Subscriptions', render: (value) => value
+  { field: 'subscriptions', label: 'Đăng ký', render: (value) => value
     .map(v => <EuiDescriptionList key={`module_configuration_subscriptions_${v}`}>{v}</EuiDescriptionList>)
   }
 ];

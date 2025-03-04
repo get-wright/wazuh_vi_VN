@@ -32,11 +32,11 @@ const columns = [
 
 const helpLinks = [
   {
-    text: 'Agent labels',
+    text: 'Nhãn trạm',
     href: webDocumentationLink('user-manual/agents/labels.html'),
   },
   {
-    text: 'Labels reference',
+    text: 'Tham khảo nhãn',
     href: webDocumentationLink('user-manual/reference/ossec-conf/labels.html'),
   },
 ];
@@ -69,7 +69,7 @@ class WzConfigurationAlertsLabels extends Component {
         !isString(currentConfig['agent-labels']) &&
         hasSize(currentConfig['agent-labels'].labels) ? (
           <WzConfigurationSettingsTabSelector
-            title='Defined labels'
+            title='Nhãn đã định nghĩa'
             currentConfig={currentConfig}
             minusHeight={agent.id === '000' ? 320 : 355}
             helpLinks={helpLinks}

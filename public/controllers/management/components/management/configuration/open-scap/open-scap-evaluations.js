@@ -63,8 +63,8 @@ class WzConfigurationOpenScapEvaluations extends Component {
           )}
         {wodleConfig['open-scap'] && wodleConfig['open-scap'].content && (
           <WzConfigurationSettingsTabSelector
-            title="Evaluations"
-            description="Scans executed according to specific security policies and their profiles"
+            title="Đánh giá"
+            description="Quét được thực hiện theo các chính sách bảo mật cụ thể và hồ sơ của chúng"
             currentConfig={wodleConfig}
             minusHeight={this.props.agent.id === '000' ? 320 : 415}
             helpLinks={helpLinks}

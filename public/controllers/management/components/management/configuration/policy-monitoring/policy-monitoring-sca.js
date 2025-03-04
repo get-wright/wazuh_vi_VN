@@ -25,12 +25,12 @@ import { wodleBuilder } from '../utils/builders';
 const securitySettings = [
   {
     field: 'enabled',
-    label: 'Security configuration assessment status',
+    label: 'Trạng thái đánh giá cấu hình bảo mật',
     render: renderValueYesThenEnabled
   },
-  { field: 'interval', label: 'Interval' },
-  { field: 'scan_on_start', label: 'Scan on start' },
-  { field: 'skip_nfs', label: 'Skip nfs' }
+  { field: 'interval', label: 'Khoảng thời gian' },
+  { field: 'scan_on_start', label: 'Quét khi khởi động' },
+  { field: 'skip_nfs', label: 'Bỏ qua NFS' }
 ];
 
 const columns = [{ field: 'policy', name: 'Name' }];
@@ -47,7 +47,7 @@ class WzPolicyMonitoringSCA extends Component {
           <WzNoConfig error="not-present" help={helpLinks} />
         ) : (
           <WzConfigurationSettingsTabSelector
-            title="Security configuration assessment status"
+            title="Trạng thái đánh giá cấu hình bảo mật"
             currentConfig={this.wodleConfig}
             minusHeight={this.props.agent.id === '000' ? 320 : 415}
             helpLinks={helpLinks}
@@ -56,7 +56,7 @@ class WzPolicyMonitoringSCA extends Component {
               config={this.wodleConfig.sca}
               items={securitySettings}
             />
-            <WzConfigurationSettingsHeader title="Policies" />
+            <WzConfigurationSettingsHeader title="Chính sách" />
             <EuiBasicTable
               items={this.wodleConfig.sca.policies.map(policy => ({ policy }))}
               columns={columns}

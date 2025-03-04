@@ -24,26 +24,26 @@ import { webDocumentationLink } from '../../../../../../../common/services/web_d
 
 const helpLinks = [
   {
-    text: 'Generating automatic reports',
+    text: 'Tạo báo cáo tự động',
     href: webDocumentationLink('user-manual/manager/automatic-reports.html')
   },
   {
-    text: 'Reports reference',
+    text: 'Tham khảo báo cáo',
     href: webDocumentationLink('user-manual/reference/ossec-conf/reports.html')
   }
 ];
 
 const mainSettings = [
-  { field: 'title', label: 'Report name' },
-  { field: 'mail_to', label: 'Send report to this email addresses' },
-  { field: 'showlogs', label: 'Include logs when creating a report' },
-  { field: 'group', label: 'Filter by this group' },
-  { field: 'category', label: 'Filter by this category' },
-  { field: 'rule', label: 'Filter by this rule ID' },
-  { field: 'level', label: 'Filter by this alert level and above' },
-  { field: 'location', label: 'Filter by this log location' },
-  { field: 'srcip', label: 'Filter by this source IP address' },
-  { field: 'user', label: 'Filter by this user name' }
+  { field: 'title', label: 'Tên báo cáo' },
+  { field: 'mail_to', label: 'Gửi báo cáo đến địa chỉ email này' },
+  { field: 'showlogs', label: 'Bao gồm logs khi tạo báo cáo' },
+  { field: 'group', label: 'Lọc theo nhóm này' },
+  { field: 'category', label: 'Lọc theo thể loại này' },
+  { field: 'rule', label: 'Lọc theo rule ID này' },
+  { field: 'level', label: 'Lọc theo mức cảnh báo này trở lên' },
+  { field: 'location', label: 'Lọc theo vị trí log này' },
+  { field: 'srcip', label: 'Lọc theo địa chỉ IP nguồn này' },
+  { field: 'user', label: 'Lọc theo tên người dùng này' }
 ];
 
 class WzConfigurationAlertsReports extends Component {
@@ -82,8 +82,8 @@ class WzConfigurationAlertsReports extends Component {
           currentConfig['monitor-reports'].reports &&
           currentConfig['monitor-reports'].reports.length && (
             <WzConfigurationSettingsTabSelector
-              title="Main settings"
-              description="Daily reports about alerts"
+              title="Cài đặt chính"
+              description="Báo cáo hàng ngày về cảnh báo"
               minusHeight={320}
               currentConfig={currentConfig}
               helpLinks={helpLinks}

@@ -29,18 +29,18 @@ import { webDocumentationLink } from '../../../../../../../common/services/web_d
 
 const helpLinks = [
   {
-    text: 'Checking connection with manager',
+    text: 'Kiểm tra kết nối với trình quản lý',
     href: webDocumentationLink('user-manual/agents/agent-connection.html'),
   },
   {
-    text: 'Client reference',
+    text: 'Tham chiếu máy khách',
     href: webDocumentationLink('user-manual/reference/ossec-conf/client.html'),
   },
 ];
 
 const mainSettings = [
-  { field: 'crypto_method', label: 'Method used to encrypt communications' },
-  { field: 'remote_conf', label: 'Remote configuration is enabled' },
+  { field: 'crypto_method', label: 'Phương thức mã hóa giao tiếp' },
+  { field: 'remote_conf', label: 'Cấu hình từ xa đã được bật' },
   {
     field: 'auto_restart',
     label:
@@ -48,16 +48,16 @@ const mainSettings = [
   },
   {
     field: 'notify_time',
-    label: 'Time (in seconds) between agent checkings to the manager',
+    label: 'Thời gian (tính bằng giây) giữa các lần kiểm tra kết nối từ trạm đến trình quản lý',
   },
   {
     field: 'time-reconnect',
-    label: 'Time (in seconds) before attempting to reconnect',
+    label: 'Thời gian (tính bằng giây) trước khi thử kết nối lại',
   },
-  { field: 'config-profile', label: 'Configuration profiles' },
+  { field: 'config-profile', label: 'Hồ sơ cấu hình' },
   {
     field: 'local_ip',
-    label: 'IP address used when the agent has multiple network interfaces',
+    label: 'Địa chỉ IP được sử dụng khi trạm có nhiều giao diện mạng',
   },
 ];
 
@@ -95,8 +95,8 @@ class WzConfigurationClient extends Component {
         {currentConfig['agent-client'] &&
           !isString(currentConfig['agent-client']) && (
             <WzConfigurationSettingsTabSelector
-              title='Main settings'
-              description='Basic manager-agent communication settings'
+              title='Cài đặt chính'
+              description='Cài đặt giao tiếp giữa trình quản lý và trạm'
               currentConfig={currentConfig}
               minusHeight={355}
               helpLinks={helpLinks}
@@ -108,8 +108,8 @@ class WzConfigurationClient extends Component {
               {currentConfig['agent-client'].client.server.length && (
                 <Fragment>
                   <WzConfigurationSettingsHeader
-                    title='Server settings'
-                    description='List of managers to connect'
+                    title='Cài đặt máy chủ'
+                    description='Danh sách trình quản lý để kết nối'
                   />
                   <EuiBasicTable
                     items={currentConfig['agent-client'].client.server}

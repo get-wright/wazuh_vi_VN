@@ -434,7 +434,7 @@ export class AppState {
       getToasts().add({
         color: 'success',
         title: 'CSV',
-        text: 'Your download should begin automatically...',
+        text: 'Tải xuống của bạn sẽ bắt đầu tự động...',
         toastLifeTimeMs: 4000,
       });
       const currentApi = JSON.parse(this.getCurrentAPI()).id;

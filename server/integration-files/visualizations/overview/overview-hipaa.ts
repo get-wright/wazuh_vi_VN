@@ -507,9 +507,9 @@ export default [
   {
     _id: 'Wazuh-App-Overview-HIPAA-Top-10-requirements-over-time-by-agent',
     _source: {
-      title: 'Requirements distribution by agent',
+      title: 'Yêu cầu phân phối theo trạm',
       visState: JSON.stringify({
-        title: 'Requirements distribution by agent',
+        title: 'Yêu cầu phân phối theo trạm',
         type: 'histogram',
         params: {
           type: 'histogram',

@@ -25,83 +25,83 @@ import helpLinks from './help-links';
 const renderOptsIncludes = key => item => (item.includes(key) ? 'yes' : 'no');
 
 const mainSettings = [
-  { field: 'dir', label: 'Selected item' },
+  { field: 'dir', label: 'Mục đã chọn' },
   {
     field: 'opts',
-    label: 'Enable realtime monitoring',
+    label: 'Bật giám sát thời gian thực',
     render: renderOptsIncludes('realtime')
   },
   {
     field: 'opts',
-    label: 'Enable auditing (who-data)',
+    label: 'Cho phép kiểm định (who-data)',
     render: renderOptsIncludes('check_whodata')
   },
   {
     field: 'opts',
-    label: 'Report file changes',
+    label: 'Báo cáo thay đổi tệp',
     render: renderOptsIncludes('report_changes')
   },
   {
     field: 'opts',
-    label: 'Perform all checksums',
+    label: 'Thực hiện tất cả các checksum',
     render: renderOptsIncludes('check_all')
   },
   {
     field: 'opts',
-    label: 'Check sums (MD5 & SHA1)',
+    label: 'Kiểm tra tổng (MD5 & SHA1)',
     render: renderOptsIncludes('check_sum')
   },
   {
     field: 'opts',
-    label: 'Check MD5 sum',
+    label: 'Kiểm tra MD5 sum',
     render: renderOptsIncludes('check_md5sum')
   },
   {
     field: 'opts',
-    label: 'Check SHA1 sum',
+    label: 'Kiểm tra SHA1 sum',
     render: renderOptsIncludes('check_sha1sum')
   },
   {
     field: 'opts',
-    label: 'Check SHA256 sum',
+    label: 'Kiểm tra SHA256 sum',
     render: renderOptsIncludes('check_sha256sum')
   },
   {
     field: 'opts',
-    label: 'Check files size',
+    label: 'Kiểm tra kích thước tập tin',
     render: renderOptsIncludes('check_size')
   },
   {
     field: 'opts',
-    label: 'Check files owner',
+    label: 'Kiểm tra chủ sở hữu tập tin',
     render: renderOptsIncludes('check_owner')
   },
   {
     field: 'opts',
-    label: 'Check files groups',
+    label: 'Kiểm tra các nhóm tập tin',
     render: renderOptsIncludes('check_group')
   },
   {
     field: 'opts',
-    label: 'Check files permissions',
+    label: 'Kiểm tra quyền của tập tin',
     render: renderOptsIncludes('check_perm')
   },
   {
     field: 'opts',
-    label: 'Check files modification time',
+    label: 'Kiểm tra thời gian sửa đổi của tập tin',
     render: renderOptsIncludes('check_mtime')
   },
   {
     field: 'opts',
-    label: 'Check files inodes',
+    label: 'Kiểm tra inodes của các tập tin',
     render: renderOptsIncludes('check_inode')
   },
-  { field: 'restrict', label: 'Restrict to files containing this string' },
-  { field: 'tags', label: 'Custom tags for alerts' },
-  { field: 'recursion_level', label: 'Recursion level' },
+  { field: 'restrict', label: 'Giới hạn các tệp chứa chuỗi này' },
+  { field: 'tags', label: 'Tags tùy chỉnh cho cảnh báo' },
+  { field: 'recursion_level', label: 'Mức độ đệ quy' },
   {
     field: 'opts',
-    label: 'Follow symbolic link',
+    label: 'Theo symbolic link',
     render: renderOptsIncludes('follow_symbolic_link')
   }
 ];
@@ -143,8 +143,8 @@ class WzConfigurationIntegrityMonitoringMonitored extends Component {
         currentConfig['syscheck-syscheck'].syscheck.directories &&
         currentConfig['syscheck-syscheck'].syscheck.directories.length > 0 ? (
           <WzConfigurationSettingsTabSelector
-            title="Monitored directories"
-            description="These directories are included on the integrity scan"
+            title="Các thư mục được theo dõi"
+            description="Các thư mục này được đưa vào quét toàn vẹn"
             currentConfig={currentConfig['syscheck-syscheck']}
             minusHeight={this.props.agent.id === '000' ? 320 : 415}
             helpLinks={helpLinks}
@@ -161,8 +161,8 @@ class WzConfigurationIntegrityMonitoringMonitored extends Component {
                 <Fragment>
                   <EuiSpacer />
                   <WzConfigurationSettingsHeader
-                    title="Monitored registry entries"
-                    description="A list of registry entries that will be monitored"
+                    title="Các mục registry được theo dõi"
+                    description="Danh sách các registry sẽ được theo dõi"
                   />
                   <EuiBasicTable
                     items={currentConfig['syscheck-syscheck'].syscheck.registry}
@@ -188,8 +188,8 @@ class WzConfigurationIntegrityMonitoringMonitored extends Component {
           ((currentConfig['syscheck-syscheck'].syscheck.directories && !currentConfig['syscheck-syscheck'].syscheck.directories.length)
             || !currentConfig['syscheck-syscheck'].syscheck.directories) && (
               <WzConfigurationSettingsTabSelector
-                title="Monitored registry entries"
-                description="A list of registry entries that will be monitored"
+                title="Các mục registry được theo dõi"
+                description="Danh sách các registry sẽ được theo dõi"
                 currentConfig={currentConfig}
                 minusHeight={this.props.agent.id === '000' ? 320 : 415}
                 helpLinks={helpLinks}

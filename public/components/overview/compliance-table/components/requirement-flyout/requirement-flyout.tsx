@@ -197,19 +197,19 @@ export class RequirementFlyout extends Component {
                   { field: 'icon' },
                   { field: 'timestamp' },
                   { field: 'agent.id', label: 'Agent' },
-                  { field: 'agent.name', label: 'Agent name' },
+                  { field: 'agent.name', label: 'Tên trạm' },
                   { field: this.props.getRequirementKey() },
-                  { field: 'rule.description', label: 'Description' },
-                  { field: 'rule.level', label: 'Level' },
-                  { field: 'rule.id', label: 'Rule ID' },
+                  { field: 'rule.description', label: 'Mô tả' },
+                  { field: 'rule.level', label: 'Mức' },
+                  { field: 'rule.id', label: 'ID rule' },
                 ]}
                 initialAgentColumns={[
                   { field: 'icon' },
                   { field: 'timestamp' },
                   { field: this.props.getRequirementKey() },
-                  { field: 'rule.description', label: 'Description' },
-                  { field: 'rule.level', label: 'Level' },
-                  { field: 'rule.id', label: 'Rule ID' },
+                  { field: 'rule.description', label: 'Mô tả' },
+                  { field: 'rule.level', label: 'Mức' },
+                  { field: 'rule.id', label: 'ID rule' },
                 ]}
                 implicitFilters={implicitFilters}
                 initialFilters={[]}

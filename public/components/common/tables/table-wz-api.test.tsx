@@ -67,7 +67,7 @@ describe('Table WZ API component', () => {
   it('renders correctly to match the snapshot', () => {
     const wrapper = mount(
       <TableWzAPI
-        title="Table"
+        title="Bảng"
         tableColumns={columns}
         endpoint={'/'}
         searchTable={false}

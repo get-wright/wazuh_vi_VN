@@ -14,15 +14,15 @@ import { webDocumentationLink } from "../../../../../../../common/services/web_d
 
 export default [
   {
-    text: 'Malware detection',
+    text: 'Phát hiện mã độc',
     href: webDocumentationLink('user-manual/capabilities/malware-detection/index.html')
   },
   {
-    text: 'Monitoring security policies',
+    text: 'Giám sát chính sách bảo mật',
     href: webDocumentationLink('user-manual/capabilities/policy-monitoring/index.html')
   },
   {
-    text: 'Rootcheck reference',
+    text: 'Tham khảo Rootcheck',
     href: webDocumentationLink('user-manual/reference/ossec-conf/rootcheck.html')
   }
 ];

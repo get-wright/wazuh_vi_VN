@@ -72,11 +72,11 @@ export const drilldownUserConfig = {
                   initialColumns={[
                     { field: 'icon' },
                     { field: 'timestamp' },
-                    { field: 'rule.description', label: 'Description' },
-                    { field: 'data.office365.ClientIP', label: 'Client IP address' },
-                    { field: 'data.office365.Operation', label: 'Operation' },
-                    { field: 'rule.level', label: 'Level' },
-                    { field: 'rule.id', label: 'Rule ID' },
+                    { field: 'rule.description', label: 'Mô tả' },
+                    { field: 'data.office365.ClientIP', label: 'Địa chỉ IP của máy khách' },
+                    { field: 'data.office365.Operation', label: 'Hoạt động' },
+                    { field: 'rule.level', label: 'Mức' },
+                    { field: 'rule.id', label: 'ID rule' },
                   ]}
                   useAgentColumns={false}
                 />

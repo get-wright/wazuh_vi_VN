@@ -22,11 +22,11 @@ import { webDocumentationLink } from '../../../../../../../common/services/web_d
 
 const helpLinks = [
   {
-    text: 'Using Wazuh to monitor Azure',
+    text: 'Sử dụng Wazuh để giám sát Azure',
     href: webDocumentationLink('cloud-security/azure/index.html'),
   },
   {
-    text: 'Azure reference',
+    text: 'Tài liệu tham khảo Azure',
     href: webDocumentationLink(
       'user-manual/reference/ossec-conf/wodle-azure-logs.html',
     ),
@@ -34,25 +34,25 @@ const helpLinks = [
 ];
 
 const mainSettings = [
-  { field: 'disabled', label: 'Enabled', render: renderValueNoThenEnabled },
-  { field: 'timeout', label: 'Timeout for each evaluation' },
-  { field: 'day', label: 'Day of the month to run the Azure-Logs' },
-  { field: 'wday', label: 'Day of the month to run the Azure-Logs' },
-  { field: 'time', label: 'Time of the day to run the Azure-Logs' },
-  { field: 'interval', label: 'Interval between Azure-Logs executions' },
+  { field: 'disabled', label: 'Đã bật', render: renderValueNoThenEnabled },
+  { field: 'timeout', label: 'Thời gian chờ cho mỗi đánh giá' },
+  { field: 'day', label: 'Ngày trong tháng để chạy Azure-Logs' },
+  { field: 'wday', label: 'Ngày trong tháng để chạy Azure-Logs' },
+  { field: 'time', label: 'Thời gian trong ngày để chạy Azure-Logs' },
+  { field: 'interval', label: 'Khoảng thời gian giữa các lần thực hiện Azure-Logs' },
   {
     field: 'run_on_start',
-    label: 'Run evaluation immediately when service is started',
+    label: 'Chạy đánh giá ngay khi dịch vụ khởi động',
   },
 ];
 
 const contentSettings = [
-  { field: 'application_id', label: 'Application id' },
-  { field: 'tag', label: 'Tag' },
-  { field: 'tenantdomain', label: 'Tenant domain' },
-  { field: 'application_key', label: 'Application key' },
-  { field: 'account_name', label: 'Account name' },
-  { field: 'account_key', label: 'Account key' },
+  { field: 'application_id', label: 'ID ứng dụng' },
+  { field: 'tag', label: 'Nhãn' },
+  { field: 'tenantdomain', label: 'Miền người thuê' },
+  { field: 'application_key', label: 'Key ứng dụng' },
+  { field: 'account_name', label: 'Tên tài khoản' },
+  { field: 'account_key', label: 'Key tài khoản' },
   {
     field: 'auth_path',
     label:
@@ -93,8 +93,8 @@ class WzConfigurationAzure extends Component {
           )}
         {currentConfig && this.wodleConfig['azure-logs'] && (
           <WzConfigurationSettingsTabSelector
-            title='Main settings'
-            description='Configuration for the Azure logs wodle'
+            title='Cài đặt chính'
+            description='Cấu hình cho Azure logs wodle'
             currentConfig={this.wodleConfig}
             minusHeight={260}
             helpLinks={helpLinks}

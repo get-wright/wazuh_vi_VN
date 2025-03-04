@@ -99,8 +99,8 @@ export default class WzAddModulesData extends Component<IPropsWzAddModulesData, 
 	setGlobalBreadcrumb() {
     const breadcrumb = [
 			{ text: '' },
-			{ text: 'Management', href: '#/manager' },
-			{ text: 'Sample data' }
+			{ text: 'Quản trị', href: '#/manager' },
+			{ text: 'Dữ liệu mẫu' }
 		];
     store.dispatch(updateGlobalBreadcrumb(breadcrumb));
   }
@@ -136,7 +136,7 @@ export default class WzAddModulesData extends Component<IPropsWzAddModulesData, 
 														position='top'
 														content='Back'
 													>
-														<EuiButtonIcon onClick={() => this.props.close()} iconType='arrowLeft' iconSize='l' aria-label='Back'/>
+														<EuiButtonIcon onClick={() => this.props.close()} iconType='arrowLeft' iconSize='l' aria-label='Quay lại'/>
 													</EuiToolTip>
 													<span> </span>
 												</Fragment>

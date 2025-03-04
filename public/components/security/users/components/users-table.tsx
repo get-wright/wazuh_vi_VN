@@ -103,7 +103,7 @@ export const UsersTable = ({ users, editUserFlyover, rolesLoading, roles, onSave
             modalProps={{ buttonColor: 'danger' }}
             iconType="trash"
             color="danger"
-            aria-label="Delete user"
+            aria-label="Xóa người dùng"
             modalCancelText="Cancel"
             modalConfirmText="Confirm"
           />

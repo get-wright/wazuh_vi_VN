@@ -292,7 +292,7 @@ const versionButtonsOracleLinux = [
 const versionButtonsRaspbian = [
   {
     id: 'busterorgreater',
-    label: 'Raspbian Buster or greater',
+    label: 'Raspbian Buster hoặc cao hơn',
   },
 ];
 

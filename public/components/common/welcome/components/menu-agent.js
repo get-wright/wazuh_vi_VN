@@ -135,7 +135,7 @@ class WzMenuAgent extends Component {
                       item.isPin = false;
                     } else {
                       this.addToast({
-                        title: 'The limit of pinned modules has been reached',
+                        title: 'Đã đạt giới hạn các module được ghim',
                         color: 'danger',
                       });
                     }
@@ -144,7 +144,7 @@ class WzMenuAgent extends Component {
                   }}
                   color="primary"
                   type={this.menuAgent[item.id] ? 'pinFilled' : 'pin'}
-                  aria-label="Next"
+                  aria-label="Tiếp theo"
                   style={{ cursor: 'pointer' }}
                 />
               </EuiFlexItem>

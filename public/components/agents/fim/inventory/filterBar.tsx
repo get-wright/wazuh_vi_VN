@@ -24,7 +24,7 @@ export class FilterBar extends Component {
       {
         type: 'q',
         label: 'file',
-        description: 'Name of the file',
+        description: 'Tên của tệp',
         operators: ['=', '!=', '~'],
         values: async (value) =>
           getFilterValues('file', value, this.props.agent.id, { type: 'file' }),
@@ -34,7 +34,7 @@ export class FilterBar extends Component {
             {
               type: 'q',
               label: 'perm',
-              description: 'Permissions of the file',
+              description: 'Quyền của tệp',
               operators: ['=', '!=', '~'],
               values: async (value) => getFilterValues('perm', value, this.props.agent.id),
             },
@@ -43,7 +43,7 @@ export class FilterBar extends Component {
       {
         type: 'q',
         label: 'mtime',
-        description: 'Date the file was modified',
+        description: 'Ngày tập tin được sửa đổi',
         operators: ['=', '!=', '>', '<'],
         values: async (value) =>
           getFilterValues('mtime', value, this.props.agent.id, {}, formatUIDate),
@@ -51,7 +51,7 @@ export class FilterBar extends Component {
       {
         type: 'q',
         label: 'date',
-        description: 'Date of registration of the event',
+        description: 'Ngày ghi nhận sự kiện',
         operators: ['=', '!=', '>', '<'],
         values: async (value) =>
           getFilterValues('date', value, this.props.agent.id, {}, formatUIDate),
@@ -59,14 +59,14 @@ export class FilterBar extends Component {
       {
         type: 'q',
         label: 'uname',
-        description: 'Owner of the file',
+        description: 'Chủ sở hữu của tệp',
         operators: ['=', '!=', '~'],
         values: async (value) => getFilterValues('uname', value, this.props.agent.id),
       },
       {
         type: 'q',
         label: 'uid',
-        description: 'Id of the owner file',
+        description: 'ID của tệp chủ sở hữu',
         operators: ['=', '!=', '~'],
         values: async (value) => getFilterValues('uid', value, this.props.agent.id),
       },
@@ -75,7 +75,7 @@ export class FilterBar extends Component {
             {
               type: 'q',
               label: 'gname',
-              description: 'Name of the group owner file',
+              description: 'Tên của tệp chủ nhóm',
               operators: ['=', '!=', '~'],
               values: async (value) => getFilterValues('gname', value, this.props.agent.id),
             },
@@ -86,7 +86,7 @@ export class FilterBar extends Component {
             {
               type: 'q',
               label: 'gid',
-              description: 'Id of the group owner',
+              description: 'ID của chủ nhóm',
               operators: ['=', '!=', '~'],
               values: async (value) => getFilterValues('gid', value, this.props.agent.id),
             },
@@ -118,7 +118,7 @@ export class FilterBar extends Component {
             {
               type: 'q',
               label: 'inode',
-              description: 'Inode of the file',
+              description: 'Inode của tệp',
               operators: ['=', '!=', '~'],
               values: async (value) => getFilterValues('inode', value, this.props.agent.id),
             },
@@ -127,7 +127,7 @@ export class FilterBar extends Component {
       {
         type: 'q',
         label: 'size',
-        description: 'Size of the file in Bytes',
+        description: 'Kích thước của tệp tính bằng byte',
         values: async (value) => getFilterValues('size', value, this.props.agent.id),
       },
     ],
@@ -135,7 +135,7 @@ export class FilterBar extends Component {
       {
         type: 'q',
         label: 'file',
-        description: 'Name of the registry_key',
+        description: 'Tên của registry_key',
         operators: ['=', '!=', '~'],
         values: async (value) =>
           getFilterValues('file', value, this.props.agent.id, { q: 'type=registry_key' }),

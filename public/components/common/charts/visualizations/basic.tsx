@@ -142,7 +142,7 @@ export const VisualizationBasicWidgetSelector = ({ selectorOptions, title, onFet
             options={selectorOptions}
             value={selectedOption}
             onChange={onChange}
-            aria-label="Select options"
+            aria-label="Chọn tùy chọn"
           />
         </EuiFlexItem>
       </EuiFlexGroup>

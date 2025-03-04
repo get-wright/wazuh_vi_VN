@@ -22,17 +22,17 @@ import { renderValueYesThenEnabled } from '../utils/utils';
 const mainSettings = [
   {
     field: 'enabled',
-    label: 'Synchronization status',
+    label: 'Trạng thái đồng bộ hóa',
     render: renderValueYesThenEnabled
   },
   {
     field: 'max_interval',
-    label: 'Maximum interval (in seconds) between every sync'
+    label: 'Khoảng thời gian tối đa (tính bằng giây) giữa các lần đồng bộ'
   },
-  { field: 'interval', label: 'Interval (in seconds) between every sync' },
-  { field: 'response_timeout', label: 'Response timeout (in seconds)' },
-  { field: 'queue_size', label: 'Queue size of the manager responses' },
-  { field: 'max_eps', label: 'Maximum message throughput' }
+  { field: 'interval', label: 'Khoảng (tính bằng giây) giữa mỗi lần đồng bộ' },
+  { field: 'response_timeout', label: 'Thời gian chờ phản hồi (tính bằng giây)' },
+  { field: 'queue_size', label: 'Kích thước hàng đợi của phản hồi từ trình quản lý' },
+  { field: 'max_eps', label: 'Thông lượng tin nhắn tối đa' }
 ];
 
 class WzConfigurationIntegrityMonitoringSynchronization extends Component {
@@ -48,8 +48,8 @@ class WzConfigurationIntegrityMonitoringSynchronization extends Component {
         currentConfig['syscheck-syscheck'].syscheck &&
         currentConfig['syscheck-syscheck'].syscheck.synchronization ? (
           <WzConfigurationSettingsTabSelector
-            title="Syncronization"
-            description="Database synchronization settings"
+            title="Đồng bộ hóa"
+            description="Cài đặt đồng bộ hóa cơ sở dữ liệu"
             currentConfig={currentConfig['syscheck-syscheck']}
             minusHeight={this.props.agent.id === '000' ? 320 : 415}
             helpLinks={helpLinks}

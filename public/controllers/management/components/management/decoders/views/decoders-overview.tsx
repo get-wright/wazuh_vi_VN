@@ -61,7 +61,7 @@ export default compose(
   withGlobalBreadcrumb(props => {
     return [
       { text: '' },
-      { text: 'Management', href: '#/manager' },
+      { text: 'Trình quản lý', href: '#/manager' },
       { text: SECTION_DECODERS_NAME}
     ];
   }),

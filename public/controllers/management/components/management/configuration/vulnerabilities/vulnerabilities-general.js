@@ -21,12 +21,12 @@ import helpLinks from './help-links';
 import { renderValueYesThenEnabled } from '../utils/utils';
 
 const mainSettings = [
-  { field: 'enabled', label: 'Vulnerability detector status', render: renderValueYesThenEnabled },
-  { field: 'interval', label: 'Interval between scan executions' },
-  { field: 'run_on_start', label: 'Scan on start' },
+  { field: 'enabled', label: 'Trạng thái bộ dò lỗ hổng', render: renderValueYesThenEnabled },
+  { field: 'interval', label: 'Khoảng thời gian giữa các lần quét' },
+  { field: 'run_on_start', label: 'Quét khi khởi động' },
   {
     field: 'ignore_time',
-    label: 'Time to ignore already detected vulnerabilities'
+    label: 'Thời gian bỏ qua các lỗ hổng đã phát hiện'
   }
 ];
 
@@ -52,8 +52,8 @@ class WzConfigurationVulnerabilitiesGeneral extends Component {
           )}
         {wodleConfig['vulnerability-detector'] && (
           <WzConfigurationSettingsTabSelector
-            title="Main settings"
-            description="General settings applied to the vulnerability detector and its providers"
+            title="Cài đặt chính"
+            description="Cài đặt chung áp dụng cho bộ dò lỗ hổng và các nhà cung cấp của nó"
             currentConfig={wodleConfig}
             minusHeight={320}
             helpLinks={helpLinks}

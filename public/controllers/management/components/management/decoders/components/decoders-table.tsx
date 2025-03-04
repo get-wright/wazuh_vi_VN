@@ -122,7 +122,7 @@ export default compose(
   const resourcesHandler = new ResourcesHandler(ResourcesConstants.DECODERS);
 
   // Table custom filter options
-  const buttonOptions = [{ label: "Custom decoders", field: "relative_dirname", value: "etc/decoders" },];
+  const buttonOptions = [{ label: "Bộ giải mã tùy chỉnh", field: "relative_dirname", value: "etc/decoders" },];
 
   const updateFilters = (filters) => {
     setFilters(filters);
@@ -195,8 +195,8 @@ export default compose(
         setTableFootprint(Date.now());
         getToasts().add({
           color: 'success',
-          title: 'Success',
-          text: 'Deleted successfully',
+          title: 'Thành công',
+          text: 'Xóa thành công',
           toastLifeTimeMs: 3000,
         });
       });

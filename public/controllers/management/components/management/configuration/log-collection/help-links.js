@@ -14,11 +14,11 @@ import { webDocumentationLink } from "../../../../../../../common/services/web_d
 
 export default [
   {
-    text: 'Log data collection documentation',
+    text: 'Tài liệu thu thập dữ liệu log',
     href: webDocumentationLink('user-manual/capabilities/log-data-collection/index.html')
   },
   {
-    text: 'Localfile reference',
+    text: 'Tham khảo Localfile',
     href: webDocumentationLink('user-manual/reference/ossec-conf/localfile.html')
   }
 ];

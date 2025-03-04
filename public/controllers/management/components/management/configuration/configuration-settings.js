@@ -15,42 +15,42 @@ import { WAZUH_MODULES_ID } from '../../../../../../common/constants'
 
 export default [
   {
-    title: 'Main configurations',
+    title: 'Cấu hình chính',
     description: '',
     settings: [
       {
         name: 'Global Configuration',
-        description: 'Global and remote settings',
+        description: 'Cài đặt toàn cục và từ xa',
         goto: 'global-configuration',
         when: 'manager'
       },
       {
         name: 'Cluster',
-        description: 'Master node configuration',
+        description: 'Cấu hình nút chủ',
         goto: 'cluster',
         when: 'manager'
       },
       {
         name: 'Registration Service',
-        description: 'Automatic agent registration service',
+        description: 'Dịch vụ đăng ký trạm tự động',
         goto: 'registration-service',
         when: 'manager'
       },
       {
         name: 'Global Configuration',
-        description: 'Logging settings that apply to the agent',
+        description: 'Cài đặt logging áp dụng cho trạm',
         goto: 'global-configuration-agent',
         when: 'agent'
       },
       {
         name: 'Communication',
-        description: 'Settings related to the connection with the manager',
+        description: 'Cài đặt liên quan đến kết nối với trình quản lý',
         goto: 'client',
         when: 'agent'
       },
       {
         name: 'Anti-flooding settings',
-        description: 'Agent bucket parameters to avoid event flooding',
+        description: 'Tham số cho trạm bucket để tránh tràn event',
         goto: 'client-buffer',
         when: 'agent'
       },
@@ -64,18 +64,18 @@ export default [
       // ,
       // { //TODO: Uncomment this to activate Log Settings
       //   name: 'Log settings',
-      //   description: 'Alerts, archives and internal settings',
+      //   description: 'Cảnh báo, lưu trữ và cài đặt nội bộ',
       //   goto: 'log-settings'
       // }
     ]
   },
   {
-    title: 'Alerts and output management',
+    title: 'Cảnh báo và quản lý đầu ra',
     description: '',
     settings: [
       {
         name: 'Alerts',
-        description: 'Settings related to the alerts and their format',
+        description: 'Cài đặt liên quan đến cảnh báo và định dạng của chúng',
         goto: 'alerts',
         when: 'manager'
       },
@@ -114,7 +114,7 @@ export default [
     ]
   },
   {
-    title: 'System threats and incident response',
+    title: 'Các mối đe dọa hệ thống và ứng phó sự cố',
     description: '',
     settings: [
       {
@@ -138,19 +138,19 @@ export default [
       },
       {
         name: 'Active Response',
-        description: 'Active threat addressing by immediate response',
+        description: 'Ứng phó mối đe dọa bằng phản ứng tức thì',
         goto: 'active-response',
         when: 'manager'
       },
       {
         name: 'Active response',
-        description: 'Active threat addressing by immediate response',
+        description: 'Ứng phó mối đe dọa bằng phản ứng tức thì',
         goto: 'active-response-agent',
         when: 'agent'
       },
       {
         name: 'Commands',
-        description: 'Configuration options of the Command wodle',
+        description: 'Tùy chọn cấu hình của lệnh Wodle',
         goto: 'commands'
       },
       {
@@ -163,7 +163,7 @@ export default [
     ]
   },
   {
-    title: 'Log data analysis',
+    title: 'Phân tích dữ liệu log',
     description: '',
     settings: [
       {
@@ -188,7 +188,7 @@ export default [
     ]
   },
   {
-    title: 'Cloud security monitoring',
+    title: 'Giám sát bảo mật đám mây',
     description: '',
     settings: [
       {
@@ -199,13 +199,13 @@ export default [
       },
       {
         name: 'Azure Logs',
-        description: 'Configuration options of the Azure Logs wodle',
+        description: 'Tùy chọn cấu hình của Azure Logs wodle',
         goto: 'azure-logs',
         when: 'manager'
       },
       {
         name: 'Google Cloud Pub/Sub',
-        description: 'Configuration options of the Google Cloud Pub/Sub module',
+        description: 'Tùy chọn cấu hình của module Google Cloud Pub/Sub',
         goto: 'gcp-pubsub'
       },
       {

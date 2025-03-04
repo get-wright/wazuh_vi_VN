@@ -14,11 +14,11 @@ import { webDocumentationLink } from "../../../../../../../common/services/web_d
 
 export default [
   {
-    text: 'OpenSCAP module documentation',
+    text: 'Tài liệu module OpenSCAP',
     href: webDocumentationLink('user-manual/capabilities/policy-monitoring/openscap/index.html')
   },
   {
-    text: 'OpenSCAP module reference',
+    text: 'Tham chiếu module OpenSCAP',
     href: webDocumentationLink('user-manual/reference/ossec-conf/wodle-openscap.html')
   }
 ];

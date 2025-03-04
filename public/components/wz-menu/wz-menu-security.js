@@ -39,22 +39,22 @@ class WzMenuSecurity extends Component {
       this.createItem({
         id: WAZUH_MENU_SECURITY_SECTIONS_ID.USERS,
         cyTestId: WAZUH_MENU_SECURITY_SECTIONS_CY_TEST_ID.USERS,
-        text: 'Users',
+        text: 'Người dùng',
       }),
       this.createItem({
         id: WAZUH_MENU_SECURITY_SECTIONS_ID.ROLES,
         cyTestId: WAZUH_MENU_SECURITY_SECTIONS_CY_TEST_ID.ROLES,
-        text: 'Roles',
+        text: 'Vai trò',
       }),
       this.createItem({
         id: WAZUH_MENU_SECURITY_SECTIONS_ID.POLICIES,
         cyTestId: WAZUH_MENU_SECURITY_SECTIONS_CY_TEST_ID.POLICIES,
-        text: 'Policies',
+        text: 'Chính sách',
       }),
       this.createItem({
         id: WAZUH_MENU_SECURITY_SECTIONS_ID.ROLES_MAPPING,
         cyTestId: WAZUH_MENU_SECURITY_SECTIONS_CY_TEST_ID.ROLES_MAPPING,
-        text: 'Roles mapping',
+        text: 'Ánh xạ vai trò',
       }),
     ];
   }

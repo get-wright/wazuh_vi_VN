@@ -22,23 +22,23 @@ import { webDocumentationLink } from '../../../../../../../common/services/web_d
 
 const helpLinks = [
   {
-    text: 'Command module reference',
+    text: 'Tham chiếu module lệnh',
     href: webDocumentationLink('user-manual/reference/ossec-conf/wodle-command.html')
   }
 ];
 
 const mainSettings = [
-  { field: 'disabled', label: 'Command status', renderValueNoThenEnabled },
-  { field: 'tag', label: 'Command name' },
-  { field: 'command', label: 'Command to execute' },
-  { field: 'interval', label: 'Interval between executions' },
-  { field: 'run_on_start', label: 'Run on start' },
-  { field: 'ignore_output', label: 'Ignore command output' },
-  { field: 'timeout', label: 'Timeout (in seconds) to wait for execution' },
-  { field: 'verify_md5', label: 'Verify MD5 sum' },
-  { field: 'verify_sha1', label: 'Verify SHA1 sum' },
-  { field: 'verify_sha256', label: 'Verify SHA256 sum' },
-  { field: 'skip_verification', label: 'Ignore checksum verification' }
+  { field: 'disabled', label: 'Trạng thái lệnh', renderValueNoThenEnabled },
+  { field: 'tag', label: 'Tên lệnh' },
+  { field: 'command', label: 'Lệnh để thực thi' },
+  { field: 'interval', label: 'Khoảng thời gian giữa các lần thực thi' },
+  { field: 'run_on_start', label: 'Chạy khi khởi động' },
+  { field: 'ignore_output', label: 'Bỏ qua đầu ra lệnh' },
+  { field: 'timeout', label: 'Thời gian chờ (tính bằng giây) để chờ thực thi' },
+  { field: 'verify_md5', label: 'Xác minh tổng MD5' },
+  { field: 'verify_sha1', label: 'Xác minh tổng SHA1' },
+  { field: 'verify_sha256', label: 'Xác minh tổng SHA256' },
+  { field: 'skip_verification', label: 'Bỏ qua xác minh checksum' }
 ];
 
 class WzConfigurationCommands extends Component {
@@ -76,8 +76,8 @@ class WzConfigurationCommands extends Component {
         items &&
         !isString(currentConfig['wmodules-wmodules']) ? (
           <WzConfigurationSettingsTabSelector
-            title="Command definitions"
-            description="Find here all the currently defined commands"
+            title="Định nghĩa lệnh"
+            description="Tìm ở đây tất cả các lệnh hiện được định nghĩa"
             currentConfig={currentConfig}
             minusHeight={this.props.agent.id === '000' ? 260 : 355}
             helpLinks={helpLinks}

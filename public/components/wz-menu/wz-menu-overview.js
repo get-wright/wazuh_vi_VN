@@ -37,21 +37,21 @@ class WzMenuOverview extends Component {
       auditing: { id: 'auditing', text: 'Kiểm thử và giám sát chính sách' },
       threatDetection: {
         id: 'threatDetection',
-        text: 'Threat detection and response',
+        text: 'Phát hiện và ứng phó đe dọa',
       },
       regulatoryCompliance: {
         id: 'regulatoryCompliance',
-        text: 'Regulatory Compliance',
+        text: 'Tuân thủ quy định',
       },
       general: {
         id: WAZUH_MODULES_ID.SECURITY_EVENTS,
         cyTestId: WAZUH_MENU_MODULES_SECTIONS_CY_TEST_ID.SECURITY_EVENTS,
-        text: 'Security Events',
+        text: 'Sự kiện bảo mật',
       },
       fim: {
         id: WAZUH_MODULES_ID.INTEGRITY_MONITORING,
         cyTestId: WAZUH_MENU_MODULES_SECTIONS_CY_TEST_ID.INTEGRITY_MONITORING,
-        text: 'Integrity Monitoring',
+        text: 'Giám sát toàn vẹn',
       },
       aws: {
         id: WAZUH_MODULES_ID.AMAZON_WEB_SERVICES,
@@ -66,22 +66,22 @@ class WzMenuOverview extends Component {
       gcp: {
         id: WAZUH_MODULES_ID.GOOGLE_CLOUD_PLATFORM,
         cyTestId: WAZUH_MENU_MODULES_SECTIONS_CY_TEST_ID.GOOGLE_CLOUD_PLATFORM,
-        text: 'Google Cloud Platform',
+        text: 'Nền tảng đám mây Google (GCP)',
       },
       pm: {
         id: WAZUH_MODULES_ID.POLICY_MONITORING,
         cyTestId: WAZUH_MENU_MODULES_SECTIONS_CY_TEST_ID.POLICY_MONITORING,
-        text: 'Policy Monitoring',
+        text: 'Giám sát chính sách',
       },
       sca: {
         id: WAZUH_MODULES_ID.SECURITY_CONFIGURATION_ASSESSMENT,
         cyTestId: WAZUH_MENU_MODULES_SECTIONS_CY_TEST_ID.SECURITY_CONFIGURATION_ASSESSMENT,
-        text: 'Security configuration assessment',
+        text: 'Đánh giá cấu hình bảo mật',
       },
       audit: {
         id: WAZUH_MODULES_ID.AUDITING,
         cyTestId: WAZUH_MENU_MODULES_SECTIONS_CY_TEST_ID.AUDITING,
-        text: 'System Auditing',
+        text: 'Kiểm định hệ thống',
       },
       oscap: {
         id: WAZUH_MODULES_ID.OPEN_SCAP,
@@ -96,7 +96,7 @@ class WzMenuOverview extends Component {
       vuls: {
         id: WAZUH_MODULES_ID.VULNERABILITIES,
         cyTestId: WAZUH_MENU_MODULES_SECTIONS_CY_TEST_ID.VULNERABILITIES,
-        text: 'Vulnerabilities',
+        text: 'Lỗ hổng',
       },
       virustotal: {
         id: WAZUH_MODULES_ID.VIRUSTOTAL,

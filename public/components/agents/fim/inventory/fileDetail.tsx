@@ -308,7 +308,7 @@ export class FileDetails extends Component {
                             this.addFilter(item.field, value);
                           }}
                           iconType="magnifyWithPlus"
-                          aria-label="Next"
+                          aria-label="Tiếp theo"
                           iconSize="s"
                           className="buttonAddFilter"
                         />
@@ -475,19 +475,19 @@ export class FileDetails extends Component {
                   { field: 'icon' },
                   { field: 'timestamp' },
                   { field: 'agent.id', label: 'Agent' },
-                  { field: 'agent.name', label: 'Agent name' },
-                  { field: 'syscheck.event', label: 'Action' },
-                  { field: 'rule.description', label: 'Description' },
-                  { field: 'rule.level', label: 'Level' },
-                  { field: 'rule.id', label: 'Rule ID' },
+                  { field: 'agent.name', label: 'Tên trạm' },
+                  { field: 'syscheck.event', label: 'Hành động' },
+                  { field: 'rule.description', label: 'Mô tả' },
+                  { field: 'rule.level', label: 'Mức' },
+                  { field: 'rule.id', label: 'ID rule' },
                 ]}
                 initialAgentColumns={[
                   { field: 'icon' },
                   { field: 'timestamp' },
-                  { field: 'syscheck.event', label: 'Action' },
-                  { field: 'rule.description', label: 'Description' },
-                  { field: 'rule.level', label: 'Level' },
-                  { field: 'rule.id', label: 'Rule ID' },
+                  { field: 'syscheck.event', label: 'Hành động' },
+                  { field: 'rule.description', label: 'Mô tả' },
+                  { field: 'rule.level', label: 'Mức' },
+                  { field: 'rule.id', label: 'ID rule' },
                 ]}
                 includeFilters="syscheck"
                 implicitFilters={implicitFilters}

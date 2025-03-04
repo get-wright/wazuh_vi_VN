@@ -311,8 +311,8 @@ function discoverController(
           if(filters.filter(item=> item.meta.params && item.meta.params.query === '').length){
             getToasts().add({
               color: 'warning',
-              title: 'Invalid field value',
-              text: 'The filter field contains invalid value',
+              title: 'Giá trị trường không hợp lệ',
+              text: 'Trường bộ lọc chứa giá trị không hợp lệ',
               toastLifeTimeMs: 10000,
             });
             filterManager.setFilters(filters.filter(item=>item.meta.params.query));

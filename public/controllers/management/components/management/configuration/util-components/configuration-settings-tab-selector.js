@@ -29,11 +29,11 @@ class WzConfigurationSettingsTabSelector extends Component {
   getTitleDescription(view) {
     const result = {};
     if (view === 'json') {
-      result.title = 'JSON Viewer';
-      result.description = 'View this configuration in raw JSON format';
+      result.title = 'Trình xem JSON';
+      result.description = 'Xem cấu hình này ở định dạng JSON thô';
     } else if (view === 'xml') {
-      result.title = 'XML Viewer';
-      result.description = 'View this configuration in raw XML format';
+      result.title = 'Trình xem XML';
+      result.description = 'Xem cấu hình này ở định dạng XML thô';
     } else {
       result.title = this.props.title;
       result.description = this.props.description;

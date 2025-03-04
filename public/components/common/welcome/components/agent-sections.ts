@@ -39,7 +39,7 @@ export const getAgentSections = (menuAgent) => {
     },
     gcp: {
       id: WAZUH_MODULES_ID.GOOGLE_CLOUD_PLATFORM,
-      text: 'Google Cloud Platform',
+      text: 'Nền tảng đám mây Google (GCP)',
       isPin: menuAgent.gcp ? menuAgent.gcp : false,
     },
     github: {

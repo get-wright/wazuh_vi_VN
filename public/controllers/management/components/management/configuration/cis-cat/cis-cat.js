@@ -37,13 +37,13 @@ class WzConfigurationCisCat extends Component {
   render() {
     return (
       <WzTabSelector>
-        <WzTabSelectorTab label="General">
+        <WzTabSelectorTab label="Tổng quan">
           <WzConfigurationCisCatGeneral
             {...this.props}
             wodleConfig={this.wodleConfig}
           />
         </WzTabSelectorTab>
-        <WzTabSelectorTab label="Benchmarks">
+        <WzTabSelectorTab label="Điểm chuẩn">
           <WzConfigurationCisCatBenchmarks
             {...this.props}
             wodleConfig={this.wodleConfig}

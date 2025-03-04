@@ -24,20 +24,20 @@ import { compose } from 'redux';
 import { webDocumentationLink } from '../../../../../../../common/services/web_documentation';
 
 const mainSettings = [
-  { field: 'type', label: 'Agentless monitoring type' },
-  { field: 'frequency', label: 'Interval (in seconds) between checks' },
-  { field: 'host', label: 'Device username and hostname' },
-  { field: 'state', label: 'Device check type' },
-  { field: 'arguments', label: 'Pass these arguments to check' }
+  { field: 'type', label: 'Giám sát agentless' },
+  { field: 'frequency', label: 'Khoảng (tính bằng giây) giữa các lần kiểm tra' },
+  { field: 'host', label: 'Username và hostname' },
+  { field: 'state', label: 'Kiểm tra loại thiết bị' },
+  { field: 'arguments', label: 'Truyền các đối số này để kiểm tra' }
 ];
 
 const helpLinks = [
   {
-    text: 'How to monitor agentless devices',
+    text: 'Cách giám sát thiết bị agentless',
     href: webDocumentationLink('user-manual/capabilities/agentless-monitoring/index.html')
   },
   {
-    text: 'Agentless reference',
+    text: 'Tham khảo agentless',
     href: webDocumentationLink('user-manual/reference/ossec-conf/agentless.html')
   }
 ];
@@ -73,7 +73,7 @@ class WzConfigurationAgentless extends Component {
         {currentConfig['agentless-agentless'] &&
           !isString(currentConfig['agentless-agentless']) && (
             <WzConfigurationSettingsTabSelector
-              title="Devices list"
+              title="Danh sách thiết bị"
               description="List of monitored devices that don't use the agent"
               currentConfig={currentConfig}
               minusHeight={260}

@@ -139,7 +139,7 @@ export const EditRole = ({ role, closeFlyout }) => {
     modal = (
       <EuiOverlayMask>
         <EuiConfirmModal
-          title="Unsubmitted changes"
+          title="Thay đổi chưa được lưu"
           onConfirm={() => {
             setIsModalVisible(false);
             closeFlyout(false);
@@ -178,7 +178,7 @@ export const EditRole = ({ role, closeFlyout }) => {
             <EuiFlexGroup>
               <EuiFlexItem grow={true}>
                 <EuiFormRow
-                  label="Policies"
+                  label="Chính sách"
                   isInvalid={selectedPoliciesError}
                   error={'At least one policy must be selected.'}
                   helpText="Assign policies to the role."

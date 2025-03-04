@@ -16,11 +16,11 @@ export const OFFICE_365 = 'office365';
 export const WMODULES_WMODULES = 'wmodules-wmodules';
 export const HELP_LINKS = [
   {
-    text: 'Using Wazuh to monitor Office 365',
+    text: 'Sử dụng Wazuh để giám sát Office 365',
     href: webDocumentationLink('cloud-security/office365/index.html'),
   },
   {
-    text: 'Configuration options for the module',
+    text: 'Tùy chọn cấu hình cho module',
     href: webDocumentationLink(
       'user-manual/reference/ossec-conf/office365-module.html',
     ),

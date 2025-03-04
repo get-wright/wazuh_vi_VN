@@ -55,7 +55,7 @@ const tableColumns = [
 
 const statsAgents: {title: string, field: string, render?: (value) => any}[] = [
   {
-    title: 'Status',
+    title: 'Trạng thái',
     field: 'status',
   },
   {
@@ -64,24 +64,24 @@ const statsAgents: {title: string, field: string, render?: (value) => any}[] = [
     render: (value) => value ? 'enabled' : 'disabled'
   },
   {
-    title: 'Message buffer',
+    title: 'Buffer tin nhắn',
     field: 'msg_buffer'
   },
   {
-    title: 'Messages count',
+    title: 'Số tin nhắn',
     field: 'msg_count'
   },
   {
-    title: 'Messages sent',
+    title: 'Tin nhắn đã gửi',
     field: 'msg_sent'
   },
   {
-    title: 'Last ack',
+    title: 'Lần ACK cuối',
     field: 'last_ack',
     render: formatUIDate
   },
   {
-    title: 'Last keep alive',
+    title: 'Lần keep alive cuối',
     field: 'last_keepalive',
     render: formatUIDate
   }
@@ -95,12 +95,12 @@ export const MainAgentStats = compose(
       text: ''
     },
     {
-      text: 'Agents',
+      text: 'Các trạm',
       href: "#/agents-preview"
     },
     { agent },
     {
-      text: 'Stats'
+      text: 'Số liệu thống kê'
     },
   ]),
   withUserAuthorizationPrompt(({agent}) => [[
@@ -176,7 +176,7 @@ function AgentStats({agent}){
             <AgentStatTable
               columns={tableColumns}
               loading={loading}
-              title='Interval'
+              title='Khoảng thời gian'
               start={dataStatLogcollector?.interval?.start}
               end={dataStatLogcollector?.interval?.end}
               items={dataStatLogcollector?.interval?.files}

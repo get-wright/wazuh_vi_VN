@@ -12,7 +12,7 @@ describe('[component] InputForm', () => {
   const optionsEditor = { editor: { language: 'json' } };
   const optionsFilepicker = { file: { type: 'image', extensions: ['.jpeg', '.jpg', '.png', '.svg'] } };
   const optionsSelect = { select: [{ text: 'Label1', value: 'value1' }, { text: 'Label2', value: 'value2' }] };
-  const optionsSwitch = { switch: { values: { enabled: { label: 'Enabled', value: true }, disabled: { label: 'Disabled', value: false } } } };
+  const optionsSwitch = { switch: { values: { enabled: { label: 'Đã bật', value: true }, disabled: { label: 'Vô hiệu', value: false } } } };
   it.each`
 		inputType       | value       | options
 		${'editor'}     | ${'{}'}     | ${optionsEditor}

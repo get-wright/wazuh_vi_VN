@@ -104,7 +104,7 @@ export const CreateRole = ({ closeFlyout }) => {
     modal = (
       <EuiOverlayMask>
         <EuiConfirmModal
-          title="Unsubmitted changes"
+          title="Thay đổi chưa được lưu"
           onConfirm={() => {
             setIsModalVisible(false);
             closeFlyout(false);
@@ -145,7 +145,7 @@ export const CreateRole = ({ closeFlyout }) => {
         <EuiFlyoutBody>
           <EuiForm component="form" style={{ padding: 24 }}>
             <EuiFormRow
-              label="Role name"
+              label="Tên vai trò"
               isInvalid={roleNameError}
               error={'Please provide a role name'}
               helpText="Introduce a name for this new role."
@@ -158,7 +158,7 @@ export const CreateRole = ({ closeFlyout }) => {
               />
             </EuiFormRow>
             <EuiFormRow
-              label="Policies"
+              label="Chính sách"
               isInvalid={selectedPoliciesError}
               error={'At least one policy must be selected.'}
               helpText="Assign policies to the role."

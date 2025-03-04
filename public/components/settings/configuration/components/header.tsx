@@ -57,7 +57,7 @@ const Title = () => {
             <EuiButtonIcon
               iconType="questionInCircle"
               iconSize="l"
-              aria-label="Help"
+              aria-label="Trợ giúp"
               target="_blank"
               href={webDocumentationLink(PLUGIN_PLATFORM_WAZUH_DOCUMENTATION_URL_PATH_APP_CONFIGURATION)}
             ></EuiButtonIcon>

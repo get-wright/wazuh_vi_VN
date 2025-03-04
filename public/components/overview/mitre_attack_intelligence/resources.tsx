@@ -105,25 +105,25 @@ function buildResource(label: string, labelResource: string){
         id: 'external_id',
       },
       {
-        label: 'Name',
+        label: 'Tên',
         id: 'name'
       },
       {
-        label: 'Created Time',
+        label: 'Thời gian tạo',
         id: 'created_time',
         render: (value) => value ? (
           formatUIDate(value)
         ) : ''
       },
       {
-        label: 'Modified Time',
+        label: 'Thời gian sửa đổi',
         id: 'modified_time',
         render: (value) => value ? (
           formatUIDate(value)
         ) : ''
       },
       {
-        label: 'Version',
+        label: 'Phiên bản',
         id: 'mitre_version'
       },
     ],

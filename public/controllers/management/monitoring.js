@@ -319,8 +319,8 @@ export function ClusterController(
 
   const breadcrumb = [
     { text: '' },
-    { text: 'Management', href: '#/manager' },
-    { text: 'Cluster' }
+    { text: 'Trình quản lý', href: '#/manager' },
+    { text: 'Cụm' }
   ];
   store.dispatch(updateGlobalBreadcrumb(breadcrumb));
   if (clusterEnabled) load();

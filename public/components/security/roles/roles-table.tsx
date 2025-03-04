@@ -147,7 +147,7 @@ export const RolesTable = ({ roles, policiesData, loading, editRole, updateRoles
             modalProps={{ buttonColor: 'danger' }}
             iconType="trash"
             color="danger"
-            aria-label="Delete role"
+            aria-label="Xóa vai trò"
           />
         </div>
       ),

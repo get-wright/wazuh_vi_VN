@@ -265,7 +265,7 @@ class WzFileEditor extends Component {
       modal = (
         <EuiOverlayMask>
           <EuiConfirmModal
-            title="Unsubmitted changes"
+            title="Thay đổi chưa được lưu"
             onConfirm={() => {
               closeModal;
               this.props.cleanEditState();
@@ -295,7 +295,7 @@ class WzFileEditor extends Component {
                         <EuiFlexItem grow={false}>
                           <EuiToolTip position="right" content={`Back to ${section}`}>
                             <EuiButtonIcon
-                              aria-label="Back"
+                              aria-label="Quay lại"
                               color="primary"
                               iconSize="l"
                               iconType="arrowLeft"
@@ -318,7 +318,7 @@ class WzFileEditor extends Component {
                             placeholder={`Type your new ${section} file name here`}
                             value={this.state.inputValue}
                             onChange={this.onChange}
-                            aria-label="aria-label to prevent react warning"
+                            aria-label="nhãn aria để tránh cảnh báo react"
                           />
                         </EuiFlexItem>
                       </EuiFlexGroup>
@@ -327,7 +327,7 @@ class WzFileEditor extends Component {
                         <span style={{ fontSize: '22px' }}>
                           <EuiToolTip position="right" content={`Back to ${section}`}>
                             <EuiButtonIcon
-                              aria-label="Back"
+                              aria-label="Quay lại"
                               color="primary"
                               iconSize="l"
                               iconType="arrowLeft"
@@ -396,7 +396,7 @@ class WzFileEditor extends Component {
                           isReadOnly={!isEditable}
                           wrapEnabled
                           setOptions={this.codeEditorOptions}
-                          aria-label="Code Editor"
+                          aria-label="Trình chỉnh sửa mã"
                         />
                       </EuiFlexItem>
                     </EuiFlexGroup>

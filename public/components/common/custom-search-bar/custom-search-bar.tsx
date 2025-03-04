@@ -186,7 +186,7 @@ export const CustomSearchBar = ({ filtersValues, filterDrillDownValue = { field:
         </EuiFlexItem>
         <EuiFlexItem grow={false}>
           <EuiSwitch
-            label="Advanced filters"
+            label="Bộ lọc nâng cao"
             checked={avancedFiltersState}
             onChange={() => changeSwitch()}
           />

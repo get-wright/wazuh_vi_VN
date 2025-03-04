@@ -177,7 +177,7 @@ class WzGroupsEditor extends Component {
       modal = (
         <EuiOverlayMask>
           <EuiConfirmModal
-            title="Unsubmitted changes"
+            title="Thay đổi chưa được lưu"
             onConfirm={() => {
               closeModal;
               this.props.cleanFileContent();
@@ -206,7 +206,7 @@ class WzGroupsEditor extends Component {
                       <span style={{ fontSize: '22px' }}>
                         <EuiToolTip position="right" content={`Back to groups`}>
                           <EuiButtonIcon
-                            aria-label="Back"
+                            aria-label="Quay lại"
                             color="primary"
                             iconSize="l"
                             iconType="arrowLeft"
@@ -248,7 +248,7 @@ class WzGroupsEditor extends Component {
                             mode="xml"
                             wrapEnabled
                             setOptions={this.codeEditorOptions}
-                            aria-label="Code Editor"
+                            aria-label="Trình chỉnh sửa mã"
                           />
                         )) || (
                           <EuiCodeBlock

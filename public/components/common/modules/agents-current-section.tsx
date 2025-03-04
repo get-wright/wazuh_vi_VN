@@ -35,7 +35,7 @@ class WzCurrentAgentsSection extends Component {
       const breadcrumb = [
         { text: '' },
         {
-          text: 'Agents',
+          text: 'Các trạm',
           href: "#/agents-preview"
         },
         {

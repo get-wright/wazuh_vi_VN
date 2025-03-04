@@ -24,33 +24,33 @@ import { LOGCOLLECTOR_LOCALFILE_PROP, LOCALFILE_LOGS_PROP } from './types';
 const renderTargetField = (item) => (item ? item.join(', ') : 'agent');
 
 const mainSettings = [
-  { field: 'logformat', label: 'Log format' },
-  { field: 'file', label: 'Log location', render: renderValueOrNoValue },
+  { field: 'logformat', label: 'Định dạng log' },
+  { field: 'file', label: 'Vị trí log', render: renderValueOrNoValue },
   {
     field: 'only-future-events',
-    label: 'Only receive logs occured after start',
+    label: 'Chỉ nhận logs xảy ra sau khi bắt đầu',
     when: 'agent',
   },
   {
     field: 'reconnect_time',
-    label: 'Time in seconds to try to reconnect with Windows Event Channel when it has fallen',
+    label: 'Thời gian (tính bằng giây) để thử kết nối lại với Windows Event Channel khi nó bị ngắt',
     when: 'agent',
   },
   {
     field: 'query',
-    label: 'Filter logs using this XPATH query',
+    label: 'Lọc logs theo truy vấn XPATH',
     render: renderValueOrNoValue,
     when: 'agent',
   },
   {
     field: 'labels',
-    label: 'Only receive logs occured after start',
+    label: 'Chỉ nhận logs xảy ra sau khi bắt đầu',
     render: renderValueOrNoValue,
     when: 'agent',
   },
   {
     field: 'target',
-    label: 'Redirect output to this socket',
+    label: 'Chuyển hướng đầu ra tới socket này',
     render: renderTargetField,
   },
 ];
@@ -87,8 +87,8 @@ class WzConfigurationLogCollectionLogs extends Component {
         {!isString(currentConfig?.[LOGCOLLECTOR_LOCALFILE_PROP]) &&
         currentConfig?.[LOGCOLLECTOR_LOCALFILE_PROP]?.[LOCALFILE_LOGS_PROP]?.length ? (
           <WzConfigurationSettingsTabSelector
-            title="Logs files"
-            description="List of log files that will be analyzed"
+            title="Các tệp logs"
+            description="Danh sách các tệp log sẽ được phân tích"
             currentConfig={currentConfig}
             minusHeight={this.props.agent.id === '000' ? 320 : 415}
             helpLinks={helpLinks}

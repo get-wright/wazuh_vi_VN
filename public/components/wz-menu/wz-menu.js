@@ -383,7 +383,7 @@ export const WzMenu = withWindowSize(class WzMenu extends Component {
 
   buildPatternSelector() {
     return (
-      <EuiFormRow label="Selected index pattern">
+      <EuiFormRow label="Mẫu chỉ mục đã chọn">
         <EuiSelect
           id="selectIndexPattern"
           options={
@@ -393,7 +393,7 @@ export const WzMenu = withWindowSize(class WzMenu extends Component {
           }
           value={this.state.currentSelectedPattern}
           onChange={this.changePattern}
-          aria-label="Index pattern selector"
+          aria-label="Bộ chọn mẫu chỉ mục"
         />
       </EuiFormRow>
     );
@@ -401,7 +401,7 @@ export const WzMenu = withWindowSize(class WzMenu extends Component {
 
   buildApiSelector() {
     return (
-      <EuiFormRow label="Selected API">
+      <EuiFormRow label="API đã chọn">
         <EuiSelect
           id="selectAPI"
           options={
@@ -411,7 +411,7 @@ export const WzMenu = withWindowSize(class WzMenu extends Component {
           }
           value={this.state.currentAPI}
           onChange={this.changeAPI}
-          aria-label="API selector"
+          aria-label="Bộ chọn API"
         />
       </EuiFormRow>
     );
@@ -659,7 +659,7 @@ export const WzMenu = withWindowSize(class WzMenu extends Component {
               }
               value={this.state.currentAPI}
               onChange={this.changeAPI}
-              aria-label="API selector"
+              aria-label="Bộ chọn API"
             />
           </div>
         </EuiFlexItem>
@@ -692,7 +692,7 @@ export const WzMenu = withWindowSize(class WzMenu extends Component {
               }
               value={this.state.currentSelectedPattern}
               onChange={this.changePattern}
-              aria-label="Index pattern selector"
+              aria-label="Bộ chọn mẫu chỉ mục"
             />
           </div>
         </EuiFlexItem>
@@ -794,7 +794,7 @@ export const WzMenu = withWindowSize(class WzMenu extends Component {
                   ? 'wz-menu-active'
                   : '')}
               color="text"
-              aria-label="Security"
+              aria-label="Bảo mật"
               onClick={this.onClickSecurityButton.bind(this)}
             >
               <EuiIcon type="securityApp" color="primary" size="m" />
@@ -811,7 +811,7 @@ export const WzMenu = withWindowSize(class WzMenu extends Component {
                   ? 'wz-menu-active'
                   : '')}
               color="text"
-              aria-label="Settings"
+              aria-label="Cài đặt"
               onClick={this.onClickSettingsButton.bind(this)}
             >
               <EuiIcon type="advancedSettingsApp" color="primary" size="m" />
@@ -939,7 +939,7 @@ export const WzMenu = withWindowSize(class WzMenu extends Component {
           style={{ position: 'relative', right: 0 }}
           onClick={()=> this.switchSelectorsPopOver()}
           size="s"
-          aria-label="Open selectors"></EuiButtonEmpty>
+          aria-label="Mở bộ chọn"></EuiButtonEmpty>
       </EuiToolTip>
     )
    

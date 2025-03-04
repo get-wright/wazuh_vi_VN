@@ -70,7 +70,7 @@ export const Category: React.FunctionComponent<ICategoryProps> = ({
                   <EuiButtonIcon
                       iconType="iInCircle"
                       iconSize="l"
-                      aria-label="Help"
+                      aria-label="Trợ giúp"
                       target="_blank"
                       href={webDocumentationLink(documentationLink)}
                     ></EuiButtonIcon>
@@ -204,7 +204,7 @@ const InputFormFilePickerPreInput = ({image, field}: {image: string, field: any}
             modalProps={{ buttonColor: 'danger' }}
             iconType="trash"
             color="danger"
-            aria-label="Delete file"
+            aria-label="Xóa tệp"
           />
         </EuiFlexItem>
       </EuiFlexGroup>

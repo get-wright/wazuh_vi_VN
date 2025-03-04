@@ -13,11 +13,11 @@ import { webDocumentationLink } from "../../../../../../../common/services/web_d
 
 export default [
   {
-    text: 'CIS-CAT module documentation',
+    text: 'Tài liệu module CIS-CAT',
     href: webDocumentationLink('user-manual/capabilities/policy-monitoring/ciscat/ciscat.html')
   },
   {
-    text: 'CIS-CAT module reference',
+    text: 'Tham chiếu module CIS-CAT',
     href: webDocumentationLink('user-manual/reference/ossec-conf/wodle-ciscat.html')
   }
 ];

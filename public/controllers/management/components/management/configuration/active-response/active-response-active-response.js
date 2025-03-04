@@ -26,25 +26,25 @@ import { webDocumentationLink } from '../../../../../../../common/services/web_d
 const mainSettings = [
   {
     field: 'disabled',
-    label: 'Status of this active response',
+    label: 'Trạng thái của ứng phó chủ động này',
     render: renderValueNoThenEnabled
   },
-  { field: 'command', label: 'Command to execute' },
-  { field: 'location', label: 'Execute the command on this location' },
-  { field: 'agent_id', label: 'Agent ID on which execute the command' },
-  { field: 'level', label: 'Match to this severity level or above' },
-  { field: 'rules_group', label: 'Match to one of these groups' },
-  { field: 'rules_id', label: 'Match to one of these rule IDs' },
-  { field: 'timeout', label: 'Timeout (in seconds) before reverting' }
+  { field: 'command', label: 'Lệnh để thực thi' },
+  { field: 'location', label: 'Thực thi lệnh tại vị trí này' },
+  { field: 'agent_id', label: 'ID của trạm để thực thi lệnh' },
+  { field: 'level', label: 'Khớp với mức độ nghiêm trọng này trở lên' },
+  { field: 'rules_group', label: 'Khớp với một trong các nhóm này' },
+  { field: 'rules_id', label: 'Khớp với một trong các rule IDs này' },
+  { field: 'timeout', label: 'Thời gian chờ (tính bằng giây) trước khi quay lại' }
 ];
 
 const helpLinks = [
   {
-    text: 'Active response documentation',
+    text: 'Tài liệu ứng phó chủ động',
     href: webDocumentationLink('user-manual/capabilities/active-response/index.html')
   },
   {
-    text: 'Active response reference',
+    text: 'Tham khảo ứng phó chủ động',
     href: webDocumentationLink('user-manual/reference/ossec-conf/active-response.html')
   }
 ];
@@ -86,8 +86,8 @@ class WzConfigurationActiveResponseActiveResponse extends Component {
         !isString(currentConfig['analysis-active_response']) &&
         currentConfig['analysis-active_response']['active-response'].length ? (
           <WzConfigurationSettingsTabSelector
-            title="Active response definitions"
-            description="Find here all the currently defined Active responses"
+            title="Định nghĩa ứng phó chủ động"
+            description="Tìm ở đây tất cả các ứng phó chủ động đã được định nghĩa"
             currentConfig={currentConfig['analysis-active_response']}
             minusHeight={320}
             helpLinks={helpLinks}

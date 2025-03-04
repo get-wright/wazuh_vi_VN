@@ -48,8 +48,8 @@ class WzConfigurationCisCatBenchmarks extends Component {
         {wodleConfig['cis-cat'] && wodleConfig['cis-cat'].content && (
           <Fragment>
             <WzConfigurationSettingsTabSelector
-              title="Benchmarks"
-              description="List of CIS-CAT benchmark templates to perform scans"
+              title="Điểm chuẩn"
+              description="Danh sách mẫu benchmark của CIS-CAT để thực hiện quét"
               currentConfig={wodleConfig}
               minusHeight={this.props.agent.id === '000' ? 320 : 415}
               helpLinks={helpLinks}

@@ -92,9 +92,9 @@ export const RequirementCard = withErrorBoundary (class RequirementCard extends 
         slider[lastArr].push(
           <EuiFlexItem key={`hidden${i}`}>
             <EuiCard
-              title="Title"
+              title="Tiêu đề"
               className="hiddenCard"
-              description="Description"
+              description="Mô tả"
               textAlign="left"
             />
           </EuiFlexItem>
@@ -154,7 +154,7 @@ export const RequirementCard = withErrorBoundary (class RequirementCard extends 
         <EuiButtonIcon
           style={{ margin: '12px 0 12px 12px' }}
           iconType="arrowLeft"
-          aria-label="Previous"
+          aria-label="Quay lại"
           onClick={() => this.slideLeft()}
           isDisabled={this.state.sliderLength <= 1 || this.state.position === 0}
         />
@@ -162,7 +162,7 @@ export const RequirementCard = withErrorBoundary (class RequirementCard extends 
         <EuiButtonIcon
           style={{ margin: '12px 10px 12px 0' }}
           iconType="arrowRight"
-          aria-label="Next"
+          aria-label="Tiếp theo"
           onClick={() => this.slideRight()}
           isDisabled={
             this.state.sliderLength <= 1 ||

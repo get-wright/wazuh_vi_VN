@@ -23,17 +23,17 @@ import { LOGCOLLECTOR_LOCALFILE_PROP, LOCALFILE_COMMANDS_PROP } from './types';
 const renderTargetField = (item) => (item ? item.join(', ') : 'agent');
 
 const mainSettings = [
-  { field: 'logformat', label: 'Log format' },
-  { field: 'command', label: 'Run this command', render: renderValueOrNoValue },
-  { field: 'alias', label: 'Command alias', render: renderValueOrNoValue },
+  { field: 'logformat', label: 'Định dạng log' },
+  { field: 'command', label: 'Chạy lệnh này', render: renderValueOrNoValue },
+  { field: 'alias', label: 'Alias của lệnh', render: renderValueOrNoValue },
   {
     field: 'frequency',
-    label: 'Interval between command executions',
+    label: 'Khoảng thời gian giữa các lần thực thi lệnh',
     render: renderValueOrNoValue,
   },
   {
     field: 'target',
-    label: 'Redirect output to this socket',
+    label: 'Chuyển hướng đầu ra tới socket này',
     render: renderTargetField,
   },
 ];
@@ -64,7 +64,7 @@ class WzConfigurationLogCollectionCommands extends Component {
         {!isString(currentConfig?.[LOGCOLLECTOR_LOCALFILE_PROP]) &&
         currentConfig?.[LOGCOLLECTOR_LOCALFILE_PROP]?.[LOCALFILE_COMMANDS_PROP]?.length ? (
           <WzConfigurationSettingsTabSelector
-            title="Command monitoring"
+            title="Giám sát lệnh"
             description="All output from these commands will be read as one or more log messages depending on whether command or full_command is used."
             currentConfig={currentConfig}
             minusHeight={this.props.agent.id === '000' ? 320 : 415}

@@ -13,11 +13,11 @@ import { webDocumentationLink } from '../../../../../../../common/services/web_d
 
 export default [
   {
-    text: 'Using Wazuh to monitor AWS',
+    text: 'Sử dụng Wazuh để giám sát AWS',
     href: webDocumentationLink('cloud-security/amazon/index.html'),
   },
   {
-    text: 'Amazon S3 module reference',
+    text: 'Tham khảo module Amazon S3',
     href: webDocumentationLink(
       'user-manual/reference/ossec-conf/wodle-s3.html',
     ),

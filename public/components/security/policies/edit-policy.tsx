@@ -203,7 +203,7 @@ export const EditPolicyFlyout = ({ policy, closeFlyout }) => {
       actions: [
         {
           name: 'Remove',
-          description: 'Remove this action',
+          description: 'Xóa hành động này',
           type: 'icon',
           enabled: () => !isReserved,
           color: 'danger',
@@ -226,7 +226,7 @@ export const EditPolicyFlyout = ({ policy, closeFlyout }) => {
       actions: [
         {
           name: 'Remove',
-          description: 'Remove this resource',
+          description: 'Xóa tài nguyên này',
           type: 'icon',
           color: 'danger',
           enabled: () => !isReserved,
@@ -273,7 +273,7 @@ export const EditPolicyFlyout = ({ policy, closeFlyout }) => {
     modal = (
       <EuiOverlayMask>
         <EuiConfirmModal
-          title="Unsubmitted changes"
+          title="Thay đổi chưa được lưu"
           onConfirm={() => {
             setIsModalVisible(false);
             closeFlyout(false);
@@ -320,7 +320,7 @@ export const EditPolicyFlyout = ({ policy, closeFlyout }) => {
         </EuiFlyoutHeader>
         <EuiFlyoutBody>
           <EuiForm component="form" style={{ padding: 24 }}>
-            <EuiFormRow label="Policy name" helpText="Introduce a name for this new policy.">
+            <EuiFormRow label="Tên chính sách" helpText="Introduce a name for this new policy.">
               <EuiFieldText
                 placeholder=""
                 disabled={isReserved}
@@ -334,7 +334,7 @@ export const EditPolicyFlyout = ({ policy, closeFlyout }) => {
             <EuiFlexGroup>
               <EuiFlexItem>
                 <EuiFormRow
-                  label="Action"
+                  label="Hành động"
                   helpText="Set an action where the policy will be carried out."
                 >
                   <EuiSuperSelect
@@ -374,7 +374,7 @@ export const EditPolicyFlyout = ({ policy, closeFlyout }) => {
             <EuiFlexGroup>
               <EuiFlexItem>
                 <EuiFormRow
-                  label="Resource"
+                  label="Tài nguyên"
                   helpText="Select the resource to which this policy is directed."
                 >
                   <EuiSuperSelect
@@ -389,7 +389,7 @@ export const EditPolicyFlyout = ({ policy, closeFlyout }) => {
               </EuiFlexItem>
               <EuiFlexItem>
                 <EuiFormRow
-                  label="Resource identifier"
+                  label="Định danh tài nguyên"
                   helpText="Introduce the resource identifier. Type * for all."
                 >
                   <EuiFieldText
@@ -423,7 +423,7 @@ export const EditPolicyFlyout = ({ policy, closeFlyout }) => {
               </>
             )}
             <EuiSpacer></EuiSpacer>
-            <EuiFormRow label="Select an effect" helpText="Select an effect.">
+            <EuiFormRow label="Chọn hiệu ứng" helpText="Select an effect.">
               <EuiSuperSelect
                 options={effectOptions}
                 valueOfSelected={effectValue}

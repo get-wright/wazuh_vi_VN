@@ -17,7 +17,7 @@ import { EuiEmptyPrompt } from '@elastic/eui';
 export const PromptNoActiveAgent = () => {
   return (
     <PromptSelectAgent
-      title="Agent is not active"
+      title="Trạm không hoạt động"
       body="This section is only available for active agents."
     />
   );

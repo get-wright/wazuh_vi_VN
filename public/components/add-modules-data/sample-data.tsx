@@ -44,20 +44,20 @@ export default class WzSampleData extends Component {
     this.generateAlertsParams = {}; // extra params to add to generateAlerts function in server
     this.categories = [
       {
-        title: 'Sample security information',
-        description: 'Sample data, visualizations and dashboards for security information (integrity monitoring, Amazon AWS services, Office 365, Google Cloud Platform, GitHub, authorization, ssh, web).',
+        title: 'Thông tin bảo mật mẫu',
+        description: 'Dữ liệu mẫu, biểu đồ và bảng điều khiển cho thông tin bảo mật (giám sát toàn vẹn, dịch vụ Amazon AWS, Office 365, Google Cloud Platform, GitHub, ủy quyền, SSH, Web).',
         image: '',
         categorySampleAlertsIndex: 'security',
       },
       {
-        title: 'Mẫu kiểm thử và giám sát chính sách',
+        title: 'Mẫu kiểm thử và giám sát Chính sách',
         description:
           'Sample data, visualizations and dashboards for events of auditing and policy monitoring (policy monitoring, system auditing, OpenSCAP, CIS-CAT).',
         image: '',
         categorySampleAlertsIndex: 'auditing-policy-monitoring',
       },
       {
-        title: 'Sample threat detection and response',
+        title: 'Phát hiện và ứng phó đe dọa mẫu',
         description:
           'Sample data, visualizations and dashboards for threat events of detection and response (vulnerabilities, VirusTotal, Osquery, Docker listener, MITRE).',
         image: '',
@@ -128,7 +128,7 @@ export default class WzSampleData extends Component {
         error: {
           error: error,
           message: error.message || error,
-          title: 'Error checking sample data',
+          title: 'Lỗi kiểm tra dữ liệu mẫu',
         },
       };
       getErrorOrchestrator().handleError(options);
@@ -270,7 +270,7 @@ export default class WzSampleData extends Component {
     return (
       <>
         <EuiCallOut
-            title="These actions require permissions on the managed indices."
+            title="Các hành động này yêu cầu quyền trên các chỉ số được quản lý."
             iconType="iInCircle"
         />
         <EuiSpacer />

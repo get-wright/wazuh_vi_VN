@@ -66,7 +66,7 @@ class WzCodeEditor extends Component {
               fontSize: '14px',
               enableSnippets: true
             }}
-            aria-label="Code Editor"
+            aria-label="Trình chỉnh sửa mã"
           />
         </div>
       </Fragment>

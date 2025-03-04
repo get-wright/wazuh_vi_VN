@@ -165,7 +165,7 @@ export class SuggestHandler extends BaseHandler {
         {
           label: inputValue,
           type: { iconType: 'search', color: 'tint8' },
-          description: 'Search',
+          description: 'Tìm kiếm',
         },
       ];
     }
@@ -175,7 +175,7 @@ export class SuggestHandler extends BaseHandler {
   buildSuggestApply(): suggestItem[] {
     return [
       {
-        label: 'Apply filter',
+        label: 'Áp dụng bộ lọc',
         type: { iconType: 'kqlFunction', color: 'tint5' },
         description: 'Click here or press "Enter" to apply the filter',
       },

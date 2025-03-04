@@ -44,15 +44,15 @@ export const EditRolesTable = ({ policies, role, onChange, isDisabled, loading})
             
           const listItems = [
             {
-              title: 'Actions',
+              title: 'Hành động',
               description: `${item.policy.actions}`,
             },
             {
-              title: 'Resources',
+              title: 'Tài nguyên',
               description: `${item.policy.resources}`,
             },
             {
-              title: 'Effect',
+              title: 'Tác dụng',
               description: `${item.policy.effect}`,
             },
           ];
@@ -74,7 +74,7 @@ export const EditRolesTable = ({ policies, role, onChange, isDisabled, loading})
           actions: [
             {
               name: 'Remove',
-              description: 'Remove',
+              description: 'Xóa',
               type: 'icon',
               color: 'danger',
               icon: 'trash',

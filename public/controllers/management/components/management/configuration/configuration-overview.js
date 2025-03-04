@@ -48,15 +48,15 @@ const columns = [
 
 const helpLinks = [
   {
-    text: 'Wazuh server administration',
+    text: 'Quản trị máy chủ Wazuh',
     href: webDocumentationLink('user-manual/manager/index.html')
   },
   {
-    text: 'Wazuh capabilities',
+    text: 'Khả năng của Wazuh',
     href: webDocumentationLink('user-manual/capabilities/index.html')
   },
   {
-    text: 'Local configuration reference',
+    text: 'Tham khảo cấu hình cục bộ',
     href: webDocumentationLink('user-manual/reference/ossec-conf/index.html')
   }
 ];

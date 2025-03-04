@@ -39,12 +39,12 @@ class WzMenuTools extends Component {
       this.createItem({
         id: WAZUH_MENU_TOOLS_SECTIONS_ID.API_CONSOLE,
         cyTestId: WAZUH_MENU_TOOLS_SECTIONS_CY_TEST_ID.API_CONSOLE,
-        text: 'API Console',
+        text: 'Bảng điều khiển API',
       }),
       this.createItem({
         id: WAZUH_MENU_TOOLS_SECTIONS_ID.RULESET_TEST,
         cyTestId: WAZUH_MENU_TOOLS_SECTIONS_CY_TEST_ID.RULESET_TEST,
-        text: 'Ruleset Test',
+        text: 'Kiểm tra tập rule',
       }),
     ];
   }

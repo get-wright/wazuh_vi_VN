@@ -43,7 +43,7 @@ export default class ReportingColums {
             <div>
               <EuiToolTip position="top" content={`Download report`}>
                 <EuiButtonIcon
-                  aria-label="Dowload report"
+                  aria-label="Tải báo cáo"
                   iconType="importAction"
                   onClick={() => this.goReport(item.name)}
                   color="primary"
@@ -53,7 +53,7 @@ export default class ReportingColums {
               <WzButtonPermissions
                 buttonType='icon'
                 roles={[WAZUH_ROLE_ADMINISTRATOR_NAME]}
-                aria-label="Delete report"
+                aria-label="Xóa báo cáo"
                 iconType="trash"
                 tooltip={{position: 'top', content: 'Delete report'}}
                 onClick={async () => {

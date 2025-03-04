@@ -159,7 +159,7 @@ export const Techniques = withWindowSize(
       return [
         {
           id: 0,
-          title: 'Actions',
+          title: 'Hành động',
           items: [
             {
               name: 'Filter for value',
@@ -400,7 +400,7 @@ export const Techniques = withWindowSize(
         );
       } else {
         return (
-          <EuiCallOut title="There are no results." iconType="help" color="warning"></EuiCallOut>
+          <EuiCallOut title="Không có kết quả." iconType="help" color="warning"></EuiCallOut>
         );
       }
     }
@@ -535,7 +535,7 @@ export const Techniques = withWindowSize(
             onChange={this.onChange}
             onSearch={this.onSearch}
             isClearable={true}
-            aria-label="Use aria labels when no actual label is in use"
+            aria-label="Sử dụng nhãn aria khi không có nhãn thực tế"
           />
           <EuiSpacer size="s" />
 

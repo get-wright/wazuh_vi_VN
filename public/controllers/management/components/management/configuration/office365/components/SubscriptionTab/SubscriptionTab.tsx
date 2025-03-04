@@ -25,7 +25,7 @@ export const SubscriptionTab = ({ agent, wodleConfiguration }: SubscriptionTabPr
 
   return (
     <WzConfigurationSettingsTabSelector
-      title="Subscriptions list"
+      title="Danh sách đăng ký"
       currentConfig={wodleConfiguration}
       minusHeight={agent.id === '000' ? 370 : 320}
       helpLinks={HELP_LINKS}

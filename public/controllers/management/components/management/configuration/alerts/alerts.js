@@ -34,19 +34,19 @@ class WzConfigurationAlerts extends Component {
     return (
       <Fragment>
         <WzTabSelector>
-          <WzTabSelectorTab label='General'>
+          <WzTabSelectorTab label='Tổng quan'>
             <WzConfigurationAlertsGeneral {...this.props} />
           </WzTabSelectorTab>
           <WzTabSelectorTab label='Labels'>
             <WzConfigurationAlertsLabels {...this.props} />
           </WzTabSelectorTab>
-          <WzTabSelectorTab label='Email alerts'>
+          <WzTabSelectorTab label='Thông báo qua email'>
             <WzConfigurationAlertsEmailAlerts {...this.props} />
           </WzTabSelectorTab>
-          <WzTabSelectorTab label='Reports'>
+          <WzTabSelectorTab label='Báo cáo'>
             <WzConfigurationAlertsEmailReports {...this.props} />
           </WzTabSelectorTab>
-          <WzTabSelectorTab label='Syslog output'>
+          <WzTabSelectorTab label='Đầu ra syslog'>
             <WzConfigurationAlertsSyslogOutput {...this.props} />
           </WzTabSelectorTab>
         </WzTabSelector>

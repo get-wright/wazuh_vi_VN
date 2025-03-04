@@ -14,11 +14,11 @@ import { webDocumentationLink } from "../../../../../../../common/services/web_d
 
 export default [
   {
-    text: 'Vulnerability detection',
+    text: 'Phát hiện lỗ hổng',
     href: webDocumentationLink('user-manual/capabilities/vulnerability-detection/index.html')
   },
   {
-    text: 'Vulnerability detector reference',
+    text: 'Tham khảo bộ dò lỗ hổng',
     href: webDocumentationLink('user-manual/reference/ossec-conf/vuln-detector.html')
   }
 ];

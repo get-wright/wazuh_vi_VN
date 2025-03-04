@@ -106,7 +106,7 @@ class WzEditConfiguration extends Component {
         error: {
           error: error,
           message: errorMessage || error,
-          title: "Error found saving the file.",
+          title: "Lỗi khi lưu tệp.",
         },
       };
       getErrorOrchestrator().handleError(options);
@@ -179,7 +179,7 @@ class WzEditConfiguration extends Component {
       }
       if(!this.props.clusterNodeSelected){
         this.addToast({
-          title: 'Manager was restarted',
+          title: 'Trình quản lý đã được khởi động lại',
           color: 'success',
         });
       }
@@ -406,7 +406,7 @@ const WzEditorConfiguration = compose(
               {infoChangesAfterRestart && (
                 <EuiCallOut
                   iconType="iInCircle"
-                  title="Changes will not take effect until a restart is performed."
+                  title="Thay đổi sẽ không có hiệu lực cho đến khi khởi động lại."
                 />
               )}
               <EuiSpacer size="s" />

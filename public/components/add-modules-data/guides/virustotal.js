@@ -15,19 +15,19 @@ export default {
   id: 'virustotal',
   xml_tag: 'integration',
   name: 'VirusTotal',
-  description: 'Configuration options of the VirusTotal integration.',
+  description: 'Tùy chọn cấu hình tích hợp VirusTotal',
   category: 'Threat detection and response',
   documentation_link: webDocumentationLink('user-manual/reference/ossec-conf/integration.html'),
   icon: 'securityApp',
   avaliable_for_manager: true,
   steps: [
     {
-      title: 'Required settings',
+      title: 'Cài đặt bắt buộc',
       description: '',
       elements: [
         {
           name: 'name',
-          description: 'This indicates the service to integrate with.',
+          description: 'Điều này chỉ ra dịch vụ cần tích hợp.',
           type: 'input',
           required: true,
           default_value: 'virustotal',
@@ -35,7 +35,7 @@ export default {
         },
         {
           name: 'api_key',
-          description: 'This is the key that you would have retrieved from the VirusTotal API.',
+          description: 'Đây là khóa bạn sẽ lấy từ API VirusTotal.',
           type: 'input',
           required: true,
           placeholder: 'VirusTotal Api key'
@@ -43,12 +43,12 @@ export default {
       ]
     },
     {
-      title: 'Optional settings',
+      title: 'Cài đặt tùy chọn',
       description: '',
       elements: [
         {
           name: 'level',
-          description: 'This filters alerts by rule level so that only alerts with the specified level or above are pushed.',
+          description: 'Bộ lọc này lọc cảnh báo theo mức quy tắc để chỉ đẩy các cảnh báo với mức được chỉ định trở lên.',
           type: 'input-number',
           values: { min: 0, max: 16 },
           default_value: 0,
@@ -57,7 +57,7 @@ export default {
         },
         {
           name: 'rule_id',
-          description: 'This filters alerts by rule ID.',
+          description: 'Bộ lọc này lọc cảnh báo theo rule ID.',
           type: 'input',
           default_value: '',
           placeholder: 'Comma-separated rule IDs',
@@ -65,19 +65,19 @@ export default {
         },
         {
           name: 'group',
-          description: 'This filters alerts by rule group. For the VirusTotal integration, only rules from the syscheck group are available.',
+          description: 'Bộ lọc này lọc cảnh báo theo nhóm rule. Đối với tích hợp VirusTotal, chỉ có các rule từ nhóm syscheck khả dụng.',
           type: 'input',
           placeholder: 'Any rule group or comma-separated rule groups.'
         },
         {
           name: 'event_location',
-          description: 'This filters alerts by where the event originated. Follows the OS_Regex Syntax.',
+          description: 'Bộ lọc này lọc cảnh báo theo nguồn gốc sự kiện. Theo cú pháp OS_Regex.',
           type: 'input',
           placeholder: 'Any single log file.'
         },
         {
           name: 'alert_format',
-          description: 'This writes the alert file in the JSON format. The Integrator makes use this file to fetch fields values.',
+          description: 'Hành động này ghi tập tin cảnh báo theo định dạng JSON. Integrator sử dụng tập tin này để lấy giá trị các trường.',
           type: 'input',
           placeholder: 'json',
           default_value: 'json',
@@ -86,7 +86,7 @@ export default {
         },
         {
           name: 'max_log',
-          description: 'The maximum length of an alert snippet that will be sent to the Integrator. Longer strings will be truncated with ...',
+          description: 'Độ dài tối đa của đoạn cảnh báo gửi đến Integrator. Các chuỗi dài hơn sẽ bị cắt bớt bằng ...',
           type: 'input-number',
           values: { min: 165, max: 1024 },
           default_value: 165,

@@ -24,23 +24,23 @@ import { webDocumentationLink } from '../../../../../../../common/services/web_d
 
 const helpLinks = [
   {
-    text: 'Active response documentation',
+    text: 'Tài liệu ứng phó chủ động',
     href: webDocumentationLink('user-manual/capabilities/active-response/index.html')
   },
   {
-    text: 'Commands reference',
+    text: 'Tham chiếu lệnh',
     href: webDocumentationLink('user-manual/reference/ossec-conf/commands.html')
   }
 ];
 
 const mainSettings = [
-  { field: 'name', label: 'Command name' },
-  { field: 'executable', label: 'Name of executable file' },
-  { field: 'expect', label: 'List of expected fields' },
-  { field: 'extra_args', label: 'Extra arguments' },
+  { field: 'name', label: 'Tên lệnh' },
+  { field: 'executable', label: 'Tên tệp thực thi' },
+  { field: 'expect', label: 'Danh sách các trường dự kiến' },
+  { field: 'extra_args', label: 'Đối số bổ sung' },
   {
     field: 'timeout_allowed',
-    label: 'Allow this command to be reverted',
+    label: 'Cho phép lệnh này được hoàn tác',
     render: renderValueNoThenEnabled
   }
 ];
@@ -81,8 +81,8 @@ class WzConfigurationActiveResponseCommands extends Component {
         currentConfig['analysis-command'].command &&
         currentConfig['analysis-command'].command.length ? (
           <WzConfigurationSettingsTabSelector
-            title="Command definitions"
-            description="Find here all the currently defined commands used for Active response"
+            title="Định nghĩa lệnh"
+            description="Tìm ở đây tất cả các lệnh đang được sử dụng cho ứng phó chủ động"
             currentConfig={currentConfig['analysis-command']}
             minusHeight={320}
             helpLinks={helpLinks}

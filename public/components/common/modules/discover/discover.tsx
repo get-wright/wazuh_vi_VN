@@ -543,7 +543,7 @@ export const Discover = compose(
                       e.stopPropagation();
                     }}
                     iconType="cross"
-                    aria-label="Filter"
+                    aria-label="Bộ lọc"
                     iconSize="s"
                   />
                 </EuiToolTip>

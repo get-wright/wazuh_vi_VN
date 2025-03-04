@@ -320,7 +320,7 @@ export class UploadFiles extends Component {
           <EuiSwitch
             className='wz-margin-top-10 wz-margin-bottom-10'
             id="overwrite"
-            label="Overwrite"
+            label="Ghi đè"
             checked={this.state.overwrite}
             onChange={this.setOverwrite}
             compressed

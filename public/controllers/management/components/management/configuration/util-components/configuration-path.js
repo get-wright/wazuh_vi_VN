@@ -57,7 +57,7 @@ class WzConfigurationPath extends Component {
       modal = (
         <EuiOverlayMask>
           <EuiConfirmModal
-            title="Unsubmitted changes"
+            title="Thay đổi chưa được lưu"
             onConfirm={() => {
               closeModal;
               updateConfigurationSection('');
@@ -92,7 +92,7 @@ class WzConfigurationPath extends Component {
                         updateConfigurationSection('');
                       }
                     }}
-                    aria-label="back to configuration"
+                    aria-label="Quay lại cấu hình"
                   />
                 </EuiToolTip>
               </span>

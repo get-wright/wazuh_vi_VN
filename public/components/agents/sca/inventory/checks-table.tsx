@@ -38,7 +38,7 @@ export class InventoryPolicyChecksTable extends Component<Props, State> {
       {
         type: 'params',
         label: 'condition',
-        description: 'Filter by check condition',
+        description: 'Lọc theo điều kiện kiểm tra',
         operators: ['=', '!='],
         values: (value) =>
           getFilterValues(
@@ -51,7 +51,7 @@ export class InventoryPolicyChecksTable extends Component<Props, State> {
       {
         type: 'params',
         label: 'description',
-        description: 'Filter by check description',
+        description: 'Lọc theo mô tả hàm kiểm tra',
         operators: ['=', '!='],
         values: (value) =>
           getFilterValues(
@@ -64,7 +64,7 @@ export class InventoryPolicyChecksTable extends Component<Props, State> {
       {
         type: 'params',
         label: 'file',
-        description: 'Filter by check file',
+        description: 'Lọc theo tệp kiểm tra',
         operators: ['=', '!='],
         values: (value) =>
           getFilterValues('file', value, this.props.agent.id, this.props.lookingPolicy.policy_id),
@@ -72,7 +72,7 @@ export class InventoryPolicyChecksTable extends Component<Props, State> {
       {
         type: 'params',
         label: 'registry',
-        description: 'Filter by check registry',
+        description: 'Lọc theo check registry',
         operators: ['=', '!='],
         values: (value) =>
           getFilterValues(
@@ -85,7 +85,7 @@ export class InventoryPolicyChecksTable extends Component<Props, State> {
       {
         type: 'params',
         label: 'rationale',
-        description: 'Filter by check rationale',
+        description: 'Lọc theo tính hợp lý của kiểm tra',
         operators: ['=', '!='],
         values: (value) =>
           getFilterValues(
@@ -98,7 +98,7 @@ export class InventoryPolicyChecksTable extends Component<Props, State> {
       {
         type: 'params',
         label: 'reason',
-        description: 'Filter by check reason',
+        description: 'Lọc theo lý do kiểm tra',
         operators: ['=', '!='],
         values: (value) =>
           getFilterValues('reason', value, this.props.agent.id, this.props.lookingPolicy.policy_id),
@@ -106,7 +106,7 @@ export class InventoryPolicyChecksTable extends Component<Props, State> {
       {
         type: 'params',
         label: 'remediation',
-        description: 'Filter by check remediation',
+        description: 'Lọc theo check remediation',
         operators: ['=', '!='],
         values: (value) =>
           getFilterValues(
@@ -119,7 +119,7 @@ export class InventoryPolicyChecksTable extends Component<Props, State> {
       {
         type: 'params',
         label: 'result',
-        description: 'Filter by check result',
+        description: 'Lọc theo check result',
         operators: ['=', '!='],
         values: (value) =>
           getFilterValues('result', value, this.props.agent.id, this.props.lookingPolicy.policy_id),
@@ -127,7 +127,7 @@ export class InventoryPolicyChecksTable extends Component<Props, State> {
       {
         type: 'params',
         label: 'title',
-        description: 'Filter by check title',
+        description: 'Lọc theo tiêu đề kiểm tra',
         operators: ['=', '!='],
         values: (value) =>
           getFilterValues('title', value, this.props.agent.id, this.props.lookingPolicy.policy_id),
@@ -232,19 +232,19 @@ export class InventoryPolicyChecksTable extends Component<Props, State> {
           : '';
       const listItems = [
         {
-          title: 'Check not applicable due to:',
+          title: 'Kiểm tra không áp dụng được do:',
           description: item.reason,
         },
         {
-          title: 'Rationale',
+          title: 'Lý do',
           description: item.rationale || '-',
         },
         {
-          title: 'Remediation',
+          title: 'Khắc phục',
           description: item.remediation || '-',
         },
         {
-          title: 'Description',
+          title: 'Mô tả',
           description: item.description || '-',
         },
         {
@@ -256,7 +256,7 @@ export class InventoryPolicyChecksTable extends Component<Props, State> {
           description: <RuleText rules={item.rules.length ? item.rules : []} />,
         },
         {
-          title: 'Compliance',
+          title: 'Tuân thủ',
           description: <ComplianceText complianceText={complianceText} />,
         },
       ];
@@ -309,7 +309,7 @@ export class InventoryPolicyChecksTable extends Component<Props, State> {
     return (
       <>
         <TableWzAPI
-          title="Checks"
+          title="Kiểm tra"
           tableColumns={this.columnsChecks}
           tableInitialSortingField="id"
           searchTable={true}

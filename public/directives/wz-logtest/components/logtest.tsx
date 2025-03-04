@@ -244,7 +244,7 @@ export const Logtest = compose(
               tooltip={{ position: 'top', content: 'Clear current session' }}
               fill
               isDisabled={sessionToken === '' ? true : false}
-              aria-label="Clear current session"
+              aria-label="Xóa phiên hiện tại"
               iconType="broom"
               onConfirm={async () => {
                 deleteToken();

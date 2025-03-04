@@ -22,25 +22,25 @@ export type GeneralTableProps = {
 };
 
 const mainSettings = [
-  { field: 'enabled', label: 'Service status', render: renderValueYesThenEnabled },
+  { field: 'enabled', label: 'Trạng thái dịch vụ', render: renderValueYesThenEnabled },
   {
     field: 'only_future_events',
-    label: 'Collect events generated since Wazuh manager is initialized',
+    label: 'Thu thập các sự kiện tạo ra từ khi trình quản lý Wazuh được khởi tạo',
   },
   {
     field: 'interval',
     label:
       'Interval between Office 365 wodle executions in seconds',
   },
-  { field: 'curl_max_size', label: 'Maximum size allowed for the Office 365 API response' },
+  { field: 'curl_max_size', label: 'Kích thước tối đa cho phép cho phản hồi API Office 365' },
 ];
 
 export const GeneralTab = ({ agent, wodleConfiguration }: GeneralTableProps) => {
 
   return (
     <WzConfigurationSettingsTabSelector
-      title="Main settings"
-      description="Configuration for the Office 365 module"
+      title="Cài đặt chính"
+      description="Cấu hình cho module Office 365"
       currentConfig={wodleConfiguration}
       minusHeight={agent.id === '000' ? 370 : 320}
       helpLinks={HELP_LINKS}

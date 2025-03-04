@@ -10,7 +10,7 @@ import { getToasts } from '../../../../../../kibana-services';
 export const toastRequiresReloadingBrowserTab = () => {
 	getToasts().add({
 	  color: 'success',
-	  title: 'Reload the page to apply the changes',
+	  title: 'Tải lại trang để áp dụng thay đổi',
 	  text: <EuiFlexGroup justifyContent="flexEnd" gutterSize="s">
 		<EuiFlexItem grow={false}>
 		  <EuiButton onClick={() => window.location.reload()} size="s">Reload page</EuiButton>
@@ -22,7 +22,7 @@ export const toastRequiresReloadingBrowserTab = () => {
 export const toastRequiresRunningHealthcheck = () => {
 	const toast = getToasts().add({
 	  color: 'warning',
-	  title: 'Run a health check to apply the changes.',
+	  title: 'Chạy kiểm tra sức khỏe để áp dụng thay đổi',
 	  toastLifeTimeMs: 5000,
 	  text:
 		<EuiFlexGroup alignItems="center" gutterSize="s">
@@ -46,6 +46,6 @@ export const toastRequiresRestartingPluginPlatform = () => {
 export const toastSuccessUpdateConfiguration = () => {
 	getToasts().add({
 	  color: 'success',
-	  title: 'The configuration has been successfully updated',
+	  title: 'Cấu hình đã được cập nhật thành công',
 	});
 };

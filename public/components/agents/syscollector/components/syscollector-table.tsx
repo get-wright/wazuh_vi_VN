@@ -148,7 +148,7 @@ export function SyscollectorTable({ tableParams }) {
               value={searchBarValue}
               fullWidth={true}
               onChange={onChange}
-              aria-label='Search'
+              aria-label='Tìm kiếm'
             />
           </EuiFlexItem>
         </EuiFlexGroup>

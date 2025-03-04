@@ -16,7 +16,7 @@ export default {
   id: 'audit',
   name: 'System auditing',
   xml_tag: 'localfile',
-  description: 'Configuration options of the System auditing extension.',
+  description: 'Tùy chọn cấu hình của tiện ích mở rộng kiểm định hệ thống',
   category: 'Kiểm thử và giám sát chính sách',
   documentation_link: webDocumentationLink('user-manual/reference/ossec-conf/localfile.html'),
   icon: 'securityApp',
@@ -24,12 +24,12 @@ export default {
   avaliable_for_agent: true,
   steps: [
     {
-      title: 'Settings',
+      title: 'Cài đặt',
       description: '',
       elements: [
         {
           name: 'log_format',
-          description: 'Set the format of the log to be read. field is required',
+          description: 'Thiết lập định dạng log cần đọc. Trường này là bắt buộc',
           type: 'input',
           required: true,
           placeholder: 'audit',
@@ -38,7 +38,7 @@ export default {
         },
         {
           name: 'location',
-          description: 'Option to get the location of a log or a group of logs. strftime format strings may be used for log file names.',
+          description: 'Tùy chọn để lấy vị trí của log hoặc nhóm logs. Có thể sử dụng chuỗi định dạng strftime cho tên tập tin log.',
           type: 'input',
           required: true,
           placeholder: 'Log or group of logs location',
@@ -53,7 +53,7 @@ export default {
         },
         {
           name: 'alias',
-          description: 'Change a command name in the log message.',
+          description: 'Thay đổi tên lệnh trong thông báo log',
           type: 'input',
           placeholder: 'Alias'
         },
@@ -76,7 +76,7 @@ export default {
         },
         // { //Not for log_format audit
         //   name: 'query',
-        //   description: 'Filter eventchannel events that Wazuh will process by using an XPATH query following the event schema.',
+        //   description: 'Lọc các sự kiện eventchannel mà Wazuh sẽ xử lý bằng truy vấn XPATH theo lược đồ sự kiện.',
         //   type: 'input',
         //   placeholder: 'Any XPATH query following the event schema',
         //   validate_error_message: 'Any XPATH query following the event schema'
@@ -94,14 +94,14 @@ export default {
         // },
         {
           name: 'target',
-          description: 'Target specifies the name of the socket where the output will be redirected. The socket must be defined previously.',
+          description: 'Target chỉ định tên của socket nơi đầu ra sẽ được chuyển hướng. Socket phải được định nghĩa trước.',
           type: 'input',
           default_value: 'agent',
           placeholder: 'Any defined socket'
         },
         {
           name: 'out_format',
-          description: 'This option allows formatting logs from Logcollector using field substitution.',
+          description: 'Tùy chọn này cho phép định dạng logs từ Logcollector bằng cách thay thế trường.',
           info: `log:	Message from the log.
           json_escaped_log:	Message from the log, escaping JSON reserver characters.
           output:	Output from a command. Alias of log.
@@ -117,7 +117,7 @@ export default {
           attributes: [
             {
               name: 'target',
-              description: 'This option selects a defined target to apply the output format',
+              description: 'Tùy chọn này chọn mục tiêu đã định để áp dụng định dạng đầu ra',
               type: 'input',
               required: true,
               placeholder: 'Any target defined in the option <target>.'
