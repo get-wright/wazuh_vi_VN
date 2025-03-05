@@ -50,7 +50,7 @@ export class WzReportingOverview extends Component {
               <EuiFlexGroup>
                 <EuiFlexItem>
                   <EuiTitle>
-                    <h2>Reporting</h2>
+                    <h2>Báo cáo</h2>
                   </EuiTitle>
                 </EuiFlexItem>
               </EuiFlexGroup>
@@ -60,7 +60,7 @@ export class WzReportingOverview extends Component {
           <EuiFlexGroup>
             <EuiFlexItem>
               <EuiText color="subdued" style={{ paddingBottom: '15px' }}>
-                From here you can check all your reports.
+                Từ đây bạn có thể kiểm tra tất cả báo cáo của mình.
               </EuiText>
             </EuiFlexItem>
           </EuiFlexGroup>

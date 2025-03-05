@@ -39,7 +39,7 @@ class WzMenuManagement extends Component {
       ruleset: {
         id: WAZUH_MENU_MANAGEMENT_SECTIONS_ID.RULESET,
         cyTestId: WAZUH_MENU_MANAGEMENT_SECTIONS_CY_TEST_ID.RULESET,
-        text: 'Ruleset',
+        text: 'Tập rules',
       },
       rules: {
         id: WAZUH_MENU_MANAGEMENT_SECTIONS_ID.RULES,
@@ -49,7 +49,7 @@ class WzMenuManagement extends Component {
       decoders: {
         id: WAZUH_MENU_MANAGEMENT_SECTIONS_ID.DECODERS,
         cyTestId: WAZUH_MENU_MANAGEMENT_SECTIONS_CY_TEST_ID.DECODERS,
-        text: 'Decoders',
+        text: 'Bộ giải mã',
       },
       lists: {
         id: WAZUH_MENU_MANAGEMENT_SECTIONS_ID.CDB_LISTS,
@@ -84,7 +84,7 @@ class WzMenuManagement extends Component {
       logs: {
         id: WAZUH_MENU_MANAGEMENT_SECTIONS_ID.LOGS,
         cyTestId: WAZUH_MENU_MANAGEMENT_SECTIONS_CY_TEST_ID.LOGS,
-        text: 'logs',
+        text: 'Logs',
       },
       reporting: {
         id: WAZUH_MENU_MANAGEMENT_SECTIONS_ID.REPORTING,

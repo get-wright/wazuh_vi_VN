@@ -17,7 +17,7 @@ export const MainFim = compose(
   withGuard(
     (props) => !(props.currentAgentData && props.currentAgentData.id && props.agent),
     () => (
-      <PromptNoSelectedAgent body="You need to select an agent to see Integrity Monitoring inventory." />
+      <PromptNoSelectedAgent body="Bạn cần chọn một trạm để xem bản kiểm kê đánh giá cấu hình bảo mật." />
     )
   ),
   withGuard(

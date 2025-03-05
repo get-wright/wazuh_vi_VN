@@ -16,7 +16,7 @@ export default {
   xml_tag: 'integration',
   name: 'VirusTotal',
   description: 'Tùy chọn cấu hình tích hợp VirusTotal',
-  category: 'Threat detection and response',
+  category: 'Phát hiện và ứng phó mối đe dọa',
   documentation_link: webDocumentationLink('user-manual/reference/ossec-conf/integration.html'),
   icon: 'securityApp',
   avaliable_for_manager: true,

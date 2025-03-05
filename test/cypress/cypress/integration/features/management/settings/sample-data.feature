@@ -12,7 +12,7 @@ Feature: Add/Delete Sample data to modules
     And The user adds sample data for
       | security information            |
       | auditing and policy monitoring  |
-      | threat detection and response   |
+      | Phát hiện và ứng phó mối đe dọa   |
     Then The add data success toasts are displayed
 
   @sampleData @actions
@@ -23,5 +23,5 @@ Feature: Add/Delete Sample data to modules
       And The user removes sample data for
       | security information            |
       | auditing and policy monitoring  |
-      | threat detection and response   |
+      | Phát hiện và ứng phó mối đe dọa   |
     Then The remove data success toasts are displayed

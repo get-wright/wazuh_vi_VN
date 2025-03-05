@@ -44,7 +44,7 @@ export default class WzSampleData extends Component {
     this.generateAlertsParams = {}; // extra params to add to generateAlerts function in server
     this.categories = [
       {
-        title: 'Thông tin bảo mật mẫu',
+        title: 'Mẫu thông tin bảo mật',
         description: 'Dữ liệu mẫu, biểu đồ và bảng điều khiển cho thông tin bảo mật (giám sát toàn vẹn, dịch vụ Amazon AWS, Office 365, Google Cloud Platform, GitHub, ủy quyền, SSH, Web).',
         image: '',
         categorySampleAlertsIndex: 'security',
@@ -52,14 +52,14 @@ export default class WzSampleData extends Component {
       {
         title: 'Mẫu kiểm thử và giám sát Chính sách',
         description:
-          'Sample data, visualizations and dashboards for events of auditing and policy monitoring (policy monitoring, system auditing, OpenSCAP, CIS-CAT).',
+          'Dữ liệu mẫu, hình ảnh trực quan và trang tổng quan cho các sự kiện kiểm tra và giám sát chính sách (giám sát chính sách, kiểm tra hệ thống, OpenSCAP, CIS-CAT).',
         image: '',
         categorySampleAlertsIndex: 'auditing-policy-monitoring',
       },
       {
-        title: 'Phát hiện và ứng phó đe dọa mẫu',
+        title: 'Mẫu phát hiện và ứng phó đe dọa',
         description:
-          'Sample data, visualizations and dashboards for threat events of detection and response (vulnerabilities, VirusTotal, Osquery, Docker listener, MITRE).',
+          'Dữ liệu mẫu, hình ảnh trực quan và bảng thông tin để phát hiện và ứng phó với các sự kiện đe dọa (lỗ hổng, VirusTotal, Osquery, Docker listener, MITRE).',
         image: '',
         categorySampleAlertsIndex: 'threat-detection',
       },

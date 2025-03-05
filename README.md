@@ -29,13 +29,13 @@ This plugin for Kibana allows you to visualize and analyze Wazuh alerts stored i
     - System auditing: Audit users behavior, monitoring command execution and alerting on access to critical files.
     - OpenSCAP: Configuration assessment and automation of compliance monitoring using SCAP checks.
     - CIS-CAT: Configuration assessment using Center of Internet Security scanner and SCAP checks.
-  - Threat Detection and Response
+  - Phát hiện và ứng phó mối đe dọa
     - Vulnerabilities: Discover what applications in your environment are affected by well-known vulnerabilities.
     - MITRE ATT&CK: Security events from the knowledge base of adversary tactics and techniques based on real-world observations.
     - VirusTotal: Alerts resulting from VirusTotal analysis of suspicious files via an integration with their API.
     - Osquery: Osquery can be used to expose an operating system as a high-performance relational database.
     - Docker listener: Monitor and collect the activity from Docker containers such as creation, running, starting, stopping or pausing events.
-  - Regulatory Compliance
+  - Tuân thủ quy định
     - PCI DSS: Global security standard for entities that process, store or transmit payment cardholder data.
     - NIST 800-53: National Institute of Standards and Technology Special Publication 800-53 (NIST 800-53) sets guidelines for federal information systems.
     - GDPR: General Data Protection Regulation (GDPR) sets guidelines for processing of personal data.
@@ -70,7 +70,7 @@ This plugin for Kibana allows you to visualize and analyze Wazuh alerts stored i
 
 ![Overview](screenshots/app4.png)
 
-**Regulatory compliance**
+**Tuân thủ quy định**
 
 ![Overview](screenshots/app5.png)
 

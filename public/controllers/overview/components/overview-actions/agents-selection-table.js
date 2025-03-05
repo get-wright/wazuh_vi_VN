@@ -623,7 +623,7 @@ export class AgentSelectionTable extends Component {
               filters={this.state.filters}
               suggestions={this.suggestions}
               onFiltersChange={filters => this.setState({filters, pageIndex: 0})}
-              placeholder="Filter or search agent"
+              placeholder="Lọc hoặc tìm kiếm trạm"
             />
           </EuiFlexItem>
         </EuiFlexGroup>

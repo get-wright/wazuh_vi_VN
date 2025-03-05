@@ -38,7 +38,7 @@ export const MainSca = compose(
   withGuard(
     (props) => !(props.currentAgentData && props.currentAgentData.id && props.agent),
     () => (
-      <PromptNoSelectedAgent body="You need to select an agent to see Security Configuration Assessment inventory." />
+      <PromptNoSelectedAgent body="Bạn cần chọn một t để xem bản kiểm kê Đánh giá cấu hình bảo mật." />
     )
   ),
   withGuard(

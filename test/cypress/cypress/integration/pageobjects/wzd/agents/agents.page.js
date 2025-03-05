@@ -13,10 +13,10 @@ export const AGENTS_PAGE = {
   agTSC: ':nth-child(4) > .euiSideNav > .euiSideNav__content > .euiSideNavItem--root > .euiSideNavItem__items > :nth-child(3) > .euiSideNavItemButton > .euiSideNavItemButton__content > .euiSideNavItemButton__label > .euiFlexGroup > .euiFlexItem',
   statusChart: '.agents-status-pie .euiCard .euiCard__content  .euiFlexGroup--gutterLarge',
   agentDetails: 'euiFlexItem euiFlexItem--flexGrowZero agents-details-card',
-  deployNewAgentButton: '//span[contains(text(),"Deploy new agent")]',
-  exploreAgentButton: '.wz-module-header-nav .euiFlexItem .euiToolTipAnchor .euiButtonEmpty .euiButtonContent .euiButtonEmpty__text:contains("Explore agent")',
+  deployNewAgentButton: '//span[contains(text(),"Triển khai trạm mới")]',
+  exploreAgentButton: '.wz-module-header-nav .euiFlexItem .euiToolTipAnchor .euiButtonEmpty .euiButtonContent .euiButtonEmpty__text:contains("Khám phá các trạm")',
   firstAgentDisplayed: '.euiModal .euiTable .euiTableRow:nth-child(1)',
-  unPinnedAgentButton: '.wz-module-header-nav .euiFlexItem .euiToolTipAnchor .euiButtonIcon[aria-label="Unpin agent"]',
+  unPinnedAgentButton: '.wz-module-header-nav .euiFlexItem .euiToolTipAnchor .euiButtonIcon[aria-label="Gỡ ghim trạm"]',
   secundAgentDisplayed: '.euiModal .euiTable .euiTableRow:nth-child(2)',
   agentID: '.euiModal .euiTable .euiTableRow:nth-child(1) .euiTableRowCell:nth-child(1) .euiTableCellContent__text',
 };

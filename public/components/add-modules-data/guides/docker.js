@@ -16,7 +16,7 @@ export default {
   name: 'Docker Listener',
   wodle_name: 'docker-listener',
   description: 'Tùy chọn cấu hình của Docker wodle',
-  category: 'Threat detection and response',
+  category: 'Phát hiện và ứng phó mối đe dọa',
   documentation_link: webDocumentationLink('user-manual/reference/ossec-conf/wodle-docker.html'),
   icon: 'logoDocker',
   avaliable_for_manager: true,

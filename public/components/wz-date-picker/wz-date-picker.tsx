@@ -22,17 +22,18 @@ import { getDataPlugin } from '../../kibana-services';
 interface IDiscoverTime { from: string, to: string };
 
 export class WzDatePicker extends Component {
+  // Localized duration ranges with display text in Vietnamese
   commonDurationRanges = [
-    { "start": "now/d", "end": "now/d", "label": "Today" },
-    { "start": "now/w", "end": "now/w", "label": "This week" },
-    { "start": "now-15m", "end": "now", "label": "Last 15 minutes" },
-    { "start": "now-30m", "end": "now", "label": "Last 30 minutes" },
-    { "start": "now-1h", "end": "now", "label": "Last 1 hour" },
-    { "start": "now-24h", "end": "now", "label": "Last 24 hours" },
-    { "start": "now-7d", "end": "now", "label": "Last 7 days" },
-    { "start": "now-30d", "end": "now", "label": "Last 30 days" },
-    { "start": "now-90d", "end": "now", "label": "Last 90 days" },
-    { "start": "now-1y", "end": "now", "label": "Last 1 year" },
+    { "start": "now/d", "end": "now/d", "label": "Hôm nay" },
+    { "start": "now/w", "end": "now/w", "label": "Tuần này" },
+    { "start": "now-15m", "end": "now", "label": "15 phút vừa qua" },
+    { "start": "now-30m", "end": "now", "label": "30 phút vừa qua" },
+    { "start": "now-1h", "end": "now", "label": "1 giờ vừa qua" },
+    { "start": "now-24h", "end": "now", "label": "24 giờ vừa qua" },
+    { "start": "now-7d", "end": "now", "label": "7 ngày vừa qua" },
+    { "start": "now-30d", "end": "now", "label": "30 ngày vừa qua" },
+    { "start": "now-90d", "end": "now", "label": "90 ngày vừa qua" },
+    { "start": "now-1y", "end": "now", "label": "1 năm vừa qua" },
   ];
 
   timefilter: {
@@ -81,12 +82,12 @@ export class WzDatePicker extends Component {
     );
     return !this.props.condensed
       ? <EuiSuperDatePicker
-        commonlyUsedRanges={this.commonDurationRanges}
-        recentlyUsedRanges={recentlyUsedRanges}
-        onTimeChange={this.onTimeChange}
-        {...datePicker} />
+          commonlyUsedRanges={this.commonDurationRanges}
+          recentlyUsedRanges={recentlyUsedRanges}
+          onTimeChange={this.onTimeChange}
+          {...datePicker} />
       : <CondensedPicker
-        onTimeChange={this.onTimeChange}
-        ranges={this.commonDurationRanges} />
+          onTimeChange={this.onTimeChange}
+          ranges={this.commonDurationRanges} />
   }
 }

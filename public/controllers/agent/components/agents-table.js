@@ -676,7 +676,7 @@ export const AgentsTable = withErrorBoundary(
               onFiltersChange={filters =>
                 this.setState({ filters, pageIndex: 0 })
               }
-              placeholder='Filter or search agent'
+              placeholder='Lọc hoặc tìm kiếm trạm'
             />
           </EuiFlexItem>
           <EuiFlexItem grow={false}>

@@ -126,7 +126,7 @@ class WzAgentSelector extends Component {
               initialFocus="[name=popswitch]"
             >
               <EuiModalHeader>
-                <EuiModalHeaderTitle>Explore agent</EuiModalHeaderTitle>
+                <EuiModalHeaderTitle>Khám phá các trạm</EuiModalHeaderTitle>
               </EuiModalHeader>
 
               <EuiModalBody>

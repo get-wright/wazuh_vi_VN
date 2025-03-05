@@ -182,7 +182,7 @@ class ManagementWelcome extends Component {
                       icon={
                         <EuiIcon size="xl" type="filebeatApp" color="primary"/>
                       }
-                      title="logs"
+                      title="Logs"
                       onClick={() => this.switchSection('logs')}
                       description="logs từ cụm Wazuh của bạn"
                     />

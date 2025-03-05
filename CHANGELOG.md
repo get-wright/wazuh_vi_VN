@@ -822,7 +822,7 @@ All notable changes to the Wazuh app project will be documented in this file.
 ### Adapt for Kibana 7.10.0
 
 - Fixed filter pinned crash returning from agents [#2864](https://github.com/wazuh/wazuh-kibana-app/issues/2864)
-- Fixed style in sca and regulatory compliance tables and in wz menu [#2861](https://github.com/wazuh/wazuh-kibana-app/issues/2861)
+- Fixed style in sca and Tuân thủ quy định tables and in wz menu [#2861](https://github.com/wazuh/wazuh-kibana-app/issues/2861)
 - Fix body-payload of Sample Alerts POST endpoint [#2857](https://github.com/wazuh/wazuh-kibana-app/issues/2857)
 - Fixed bug in the table on Agents->Table-> Actions->Config icon [#2853](https://github.com/wazuh/wazuh-kibana-app/issues/2853)
 - Fixed tooltip in the icon of view decoder file [#2850](https://github.com/wazuh/wazuh-kibana-app/issues/2850)
@@ -1297,7 +1297,7 @@ All notable changes to the Wazuh app project will be documented in this file.
 
 - Support for Wazuh v3.10.0.
 - Added an interactive guide for registering agents, things are now easier for the user, guiding it through the steps needed ending in a _copy & paste_ snippet for deploying his agent [#1468](https://github.com/wazuh/wazuh-kibana-app/issues/1468).
-- Added new dashboards for the recently added regulatory compliance groups into the Wazuh core. They are HIPAA and NIST-800-53 [#1468](https://github.com/wazuh/wazuh-kibana-app/issues/1448), [#1638](https://github.com/wazuh/wazuh-kibana-app/issues/1638).
+- Added new dashboards for the recently added Tuân thủ quy định groups into the Wazuh core. They are HIPAA and NIST-800-53 [#1468](https://github.com/wazuh/wazuh-kibana-app/issues/1448), [#1638](https://github.com/wazuh/wazuh-kibana-app/issues/1638).
 - Make the app work under a custom Kibana space [#1234](https://github.com/wazuh/wazuh-kibana-app/issues/1234), [#1450](https://github.com/wazuh/wazuh-kibana-app/issues/1450).
 - Added the ability to manage the app as a native plugin when using Kibana spaces, now you can safely hide/show the app depending on the selected space [#1601](https://github.com/wazuh/wazuh-kibana-app/issues/1601).
 - Adapt the app the for Kibana dark mode [#1562](https://github.com/wazuh/wazuh-kibana-app/issues/1562).

@@ -1,5 +1,5 @@
 /*
- * Wazuh app - Regulatory compliance
+ * Wazuh app - Tuân thủ quy định
  * Copyright (C) 2015-2022 Wazuh, Inc.
  *
  * This program is free software; you can redistribute it and/or modify
@@ -10,7 +10,7 @@
  * Find more information about this on the LICENSE file.
  */
 
-// Regulatory compliance
+// Tuân thủ quy định
 export const PCI_DSS = ["1.1.1","1.3.4","1.4","10.1","10.2.1","10.2.2","10.2.4","10.2.5","10.2.6","10.2.7","10.4","10.5.2","10.5.5","10.6","10.6.1","11.2.1","11.2.3","11.4","11.5","2.2","2.2.3","4.1","5.1","5.2","6.2","6.5","6.5.1","6.5.10","6.5.2","6.5.5","6.5.7","6.5.8","6.6","8.1.2","8.1.4","8.1.5","8.1.6","8.1.8","8.2.4","8.7"];
 export const GDPR = ["IV_35.7.d", "II_5.1.f", "IV_32.2", "IV_30.1.g"];
 export const HIPAA = ["164.312.a.1","164.312.a.2.I","164.312.a.2.II","164.312.a.2.III","164.312.a.2.IV","164.312.b","164.312.c.1","164.312.c.2","164.312.d","164.312.e.1","164.312.e.2.I","164.312.e.2.II"];

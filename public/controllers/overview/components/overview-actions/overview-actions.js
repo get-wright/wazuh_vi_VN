@@ -154,7 +154,7 @@ class OverviewActions extends Component {
               initialFocus="[name=popswitch]"
             >
               <EuiModalHeader>
-                <EuiModalHeaderTitle>Explore agent</EuiModalHeaderTitle>
+                <EuiModalHeaderTitle>Khám phá các trạm</EuiModalHeaderTitle>
               </EuiModalHeader>
 
               <EuiModalBody>
@@ -210,7 +210,7 @@ class OverviewActions extends Component {
         iconType="watchesApp"
         onClick={() => this.showAgentModal()}
       >
-        {thereAgentSelected ? `${this.props.agent.name} (${this.props.agent.id})` : 'Explore agent'}
+        {thereAgentSelected ? `${this.props.agent.name} (${this.props.agent.id})` : 'Khám phá các trạm'}
       </WzButton>
     );
 

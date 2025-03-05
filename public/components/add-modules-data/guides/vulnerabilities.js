@@ -16,7 +16,7 @@ export default {
   xml_tag: 'vulnerabilities-detector',
   name: 'Vulnerabilities',
   description: 'Tùy chọn cấu hình cho các lỗ hổng',
-  category: 'Threat detection and response',
+  category: 'Phát hiện và ứng phó mối đe dọa',
   documentation_link: webDocumentationLink('user-manual/reference/ossec-conf/vuln-detector.html'),
   icon: 'securityApp',
   avaliable_for_manager: true,

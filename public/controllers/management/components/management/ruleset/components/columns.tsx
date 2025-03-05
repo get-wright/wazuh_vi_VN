@@ -69,7 +69,7 @@ export default class RulesetColumns {
           width: '10%'
         },
         {
-          name: 'Regulatory compliance',
+          name: 'Tuân thủ quy định',
           render: this.buildComplianceBadges
         },
         {

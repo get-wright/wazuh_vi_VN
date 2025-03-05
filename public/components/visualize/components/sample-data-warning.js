@@ -58,11 +58,11 @@ export const SampleDataWarning = ({ ...props }) => {
         {...props}
       >
         <p>
-          {'The data displayed may contain sample alerts. Go '}
+          {'Dữ liệu hiển thị có thể chứa các cảnh báo mẫu. Đi đến '}
           <EuiLink href="#/settings?tab=sample_data" aria-label="Đi đến cấu hình dữ liệu mẫu">
-            {'here '}
+            {'đây '}
           </EuiLink>
-          {'to configure the sample data.'}
+          {'để điều chỉnh dữ liệu mẫu.'}
         </p>
       </EuiCallOut>
     );

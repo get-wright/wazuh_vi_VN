@@ -24,7 +24,7 @@ export const PromptAgentNoSupportModule = () => {
       title={<h2>Module not supported by the agent</h2>}
       actions={
         <EuiButton color="primary" fill onClick={openAgentSelector}>
-          Select agent
+          Chọn trạm
         </EuiButton>
       }
     />

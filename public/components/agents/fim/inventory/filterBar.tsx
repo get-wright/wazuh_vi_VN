@@ -162,7 +162,7 @@ export class FilterBar extends Component {
             filters={filters}
             onFiltersChange={onFiltersChange}
             suggestions={this.suggestions[selectView]}
-            placeholder="Filter or search file"
+            placeholder="Lọc hoặc tìm kiếm tệp"
           />
         </EuiFlexItem>
       </EuiFlexGroup>

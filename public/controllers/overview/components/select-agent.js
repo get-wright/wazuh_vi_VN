@@ -255,7 +255,7 @@ export const SelectAgent = withErrorBoundary (class SelectAgent extends Componen
             onChange={this.onTableChange}
             sorting={sorting}
             loading={isLoading}
-            noItemsMessage="No agents found"
+            noItemsMessage="Không tìm thấy trạm"
           />
         </EuiFlexItem>
       </EuiFlexGroup>
@@ -272,7 +272,7 @@ export const SelectAgent = withErrorBoundary (class SelectAgent extends Componen
         <EuiFlyout className="wzApp" onClose={this.closeFlyout} aria-labelledby="flyoutTitle">
           <EuiFlyoutHeader hasBorder>
             <EuiTitle size="m">
-              <h2 id="flyoutTitle">Select agent</h2>
+              <h2 id="flyoutTitle">Chọn trạm</h2>
             </EuiTitle>
           </EuiFlyoutHeader>
           <EuiFlyoutBody>{table}</EuiFlyoutBody>
@@ -282,7 +282,7 @@ export const SelectAgent = withErrorBoundary (class SelectAgent extends Componen
 
     return (
       <div>
-        <EuiButton onClick={this.showFlyout}>Select agent</EuiButton>
+        <EuiButton onClick={this.showFlyout}>Chọn trạm</EuiButton>
 
         {flyout}
       </div>

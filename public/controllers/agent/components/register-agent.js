@@ -761,119 +761,119 @@ export const RegisterAgent = withErrorBoundary(
 
     checkMissingOSSelection() {
       if (!this.state.selectedOS) {
-        return ['Operating system'];
+        return ['Hệ điều hành'];
       }
       switch (this.state.selectedOS) {
         case 'rpm':
           return [
-            ...(!this.state.selectedVersion ? ['OS version'] : []),
+            ...(!this.state.selectedVersion ? ['Phiên bản hệ điều hành'] : []),
             ...(this.state.selectedVersion && !this.state.selectedArchitecture
-              ? ['OS architecture']
+              ? ['Kiến trúc hệ điều hành']
               : []),
           ];
         case 'cent':
           return [
-            ...(!this.state.selectedVersion ? ['OS version'] : []),
+            ...(!this.state.selectedVersion ? ['Phiên bản hệ điều hành'] : []),
             ...(this.state.selectedVersion && !this.state.selectedArchitecture
-              ? ['OS architecture']
+              ? ['Kiến trúc hệ điều hành']
               : []),
           ];
         case 'deb':
           return [
-            ...(!this.state.selectedVersion ? ['OS version'] : []),
+            ...(!this.state.selectedVersion ? ['Phiên bản hệ điều hành'] : []),
             ...(this.state.selectedVersion && !this.state.selectedArchitecture
-              ? ['OS architecture']
+              ? ['Kiến trúc hệ điều hành']
               : []),
           ];
         case 'ubu':
           return [
-            ...(!this.state.selectedVersion ? ['OS version'] : []),
+            ...(!this.state.selectedVersion ? ['Phiên bản hệ điều hành'] : []),
             ...(this.state.selectedVersion && !this.state.selectedArchitecture
-              ? ['OS architecture']
+              ? ['Kiến trúc hệ điều hành']
               : []),
           ];
         case 'win':
           return [
-            ...(!this.state.selectedVersion ? ['OS version'] : []),
+            ...(!this.state.selectedVersion ? ['Phiên bản hệ điều hành'] : []),
             ...(this.state.selectedVersion && !this.state.selectedArchitecture
-              ? ['OS architecture']
+              ? ['Kiến trúc hệ điều hành']
               : []),
           ];
         case 'macos':
           return [
-            ...(!this.state.selectedVersion ? ['OS version'] : []),
+            ...(!this.state.selectedVersion ? ['Phiên bản hệ điều hành'] : []),
             ...(this.state.selectedVersion && !this.state.selectedArchitecture
-              ? ['OS architecture']
+              ? ['Kiến trúc hệ điều hành']
               : []),
           ];
         case 'open':
           return [
-            ...(!this.state.selectedVersion ? ['OS version'] : []),
+            ...(!this.state.selectedVersion ? ['Phiên bản hệ điều hành'] : []),
             ...(this.state.selectedVersion && !this.state.selectedArchitecture
-              ? ['OS architecture']
+              ? ['Kiến trúc hệ điều hành']
               : []),
           ];
         case 'sol':
           return [
-            ...(!this.state.selectedVersion ? ['OS version'] : []),
+            ...(!this.state.selectedVersion ? ['Phiên bản hệ điều hành'] : []),
             ...(this.state.selectedVersion && !this.state.selectedArchitecture
-              ? ['OS architecture']
+              ? ['Kiến trúc hệ điều hành']
               : []),
           ];
         case 'aix':
           return [
-            ...(!this.state.selectedVersion ? ['OS version'] : []),
+            ...(!this.state.selectedVersion ? ['Phiên bản hệ điều hành'] : []),
             ...(this.state.selectedVersion && !this.state.selectedArchitecture
-              ? ['OS architecture']
+              ? ['Kiến trúc hệ điều hành']
               : []),
           ];
         case 'hp':
           return [
-            ...(!this.state.selectedVersion ? ['OS version'] : []),
+            ...(!this.state.selectedVersion ? ['Phiên bản hệ điều hành'] : []),
             ...(this.state.selectedVersion && !this.state.selectedArchitecture
-              ? ['OS architecture']
+              ? ['Kiến trúc hệ điều hành']
               : []),
           ];
         case 'amazonlinux':
           return [
-            ...(!this.state.selectedVersion ? ['OS version'] : []),
+            ...(!this.state.selectedVersion ? ['Phiên bản hệ điều hành'] : []),
             ...(this.state.selectedVersion && !this.state.selectedArchitecture
-              ? ['OS architecture']
+              ? ['Kiến trúc hệ điều hành']
               : []),
           ];
         case 'fedora':
           return [
-            ...(!this.state.selectedVersion ? ['OS version'] : []),
+            ...(!this.state.selectedVersion ? ['Phiên bản hệ điều hành'] : []),
             ...(this.state.selectedVersion && !this.state.selectedArchitecture
-              ? ['OS architecture']
+              ? ['Kiến trúc hệ điều hành']
               : []),
           ];
         case 'oraclelinux':
           return [
-            ...(!this.state.selectedVersion ? ['OS version'] : []),
+            ...(!this.state.selectedVersion ? ['Phiên bản hệ điều hành'] : []),
             ...(this.state.selectedVersion && !this.state.selectedArchitecture
-              ? ['OS architecture']
+              ? ['Kiến trúc hệ điều hành']
               : []),
           ];
         case 'suse':
           return [
-            ...(!this.state.selectedVersion ? ['OS version'] : []),
+            ...(!this.state.selectedVersion ? ['Phiên bản hệ điều hành'] : []),
             ...(this.state.selectedVersion && !this.state.selectedArchitecture
-              ? ['OS architecture']
+              ? ['Kiến trúc hệ điều hành']
               : []),
           ];
         case 'raspbian':
           return [
-            ...(!this.state.selectedVersion ? ['OS version'] : []),
+            ...(!this.state.selectedVersion ? ['Phiên bản hệ điều hành'] : []),
             ...(this.state.selectedVersion && !this.state.selectedArchitecture
-              ? ['OS architecture']
+              ? ['Kiến trúc hệ điều hành']
               : []),
           ];
         case 'alpine':
           return [
-            ...(!this.state.selectedVersion ? ['OS version'] : []),
+            ...(!this.state.selectedVersion ? ['Phiên bản hệ điều hành'] : []),
             ...(this.state.selectedVersion && !this.state.selectedArchitecture
-              ? ['OS architecture']
+              ? ['Kiến trúc hệ điều hành']
               : []),
           ];
         default:
@@ -907,33 +907,27 @@ export const RegisterAgent = withErrorBoundary(
       const urlWindowsPackage = `https://packages.wazuh.com/4.x/windows/wazuh-agent-${this.state.wazuhVersion}-1.msi`;
       const missingOSSelection = this.checkMissingOSSelection();
       const warningForAgentName =
-        'The agent name must be unique. It can’t be changed once the agent has been enrolled.';
+        'Tên trạm phải là độc nhất. Không thể thay đổi tên sau khi trạm đã được đăng ký.';
 
       const agentName = (
         <EuiText>
           <p>
-            The deployment sets the endpoint hostname as the agent name by
-            default. Optionally, you can set the agent name below.
+            Triển khai mặc định sử dụng tên máy chủ làm tên trạm. Nếu muốn, bạn có thể đặt tên trạm bên dưới.
           </p>
-          <EuiText color='default'>Assign an agent name</EuiText>
+          <EuiText color='default'>Đặt tên cho trạm</EuiText>
           <EuiSpacer />
           <EuiForm>
             <EuiFormRow
               isInvalid={this.state.agentNameError}
               error={[
                 this.state.badCharacters.length < 1
-                  ? 'The minimum length is 2 characters.'
-                  : `The character${
-                      this.state.badCharacters.length <= 1 ? '' : 's'
-                    }
-            ${this.state.badCharacters.map(char => ` "${char}"`)}
-            ${this.state.badCharacters.length <= 1 ? 'is' : 'are'}
-            not valid. Allowed characters are A-Z, a-z, ".", "-", "_"`,
+                  ? 'Độ dài tối thiểu là 2 ký tự.'
+                  : `Các ký tự ${this.state.badCharacters.map(char => `"${char}"`)} không hợp lệ. Các ký tự được phép là A-Z, a-z, ".", "-", "_"`,
               ]}
             >
               <EuiFieldText
                 isInvalid={this.state.agentNameError}
-                placeholder='Agent name'
+                placeholder='Tên trạm'
                 value={this.state.agentName}
                 onChange={event => this.setAgentName(event)}
               />
@@ -964,9 +958,9 @@ export const RegisterAgent = withErrorBoundary(
 
       const agentGroup = (
         <EuiText style={{ marginTop: '1.5rem' }}>
-          <p>Select one or more existing groups</p>
+          <p>Chọn một hoặc nhiều nhóm có sẵn</p>
           <EuiComboBox
-            placeholder={!this.state.groups.length ? 'Default' : 'Select group'}
+            placeholder={!this.state.groups.length ? 'Mặc định' : 'Chọn nhóm'}
             options={this.state.groups}
             selectedOptions={this.state.selectedGroup}
             onChange={group => {
@@ -980,7 +974,7 @@ export const RegisterAgent = withErrorBoundary(
       );
       const passwordInput = (
         <EuiFieldText
-          placeholder='Wazuh password'
+          placeholder='Mật khẩu Wazuh'
           value={this.state.wazuhPassword}
           onChange={event => this.setWazuhPassword(event)}
         />
@@ -1021,12 +1015,8 @@ apk add wazuh-agent=${this.state.wazuhVersion}-r1`,
         winText:
           this.state.selectedVersion == 'windowsxp' ||
           this.state.selectedVersion == 'windowsserver2008'
-            ? `msiexec.exe /i wazuh-agent-${
-                this.state.wazuhVersion
-              }-1.msi /q ${this.optionalDeploymentVariables()}${this.agentNameVariable()}`
-            : `Invoke-WebRequest -Uri https://packages.wazuh.com/4.x/windows/wazuh-agent-${
-                this.state.wazuhVersion
-              }-1.msi -OutFile \${env:tmp}\\wazuh-agent.msi; msiexec.exe /i \${env:tmp}\\wazuh-agent.msi /q ${this.optionalDeploymentVariables()}${this.agentNameVariable()}`,
+            ? `msiexec.exe /i wazuh-agent-${this.state.wazuhVersion}-1.msi /q ${this.optionalDeploymentVariables()}${this.agentNameVariable()}`
+            : `Invoke-WebRequest -Uri https://packages.wazuh.com/4.x/windows/wazuh-agent-${this.state.wazuhVersion}-1.msi -OutFile \${env:tmp}\\wazuh-agent.msi; msiexec.exe /i \${env:tmp}\\wazuh-agent.msi /q ${this.optionalDeploymentVariables()}${this.agentNameVariable()}`,
         openText: `sudo rpm --import https://packages.wazuh.com/key/GPG-KEY-WAZUH && sudo ${this.optionalDeploymentVariables()}${this.agentNameVariable()}zypper install -y ${this.optionalPackages()}`,
         solText: `sudo curl -so ${
           this.state.selectedVersion == 'solaris11'
@@ -1050,16 +1040,16 @@ apk add wazuh-agent=${this.state.wazuhVersion}-r1`,
       const text = customTexts[field];
       const language = this.getHighlightCodeLanguage(this.state.selectedOS);
       const warningUpgrade =
-        'If the installer finds another Wazuh agent in the system, it will upgrade it preserving the configuration.';
+        'Nếu trình cài đặt phát hiện trạm Wazuh khác trên hệ thống, nó sẽ nâng cấp và giữ nguyên cấu hình.';
       const textAndLinkToCheckConnectionDocumentation = (
         <p>
-          To verify the connection with the Wazuh server, please follow this{' '}
+          Để xác minh kết nối với máy chủ Wazuh, vui lòng làm theo hướng dẫn trong{' '}
           <a
             href={urlCheckConnectionDocumentation}
             target='_blank'
             rel='noreferrer'
           >
-            document.
+            tài liệu
           </a>
         </p>
       );
@@ -1067,11 +1057,7 @@ apk add wazuh-agent=${this.state.wazuhVersion}-r1`,
       const warningCommand = (
         <>
           <p>
-            Please
-            <a href={urlWindowsPackage}> download </a>
-            the package from our repository and copy it to the Windows system
-            where you are going to install it. Then run the following command to
-            perform the installation:
+            Vui lòng <a href={urlWindowsPackage}>tải gói</a> từ kho lưu trữ của chúng tôi và sao chép nó vào hệ thống Windows nơi bạn sẽ cài đặt. Sau đó, chạy lệnh sau để cài đặt:
           </p>
         </>
       );
@@ -1082,17 +1068,15 @@ apk add wazuh-agent=${this.state.wazuhVersion}-r1`,
             <ul className='wz-callout-list'>
               <li>
                 <span>
-                  You will need administrator privileges to perform this
-                  installation.
+                  Bạn cần quyền quản trị viên để thực hiện cài đặt này.
                 </span>
               </li>
               <li>
-                <span>PowerShell 3.0 or greater is required.</span>
+                <span>Yêu cầu PowerShell 3.0 hoặc cao hơn.</span>
               </li>
             </ul>
             <p>
-              Keep in mind you need to run this command in a Windows PowerShell
-              terminal.
+              Lưu ý rằng bạn cần chạy lệnh này trong terminal PowerShell của Windows.
             </p>
           </EuiCallOut>
           <EuiSpacer></EuiSpacer>
@@ -1126,13 +1110,11 @@ apk add wazuh-agent=${this.state.wazuhVersion}-r1`,
               <EuiText>
                 {this.state.agentName.length > 0 ? (
                   <p>
-                    You can use this command to install and enroll the Wazuh
-                    agent.
+                    Bạn có thể sử dụng lệnh này để cài đặt và đăng ký trạm Wazuh.
                   </p>
                 ) : (
                   <p>
-                    You can use this command to install and enroll the Wazuh
-                    agent in one or more hosts.
+                    Bạn có thể sử dụng lệnh này để cài đặt và đăng ký trạm Wazuh trên một hoặc nhiều máy chủ.
                   </p>
                 )}
                 <EuiCallOut
@@ -1144,12 +1126,12 @@ apk add wazuh-agent=${this.state.wazuhVersion}-r1`,
                 {!this.state.connectionSecure && (
                   <>
                     <EuiSpacer />
-                    {/** Warning connection NO SECURE */}
+                    {/** Cảnh báo không có kết nối bảo mật */}
                     <EuiCallOut
                       color='danger'
                       title={
                         <>
-                          Warning: there's no{' '}
+                          Cảnh báo: không có{' '}
                           <EuiLink
                             target='_blank'
                             href={webDocumentationLink(
@@ -1157,15 +1139,13 @@ apk add wazuh-agent=${this.state.wazuhVersion}-r1`,
                               appVersionMajorDotMinor,
                             )}
                           >
-                            secure protocol configured
+                            giao thức bảo mật
                           </EuiLink>{' '}
-                          and agents will not be able to communicate with the
-                          manager.
+                          được cấu hình và các trạm sẽ không thể giao tiếp với máy chủ quản lý.
                         </>
                       }
                       iconType='iInCircle'
                     />
-                    {/** END Warning connection NO SECURE */}
                   </>
                 )}
                 <EuiSpacer />
@@ -1194,7 +1174,7 @@ apk add wazuh-agent=${this.state.wazuhVersion}-r1`,
                     {copy => (
                       <div className='copy-overlay' onClick={copy}>
                         <p>
-                          <EuiIcon type='copy' /> Copy command
+                          <EuiIcon type='copy' /> Sao chép lệnh
                         </p>
                       </div>
                     )}
@@ -1209,7 +1189,7 @@ apk add wazuh-agent=${this.state.wazuhVersion}-r1`,
                       iconType='iInCircle'
                       title={
                         <span>
-                          Might require some extra installation{' '}
+                          Có thể yêu cầu thêm một số bước cài đặt{' '}
                           <EuiLink
                             target='_blank'
                             href={webDocumentationLink(
@@ -1217,7 +1197,7 @@ apk add wazuh-agent=${this.state.wazuhVersion}-r1`,
                               appVersionMajorDotMinor,
                             )}
                           >
-                            steps
+                            các bước
                           </EuiLink>
                           .
                         </span>
@@ -1230,15 +1210,14 @@ apk add wazuh-agent=${this.state.wazuhVersion}-r1`,
                       iconType='iInCircle'
                       title={
                         <span>
-                          After installing the agent, you need to enroll it in
-                          the Wazuh server. Check the Wazuh agent enrollment{' '}
+                          Sau khi cài đặt trạm, bạn cần đăng ký nó vào máy chủ Wazuh. Xem phần{' '}
                           <EuiLink
                             target='_blank'
                             href={urlWazuhAgentEnrollment}
                           >
-                            Wazuh agent enrollment
+                            đăng ký trạm Wazuh
                           </EuiLink>{' '}
-                          section to learn more.
+                          để biết thêm chi tiết.
                         </span>
                       }
                     ></EuiCallOut>
@@ -1251,7 +1230,7 @@ apk add wazuh-agent=${this.state.wazuhVersion}-r1`,
                       iconType='iInCircle'
                       title={
                         <span>
-                          Might require some extra installation{' '}
+                          Có thể yêu cầu thêm một số bước cài đặt{' '}
                           <EuiLink
                             target='_blank'
                             href={webDocumentationLink(
@@ -1259,7 +1238,7 @@ apk add wazuh-agent=${this.state.wazuhVersion}-r1`,
                               appVersionMajorDotMinor,
                             )}
                           >
-                            steps
+                            các bước
                           </EuiLink>
                           .
                         </span>
@@ -1275,7 +1254,7 @@ apk add wazuh-agent=${this.state.wazuhVersion}-r1`,
                       iconType='iInCircle'
                       title={
                         <span>
-                          Might require some extra installation{' '}
+                          Có thể yêu cầu thêm một số bước cài đặt{' '}
                           <EuiLink
                             target='_blank'
                             href={webDocumentationLink(
@@ -1283,7 +1262,7 @@ apk add wazuh-agent=${this.state.wazuhVersion}-r1`,
                               appVersionMajorDotMinor,
                             )}
                           >
-                            steps
+                            các bước
                           </EuiLink>
                           .
                         </span>
@@ -1296,15 +1275,14 @@ apk add wazuh-agent=${this.state.wazuhVersion}-r1`,
                       iconType='iInCircle'
                       title={
                         <span>
-                          After installing the agent, you need to enroll it in
-                          the Wazuh server. Check the Wazuh agent enrollment{' '}
+                          Sau khi cài đặt trạm, bạn cần đăng ký nó vào máy chủ Wazuh. Xem phần{' '}
                           <EuiLink
                             target='_blank'
                             href={urlWazuhAgentEnrollment}
                           >
-                            Wazuh agent enrollment{' '}
-                          </EuiLink>
-                          section to learn more.
+                            đăng ký trạm Wazuh
+                          </EuiLink>{' '}
+                          để biết thêm chi tiết.
                         </span>
                       }
                     ></EuiCallOut>
@@ -1317,7 +1295,7 @@ apk add wazuh-agent=${this.state.wazuhVersion}-r1`,
                       iconType='iInCircle'
                       title={
                         <span>
-                          Might require some extra installation{' '}
+                          Có thể yêu cầu thêm một số bước cài đặt{' '}
                           <EuiLink
                             target='_blank'
                             href={webDocumentationLink(
@@ -1325,7 +1303,7 @@ apk add wazuh-agent=${this.state.wazuhVersion}-r1`,
                               appVersionMajorDotMinor,
                             )}
                           >
-                            steps
+                            các bước
                           </EuiLink>
                           .
                         </span>
@@ -1338,15 +1316,14 @@ apk add wazuh-agent=${this.state.wazuhVersion}-r1`,
                       iconType='iInCircle'
                       title={
                         <span>
-                          After installing the agent, you need to enroll it in
-                          the Wazuh server. Check the Wazuh agent enrollment{' '}
+                          Sau khi cài đặt trạm, bạn cần đăng ký nó vào máy chủ Wazuh. Xem phần{' '}
                           <EuiLink
                             target='_blank'
                             href={urlWazuhAgentEnrollment}
                           >
-                            Wazuh agent enrollment{' '}
-                          </EuiLink>
-                          section to learn more.
+                            đăng ký trạm Wazuh
+                          </EuiLink>{' '}
+                          để biết thêm chi tiết.
                         </span>
                       }
                     ></EuiCallOut>
@@ -1362,7 +1339,7 @@ apk add wazuh-agent=${this.state.wazuhVersion}-r1`,
                       iconType='iInCircle'
                       title={
                         <span>
-                          Might require some extra installation{' '}
+                          Có thể yêu cầu thêm một số bước cài đặt{' '}
                           <EuiLink
                             target='_blank'
                             href={webDocumentationLink(
@@ -1370,7 +1347,7 @@ apk add wazuh-agent=${this.state.wazuhVersion}-r1`,
                               appVersionMajorDotMinor,
                             )}
                           >
-                            steps
+                            các bước
                           </EuiLink>
                           .
                         </span>
@@ -1414,7 +1391,7 @@ apk add wazuh-agent=${this.state.wazuhVersion}-r1`,
                     {copy => (
                       <div className='copy-overlay' onClick={copy}>
                         <p>
-                          <EuiIcon type='copy' /> Copy command
+                          <EuiIcon type='copy' /> Sao chép lệnh
                         </p>
                       </div>
                     )}
@@ -1444,7 +1421,7 @@ apk add wazuh-agent=${this.state.wazuhVersion}-r1`,
                     {copy => (
                       <div className='copy-overlay' onClick={copy}>
                         <p>
-                          <EuiIcon type='copy' /> Copy command
+                          <EuiIcon type='copy' /> Sao chép lệnh
                         </p>
                       </div>
                     )}
@@ -1474,7 +1451,7 @@ apk add wazuh-agent=${this.state.wazuhVersion}-r1`,
                     {copy => (
                       <div className='copy-overlay' onClick={copy}>
                         <p>
-                          <EuiIcon type='copy' /> Copy command
+                          <EuiIcon type='copy' /> Sao chép lệnh
                         </p>
                       </div>
                     )}
@@ -1504,7 +1481,7 @@ apk add wazuh-agent=${this.state.wazuhVersion}-r1`,
                     {copy => (
                       <div className='copy-overlay' onClick={copy}>
                         <p>
-                          <EuiIcon type='copy' /> Copy command
+                          <EuiIcon type='copy' /> Sao chép lệnh
                         </p>
                       </div>
                     )}
@@ -1534,7 +1511,7 @@ apk add wazuh-agent=${this.state.wazuhVersion}-r1`,
                     {copy => (
                       <div className='copy-overlay' onClick={copy}>
                         <p>
-                          <EuiIcon type='copy' /> Copy command
+                          <EuiIcon type='copy' /> Sao chép lệnh
                         </p>
                       </div>
                     )}
@@ -1564,7 +1541,7 @@ apk add wazuh-agent=${this.state.wazuhVersion}-r1`,
                     {copy => (
                       <div className='copy-overlay' onClick={copy}>
                         <p>
-                          <EuiIcon type='copy' /> Copy command
+                          <EuiIcon type='copy' /> Sao chép lệnh
                         </p>
                       </div>
                     )}
@@ -1591,7 +1568,7 @@ apk add wazuh-agent=${this.state.wazuhVersion}-r1`,
           title: 'Chọn hệ điều hành',
           children: (
             <PrincipalButtonGroup
-              legend='Choose the Operating system'
+              legend='Chọn hệ điều hành'
               options={osPrincipalButtons}
               idSelected={this.state.selectedOS}
               onChange={os => this.selectOS(os)}
@@ -1604,7 +1581,7 @@ apk add wazuh-agent=${this.state.wazuhVersion}-r1`,
                 title: 'Chọn phiên bản',
                 children: (
                   <RegisterAgentButtonGroup
-                    legend='Choose the version'
+                    legend='Chọn phiên bản'
                     options={versionButtonsRedHat}
                     idSelected={this.state.selectedVersion}
                     onChange={version => this.setVersion(version)}
@@ -1619,7 +1596,7 @@ apk add wazuh-agent=${this.state.wazuhVersion}-r1`,
                 title: 'Chọn phiên bản',
                 children: (
                   <RegisterAgentButtonGroup
-                    legend='Choose the version'
+                    legend='Chọn phiên bản'
                     options={versionButtonsOracleLinux}
                     idSelected={this.state.selectedVersion}
                     onChange={version => this.setVersion(version)}
@@ -1634,7 +1611,7 @@ apk add wazuh-agent=${this.state.wazuhVersion}-r1`,
                 title: 'Chọn phiên bản',
                 children: (
                   <RegisterAgentButtonGroup
-                    legend='Choose the version'
+                    legend='Chọn phiên bản'
                     options={versionButtonsRaspbian}
                     idSelected={this.state.selectedVersion}
                     onChange={version => this.setVersion(version)}
@@ -1649,7 +1626,7 @@ apk add wazuh-agent=${this.state.wazuhVersion}-r1`,
                 title: 'Chọn phiên bản',
                 children: (
                   <RegisterAgentButtonGroup
-                    legend='Choose the version'
+                    legend='Chọn phiên bản'
                     options={versionButtonAmazonLinux}
                     idSelected={this.state.selectedVersion}
                     onChange={version => this.setVersion(version)}
@@ -1664,7 +1641,7 @@ apk add wazuh-agent=${this.state.wazuhVersion}-r1`,
                 title: 'Chọn phiên bản',
                 children: (
                   <RegisterAgentButtonGroup
-                    legend='Choose the version'
+                    legend='Chọn phiên bản'
                     options={versionButtonsCentos}
                     idSelected={this.state.selectedVersion}
                     onChange={version => this.setVersion(version)}
@@ -1679,7 +1656,7 @@ apk add wazuh-agent=${this.state.wazuhVersion}-r1`,
                 title: 'Chọn phiên bản',
                 children: (
                   <RegisterAgentButtonGroup
-                    legend='Choose the version'
+                    legend='Chọn phiên bản'
                     options={versionButtonFedora}
                     idSelected={this.state.selectedVersion}
                     onChange={version => this.setVersion(version)}
@@ -1694,7 +1671,7 @@ apk add wazuh-agent=${this.state.wazuhVersion}-r1`,
                 title: 'Chọn phiên bản',
                 children: (
                   <RegisterAgentButtonGroup
-                    legend='Choose the version'
+                    legend='Chọn phiên bản'
                     options={versionButtonsDebian}
                     idSelected={this.state.selectedVersion}
                     onChange={version => this.setVersion(version)}
@@ -1709,7 +1686,7 @@ apk add wazuh-agent=${this.state.wazuhVersion}-r1`,
                 title: 'Chọn phiên bản',
                 children: (
                   <RegisterAgentButtonGroup
-                    legend='Choose the version'
+                    legend='Chọn phiên bản'
                     options={versionButtonsUbuntu}
                     idSelected={this.state.selectedVersion}
                     onChange={version => this.setVersion(version)}
@@ -1724,7 +1701,7 @@ apk add wazuh-agent=${this.state.wazuhVersion}-r1`,
                 title: 'Chọn phiên bản',
                 children: (
                   <RegisterAgentButtonGroup
-                    legend='Choose the version'
+                    legend='Chọn phiên bản'
                     options={versionButtonsWindows}
                     idSelected={this.state.selectedVersion}
                     onChange={version => this.setVersion(version)}
@@ -1739,7 +1716,7 @@ apk add wazuh-agent=${this.state.wazuhVersion}-r1`,
                 title: 'Chọn phiên bản',
                 children: (
                   <RegisterAgentButtonGroup
-                    legend='Choose the version'
+                    legend='Chọn phiên bản'
                     options={versionButtonsMacOS}
                     idSelected={this.state.selectedVersion}
                     onChange={version => this.setVersion(version)}
@@ -1754,7 +1731,7 @@ apk add wazuh-agent=${this.state.wazuhVersion}-r1`,
                 title: 'Chọn phiên bản',
                 children: (
                   <RegisterAgentButtonGroup
-                    legend='Choose the version'
+                    legend='Chọn phiên bản'
                     options={versionButtonsSuse}
                     idSelected={this.state.selectedVersion}
                     onChange={version => this.setVersion(version)}
@@ -1769,7 +1746,7 @@ apk add wazuh-agent=${this.state.wazuhVersion}-r1`,
                 title: 'Chọn phiên bản',
                 children: (
                   <RegisterAgentButtonGroup
-                    legend='Choose the version'
+                    legend='Chọn phiên bản'
                     options={versionButtonsOpenSuse}
                     idSelected={this.state.selectedVersion}
                     onChange={version => this.setVersion(version)}
@@ -1784,7 +1761,7 @@ apk add wazuh-agent=${this.state.wazuhVersion}-r1`,
                 title: 'Chọn phiên bản',
                 children: (
                   <RegisterAgentButtonGroup
-                    legend='Choose the version'
+                    legend='Chọn phiên bản'
                     options={versionButtonsSolaris}
                     idSelected={this.state.selectedVersion}
                     onChange={version => this.setVersion(version)}
@@ -1799,7 +1776,7 @@ apk add wazuh-agent=${this.state.wazuhVersion}-r1`,
                 title: 'Chọn phiên bản',
                 children: (
                   <RegisterAgentButtonGroup
-                    legend='Choose the version'
+                    legend='Chọn phiên bản'
                     options={versionButtonsAix}
                     idSelected={this.state.selectedVersion}
                     onChange={version => this.setVersion(version)}
@@ -1814,7 +1791,7 @@ apk add wazuh-agent=${this.state.wazuhVersion}-r1`,
                 title: 'Chọn phiên bản',
                 children: (
                   <RegisterAgentButtonGroup
-                    legend='Choose the version'
+                    legend='Chọn phiên bản'
                     options={versionButtonsHPUX}
                     idSelected={this.state.selectedVersion}
                     onChange={version => this.setVersion(version)}
@@ -1829,7 +1806,7 @@ apk add wazuh-agent=${this.state.wazuhVersion}-r1`,
                 title: 'Chọn phiên bản',
                 children: (
                   <RegisterAgentButtonGroup
-                    legend='Choose the version'
+                    legend='Chọn phiên bản'
                     options={versionButtonAlpine}
                     idSelected={this.state.selectedVersion}
                     onChange={version => this.setVersion(version)}
@@ -1847,7 +1824,7 @@ apk add wazuh-agent=${this.state.wazuhVersion}-r1`,
                 title: 'Chọn kiến trúc',
                 children: (
                   <RegisterAgentButtonGroup
-                    legend='Choose the architecture'
+                    legend='Chọn kiến trúc'
                     options={architecturei386Andx86_64}
                     idSelected={this.state.selectedArchitecture}
                     onChange={architecture =>
@@ -1864,7 +1841,7 @@ apk add wazuh-agent=${this.state.wazuhVersion}-r1`,
                 title: 'Chọn kiến trúc',
                 children: (
                   <RegisterAgentButtonGroup
-                    legend='Choose the architecture'
+                    legend='Chọn kiến trúc'
                     options={architectureButtonsWithPPC64LE}
                     idSelected={this.state.selectedArchitecture}
                     onChange={architecture =>
@@ -1881,7 +1858,7 @@ apk add wazuh-agent=${this.state.wazuhVersion}-r1`,
                 title: 'Chọn kiến trúc',
                 children: (
                   <RegisterAgentButtonGroup
-                    legend='Choose the architecture'
+                    legend='Chọn kiến trúc'
                     options={architectureButtonsWithPPC64LEAlpine}
                     idSelected={this.state.selectedArchitecture}
                     onChange={architecture =>
@@ -1907,7 +1884,7 @@ apk add wazuh-agent=${this.state.wazuhVersion}-r1`,
                 title: 'Chọn kiến trúc',
                 children: (
                   <RegisterAgentButtonGroup
-                    legend='Choose the architecture'
+                    legend='Chọn kiến trúc'
                     options={architectureButtons}
                     idSelected={this.state.selectedArchitecture}
                     onChange={architecture =>
@@ -1929,7 +1906,7 @@ apk add wazuh-agent=${this.state.wazuhVersion}-r1`,
                 title: 'Chọn kiến trúc',
                 children: (
                   <RegisterAgentButtonGroup
-                    legend='Choose the architecture'
+                    legend='Chọn kiến trúc'
                     options={architectureButtonsWithPPC64LE}
                     idSelected={this.state.selectedArchitecture}
                     onChange={architecture =>
@@ -1948,7 +1925,7 @@ apk add wazuh-agent=${this.state.wazuhVersion}-r1`,
                 title: 'Chọn kiến trúc',
                 children: (
                   <RegisterAgentButtonGroup
-                    legend='Choose the architecture'
+                    legend='Chọn kiến trúc'
                     options={architectureButtonsi386}
                     idSelected={this.state.selectedArchitecture}
                     onChange={architecture =>
@@ -1965,7 +1942,7 @@ apk add wazuh-agent=${this.state.wazuhVersion}-r1`,
                 title: 'Chọn kiến trúc',
                 children: (
                   <RegisterAgentButtonGroup
-                    legend='Choose the architecture'
+                    legend='Chọn kiến trúc'
                     options={architectureButtonsMacos}
                     idSelected={this.state.selectedArchitecture}
                     onChange={architecture =>
@@ -1983,7 +1960,7 @@ apk add wazuh-agent=${this.state.wazuhVersion}-r1`,
                 title: 'Chọn Kiến Trúc',
                 children: (
                   <RegisterAgentButtonGroup
-                    legend='Choose the architecture'
+                    legend='Chọn kiến trúc'
                     options={architectureButtonsSolaris}
                     idSelected={this.state.selectedArchitecture}
                     onChange={architecture =>
@@ -2000,7 +1977,7 @@ apk add wazuh-agent=${this.state.wazuhVersion}-r1`,
                 title: 'Chọn kiến trúc',
                 children: (
                   <RegisterAgentButtonGroup
-                    legend='Choose the architecture'
+                    legend='Chọn kiến trúc'
                     options={architectureButtonsAix}
                     idSelected={this.state.selectedArchitecture}
                     onChange={architecture =>
@@ -2017,7 +1994,7 @@ apk add wazuh-agent=${this.state.wazuhVersion}-r1`,
                 title: 'Chọn kiến trúc',
                 children: (
                   <RegisterAgentButtonGroup
-                    legend='Choose the architecture'
+                    legend='Chọn kiến trúc'
                     options={architectureButtonsHpUx}
                     idSelected={this.state.selectedArchitecture}
                     onChange={architecture =>
@@ -2035,7 +2012,7 @@ apk add wazuh-agent=${this.state.wazuhVersion}-r1`,
         )
           ? [
               {
-                title: 'Địa chỉ Wazuh server',
+                title: 'Địa chỉ máy chủ Wazuh',
                 children: (
                   <Fragment>
                     <WzManagerAddressInput
@@ -2087,36 +2064,37 @@ apk add wazuh-agent=${this.state.wazuhVersion}-r1`,
             !['hp', 'sol', 'alpine'].includes(this.state.selectedOS) ? (
             <EuiCallOut
               color='danger'
-              title={'There are fields with errors. Please verify them.'}
+              title={'Có một số trường có lỗi. Vui lòng kiểm tra lại.'}
               iconType='alert'
             />
           ) : missingOSSelection.length ? (
             <EuiCallOut
               color='warning'
-              title={`Please select the ${missingOSSelection.join(', ')}.`}
+              title={`Hãy chọn ${missingOSSelection.join(', ')}.`}
               iconType='iInCircle'
             />
           ) : (
             <div>{guide}</div>
           ),
         },
-        ...(this.state.selectedOS == 'rpm' ||
-        this.state.selectedOS == 'cent' ||
-        this.state.selectedOS == 'suse' ||
-        this.state.selectedOS == 'fedora' ||
-        this.state.selectedOS == 'oraclelinux' ||
-        this.state.selectedOS == 'amazonlinux' ||
-        this.state.selectedOS == 'deb' ||
-        this.state.selectedOS == 'raspbian' ||
-        this.state.selectedOS == 'ubu' ||
-        this.state.selectedOS == 'win' ||
-        this.state.selectedOS == 'macos' ||
-        this.state.selectedOS == 'open' ||
-        this.state.selectedOS == 'sol' ||
-        this.state.selectedOS == 'aix' ||
-        this.state.selectedOS == 'hp' ||
-        this.state.selectedOS == 'alpine' ||
-        this.state.selectedOS == ''
+        ...(!missingOSSelection.length &&
+        this.state.selectedOS !== 'rpm' &&
+        this.state.selectedOS !== 'deb' &&
+        this.state.selectedOS !== 'cent' &&
+        this.state.selectedOS !== 'ubu' &&
+        this.state.selectedOS !== 'win' &&
+        this.state.selectedOS !== 'macos' &&
+        this.state.selectedOS !== 'open' &&
+        this.state.selectedOS !== 'sol' &&
+        this.state.selectedOS !== 'aix' &&
+        this.state.selectedOS !== 'hp' &&
+        this.state.selectedOS !== 'amazonlinux' &&
+        this.state.selectedOS !== 'fedora' &&
+        this.state.selectedOS !== 'oraclelinux' &&
+        this.state.selectedOS !== 'suse' &&
+        this.state.selectedOS !== 'raspbian' &&
+        this.state.selectedOS !== 'alpine' &&
+        restartAgentCommand
           ? [
               {
                 title: 'Khởi động trạm',
@@ -2126,13 +2104,13 @@ apk add wazuh-agent=${this.state.wazuhVersion}-r1`,
                   !['hp', 'sol', 'alpine'].includes(this.state.selectedOS) ? (
                   <EuiCallOut
                     color='danger'
-                    title={'There are fields with errors. Please verify them.'}
+                    title={'Có một số trường có lỗi. Vui lòng kiểm tra lại.'}
                     iconType='alert'
                   />
                 ) : missingOSSelection.length ? (
                   <EuiCallOut
                     color='warning'
-                    title={`Please select the ${missingOSSelection.join(
+                    title={`Hãy chọn ${missingOSSelection.join(
                       ', ',
                     )}.`}
                     iconType='iInCircle'
@@ -2183,52 +2161,6 @@ apk add wazuh-agent=${this.state.wazuhVersion}-r1`,
               },
             ]
           : []),
-        ...(!missingOSSelection.length &&
-        this.state.selectedOS !== 'rpm' &&
-        this.state.selectedOS !== 'deb' &&
-        this.state.selectedOS !== 'cent' &&
-        this.state.selectedOS !== 'ubu' &&
-        this.state.selectedOS !== 'win' &&
-        this.state.selectedOS !== 'macos' &&
-        this.state.selectedOS !== 'open' &&
-        this.state.selectedOS !== 'sol' &&
-        this.state.selectedOS !== 'aix' &&
-        this.state.selectedOS !== 'hp' &&
-        this.state.selectedOS !== 'amazonlinux' &&
-        this.state.selectedOS !== 'fedora' &&
-        this.state.selectedOS !== 'oraclelinux' &&
-        this.state.selectedOS !== 'suse' &&
-        this.state.selectedOS !== 'raspbian' &&
-        this.state.selectedOS !== 'alpine' &&
-        restartAgentCommand
-          ? [
-              {
-                title: 'Khởi động trạm',
-                children: this.state.gotErrorRegistrationServiceInfo ? (
-                  calloutErrorRegistrationServiceInfo
-                ) : (
-                  <EuiFlexGroup direction='column'>
-                    <EuiText>
-                      <div className='copy-codeblock-wrapper'>
-                        <EuiCodeBlock style={codeBlock} language={language}>
-                          {restartAgentCommand}
-                        </EuiCodeBlock>
-                        <EuiCopy textToCopy={restartAgentCommand}>
-                          {copy => (
-                            <div className='copy-overlay' onClick={copy}>
-                              <p>
-                                <EuiIcon type='copy' /> Copy command
-                              </p>
-                            </div>
-                          )}
-                        </EuiCopy>
-                      </div>
-                    </EuiText>
-                  </EuiFlexGroup>
-                ),
-              },
-            ]
-          : []),
       ];
 
       return (
@@ -2241,7 +2173,7 @@ apk add wazuh-agent=${this.state.wazuhVersion}-r1`,
                     <EuiFlexGroup>
                       <EuiFlexItem>
                         <EuiTitle>
-                          <h2>Deploy a new agent</h2>
+                          <h2>Triển khai trạm mới</h2>
                         </EuiTitle>
                       </EuiFlexItem>
                       <EuiFlexItem grow={false}>
@@ -2251,7 +2183,7 @@ apk add wazuh-agent=${this.state.wazuhVersion}-r1`,
                             onClick={() => this.props.addNewAgent(false)}
                             iconType='cross'
                           >
-                            Close
+                            Đóng
                           </EuiButtonEmpty>
                         )}
                         {!this.props.hasAgents() && (
@@ -2260,7 +2192,7 @@ apk add wazuh-agent=${this.state.wazuhVersion}-r1`,
                             onClick={() => this.props.reload()}
                             iconType='refresh'
                           >
-                            Refresh
+                            Làm mới
                           </EuiButtonEmpty>
                         )}
                       </EuiFlexItem>

@@ -609,7 +609,7 @@ function generateAlert(params) {
     }
   }
 
-  // Regulatory compliance
+  // Tuân thủ quy định
   if (
     params.pci_dss ||
     params.regulatory_compliance ||

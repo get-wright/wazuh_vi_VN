@@ -128,7 +128,7 @@ export const OverviewWelcome = withErrorBoundary(class OverviewWelcome extends C
               <EuiSpacer size="xl" />
               <EuiFlexGroup>
                 <EuiFlexItem>
-                  <EuiCard title description betaBadgeLabel="Threat Detection and Response">
+                  <EuiCard title description betaBadgeLabel="Phát hiện và ứng phó mối đe dọa">
                     <EuiSpacer size="s" />
                     <EuiFlexGrid columns={2}>
                       {this.buildTabCard('vuls', 'securityApp')}
@@ -145,7 +145,7 @@ export const OverviewWelcome = withErrorBoundary(class OverviewWelcome extends C
                 </EuiFlexItem>
 
                 <EuiFlexItem>
-                  <EuiCard title description betaBadgeLabel="Regulatory Compliance">
+                  <EuiCard title description betaBadgeLabel="Tuân thủ quy định">
                     <EuiSpacer size="s" />
                     {!this.props.extensions.pci &&
                       !this.props.extensions.gdpr &&
@@ -158,7 +158,7 @@ export const OverviewWelcome = withErrorBoundary(class OverviewWelcome extends C
                               title={
                                 <p>
                                   Click the <EuiIcon type="eye" /> icon to show
-                                  regulatory compliance extensions.
+                                  Tuân thủ quy định extensions.
                                 </p>
                               }
                               color="success"

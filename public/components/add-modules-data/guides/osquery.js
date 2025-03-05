@@ -16,7 +16,7 @@ export default {
   name: 'Osquery',
   wodle_name: 'osquery',
   description: 'Tùy chọn cấu hình của osquery wodle',
-  category: 'Threat detection and response',
+  category: 'Phát hiện và ứng phó mối đe dọa',
   documentation_link: webDocumentationLink('user-manual/reference/ossec-conf/wodle-osquery.html'),
   icon: 'securityApp',
   callout_warning: 'Osquery is not installed by default. It is an open source software that you have to obtain for using this module.',

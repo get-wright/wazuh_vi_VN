@@ -30,7 +30,7 @@ export const PromptSelectAgent = ({ body, title }: PromptSelectAgentProps) => {
       body={body && <p>{body}</p>}
       actions={
         <EuiButton color="primary" fill onClick={openAgentSelector}>
-          Select agent
+          Chọn trạm
         </EuiButton>
       }
     />
